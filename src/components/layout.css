@@ -26,7 +26,18 @@ header ul li:first-child {
   margin-right: auto;
 }
 
+.uk-alert-primary > p {
+  color: #1e87f0 !important; 
+  margin-bottom: 0 !important;
+}
+
+.uk-alert-primary > p > a {
+  color: #1b78d4 !important; 
+  font-weight: bolder !important;
+}
+
 .site {
+  margin: 0;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
