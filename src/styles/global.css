@@ -1,0 +1,228 @@
+@font-face {
+    font-family: manrope;
+    src: url("../fonts/Manrope/manrope-regular.woff2") format("woff2"),
+      url("../fonts/Manrope/manrope-regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: manrope;
+    color: white;
+  }
+
+  body {
+    background-color: #343b3f;
+  }
+  
+  ::-moz-selection {
+    color: #212121;
+    background: #aadc39;
+  }
+  
+  ::selection {
+    color: #212121;
+    background: #aadc39;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  section {
+    background-color: #252525fa
+  }
+  
+  #pic {
+    border-radius: 50%;
+    height: 15%;
+    width: 15%;
+    border: 0.1rem;
+    box-shadow: 0.1rem 0.5rem 1rem 0.1rem rgba(24, 105, 165, 0.3);
+  }
+  
+  #name {
+    color: white;
+    text-align: center;
+  }
+  
+  /* Begin: To override GitHub Caledar's CSS */
+  .calendar {
+    min-height: fit-content !important;
+    max-width: 100rem;
+    border: 0;
+  }
+  
+  .contrib-column > span {
+    color: whitesmoke;
+  }
+  
+  .calendar-graph text.month {
+    fill: whitesmoke;
+  }
+  /* End: To override GitHub Caledar's CSS */
+  
+  .card:hover {
+    border: #68808b 0.2rem solid;
+    border-radius: 1rem;
+  }
+  
+  .card > a {
+    font-size: 125%;
+  }
+  
+  #about-me-section > center > div {
+    margin-top: 7rem;
+  }
+
+  
+  .top-buttons > a {
+    color: white !important;
+  }
+  
+  .git-button {
+    font-size: 1rem;
+  }
+  
+  #intro-block {
+    background-color: #455a64;
+    padding-top: 10rem;
+    color: aliceblue;
+    font-size: 3.2rem;
+  }
+  
+  .project {
+    padding-bottom: 4rem;
+    padding-top: 2rem;
+  }
+  
+  .top-right-content {
+    font-size: 3.5rem;
+    margin-top: 0%;
+  }
+  
+  .desc-title {
+    font-size: 4.5rem;
+    padding-bottom: 20px;
+    margin-top: 5rem;
+    text-align: center;
+  }
+  
+  .project-card {
+    width: 20rem;
+    margin-top: 3rem;
+  }
+  
+  .desc-data {
+    font-size: 3rem;
+    display: inline-block;
+  }
+  
+  .project-data {
+    display: inline-block;
+    justify-content: center;
+    background-color: #455a64;
+  }
+  
+  #repeatedCode {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 75%;
+  }
+  
+  #social {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #project-data {
+    width: 100%;
+  }
+  
+  .about-me-table {
+    padding-left: 1rem;
+  }
+  
+  #social a {
+    margin: 1rem;
+    font-size: xx-large;
+  }
+  
+  @media only screen and (max-width: 1080px) {
+    .mm {
+      text-align: center;
+    }
+  
+    .container {
+      float: center;
+    }
+  
+    .contrib-legend,
+    .float-left {
+      display: none;
+    }
+  
+    body {
+      background-color: #212121;
+    }
+  
+    #pic {
+      height: 50%;
+      width: 50%;
+    }
+  
+    #down {
+      visibility: visible;
+      margin-top: 10%;
+    }
+  
+    #up {
+      visibility: visible;
+      margin-bottom: 10%;
+    }
+  
+    #intro-block {
+      width: 100%;
+      background-color: #455a64;
+      padding-top: 5rem;
+      color: aliceblue;
+    }
+  
+    #right-wing {
+      width: 100%;
+      background-color: #212121;
+      height: 100%;
+      color: whitesmoke;
+      padding-top: 60px;
+    }
+  
+    #bio-block {
+      font-weight: bold;
+    }
+  
+    #repeatedCode {
+      max-width: 90%;
+    }
+  
+    .desc-data,
+    .top-right-content {
+      font-size: 2.5rem;
+    }
+  
+    #about-me-section > center > div {
+      margin-top: 4rem;
+    }
+  
+    body::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  
