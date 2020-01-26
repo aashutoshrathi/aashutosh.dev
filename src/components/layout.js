@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
           src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"
         ></script>
       </Helmet>
-      <div className="uk-alert-primary" uk-alert>
+      <div className="uk-alert-primary">
         <p className="uk-text-center">
           This is site is currently in beta, if you have any suggestions ping me
           at <a href="emailto:me@aashutosh.dev">me@aashutosh.dev</a>. Thanks for

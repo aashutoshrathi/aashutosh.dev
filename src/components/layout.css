@@ -47,11 +47,27 @@ header ul li:first-child {
   flex-grow: 1;
 }
 
+@media only screen and (max-width: 360px) {
+  header ul li a {
+    display: block;
+    line-height: 3em;
+    padding: 0 !important;
+    text-decoration: none;
+  }
+
+  header ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+}
+
+
 @media only screen and (max-width: 400px) {
   header ul li a {
     display: block;
     line-height: 3em;
-    padding: 1em 0.5em;
+    padding: 0, 0.5 !important;
     text-decoration: none;
   }
 
@@ -71,7 +87,7 @@ header ul li:first-child {
   }
 
   header ul {
-    margin: 0 1.5em 0 1.5em;
+    margin: 0 0.5em 0 0.5em;
     padding: 0;
     display: flex;
   }
