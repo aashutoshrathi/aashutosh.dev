@@ -1,7 +1,9 @@
+import { useEffect } from "react"
 import { navigate } from "gatsby"
 
-const NotFoundPage = () => {
-  return navigate("/")
+export default () => {
+  useEffect(() => {
+    navigate("/")
+  }, [])
+  return null
 }
-
-export default NotFoundPage
