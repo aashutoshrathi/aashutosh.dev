@@ -47,8 +47,6 @@
 .contrib-column > span {
   color: whitesmoke;
 }
-
-
 /* End: To override GitHub Caledar's CSS */
   
   .pic {
@@ -142,63 +140,8 @@
   }
   
   @media only screen and (max-width: 1080px) {
-    .mm {
-      text-align: center;
-    }
-  
-    .container {
-      float: center;
-    }
-  
-    .contrib-legend,
-    .float-left {
-      display: none;
-    }
-  
-    #down {
-      visibility: visible;
-      margin-top: 10%;
-    }
-  
-    #up {
-      visibility: visible;
-      margin-bottom: 10%;
-    }
-  
-    #intro-block {
-      width: 100%;
-      background-color: #455a64;
-      padding-top: 5rem;
-      color: aliceblue;
-    }
-  
-    #right-wing {
-      width: 100%;
-      background-color: #212121;
-      height: 100%;
-      color: whitesmoke;
-      padding-top: 60px;
-    }
-  
-    #bio-block {
-      font-weight: bold;
-    }
-  
     #repeatedCode {
       max-width: 90%;
-    }
-  
-    .desc-data,
-    .top-right-content {
-      font-size: 2.5rem;
-    }
-  
-    #about-me-section > center > div {
-      margin-top: 4rem;
-    }
-  
-    body::-webkit-scrollbar {
-      display: none;
     }
   }
   

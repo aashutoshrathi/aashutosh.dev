@@ -46,3 +46,33 @@ header ul li:first-child {
 .site-content {
   flex-grow: 1;
 }
+
+@media only screen and (max-width: 400px) {
+  header ul li a {
+    display: block;
+    line-height: 3em;
+    padding: 1em 0.5em;
+    text-decoration: none;
+  }
+
+  header ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  header ul li a {
+    display: block;
+    line-height: 3em;
+    padding: 1em 1em;
+    text-decoration: none;
+  }
+
+  header ul {
+    margin: 0 1.5em 0 1.5em;
+    padding: 0;
+    display: flex;
+  }
+}
