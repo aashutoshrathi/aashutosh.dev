@@ -10,9 +10,11 @@
   * {
     margin: 0;
     padding: 0;
-    font-family: manrope;
-    color: white;
+    font-family: manrope !important;
+    color: white !important;
   }
+
+  a:hover { text-decoration: none !important }
 
   body {
     background-color: #343b3f;
@@ -34,38 +36,33 @@
     overflow-x: hidden;
   }
 
-  section {
-    background-color: #252525fa
-  }
+  /* Begin: To override GitHub Caledar's CSS */
+.calendar {
+  min-height: fit-content !important;
+  max-width: 70rem;
+  max-height: 20rem;
+  border: 0;
+}
+
+.contrib-column > span {
+  color: whitesmoke;
+}
+
+
+/* End: To override GitHub Caledar's CSS */
   
-  #pic {
+  .pic {
     border-radius: 50%;
     height: 15%;
     width: 15%;
     border: 0.1rem;
-    box-shadow: 0.1rem 0.5rem 1rem 0.1rem rgba(24, 105, 165, 0.3);
   }
   
   #name {
     color: white;
     text-align: center;
+    font-family: manrope !important;
   }
-  
-  /* Begin: To override GitHub Caledar's CSS */
-  .calendar {
-    min-height: fit-content !important;
-    max-width: 100rem;
-    border: 0;
-  }
-  
-  .contrib-column > span {
-    color: whitesmoke;
-  }
-  
-  .calendar-graph text.month {
-    fill: whitesmoke;
-  }
-  /* End: To override GitHub Caledar's CSS */
   
   .card:hover {
     border: #68808b 0.2rem solid;
@@ -78,11 +75,6 @@
   
   #about-me-section > center > div {
     margin-top: 7rem;
-  }
-
-  
-  .top-buttons > a {
-    color: white !important;
   }
   
   .git-button {
@@ -135,14 +127,7 @@
     justify-content: center;
     max-width: 75%;
   }
-  
-  #social {
-    margin-top: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
+
   #project-data {
     width: 100%;
   }
@@ -168,15 +153,6 @@
     .contrib-legend,
     .float-left {
       display: none;
-    }
-  
-    body {
-      background-color: #212121;
-    }
-  
-    #pic {
-      height: 50%;
-      width: 50%;
     }
   
     #down {

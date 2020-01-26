@@ -1,21 +1,13 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
+import "./footer.module.css"
 
 const Footer = () => {
   return (
-    <section>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` ❤️ `}
-        by Aashutosh Rathi
-      </footer>
-    </section>
+    <footer className={"uk-text-center uk-padding-small"}>
+      © {new Date().getFullYear()}, Built with
+      {` ❤️ `}
+      by Aashutosh Rathi
+    </footer>
   )
 }
 
