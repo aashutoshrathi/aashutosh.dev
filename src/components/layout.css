@@ -31,12 +31,12 @@ header ul li:first-child {
 }
 
 .alert-primary > p {
-  color: #1e87f0 !important; 
+  color: var(--alert-text-color) !important; 
   margin-bottom: 0 !important;
 }
 
 .alert-primary > p > a {
-  color: #1b78d4 !important; 
+  color: var(--alert-text-color) !important; 
   font-weight: bolder !important;
 }
 
