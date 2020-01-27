@@ -9,11 +9,11 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <>
-      <div className="uk-text-center">
+      <div className="text-center">
         <Image />
       </div>
       <h1 id="name">Aashutosh Rathi</h1>
-      <div id="social" className="uk-text-center">
+      <div id="social" className="text-center">
         <SocialIcon url="https://github.com/aashutoshrathi" label="GitHub" />
         <SocialIcon url="https://twitter.com/AashutoshRathi" label="Twitter" />
         <SocialIcon
@@ -27,7 +27,7 @@ const IndexPage = () => (
         <SocialIcon url="https://fb.com/aashutoshrathi" label="Facebook" />
       </div>
 
-      <div className="uk-text-center uk-padding-small">
+      <div className="text-center padding-small">
         <Button url="https://resume.aashutosh.dev" text="Résumé" />
         <Button
           url="https://sourcerer.io/aashutoshrathi"

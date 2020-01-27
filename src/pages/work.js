@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import GitHubCalendar from "github-calendar"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import "./work.css"
 
 const IndexPage = () => {
   useEffect(() => {
@@ -11,7 +12,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Work" />
-      <h3 className="uk-text-center">
+      <h3 className="text-center">
         My GitHub Calendar{" "}
         <span role="img" aria-label="calendar">
           🗓
@@ -19,7 +20,7 @@ const IndexPage = () => {
       </h3>
       <div className="calendar">Loading the data just for you.</div>
 
-      <h3 className="uk-text-center">
+      <h3 className="text-center">
         Projects{" "}
         <span role="img" aria-label="project">
           📂

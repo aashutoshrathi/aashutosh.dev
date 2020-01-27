@@ -7,6 +7,15 @@
   font-display: swap;
 }
 
+:root {
+  --main-bg-color: #343b3f;
+  --selected-text-color: #212121;
+  --selected-text-bg-color: #aadc39;
+  --main-text-color: white;
+  --calendar-text-color: whitesmoke;
+  --nav-footer-bg-color: #252525fa;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,41 +28,26 @@ a:hover {
 }
 
 body {
-  background-color: #343b3f;
+  background-color: var(--main-bg-color);
 }
 
 ::-moz-selection {
-  color: #212121;
-  background: #aadc39;
+  color: var(--selected-text-color);
+  background: var(--selected-text-bg-color);
 }
 
 ::selection {
-  color: #212121;
-  background: #aadc39;
+  color: var(--selected-text-color);
+  background: var(--selected-text-bg-color);
 }
 
-html,
-body {
-  height: 100%;
-  overflow-x: hidden;
+.text-center {
+  text-align: center;
 }
 
-/* Begin: To override GitHub Caledar's CSS */
-.calendar {
-  min-height: fit-content !important;
-  max-width: 70rem;
-  max-height: 20rem;
-  border: 0;
+.padding-small {
+  padding: 1rem;
 }
-
-.contrib-column > span {
-  color: whitesmoke;
-}
-
-.contrib-legend {
-  display: none !important;
-}
-/* End: To override GitHub Caledar's CSS */
 
 .pic {
   border-radius: 50%;
@@ -63,42 +57,11 @@ body {
 }
 
 #name {
-  color: white;
+  color: var(--main-text-color);
   text-align: center;
-  font-family: manrope !important;
-}
-
-.card:hover {
-  border: #68808b 0.2rem solid;
-  border-radius: 1rem;
-}
-
-.card > a {
-  font-size: 125%;
-}
-
-#about-me-section > center > div {
-  margin-top: 7rem;
-}
-
-.git-button {
-  font-size: 1rem;
-}
-
-#intro-block {
-  background-color: #455a64;
-  padding-top: 10rem;
-  color: aliceblue;
-  font-size: 3.2rem;
 }
 
 #social a {
   margin: 1rem;
   font-size: xx-large;
-}
-
-@media only screen and (max-width: 1080px) {
-  #repeatedCode {
-    max-width: 90%;
-  }
 }

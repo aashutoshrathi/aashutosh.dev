@@ -10,21 +10,13 @@ const Layout = ({ children }) => {
   return (
     <>
       <Helmet>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/css/uikit.min.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
-        />
         <script
           async
           src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"
         ></script>
       </Helmet>
-      <div className="uk-alert-primary">
-        <p className="uk-text-center">
+      <div className="alert-primary">
+        <p className="text-center">
           This is site is currently in beta, if you have any suggestions ping me
           at <a href="emailto:me@aashutosh.dev">me@aashutosh.dev</a>. Thanks for
           visiting 😬. Simply scroll a bit to ignore this.

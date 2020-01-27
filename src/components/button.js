@@ -1,14 +1,14 @@
 import React from "react"
+import "./button.css"
 
 const Button = ({ url, text }) => {
   return (
     <>
       <a
         href={url}
-        id="sourcerer"
         target=" _blank"
         rel="noopener noreferrer"
-        className="uk-button uk-button-secondary uk-border-pill uk-margin-right"
+        className="pill-button"
       >
         {text}
       </a>

@@ -1,6 +1,10 @@
+footer {
+  background-color: var(--nav-footer-bg-color);
+  padding: 1rem;
+}
 
 header {
-  background-color: #252525fa;
+  background-color: var(--nav-footer-bg-color);
   margin-bottom: 1.45rem;
 }
 
@@ -26,12 +30,12 @@ header ul li:first-child {
   margin-right: auto;
 }
 
-.uk-alert-primary > p {
+.alert-primary > p {
   color: #1e87f0 !important; 
   margin-bottom: 0 !important;
 }
 
-.uk-alert-primary > p > a {
+.alert-primary > p > a {
   color: #1b78d4 !important; 
   font-weight: bolder !important;
 }

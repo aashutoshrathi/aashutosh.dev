@@ -1,9 +1,8 @@
 import React from "react"
-import "./footer.module.css"
 
 const Footer = () => {
   return (
-    <footer className={"uk-text-center uk-padding-small"}>
+    <footer className={"text-center"}>
       © {new Date().getFullYear()}, Built with
       {` ❤️ `}
       by Aashutosh Rathi
