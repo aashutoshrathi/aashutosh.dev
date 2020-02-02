@@ -12,7 +12,9 @@ const IndexPage = () => (
       <div className="text-center">
         <Image />
       </div>
-      <h1 id="name">Aashutosh Rathi</h1>
+      <h1 id="name" className="padding-small">
+        Aashutosh Rathi
+      </h1>
       <div id="social" className="text-center">
         <SocialIcon url="https://github.com/aashutoshrathi" label="GitHub" />
         <SocialIcon url="https://twitter.com/AashutoshRathi" label="Twitter" />

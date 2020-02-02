@@ -8,7 +8,7 @@ const Button = ({ url, text }) => {
         href={url}
         target=" _blank"
         rel="noopener noreferrer"
-        className="pill-button"
+        className={["pill-button", "padding-small"].join(" ")}
       >
         {text}
       </a>
