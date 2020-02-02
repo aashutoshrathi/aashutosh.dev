@@ -16,6 +16,7 @@
   --nav-footer-bg-color: #252525fa;
   --alert-text-color: #90beec;
   --small-padding: 1rem;
+  --med-margin: 1.2 rem;
 }
 
 * {
@@ -61,6 +62,10 @@ body {
 
 .padding-small {
   padding: var(--small-padding);
+}
+
+.margin-right-medium {
+  margin-right: var(--med-margin);
 }
 
 .pic {
