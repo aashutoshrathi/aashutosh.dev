@@ -3,8 +3,9 @@
   padding: 1rem;
   text-align: center;
   background-color: var(--nav-footer-bg-color);
-  border-radius: 0.25rem;
+  border-radius: 0.42rem;
   cursor: pointer;
+  width: 90%;
   margin: 1rem;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
