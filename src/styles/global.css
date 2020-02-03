@@ -16,14 +16,14 @@
   --nav-footer-bg-color: #252525fa;
   --alert-text-color: #90beec;
   --small-padding: 1rem;
-  --med-margin: 1.2 rem;
+  --med-margin: 1.2rem;
 }
 
 * {
   margin: 0;
   padding: 0;
-  font-family: manrope !important;
-  color: white !important;
+  font-family: manrope;
+  color: var(--main-text-color);
 }
 
 a {
@@ -60,6 +60,13 @@ body {
   text-align: center;
 }
 
+.pic {
+  border-radius: 50%;
+  height: 15%;
+  width: 15%;
+  border: 0.1rem;
+}
+
 .padding-small {
   padding: var(--small-padding);
 }
@@ -68,11 +75,10 @@ body {
   margin-right: var(--med-margin);
 }
 
-.pic {
-  border-radius: 50%;
-  height: 15%;
-  width: 15%;
-  border: 0.1rem;
+.projects {
+  display: inline-grid;
+  justify-content: space-around;
+  grid-template-columns: repeat(3, 25%);
 }
 
 #name {
@@ -83,4 +89,20 @@ body {
 #social a {
   margin: 1rem;
   font-size: xx-large;
+}
+
+@media only screen and (max-width: 768px) {
+  .projects {
+    grid-template-columns: repeat(2, 45%);
+    align-items: stretch;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .projects {
+    grid-template-columns: repeat(1, 95%);
+    align-items: stretch;
+    justify-content: space-around;
+  }
 }

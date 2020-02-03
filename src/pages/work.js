@@ -1,6 +1,7 @@
-import React, { useEffect } from "react"
 import GitHubCalendar from "github-calendar"
+import React, { useEffect } from "react"
 import Layout from "../components/layout"
+import Projects from "../components/projects"
 import SEO from "../components/seo"
 import "./work.css"
 
@@ -33,6 +34,7 @@ const IndexPage = () => {
           📂
         </span>
       </h3>
+      <Projects />
     </Layout>
   )
 }
