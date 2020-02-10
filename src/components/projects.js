@@ -8,7 +8,7 @@ const Projects = () => {
     fetch(process.env.GATSBY_API_URI)
       .then(res => res.json())
       .then(data => {
-        data = data.filter(repo => !repo.fork)
+        data = data.filter(repo => !repo.fork && repo.stargazers_count > 1)
         data.sort((a, b) => {
           return a.stargazers_count > b.stargazers_count ? -1 : 1
         })

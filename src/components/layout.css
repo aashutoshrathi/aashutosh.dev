@@ -51,6 +51,10 @@ header ul li:first-child {
   flex-grow: 1;
 }
 
+.title {
+  text-transform: uppercase;
+}
+
 @media only screen and (max-width: 360px) {
   header ul li a {
     display: block;

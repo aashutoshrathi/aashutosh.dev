@@ -5,7 +5,9 @@ const Header = () => (
   <header>
     <ul>
       <li>
-        <Link to="/">{"aashutosh.dev "}</Link>
+        <Link className="title" to="/">
+          {"aashutosh.dev "}
+        </Link>
       </li>
       <li>
         <Link to="/">
@@ -22,6 +24,19 @@ const Header = () => (
             🛠
           </span>
         </Link>
+      </li>
+
+      <li>
+        <a
+          href="https://blog.aashutosh.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {"Blog "}
+          <span role="img" aria-label="blog">
+            📋
+          </span>
+        </a>
       </li>
     </ul>
   </header>
