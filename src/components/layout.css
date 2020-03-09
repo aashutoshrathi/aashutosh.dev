@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Code:500&display=swap');
 footer {
   background-color: var(--nav-footer-bg-color);
   padding: 1rem;
@@ -5,29 +6,29 @@ footer {
 
 header {
   background-color: var(--nav-footer-bg-color);
-  margin-bottom: 1.45rem;
 }
 
-header ul {
-  margin: 0 5em 0 5em;
-  padding: 0;
+nav {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-header ul li {
-  display: inline-block;
-  list-style-type: none;
+nav > * {
+  margin-left: 1rem;
 }
 
-header ul li a {
-  display: block;
-  line-height: 3em;
-  padding: 1em 2em;
-  text-decoration: none;
+.header {
+  padding: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-header ul li:first-child {
-  margin-right: auto;
+.header > * {
+  padding: 0.5rem;
 }
 
 .alert-primary > p {
@@ -52,51 +53,15 @@ header ul li:first-child {
 }
 
 .title {
-  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Fira Code', monospace;
 }
 
-@media only screen and (max-width: 360px) {
-  header ul li a {
-    display: block;
-    line-height: 3em;
-    padding: 0 !important;
-    text-decoration: none;
-  }
-
-  header ul {
-    margin: 0;
-    padding: 0;
+@media only screen and (max-width: 500px) {
+  .header {
     display: flex;
-  }
-}
-
-
-@media only screen and (max-width: 400px) {
-  header ul li a {
-    display: block;
-    line-height: 3em;
-    padding: 0, 0.5 !important;
-    text-decoration: none;
-  }
-
-  header ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  header ul li a {
-    display: block;
-    line-height: 3em;
-    padding: 1em 1em;
-    text-decoration: none;
-  }
-
-  header ul {
-    margin: 0 0.5em 0 0.5em;
-    padding: 0;
-    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }

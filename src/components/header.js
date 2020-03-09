@@ -3,30 +3,23 @@ import { Link } from "gatsby"
 
 const Header = () => (
   <header>
-    <ul>
-      <li>
-        <Link className="title" to="/">
-          {"aashutosh.dev "}
-        </Link>
-      </li>
-      <li>
-        <Link to="/">
+    <div className="header">
+      <Link className="title" to="/">
+        {"aashutosh.dev "}
+      </Link>
+      <nav>
+        <Link to="/" activeClassName="active">
           {"Home "}
           <span role="img" aria-label="home">
             🏠
           </span>
         </Link>
-      </li>
-      <li>
-        <Link to="/work">
+        <Link to="/work" activeClassName="active">
           {"Work "}
           <span role="img" aria-label="work">
             🛠
           </span>
         </Link>
-      </li>
-
-      <li>
         <a
           href="https://blog.aashutosh.dev"
           target="_blank"
@@ -37,8 +30,8 @@ const Header = () => (
             📋
           </span>
         </a>
-      </li>
-    </ul>
+      </nav>
+    </div>
   </header>
 )
 
