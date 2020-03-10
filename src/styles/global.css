@@ -53,8 +53,9 @@ body {
 }
 
 .active {
-  text-decoration: underline solid white !important;
-  border-bottom-width: 2rem;
+  border-bottom: solid 0.1rem white;
+  display: inline;
+  padding-bottom: 0.2rem;
 }
 
 .margin-top-small {

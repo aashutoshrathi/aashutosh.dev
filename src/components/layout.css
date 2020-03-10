@@ -16,7 +16,7 @@ nav {
 }
 
 nav > * {
-  margin-left: 1rem;
+  margin-left: 2rem;
 }
 
 .header {
@@ -55,6 +55,7 @@ nav > * {
 .title {
   text-align: center;
   font-family: 'Fira Code', monospace;
+  font-size: 1.3rem !important;
 }
 
 @media only screen and (max-width: 500px) {
