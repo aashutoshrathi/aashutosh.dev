@@ -4,8 +4,8 @@
   Portfolio 
 </h1>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/588fe60c-40b4-4954-b162-ee552848c56d/deploy-status)](https://app.netlify.com/sites/beta-port-ar/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8e9fff3e-2b17-4746-afa7-a1131d64d0e0/deploy-status)](https://app.netlify.com/sites/aashutosh-dev/deploys)
 
 <hr/>
 
-A Gatsby port of my vanilla portfolio.
+A Gatsby port of my vanilla portfolio
