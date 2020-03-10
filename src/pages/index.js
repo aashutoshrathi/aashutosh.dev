@@ -30,7 +30,7 @@ const IndexPage = () => (
       </div>
 
       <div className="text-center padding-small">
-        <Button url="https://resume.aashutosh.dev" text="Résumé" />
+        <Button url="https://files.aashutosh.dev/Resume.pdf" text="Résumé" />
         <Button
           url="https://sourcerer.io/aashutoshrathi"
           text="Sourcerer Profile"
