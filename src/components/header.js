@@ -14,10 +14,10 @@ const Header = () => (
             🏠
           </span>
         </Link>
-        <Link to="/work" activeClassName="active">
+        <Link to="/work/" activeClassName="active">
           {"Work "}
           <span role="img" aria-label="work">
-            🛠
+            👨🏻‍💻
           </span>
         </Link>
         <a

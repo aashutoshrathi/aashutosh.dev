@@ -6,6 +6,7 @@ footer {
 
 header {
   background-color: var(--nav-footer-bg-color);
+  margin-bottom: 1.5rem;
 }
 
 nav {

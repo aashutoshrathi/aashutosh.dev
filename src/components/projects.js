@@ -11,10 +11,6 @@ const Projects = () => {
     fetch(PROJECT_URL)
       .then(res => res.json())
       .then(data => {
-        data = data.filter(repo => !repo.fork && repo.stargazers_count > 1)
-        data.sort((a, b) => {
-          return a.stargazers_count > b.stargazers_count ? -1 : 1
-        })
         CACHE[PROJECT_URL] = data
         setProjects(data)
       })
@@ -32,8 +28,8 @@ const Projects = () => {
 
   return (
     <div className="projects">
-      {projects.map((project, idx) => (
-        <Card key={idx} project={project} />
+      {projects.map(project => (
+        <Card key={project.id} project={project} />
       ))}
     </div>
   )
