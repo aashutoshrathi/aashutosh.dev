@@ -1,5 +1,6 @@
 import React from "react"
 import "./card.css"
+import Icon from "./icon"
 
 const Card = ({ project }) => (
   <div className="card">
@@ -10,7 +11,14 @@ const Card = ({ project }) => (
         <br />
         <p className="card-description"> {project.description} </p>
         <br />
-        <p> Made with {project.language} </p>
+        <p>
+          {" "}
+          Written in <Icon url="" label={project.language} />{" "}
+        </p>
+        <br />
+        <a href={project.homepage} rel="noopener noreferrer" target="_blank">
+          Demo/Docs
+        </a>
       </div>
     </a>
   </div>
