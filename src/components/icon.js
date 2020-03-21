@@ -1,11 +1,11 @@
 import React from "react"
 
 const Icon = ({ url, label }) => {
-  label = label.replace(/\+/g, "p")
+  label = label.replace(/\+/g, "p") // for c++
   return (
     <>
       <a
-        href={url}
+        {...(url && { href: url })}
         target="_blank"
         rel="noopener noreferrer"
         aria-label={label}

@@ -1,6 +1,6 @@
 .card {
   box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
-  padding: 1rem;
+  padding: 1rem 1.3rem;
   text-align: center;
   background-color: var(--nav-footer-bg-color);
   border-radius: 0.42rem;
@@ -12,10 +12,17 @@
   justify-self: center;
 }
 
+.card > div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
 .eq-div-flex {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .card:hover {
@@ -24,6 +31,20 @@
     0 0.25rem 0.5rem rgba(0, 0, 0, 0.06);
 }
 
+.card-title {
+  height: 2rem;
+}
+
+.card-star {
+  height: 3rem;
+}
+
+.card-lang {
+  height: 3rem;
+}
+
 .card-description {
   color: rgba(255, 255, 255, 0.856);
+  height: 5rem;
+  text-align: left;
 }

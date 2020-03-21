@@ -5,16 +5,13 @@ import Icon from "./icon"
 const Card = ({ project }) => (
   <div className="card">
     <div>
-      <h3> {project.name.replace(/-/g, " ")} </h3>
-      <h4> {project.stargazers_count} ⭐️ </h4>
-      <br />
+      <h3 className="card-title"> {project.name.replace(/-/g, " ")} </h3>
+      <h4 className="card-star"> {project.stargazers_count} ⭐️ </h4>
       <p className="card-description"> {project.description} </p>
-      <br />
-      <p>
+      <p className="card-lang">
         {" "}
-        Written in <Icon url="" label={project.language} />{" "}
+        Written in <Icon label={project.language} />{" "}
       </p>
-      <br />
       <div className="eq-div-flex">
         <a
           href={project.html_url}
