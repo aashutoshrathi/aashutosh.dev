@@ -23,7 +23,7 @@ const Card = ({ project }) => (
           rel="noopener noreferrer"
           target="_blank"
         >
-          {`</>`} Code
+          <span className="title">{`</>`}</span> Code
         </a>
         {project.homepage ? (
           <a
@@ -33,7 +33,14 @@ const Card = ({ project }) => (
             rel="noopener noreferrer"
             target="_blank"
           >
-            💻/📑 (Demo/Docs)
+            <span role="img" aria-label="demo">
+              💻
+            </span>
+            /
+            <span role="img" aria-label="docs">
+              📑
+            </span>{" "}
+            (Demo/Docs)
           </a>
         ) : (
           ""
