@@ -85,7 +85,7 @@ body {
 .projects {
   display: inline-grid;
   justify-content: space-around;
-  grid-template-columns: repeat(3, 27%);
+  grid-template-columns: repeat(3, 25%);
   margin: 1rem;
 }
 
@@ -101,7 +101,7 @@ body {
 
 @media only screen and (max-width: 768px) {
   .projects {
-    grid-template-columns: repeat(2, 45%);
+    grid-template-columns: repeat(2, 42%);
     align-items: stretch;
     justify-content: space-around;
   }
