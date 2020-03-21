@@ -23,6 +23,10 @@
   margin: 1rem 0;
 }
 
+.card > div > h3 {
+  margin: 0.5rem 0;
+}
+
 .eq-div-flex {
   display: flex;
   flex-direction: row;
@@ -36,15 +40,15 @@
 }
 
 .card-title {
-  max-height: 3rem;
+  max-height: 5rem;
 }
 
 .card-star {
-  max-height: 3rem;
+  max-height: 5rem;
 }
 
 .card-lang {
-  max-height: 3rem;
+  max-height: 5rem;
 }
 
 .card-description {
