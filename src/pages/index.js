@@ -3,14 +3,10 @@ import Button from "../components/button"
 import Image from "../components/image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import SocialIcon from "../components/socialIcon"
+import Icon from "../components/icon"
 
 const IndexPage = () => (
   <>
-    <link
-      rel="stylesheet"
-      href="https://files.aashutosh.dev/hosting/style.css"
-    />
     <Layout>
       <SEO title="Home" />
       <>
@@ -21,20 +17,17 @@ const IndexPage = () => (
           Aashutosh Rathi
         </h1>
         <div id="social" className="text-center">
-          <SocialIcon url="https://github.com/aashutoshrathi" label="GitHub" />
-          <SocialIcon
-            url="https://twitter.com/AashutoshRathi"
-            label="Twitter"
-          />
-          <SocialIcon
+          <Icon url="https://github.com/aashutoshrathi" label="GitHub" />
+          <Icon url="https://twitter.com/AashutoshRathi" label="Twitter" />
+          <Icon
             url="https://stackoverflow.com/users/story/7326407"
             label="Stackoverflow"
           />
-          <SocialIcon
+          <Icon
             url="https://linkedin.com/in/aashutoshrathi/"
             label="LinkedIn"
           />
-          <SocialIcon url="https://fb.com/aashutoshrathi" label="Facebook" />
+          <Icon url="https://fb.com/aashutoshrathi" label="Facebook" />
         </div>
 
         <div className="text-center padding-small">

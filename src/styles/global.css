@@ -85,7 +85,7 @@ body {
 .projects {
   display: inline-grid;
   justify-content: space-around;
-  grid-template-columns: repeat(3, 25%);
+  grid-template-columns: repeat(3, 27%);
   margin: 1rem;
 }
 
