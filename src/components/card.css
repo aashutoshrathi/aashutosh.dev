@@ -4,13 +4,18 @@
   text-align: center;
   background-color: var(--nav-footer-bg-color);
   border-radius: 0.42rem;
-  cursor: pointer;
   width: 90%;
   margin: 1rem;
   -webkit-transition: all 0.25s;
   -moz-transition: all 0.25s;
   transition: all 0.25s;
   justify-self: center;
+}
+
+.eq-div-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .card:hover {
