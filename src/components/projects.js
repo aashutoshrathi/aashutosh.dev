@@ -27,11 +27,11 @@ const Projects = () => {
   }, [])
 
   return (
-    <div className="projects">
+    <section className="projects">
       {projects.map(project => (
         <Card key={project.id} project={project} />
       ))}
-    </div>
+    </section>
   )
 }
 

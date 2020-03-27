@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 const Header = () => (
   <header>
-    <div className="header">
+    <nav className="header">
       <Link className="title" to="/">
         {"aashutosh.dev "}
       </Link>
@@ -31,7 +31,7 @@ const Header = () => (
           </span>
         </a>
       </nav>
-    </div>
+    </nav>
   </header>
 )
 

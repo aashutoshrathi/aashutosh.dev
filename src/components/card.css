@@ -51,6 +51,10 @@
   max-height: 5rem;
 }
 
+.card-lang > * {
+  margin-left: 0.42rem;
+}
+
 .card-description {
   color: rgba(255, 255, 255, 0.856);
   text-align: left;
