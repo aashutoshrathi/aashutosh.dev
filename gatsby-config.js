@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Aashutosh`,
-    description: `Gatsby port of aashutosh.dev`,
+    description: `Dev Portfolio | Aashutosh Rathi`,
     author: `@aashutoshrathi`,
   },
   plugins: [
@@ -18,11 +18,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Aashutosh Rathi | Dev Portfolio`,
+        short_name: `Aashutosh.Dev`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#252525`,
+        theme_color: `#343b3f`,
         display: `minimal-ui`,
         icon: `src/images/pic.jpeg`, // This path is relative to the root of the site.
       },

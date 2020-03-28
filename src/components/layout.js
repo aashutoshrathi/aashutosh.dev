@@ -15,13 +15,6 @@ const Layout = ({ children }) => {
           src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"
         ></script>
       </Helmet>
-      {/* <div className="alert-primary">
-        <p className="text-center">
-          This is site is currently in beta, if you have any suggestions ping me
-          at <a href="emailto:me@aashutosh.dev">me@aashutosh.dev</a>. Thanks for
-          visiting 😬. Simply scroll a bit to ignore this.
-        </p>
-      </div> */}
       <div className="site">
         <Header />
         <main className={"site-content"}>{children}</main>

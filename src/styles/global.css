@@ -89,6 +89,8 @@ body {
 #name {
   color: var(--main-text-color);
   text-align: center;
+  font-size: 2rem;
+  font-family: Fira Code;
 }
 
 #social a {

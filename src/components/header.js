@@ -17,7 +17,7 @@ const Header = () => (
         <Link to="/work/" activeClassName="active">
           {"Work "}
           <span role="img" aria-label="work">
-            👨🏻‍💻
+            💼
           </span>
         </Link>
         <a
