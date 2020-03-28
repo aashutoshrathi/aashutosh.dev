@@ -1,11 +1,4 @@
-@font-face {
-  font-family: manrope;
-  src: url("../fonts/Manrope/manrope-regular.woff2") format("woff2"),
-    url("../fonts/Manrope/manrope-regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 
 :root {
   --main-bg-color: #343b3f;
@@ -22,7 +15,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: manrope;
+  font-family: 'Open Sans', sans-serif;
   color: var(--main-text-color);
 }
 
@@ -56,6 +49,10 @@ body {
   border-bottom: solid 0.1rem white;
   display: inline;
   padding-bottom: 0.2rem;
+}
+
+.bold {
+  font-weight: bold !important;
 }
 
 .margin-top-small {

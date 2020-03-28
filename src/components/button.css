@@ -1,7 +1,7 @@
 .pill-button {
   border: none;
   background-color: var(--nav-footer-bg-color);
-  padding: 0.625rem 1.25rem;
+  padding: 0.67rem 1rem !important;
   display: inline-block;
   margin: 0.25rem 0.6rem;
   cursor: pointer;
