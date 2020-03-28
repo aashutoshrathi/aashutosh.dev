@@ -20,16 +20,12 @@ const Header = () => (
             💼
           </span>
         </Link>
-        <a
-          href="https://blog.aashutosh.dev"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link to="/blog/" activeClassName="active">
           {"Blog "}
-          <span role="img" aria-label="blog">
+          <span role="img" aria-label="work">
             📋
           </span>
-        </a>
+        </Link>
       </nav>
     </nav>
   </header>
