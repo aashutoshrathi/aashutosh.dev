@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fira+Code|Open+Sans:400,600&display=swap');
 
 :root {
   --main-bg-color: #343b3f;
@@ -90,7 +90,7 @@ body {
   color: var(--main-text-color);
   text-align: center;
   font-size: 2rem;
-  font-family: Fira Code;
+  font-family: Fira Code, monospace;
 }
 
 #social a {
