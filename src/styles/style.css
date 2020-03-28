@@ -1,6 +1,5 @@
 @font-face {
     font-family: 'icomoon';
-    src:  url('https://files.aashutosh.dev/hosting/fonts/icomoon.eot?e1kmb0');
     src:  url('https://files.aashutosh.dev/hosting/fonts/icomoon.eot?e1kmb0#iefix') format('embedded-opentype'),
       url('https://files.aashutosh.dev/hosting/fonts/icomoon.ttf?e1kmb0') format('truetype'),
       url('https://files.aashutosh.dev/hosting/fonts/icomoon.woff?e1kmb0') format('woff'),
@@ -11,7 +10,6 @@
   }
   
   [class^="icon-"], [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon' !important;
     font-style: normal;
     font-weight: normal;
