@@ -31,6 +31,10 @@ body {
   background-color: var(--main-bg-color);
 }
 
+svg {
+  margin: 0.5rem;
+}
+
 ::-moz-selection {
   color: var(--selected-text-color);
   background: var(--selected-text-bg-color);
@@ -84,6 +88,11 @@ body {
   justify-content: space-around;
   grid-template-columns: repeat(3, 25%);
   margin: 1rem;
+}
+
+.svg-icon svg {
+  position: relative;
+  top: 0.55em;
 }
 
 #name {
