@@ -10,11 +10,8 @@ const Card = ({ project }) => (
       <p className="card-description"> {project.description} </p>
       <p className={("card-lang", "svg-icon")}>
         {" "}
-        Written in <Icon
-          label={project.language}
-          width="1em"
-          height="1em"
-        />{" "}
+        Written in
+        <Icon label={project.language} width="1em" height="1em" />{" "}
       </p>
       <div className="eq-div-flex">
         <a
