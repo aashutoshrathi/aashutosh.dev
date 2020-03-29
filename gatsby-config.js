@@ -1,8 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: `Aashutosh`,
-    description: `Dev Portfolio | Aashutosh Rathi`,
+    title: `Aashutosh Rathi | Blog`,
+    description: `Personal Blog and Site by Aashutosh Rathi`,
     author: `@aashutoshrathi`,
+    social: [
+      {
+        name: `Twitter`,
+        url: `https://twitter.com/AashutoshRathi`,
+      },
+      {
+        name: `GitHub`,
+        url: `https://github.com/aashutoshrathi`,
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

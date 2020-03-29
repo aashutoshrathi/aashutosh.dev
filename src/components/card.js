@@ -8,9 +8,10 @@ const Card = ({ project }) => (
       <h3 className="card-title"> {project.name.replace(/-/g, " ")} </h3>
       <h4 className="card-star"> {project.stargazers_count} ⭐️ </h4>
       <p className="card-description"> {project.description} </p>
-      <p className="card-lang">
+      <p className={("card-lang", "svg-icon")}>
         {" "}
-        Written in <Icon label={project.language} />{" "}
+        Written in
+        <Icon label={project.language} width="1em" height="1em" />{" "}
       </p>
       <div className="eq-div-flex">
         <a

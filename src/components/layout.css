@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Code:500&display=swap');
 footer {
   background-color: var(--nav-footer-bg-color);
   padding: 1rem;
@@ -56,7 +55,7 @@ nav > * {
 
 .title {
   text-align: center;
-  font-family: 'Fira Code', monospace;
+  font-family: 'Open Sans', monospace;
   font-size: 1.3rem !important;
 }
 

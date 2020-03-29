@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
 
 :root {
   --main-bg-color: #343b3f;
@@ -29,6 +29,10 @@ a:hover {
 
 body {
   background-color: var(--main-bg-color);
+}
+
+svg {
+  margin: 0.5rem;
 }
 
 ::-moz-selection {
@@ -86,15 +90,20 @@ body {
   margin: 1rem;
 }
 
+.svg-icon svg {
+  position: relative;
+  top: 0.55em;
+}
+
 #name {
   color: var(--main-text-color);
   text-align: center;
   font-size: 2rem;
-  font-family: Fira Code;
+  font-family: Open Sans;
 }
 
 #social a {
-  margin: 1rem;
+  margin: 0.2rem;
   font-size: xx-large;
 }
 
