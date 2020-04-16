@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Manrope:400,600&display=swap');
 
 :root {
   --main-bg-color: #343b3f;
@@ -15,7 +15,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Manrope', sans-serif;
   color: var(--main-text-color);
 }
 
@@ -99,7 +99,7 @@ svg {
   color: var(--main-text-color);
   text-align: center;
   font-size: 2rem;
-  font-family: Open Sans;
+  font-family: 'Manrope', sans-serif;
 }
 
 #social a {
