@@ -50,17 +50,30 @@ module.exports = {
         icon: `src/images/pic.jpeg`, // This path is relative to the root of the site.
       },
     },
+    // {
+    //   resolve: "gatsby-plugin-netlify",
+    //   options: {
+    //     headers: {
+    //       "/*": [
+    //         "X-Frame-Options: DENY",
+    //         "X-XSS-Protection: 1; mode=block",
+    //         "X-Content-Type-Options: nosniff",
+    //         `Content-Security-Policy: ${directivesToCspHeader(cspDirectives)}`,
+    //         "Referrer-Policy: no-referrer-when-downgrade",
+    //       ],
+    //     },
+    //   },
+    // },
     {
-      resolve: "gatsby-plugin-netlify",
+      resolve: `gatsby-plugin-csp`,
       options: {
-        headers: {
-          "/*": [
-            "X-Frame-Options: DENY",
-            "X-XSS-Protection: 1; mode=block",
-            "X-Content-Type-Options: nosniff",
-            `Content-Security-Policy: ${directivesToCspHeader(cspDirectives)}`,
-            "Referrer-Policy: no-referrer-when-downgrade",
-          ],
+        mergeScriptHashes: false,
+        mergeStyleHashes: false,
+        directives: {
+          "script-src": `'self' 'unsafe-inline' data: https://unpkg.com https://cdn.lr-ingest.io`,
+          "style-src": `'self' 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com`,
+          "img-src": `'self' data: www.google-analytics.com`,
+          "font-src": `'self' data: fonts.gstatic.com`,
         },
       },
     },
