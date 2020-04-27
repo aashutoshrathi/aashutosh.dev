@@ -1,3 +1,14 @@
+const cspDirectives = [
+  "script-src 'self' 'unsafe-inline' *.cloudfront.net unpkg.com",
+  "style-src 'self' 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com",
+  "img-src 'self' data: *.githubusercontent.com *.githubassets.com",
+  "font-src 'self' data: fonts.googleapis.com fonts.gstatic.com",
+  "worker-src 'self' blob: data:",
+  "connect-src 'self' api.aashutosh.dev urlreq.appspot.com",
+  "object-src 'none'",
+  "require-trusted-types-for 'script'",
+]
+
 module.exports = {
   siteMetadata: {
     title: `Aashutosh Rathi | Blog`,
@@ -38,28 +49,11 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-csp`,
-      options: {
-        mergeScriptHashes: false,
-        mergeStyleHashes: false,
-        directives: {
-          "script-src": `'self' 'unsafe-inline' *.cloudfront.net unpkg.com`,
-          "style-src": `'self' 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com`,
-          "img-src": `'self' data: *.githubusercontent.com *.githubassets.com`,
-          "font-src": `'self' data: fonts.googleapis.com fonts.gstatic.com`,
-          "worker-src": `'self' blob: data:`,
-          "connect-src": `'self' api.aashutosh.dev urlreq.appspot.com`,
-          "object-src": `'none'`,
-          "require-trusted-types-for": `'script'`,
-        },
-      },
-    },
-    {
       resolve: "gatsby-plugin-netlify",
       options: {
         headers: {
           "/*": [
-            "Content-Security-Policy: __REPLACE_ME__",
+            `Content-Security-Policy: ${cspDirectives.join(";")}`,
             "X-Frame-Options: DENY",
             "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload",
             "Upgrade-Insecure-Requests: 1",
