@@ -1,6 +1,6 @@
 const cspDirectives = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.lr-ingest.io",
+  "script-src 'self' 'unsafe-inline' https://*.cloudfront.net/ https://unpkg.com https://cdn.lr-ingest.io",
   "font-src 'self' data: https://fonts.googleapis.com https://fonts.gstatic.com",
   "img-src 'self' data: https://avatars0.githubusercontent.com/",
   "worker-src 'self' blob: data:",
