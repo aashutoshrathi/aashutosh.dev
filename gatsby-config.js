@@ -1,11 +1,12 @@
 const cspDirectives = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.lr-ingest.io",
+  "script-src-elem *",
   "font-src 'self' data: https://fonts.googleapis.com https://fonts.gstatic.com",
   "img-src 'self' data:",
   "worker-src 'self' blob: data:",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-  "connect-src 'self' https://api.aashutosh.dev",
+  "connect-src 'self' https://api.aashutosh.dev https://r.lr-ingest.io/",
 ]
 
 const directivesToCspHeader = headers => headers.join(";")
