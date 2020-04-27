@@ -6,7 +6,7 @@ const cspDirectives = [
   "img-src 'self' data:",
   "worker-src 'self' blob: data:",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-  "connect-src 'self' https://api.aashutosh.dev https://r.lr-ingest.io/",
+  "connect-src 'self' https://api.aashutosh.dev https://r.lr-ingest.io/ https://urlreq.appspot.com",
 ]
 
 const directivesToCspHeader = headers => headers.join(";")
