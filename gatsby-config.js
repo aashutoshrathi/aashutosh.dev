@@ -1,3 +1,15 @@
+const cspDirectives = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline' https://*.cloudfront.net/ https://unpkg.com",
+  "font-src 'self' data: https://fonts.googleapis.com https://fonts.gstatic.com",
+  "img-src 'self' data: https://*.githubusercontent.com/ https://*.githubassets.com/",
+  "worker-src 'self' blob: data:",
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+  "connect-src 'self' https://api.aashutosh.dev https://urlreq.appspot.com",
+]
+
+const directivesToCspHeader = headers => headers.join(";")
+
 module.exports = {
   siteMetadata: {
     title: `Aashutosh Rathi | Blog`,
@@ -35,6 +47,20 @@ module.exports = {
         theme_color: `#343b3f`,
         display: `minimal-ui`,
         icon: `src/images/pic.jpeg`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: "gatsby-plugin-netlify",
+      options: {
+        headers: {
+          "/*": [
+            "X-Frame-Options: DENY",
+            "X-XSS-Protection: 1; mode=block",
+            "X-Content-Type-Options: nosniff",
+            `Content-Security-Policy: ${directivesToCspHeader(cspDirectives)}`,
+            "Referrer-Policy: no-referrer-when-downgrade",
+          ],
+        },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
