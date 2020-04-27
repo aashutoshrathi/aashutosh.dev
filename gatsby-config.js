@@ -1,8 +1,10 @@
 const cspDirectives = [
   "default-src 'self'",
-  "script-src 'self'",
-  "font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com",
-  "img-src 'self' https://github.com",
+  "script-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.lr-ingest.io",
+  "font-src 'self' data: https://fonts.googleapis.com https://fonts.gstatic.com",
+  "img-src 'self' data:",
+  "worker-src 'self' blob: data:",
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "connect-src 'self' https://api.aashutosh.dev",
 ]
 
