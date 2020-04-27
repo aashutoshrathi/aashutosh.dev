@@ -45,8 +45,7 @@ module.exports = {
         directives: {
           "script-src": `'self' 'unsafe-inline' *.cloudfront.net unpkg.com`,
           "style-src": `'self' 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com`,
-          "img-src": `'self' data: *.githubusercontent.com *.githubassets.com"`,
-          "img-src": `'self' data: www.google-analytics.com`,
+          "img-src": `'self' data: *.githubusercontent.com *.githubassets.com`,
           "font-src": `'self' data: fonts.googleapis.com fonts.gstatic.com`,
           "worker-src": `'self' blob: data:`,
           "connect-src": `'self' api.aashutosh.dev urlreq.appspot.com`,
