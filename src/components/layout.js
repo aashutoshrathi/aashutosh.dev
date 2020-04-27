@@ -14,13 +14,13 @@ const Layout = ({ children }) => {
           async
           src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"
         ></script>
-        <script
+        {/* <script
           src="https://cdn.lr-ingest.io/LogRocket.min.js"
           crossorigin="anonymous"
         ></script>
         <script>
           window.LogRocket && window.LogRocket.init('egtlbt/aashutosh-rathi');
-        </script>
+        </script> */}
       </Helmet>
       <div className="site">
         <Header />
