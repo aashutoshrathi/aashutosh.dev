@@ -1,12 +1,13 @@
 const cspDirectives = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' https://www.google-analytics.com",
+  "script-src 'self'",
   "font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com",
-  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-  "img-src 'self' https://www.google-analytics.com",
+  "img-src 'self' https://github.com",
+  "connect-src 'self' https://api.aashutosh.dev",
 ]
 
 const directivesToCspHeader = headers => headers.join(";")
+
 module.exports = {
   siteMetadata: {
     title: `Aashutosh Rathi | Blog`,
