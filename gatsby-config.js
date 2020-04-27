@@ -1,5 +1,5 @@
 const cspDirectives = [
-  "script-src 'self' 'unsafe-inline' *.cloudfront.net unpkg.com",
+  "script-src 'self' *.cloudfront.net unpkg.com",
   "style-src 'self' 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com",
   "img-src 'self' data: *.githubusercontent.com *.githubassets.com",
   "font-src 'self' data: fonts.googleapis.com fonts.gstatic.com",
