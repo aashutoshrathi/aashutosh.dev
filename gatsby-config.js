@@ -7,6 +7,7 @@ const cspDirectives = [
   "connect-src 'self' api.aashutosh.dev urlreq.appspot.com",
   "object-src 'none'",
   "require-trusted-types-for 'script'",
+  "Feature-Policy vibrate 'self'; usermedia *; sync-xhr 'self'",
 ]
 
 module.exports = {
