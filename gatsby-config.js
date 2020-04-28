@@ -7,7 +7,6 @@ const cspDirectives = [
   "connect-src 'self' api.aashutosh.dev urlreq.appspot.com",
   "object-src 'none'",
   "require-trusted-types-for 'script'",
-  "Feature-Policy vibrate 'self'; usermedia *; sync-xhr 'self'",
 ]
 
 module.exports = {
@@ -55,6 +54,7 @@ module.exports = {
         headers: {
           "/*": [
             `Content-Security-Policy: ${cspDirectives.join(";")}`,
+            "Feature-Policy: vibrate 'self'; usermedia *; sync-xhr 'self'",
             "X-Frame-Options: DENY",
             "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload",
             "Upgrade-Insecure-Requests: 1",
