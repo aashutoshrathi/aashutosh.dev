@@ -1,5 +1,5 @@
 const cspDirectives = [
-  "script-src 'self' *.cloudfront.net unpkg.com 'sha256-egpbluqkD8NT0bY3bWy7raM9tRIMkfUWboq0Y8KqsFk=' 'sha256-RO/fsOOG1Pjr/GU/rMC3PRDUlAZbJbReLigQo4Ed+cw='",
+  "script-src 'self' *.cloudfront.net unpkg.com 'sha256-jFwHy8F6vD3srEixoFhY/KzLjJf8hqeGKJYhPUUqcrc=' 'sha256-RO/fsOOG1Pjr/GU/rMC3PRDUlAZbJbReLigQo4Ed+cw='",
   "style-src 'self' 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com",
   "img-src 'self' data: *.githubusercontent.com *.githubassets.com",
   "font-src 'self' data: fonts.googleapis.com fonts.gstatic.com",
