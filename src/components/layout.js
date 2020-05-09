@@ -14,6 +14,13 @@ const Layout = ({ children }) => {
           async
           src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"
         ></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-37968445-2"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-37968445-2');
+      </script>
         {/* <script
           src="https://cdn.lr-ingest.io/LogRocket.min.js"
           crossorigin="anonymous"
