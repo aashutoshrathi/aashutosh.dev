@@ -1,7 +1,7 @@
 const cspDirectives = [
-  "script-src 'self' *.cloudfront.net unpkg.com 'sha256-jFwHy8F6vD3srEixoFhY/KzLjJf8hqeGKJYhPUUqcrc=' 'sha256-egpbluqkD8NT0bY3bWy7raM9tRIMkfUWboq0Y8KqsFk=' 'sha256-RO/fsOOG1Pjr/GU/rMC3PRDUlAZbJbReLigQo4Ed+cw='",
+  "script-src 'self' *.cloudfront.net unpkg.com www.google-analytics.com 'sha256-Q07NZR8XtETrhMseR3RkEi713oTIsU/8/0wwV0XmWIM=' 'sha256-aOmVFCBtrRWsGTDBgY9meiJlu6JzM54EFnz9CtvAvW0=' 'sha256-egpbluqkD8NT0bY3bWy7raM9tRIMkfUWboq0Y8KqsFk='",
   "style-src 'self' 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com",
-  "img-src 'self' data: *.githubusercontent.com *.githubassets.com",
+  "img-src 'self' data: *.githubusercontent.com *.githubassets.com www.google-analytics.com",
   "font-src 'self' data: fonts.googleapis.com fonts.gstatic.com",
   "worker-src 'self' blob: data:",
   "connect-src 'self' api.aashutosh.dev urlreq.appspot.com",
@@ -32,6 +32,15 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-37968445-2",
+        // this option places the tracking script into the head of the DOM
+        head: true,
+        // other options
       },
     },
     `gatsby-transformer-sharp`,

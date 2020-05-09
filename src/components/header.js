@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 const Header = () => (
   <header>
@@ -20,7 +21,7 @@ const Header = () => (
             💼
           </span>
         </Link>
-        <a
+        <OutboundLink
           href="https://blog.aashutosh.dev"
           target="_blank"
           rel="noopener noreferrer"
@@ -29,7 +30,7 @@ const Header = () => (
           <span role="img" aria-label="blog">
             📋
           </span>
-        </a>
+        </OutboundLink>
       </nav>
     </nav>
   </header>
