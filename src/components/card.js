@@ -1,6 +1,7 @@
 import React from "react"
 import "./card.css"
 import Icon from "./icon"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 const Card = ({ project }) => (
   <div className="card">
@@ -14,7 +15,7 @@ const Card = ({ project }) => (
         <Icon label={project.language} width="1em" height="1em" />{" "}
       </p>
       <div className="eq-div-flex">
-        <a
+        <OutboundLink
           href={project.html_url}
           aria-label="Source Code"
           title="Source Code"
@@ -22,9 +23,9 @@ const Card = ({ project }) => (
           target="_blank"
         >
           <span className="title">{`</>`}</span> Code
-        </a>
+        </OutboundLink>
         {project.homepage ? (
-          <a
+          <OutboundLink
             href={project.homepage}
             aria-label="Demo/Docs"
             title="Demo/Docs"
@@ -39,7 +40,7 @@ const Card = ({ project }) => (
               📑
             </span>{" "}
             (Demo/Docs)
-          </a>
+          </OutboundLink>
         ) : (
           ""
         )}

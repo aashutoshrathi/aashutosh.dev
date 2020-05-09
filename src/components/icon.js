@@ -1,5 +1,6 @@
 import React from "react"
 import { titleCaseSingleWord } from "../utils/utils"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 export const path = {
   C:
@@ -32,7 +33,7 @@ const Icon = ({ url, label, width, height }) => {
   const sizeProps = { width: width ?? "1em", height: height ?? "1em" }
   return (
     <>
-      <a
+      <OutboundLink
         href={url}
         title={updatedLabel}
         target="_blank"
@@ -45,7 +46,7 @@ const Icon = ({ url, label, width, height }) => {
         ) : (
           <p> {updatedLabel} </p>
         )}
-      </a>
+      </OutboundLink>
     </>
   )
 }
