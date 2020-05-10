@@ -1,7 +1,7 @@
 const cspDirectives = [
   "script-src 'self' *.cloudfront.net unpkg.com www.google-analytics.com 'sha256-Q07NZR8XtETrhMseR3RkEi713oTIsU/8/0wwV0XmWIM=' 'sha256-aOmVFCBtrRWsGTDBgY9meiJlu6JzM54EFnz9CtvAvW0=' 'sha256-egpbluqkD8NT0bY3bWy7raM9tRIMkfUWboq0Y8KqsFk='",
   "style-src 'self' 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com",
-  "img-src 'self' data: *.githubusercontent.com *.githubassets.com www.google-analytics.com",
+  "img-src 'self' data: *.githubusercontent.com *.githubassets.com google-analytics.com stats.g.doubleclick.net",
   "font-src 'self' data: fonts.googleapis.com fonts.gstatic.com",
   "worker-src 'self' blob: data:",
   "connect-src 'self' api.aashutosh.dev urlreq.appspot.com",
