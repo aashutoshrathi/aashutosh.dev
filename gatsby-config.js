@@ -1,7 +1,7 @@
 const cspDirectives = [
   "script-src 'self' 'unsafe-inline' *.cloudfront.net unpkg.com www.google-analytics.com",
   "style-src 'self' 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com",
-  "img-src 'self' data: *.githubusercontent.com *.githubassets.com *.google-analytics.com stats.g.doubleclick.net",
+  "img-src 'self' data: https:",
   "font-src 'self' data: fonts.googleapis.com fonts.gstatic.com",
   "worker-src 'self' blob: data:",
   "connect-src 'self' api.aashutosh.dev urlreq.appspot.com",
