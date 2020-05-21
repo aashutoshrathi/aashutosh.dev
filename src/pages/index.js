@@ -24,6 +24,11 @@ const IndexPage = () => (
             label="Stackoverflow"
           />
           <Icon
+            url="https://dev.to/aashutoshrathi"
+            label="Dev"
+            viewBox="0 0 448 512"
+          />
+          <Icon
             url="https://linkedin.com/in/aashutoshrathi/"
             label="LinkedIn"
           />
