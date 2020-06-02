@@ -1,11 +1,10 @@
 import React from "react"
 import "./button.css"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 const Button = ({ url, text }) => {
   return (
     <>
-      <OutboundLink
+      <a
         href={url}
         target=" _blank"
         rel="noopener noreferrer"
@@ -14,7 +13,7 @@ const Button = ({ url, text }) => {
         )}
       >
         {text}
-      </OutboundLink>
+      </a>
     </>
   )
 }

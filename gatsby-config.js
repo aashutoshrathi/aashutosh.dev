@@ -1,5 +1,5 @@
 const cspDirectives = [
-  "script-src 'self' 'unsafe-inline' *.cloudfront.net unpkg.com www.google-analytics.com",
+  "script-src 'self' 'unsafe-inline' *.cloudfront.net unpkg.com",
   "style-src 'self' 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com",
   "img-src 'self' data: https:",
   "font-src 'self' data: fonts.googleapis.com fonts.gstatic.com",
@@ -32,15 +32,6 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-37968445-2",
-        // this option places the tracking script into the head of the DOM
-        head: true,
-        // other options
       },
     },
     `gatsby-transformer-sharp`,
