@@ -6,7 +6,7 @@ const cspDirectives = [
   "worker-src 'self' blob: data:",
   "connect-src 'self' api.aashutosh.dev urlreq.appspot.com",
   "object-src 'none'",
-  "require-trusted-types-for 'script'",
+  // "require-trusted-types-for 'script'",
 ]
 
 module.exports = {
