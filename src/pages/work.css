@@ -1,5 +1,5 @@
 .calendar {
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   border: 1px solid #dddddd;
   border-radius: 3px;
   text-align: center;
@@ -25,7 +25,7 @@
 }
 
 .contrib-column > span {
-    color: var(--calendar-text-color);
+  color: var(--calendar-text-color);
 }
 
 .calendar-graph {
@@ -74,7 +74,7 @@
 }
 
 .wday > text {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 .contrib-footer {
@@ -86,11 +86,20 @@
   height: 26px;
 }
 
+.heading {
+  font-size: 1.5rem;
+}
+
+.margin-top-small {
+  margin-top: 1rem;
+}
+
 .left.text-muted {
   float: left;
   margin-left: 15px;
   color: whitesmoke;
 }
+
 .left.text-muted a {
   color: #4078c0;
   text-decoration: none;
@@ -107,6 +116,7 @@ h2.f4.text-normal.mb-3 {
 .float-left.text-gray {
   float: left;
 }
+
 #user-activity-overview {
   display: none;
 }

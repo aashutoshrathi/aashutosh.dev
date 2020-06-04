@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import Card from "./card.js"
+import "./projects.css"
 
 const CACHE = {}
 const PROJECT_URL = process.env.GATSBY_API_URI

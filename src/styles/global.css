@@ -7,7 +7,6 @@
   --main-text-color: white;
   --calendar-text-color: whitesmoke;
   --nav-footer-bg-color: #252525fa;
-  --alert-text-color: #90beec;
   --small-padding: 1rem;
   --med-margin: 1.2rem;
 }
@@ -45,10 +44,6 @@ svg {
   background: var(--selected-text-bg-color);
 }
 
-.heading {
-  font-size: 1.5rem;
-}
-
 .active {
   border-bottom: solid 0.1rem white;
   display: inline;
@@ -57,10 +52,6 @@ svg {
 
 .bold {
   font-weight: bold !important;
-}
-
-.margin-top-small {
-  margin-top: 1rem;
 }
 
 .text-center {
@@ -83,18 +74,6 @@ svg {
   margin-right: var(--med-margin);
 }
 
-.projects {
-  display: inline-grid;
-  justify-content: space-around;
-  grid-template-columns: repeat(3, 25%);
-  margin: 1rem;
-}
-
-.svg-icon svg {
-  position: relative;
-  top: 0.55em;
-}
-
 #name {
   color: var(--main-text-color);
   text-align: center;
@@ -105,20 +84,4 @@ svg {
 #social a {
   margin: 0.2rem;
   font-size: xx-large;
-}
-
-@media only screen and (max-width: 768px) {
-  .projects {
-    grid-template-columns: repeat(2, 42%);
-    align-items: stretch;
-    justify-content: space-around;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .projects {
-    grid-template-columns: repeat(1, 95%);
-    align-items: stretch;
-    justify-content: space-around;
-  }
 }

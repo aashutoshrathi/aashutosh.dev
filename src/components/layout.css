@@ -32,16 +32,6 @@ nav > * {
   padding: 0.5rem;
 }
 
-.alert-primary > p {
-  color: var(--alert-text-color) !important; 
-  margin-bottom: 0 !important;
-}
-
-.alert-primary > p > a {
-  color: var(--alert-text-color) !important; 
-  font-weight: bolder !important;
-}
-
 .site {
   margin: 0;
   display: flex;
