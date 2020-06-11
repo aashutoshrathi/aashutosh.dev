@@ -54,6 +54,16 @@ svg {
   font-weight: bold !important;
 }
 
+.link {
+  text-decoration: underline dashed white !important;
+  text-underline-position: under;
+}
+
+.link:hover {
+  text-decoration: underline dashed yellow !important;
+  text-underline-position: under;
+}
+
 .text-center {
   text-align: center;
 }

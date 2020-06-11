@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import TilCard from "../components/til-card"
+import "./til.css"
 
 const CACHE = {}
 const TIL_URL = `${process.env.GATSBY_API_URI}til`
@@ -39,9 +41,10 @@ const Til = () => {
       <h4 className={["text-center"].join(" ")}>
         This page contains all #TILs, that I tweeted
       </h4>
+
       <section className="tils">
         {tils.map(til => (
-          <div key={til.id}>{til.full_text}</div>
+          <TilCard key={til.id} til={til} />
         ))}
       </section>
     </Layout>
