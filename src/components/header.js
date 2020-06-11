@@ -21,6 +21,12 @@ const Header = () => (
             💼
           </span>
         </Link>
+        <Link to="/til/" activeClassName="active">
+          {"TIL "}
+          <span role="img" aria-label="til">
+            📚
+          </span>
+        </Link>
         <OutboundLink
           href="https://blog.aashutosh.dev"
           target="_blank"
