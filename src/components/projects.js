@@ -3,7 +3,7 @@ import Card from "./card.js"
 import "./projects.css"
 
 const CACHE = {}
-const PROJECT_URL = process.env.GATSBY_API_URI
+const PROJECT_URL = `${process.env.GATSBY_API_URI}projects`
 
 const Projects = () => {
   const [projects, setProjects] = useState([])

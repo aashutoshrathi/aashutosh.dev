@@ -50,7 +50,7 @@ const Icon = ({ url, label, width, height, viewBox }) => {
             <path title={updatedLabel} fill={color} d={path[updatedLabel]} />
           </svg>
         ) : (
-          <p> {updatedLabel} </p>
+          <span> {updatedLabel} </span>
         )}
       </OutboundLink>
     </>
