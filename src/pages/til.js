@@ -31,9 +31,9 @@ const Til = () => {
 
   return (
     <Layout>
-      <SEO title="TILs" />
+      <SEO title="Today I Learned" />
       <h3 className={["text-center", "padding-small", "heading"].join(" ")}>
-        TILs{" "}
+        Today I Learned{" "}
         <span role="img" aria-label="project">
           📚
         </span>
