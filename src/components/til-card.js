@@ -1,5 +1,6 @@
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 import React from "react"
+import Linkify from "react-linkify"
 import "./card.css"
 
 const TilCard = ({ til }) => {
@@ -12,7 +13,10 @@ const TilCard = ({ til }) => {
         <div className="til-card-boundary">
           <span aria-label="Tweet Time">{dateString}</span>
         </div>
-        <p className="card-til"> {til.full_text} </p>
+        <p className="card-til">
+          {" "}
+          <Linkify>{til.full_text}</Linkify>{" "}
+        </p>
         <div className="til-card-boundary">
           <OutboundLink
             href={til.link_to_tweet}
