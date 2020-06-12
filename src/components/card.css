@@ -64,6 +64,13 @@
   margin-top: 0.5rem !important;
 }
 
+.card-til > a {
+  font-style: normal !important;
+  color: var(--description-text-color);
+  text-decoration: underline solid var(--twitter-brand) !important;
+  text-underline-position: under;
+}
+
 .link-twitter {
   text-decoration: underline solid white !important;
   color: var(--dull-white);
