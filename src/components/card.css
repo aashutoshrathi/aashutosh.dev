@@ -61,6 +61,30 @@
   color: rgba(255, 255, 255, 0.856);
   text-align: left;
   max-height: 15rem;
+  margin-top: 0.5rem !important;
+}
+
+.link-twitter {
+  text-decoration: underline solid white !important;
+  color: var(--dull-white);
+  text-underline-position: under;
+}
+
+.link-twitter:hover {
+  text-decoration: underline solid var(--twitter-brand) !important;
+  color: var(--twitter-brand);
+  text-underline-position: under;
+}
+
+.til-card-boundary {
+  display: flex;
+  font-size: 0.85rem;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.til-card-boundary > span {
+  color: var(--dull-white);
 }
 
 .svg-icon svg {

@@ -9,6 +9,8 @@
   --nav-footer-bg-color: #252525fa;
   --small-padding: 1rem;
   --med-margin: 1.2rem;
+  --twitter-brand: #1da1f2;
+  --dull-white: #c5c4bf;
 }
 
 * {
@@ -52,16 +54,6 @@ svg {
 
 .bold {
   font-weight: bold !important;
-}
-
-.link {
-  text-decoration: underline dashed white !important;
-  text-underline-position: under;
-}
-
-.link:hover {
-  text-decoration: underline dashed yellow !important;
-  text-underline-position: under;
 }
 
 .text-center {
