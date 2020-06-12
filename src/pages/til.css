@@ -13,7 +13,7 @@
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 532px) {
   .tils {
     grid-template-columns: repeat(1, 95%);
     align-items: stretch;
