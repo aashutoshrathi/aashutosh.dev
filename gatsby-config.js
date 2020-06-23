@@ -12,7 +12,7 @@ const cspDirectives = [
 module.exports = {
   siteMetadata: {
     title: `Aashutosh Rathi | Blog`,
-    description: `Personal Blog and Site by Aashutosh Rathi`,
+    description: `~/home/aashutosh`,
     author: `@aashutoshrathi`,
     social: [
       {
@@ -52,7 +52,7 @@ module.exports = {
         background_color: `#252525`,
         theme_color: `#343b3f`,
         display: `minimal-ui`,
-        icon: `src/images/pic.jpeg`, // This path is relative to the root of the site.
+        icon: `src/images/pic.webp`, // This path is relative to the root of the site.
       },
     },
     {
