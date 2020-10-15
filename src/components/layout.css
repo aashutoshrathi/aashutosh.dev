@@ -5,7 +5,6 @@ footer {
 
 header {
   background-color: var(--nav-footer-bg-color);
-  margin-bottom: 1.5rem;
 }
 
 nav {
@@ -21,7 +20,7 @@ nav > * {
 }
 
 .header {
-  padding: 1.5rem;
+  padding: 1%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -40,7 +39,7 @@ nav > * {
 }
 
 .site-content {
-  flex-grow: 1;
+  margin: auto;
 }
 
 .title {

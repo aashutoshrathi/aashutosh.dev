@@ -28,6 +28,10 @@ a:hover {
   text-decoration: none !important;
 }
 
+main {
+  margin: auto auto;
+}
+
 body {
   background-color: var(--main-bg-color);
 }

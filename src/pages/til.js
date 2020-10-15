@@ -1,33 +1,15 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import Layout from "../components/layout"
+import useSWR from "swr"
 import SEO from "../components/seo"
 import TilCard from "../components/til-card"
 import "./til.css"
+import { fetchData } from "../utils/utils"
 
-const CACHE = {}
 const TIL_URL = `${process.env.GATSBY_API_URI}til`
 
 const Til = () => {
-  const [tils, setTil] = useState([])
-
-  const getTils = () => {
-    fetch(TIL_URL)
-      .then(res => res.json())
-      .then(data => {
-        CACHE[TIL_URL] = data
-        setTil(data)
-      })
-      .catch(err => {
-        console.log(err)
-      })
-  }
-
-  useEffect(() => {
-    if (CACHE[TIL_URL] !== undefined) {
-      setTil(CACHE[TIL_URL])
-    }
-    getTils()
-  }, [])
+  const { data: tils } = useSWR(TIL_URL, fetchData(TIL_URL))
 
   return (
     <Layout>
@@ -43,7 +25,7 @@ const Til = () => {
       </h4>
 
       <section className="tils">
-        {tils.map(til => (
+        {tils?.map(til => (
           <TilCard key={til.id} til={til} />
         ))}
       </section>
