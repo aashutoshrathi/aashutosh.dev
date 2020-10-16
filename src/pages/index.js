@@ -7,7 +7,7 @@ import Icon from "../components/icon"
 
 const IndexPage = () => (
   <>
-    <Layout>
+    <Layout verticallyCenter={true}>
       <SEO title="Home" />
       <>
         <div className="text-center">

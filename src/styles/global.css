@@ -28,8 +28,9 @@ a:hover {
   text-decoration: none !important;
 }
 
-main {
-  margin: auto auto;
+.main {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 body {
