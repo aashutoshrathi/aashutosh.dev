@@ -22,7 +22,7 @@ jobs:
         uses: jakepartusch/wait-for-netlify-action@v1
         id: waitFor200
         with:
-          site_name: "aashutosh.dev"
+          site_name: ${{ secrets.NETLIFY_SITE_ID }}
           max_timeout: 90
       - name: Lighthouse CI
         run: |
