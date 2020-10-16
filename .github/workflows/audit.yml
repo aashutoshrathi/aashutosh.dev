@@ -18,7 +18,7 @@ jobs:
       - name: Build
         run: |
           npm run build
-      - name: Waiting for 200 from the Netlify Preview
+      - name: Waiting for Netlify Preview
         uses: jakepartusch/wait-for-netlify-action@v1
         id: waitFor200
         with:
