@@ -10,7 +10,7 @@ const Layout = ({ children, verticallyCenter }) => {
     <>
       <div className="site">
         <Header />
-        <main className={`site-content ${verticallyCenter ? "main" : ""}`}>
+        <main className={`${verticallyCenter ? "main" : "site-content"}`}>
           {children}
         </main>
         <Footer />

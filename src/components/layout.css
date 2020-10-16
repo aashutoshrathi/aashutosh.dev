@@ -1,9 +1,6 @@
 footer {
   background-color: var(--nav-footer-bg-color);
   padding: 1.1%;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
 
 header {
@@ -32,6 +29,10 @@ nav > * {
 
 .header > * {
   padding: 0.5rem;
+}
+
+.site-content {
+  flex-grow: 1;
 }
 
 .site {
