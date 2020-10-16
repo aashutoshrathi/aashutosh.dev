@@ -1,6 +1,7 @@
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 import React from "react"
 import Linkify from "react-linkify"
+import { parseBetter } from "../utils/utils"
 import "./card.css"
 
 const TilCard = ({ til }) => {
@@ -15,7 +16,7 @@ const TilCard = ({ til }) => {
         </div>
         <p className="card-til">
           {" "}
-          <Linkify>{til.full_text}</Linkify>{" "}
+          <Linkify>{parseBetter(til.full_text)}</Linkify>{" "}
         </p>
         <div className="til-card-boundary">
           <OutboundLink
