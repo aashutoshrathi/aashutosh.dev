@@ -4,7 +4,7 @@ const cspDirectives = [
   "img-src 'self' data: https:",
   "font-src 'self' data: fonts.googleapis.com fonts.gstatic.com",
   "worker-src 'self' blob: data:",
-  "connect-src 'self' api.aashutosh.dev apiv2.aashutosh.dev urlreq.appspot.com",
+  "connect-src 'self' 'unsafe-inline' api.aashutosh.dev urlreq.appspot.com www.google-analytics.com stats.g.doubleclick.net",
   "object-src 'none'",
   // "require-trusted-types-for 'script'",
 ]

@@ -1,35 +1,18 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
+import useSWR from "swr"
 import Card from "./card.js"
 import "./projects.css"
 
-const CACHE = {}
+import { fetchData } from "../utils/utils"
+
 const PROJECT_URL = `${process.env.GATSBY_API_URI}projects`
 
 const Projects = () => {
-  const [projects, setProjects] = useState([])
-
-  const getProjects = () => {
-    fetch(PROJECT_URL)
-      .then(res => res.json())
-      .then(data => {
-        CACHE[PROJECT_URL] = data
-        setProjects(data)
-      })
-      .catch(err => {
-        console.log(err)
-      })
-  }
-
-  useEffect(() => {
-    if (CACHE[PROJECT_URL] !== undefined) {
-      setProjects(CACHE[PROJECT_URL])
-    }
-    getProjects()
-  }, [])
+  const { data: projects } = useSWR(PROJECT_URL, fetchData(PROJECT_URL))
 
   return (
     <section className="projects">
-      {projects.map(project => (
+      {projects?.map(project => (
         <Card key={project.id} project={project} />
       ))}
     </section>

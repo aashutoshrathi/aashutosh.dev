@@ -1,11 +1,10 @@
 footer {
   background-color: var(--nav-footer-bg-color);
-  padding: 1rem;
+  padding: 1.1%;
 }
 
 header {
   background-color: var(--nav-footer-bg-color);
-  margin-bottom: 1.5rem;
 }
 
 nav {
@@ -21,7 +20,7 @@ nav > * {
 }
 
 .header {
-  padding: 1.5rem;
+  padding: 1%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -32,15 +31,15 @@ nav > * {
   padding: 0.5rem;
 }
 
+.site-content {
+  flex-grow: 1;
+}
+
 .site {
   margin: 0;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-}
-
-.site-content {
-  flex-grow: 1;
 }
 
 .title {
