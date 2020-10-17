@@ -11,9 +11,11 @@ const cspDirectives = [
 
 module.exports = {
   siteMetadata: {
-    title: `Aashutosh Rathi | Blog`,
-    description: `~/home/aashutosh`,
-    author: `@aashutoshrathi`,
+    title: `Aashutosh Rathi | Developer`,
+    description: `I solve problems using code (Mostly web). Currently building stuff @Jio. Lead Dev communities at IIITV in past. Feel free to ping me for discussions on Tech || Cosmos`,
+    navigationString: `Aashutosh Rathi | `,
+    author: `@AashutoshRathi`,
+    coverImage: `https://files.aashutosh.dev/pale_blue_dot.jpg`,
     social: [
       {
         name: `Twitter`,
@@ -61,7 +63,7 @@ module.exports = {
         headers: {
           "/*": [
             `Content-Security-Policy: ${cspDirectives.join(";")}`,
-            "Feature-Policy: vibrate 'self'; usermedia *; sync-xhr 'self'",
+            "Feature-Policy: sync-xhr 'self'",
             "X-Frame-Options: DENY",
             "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload",
             "Upgrade-Insecure-Requests: 1",
