@@ -12,6 +12,7 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            navigationString
           }
         }
       }
@@ -26,7 +27,7 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`${site.siteMetadata.navigationString}%s`}
       meta={[
         {
           name: `description`,
@@ -37,16 +38,28 @@ function SEO({ description, lang, meta, title }) {
           content: title,
         },
         {
+          property: `og:url`,
+          content: `https://aashutosh.dev`,
+        },
+        {
           property: `og:description`,
           content: metaDescription,
         },
         {
           property: `og:type`,
-          content: `Personal Website`,
+          content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: `https://github.com/aashutoshrathi.png`,
         },
         {
           name: `twitter:card`,
-          content: metaDescription,
+          content: `summary`,
+        },
+        {
+          property: `twitter:url`,
+          content: `https://aashutosh.dev`,
         },
         {
           name: `twitter:creator`,
@@ -59,6 +72,10 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          property: `twitter:image`,
+          content: `https://github.com/aashutoshrathi.png`,
         },
       ].concat(meta)}
     />
