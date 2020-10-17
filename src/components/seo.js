@@ -13,6 +13,7 @@ function SEO({ description, lang, meta, title }) {
             description
             author
             navigationString
+            coverImage
           }
         }
       }
@@ -51,7 +52,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: `https://github.com/aashutoshrathi.png`,
+          content: `${site.siteMetadata.coverImage}`,
         },
         {
           name: `twitter:card`,
@@ -75,7 +76,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `twitter:image`,
-          content: `https://github.com/aashutoshrathi.png`,
+          content: `${site.siteMetadata.coverImage}`,
         },
       ].concat(meta)}
     />
