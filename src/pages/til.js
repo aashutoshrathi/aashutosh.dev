@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import useSWR from "swr"
 import SEO from "../components/seo"
+import Loader from "../components/loader"
 import TilCard from "../components/til-card"
 import "./til.css"
 import { fetchData } from "../utils/utils"
@@ -24,11 +25,15 @@ const Til = () => {
         This page contains all #TILs, that I tweeted
       </h4>
 
-      <section className="tils">
-        {tils?.map(til => (
-          <TilCard key={til.id} til={til} />
-        ))}
-      </section>
+      {tils ? (
+        <section className="tils">
+          {tils?.map(til => (
+            <TilCard key={til.id} til={til} />
+          ))}
+        </section>
+      ) : (
+        <Loader />
+      )}
     </Layout>
   )
 }
