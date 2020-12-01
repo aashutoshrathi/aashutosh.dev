@@ -37,14 +37,7 @@ const IndexPage = () => (
 
         <div className="text-center padding-small">
           <Button url="https://resume.aashutosh.dev" text="Résumé" />
-          <Button
-            url="https://ghuser.io/aashutoshrathi"
-            text={
-              <span>
-                <span className="bold">gh</span>user Profile
-              </span>
-            }
-          />
+          <Button url="mailto:me@aashutosh.dev" text="Email me" />
         </div>
       </>
     </Layout>
