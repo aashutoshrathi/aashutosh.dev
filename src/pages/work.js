@@ -22,7 +22,7 @@ const IndexPage = () => {
           showTotalCount={false}
           fontSize={16}
           blockSize={14}
-          years={[2020, 2019]}
+          years={[new Date().getFullYear(), new Date().getFullYear() - 1]}
           fullYear={false}
         >
           <ReactTooltip delayShow={10} html />
