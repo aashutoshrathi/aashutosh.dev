@@ -10,7 +10,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Work" />
-      <h3 className={["text-center", "padding-small", "heading"].join(" ")}>
+      <h3 className={`text-center padding-small heading`}>
         My GitHub Calendar{" "}
         <span role="img" aria-label="calendar">
           🗓
@@ -19,9 +19,10 @@ const IndexPage = () => {
       <div className="cal-container">
         <GitHubCalendar
           username="aashutoshrathi"
-          showTotalCount={false}
           fontSize={16}
           blockSize={14}
+          hideColorLegend
+          hideTotalCount
         >
           <ReactTooltip delayShow={10} html />
         </GitHubCalendar>

@@ -1,5 +1,5 @@
 import React from "react"
-import { titleCaseSingleWord } from "../utils/utils"
+import { titleCase } from "../utils/utils"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 export const path = {
@@ -30,7 +30,7 @@ export const path = {
 }
 
 const Icon = ({ url, label, width, height, viewBox }) => {
-  const updatedLabel = titleCaseSingleWord(label.replace(/\+/g, "p")) // for c++
+  const updatedLabel = titleCase(label.replace(/\+/g, "p")) // for c++
   const color = "#ffffff"
   const svgProps = {
     viewBox: viewBox ?? "0 0 24 24",

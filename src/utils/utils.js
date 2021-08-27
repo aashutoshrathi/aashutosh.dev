@@ -1,12 +1,12 @@
-const titleCaseSingleWord = str =>
+const titleCase = str =>
   str
     .toLowerCase()
     .replace(/\b(\w)/g, s => s.toUpperCase())
     .split(" ")[0]
 
-const fetchData = async url => {
+const fetchData = async (url) => {
   const response = await fetch(url)
-  return await response.json()
+  return response.json()
 }
 
 const parseBetter = text => {
@@ -18,4 +18,4 @@ const parseBetter = text => {
   return dom.body.textContent
 }
 
-export { titleCaseSingleWord, fetchData, parseBetter }
+export { titleCase, fetchData, parseBetter }
