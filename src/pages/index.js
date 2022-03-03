@@ -20,7 +20,7 @@ const IndexPage = () => (
           <Icon url="https://github.com/aashutoshrathi" label="GitHub" />
           <Icon url="https://twitter.com/AashutoshRathi" label="Twitter" />
           <Icon
-            url="https://stackoverflow.com/users/story/7326407"
+            url="https://stackoverflow.com/users/7326407/aashutosh-rathi?tab=profile"
             label="Stackoverflow"
           />
           <Icon
