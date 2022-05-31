@@ -1,9 +1,8 @@
 import React from "react"
 import Button from "../components/button"
-import Image from "../components/image"
+import Icon from "../components/icon"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Icon from "../components/icon"
 
 const IndexPage = () => (
   <>

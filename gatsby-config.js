@@ -12,7 +12,7 @@ const cspDirectives = [
 module.exports = {
   siteMetadata: {
     title: `Aashutosh Rathi | Developer`,
-    description: `I solve problems using code (Mostly web). Currently building stuff @Jio. Lead Dev communities at IIITV in past. Feel free to ping me for discussions on Tech || Cosmos`,
+    description: `I solve problems using code. Currently building stuff @regie.ai. Lead Dev communities at IIITV in past. Feel free to ping me for discussions on Tech || Cosmos`,
     navigationString: `Aashutosh Rathi | `,
     author: `@AashutoshRathi`,
     coverImage: `https://files.aashutosh.dev/pale_blue_dot.jpg`,
