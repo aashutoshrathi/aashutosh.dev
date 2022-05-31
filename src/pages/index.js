@@ -10,11 +10,8 @@ const IndexPage = () => (
     <Layout verticallyCenter={true}>
       <SEO title="Home" />
       <>
-        <div className="text-center">
-          <Image />
-        </div>
         <p id="name" className="padding-small">
-          Aashutosh Rathi
+          👋 I'm Aashutosh Rathi
         </p>
         <div id="social" className="text-center">
           <Icon url="https://github.com/aashutoshrathi" label="GitHub" />
