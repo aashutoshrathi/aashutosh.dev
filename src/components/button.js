@@ -1,6 +1,6 @@
 import React from "react"
 import "./button.css"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 const Button = ({ url, text }) => {
   return (

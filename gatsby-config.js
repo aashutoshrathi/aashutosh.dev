@@ -1,10 +1,10 @@
 const cspDirectives = [
-  "script-src 'self' 'unsafe-inline' *.cloudfront.net unpkg.com www.google-analytics.com",
+  "script-src 'self' 'unsafe-inline' *.cloudfront.net unpkg.com www.google-analytics.com www.googletagmanager.com",
   "style-src 'self' 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com",
   "img-src 'self' data: https:",
   "font-src 'self' data: fonts.googleapis.com fonts.gstatic.com",
   "worker-src 'self' blob: data:",
-  "connect-src 'self' 'unsafe-inline' api.aashutosh.dev github-contributions-api.jogruber.de www.google-analytics.com stats.g.doubleclick.net",
+  "connect-src 'self' 'unsafe-inline' api.aashutosh.dev github-contributions-api.jogruber.de www.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com",
   "object-src 'none'",
   // "require-trusted-types-for 'script'",
 ]
@@ -29,6 +29,9 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -37,12 +40,22 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: "UA-37968445-2",
-        // this option places the tracking script into the head of the DOM
-        head: true,
-        // other options
+        trackingIds: ["UA-37968445-2"],
+        // This object gets passed directly to the gtag config command
+        // This config will be shared across all trackingIds
+        gtagConfig: {
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+          // Setting this parameter is also optional
+          respectDNT: true,
+        },
       },
     },
     {

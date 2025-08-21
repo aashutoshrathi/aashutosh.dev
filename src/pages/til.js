@@ -10,7 +10,7 @@ import { fetchData } from "../utils/utils"
 const TIL_URL = `${process.env.GATSBY_API_URI}til`
 
 const Til = () => {
-  const { data: tils } = useSWR(TIL_URL, fetchData(TIL_URL))
+  const { data: tils } = useSWR(TIL_URL, fetchData)
 
   return (
     <Layout>

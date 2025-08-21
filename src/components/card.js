@@ -1,7 +1,7 @@
 import React from "react"
 import "./card.css"
 import Icon from "./icon"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 const Card = ({ project }) => (
   <div className="card">

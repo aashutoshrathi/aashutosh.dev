@@ -1,6 +1,6 @@
 import React from "react"
 import { titleCase } from "../utils/utils"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 export const path = {
   C:
