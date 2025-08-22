@@ -1,4 +1,4 @@
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 import React from "react"
 import Linkify from "react-linkify"
 import { parseBetter } from "../utils/utils"

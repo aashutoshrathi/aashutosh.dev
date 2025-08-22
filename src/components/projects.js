@@ -8,7 +8,7 @@ import "./projects.css"
 const PROJECT_URL = `${process.env.GATSBY_API_URI}projects`
 
 const Projects = () => {
-  const { data: projects } = useSWR(PROJECT_URL, fetchData(PROJECT_URL))
+  const { data: projects } = useSWR(PROJECT_URL, fetchData)
 
   return (
     <>
