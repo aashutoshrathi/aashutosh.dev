@@ -3,10 +3,11 @@ import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
 import { LayoutProps } from "../types"
+import { ThemeProvider } from "../context/ThemeContext"
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <>
+    <ThemeProvider>
       <div className="site">
         <Header />
         <main className="site-content">
@@ -14,7 +15,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </main>
         <Footer />
       </div>
-    </>
+    </ThemeProvider>
   )
 }
 

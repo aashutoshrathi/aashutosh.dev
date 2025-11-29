@@ -1,6 +1,6 @@
 .custom-link {
   position: relative;
-  color: #2563eb;
+  color: var(--link-color);
   text-decoration: none !important;
   font-weight: 500;
   display: inline;
@@ -11,8 +11,8 @@
 }
 
 .custom-link:hover {
-  color: #1d4ed8;
-  border-bottom: 2px dashed #1d4ed8;
+  color: var(--link-hover-color);
+  border-bottom: 2px dashed var(--link-hover-color);
   text-decoration: none !important;
 }
 
@@ -25,7 +25,7 @@
 .custom-link.animated:hover {
   background-image: linear-gradient(
     to right,
-    #1d4ed8 50%,
+    var(--link-hover-color) 50%,
     transparent 50%
   );
   background-position: 0 100%;
@@ -51,7 +51,8 @@
 }
 
 .custom-link.subtle:hover {
-  border-bottom: 2px dashed rgba(37, 99, 235, 0.6);
+  border-bottom: 2px dashed var(--link-hover-color);
+  opacity: 0.8;
 }
 
 /* Bold variant with thicker dashes */
@@ -61,5 +62,5 @@
 }
 
 .custom-link.bold:hover {
-  border-bottom: 3px dashed #1d4ed8;
+  border-bottom: 3px dashed var(--link-hover-color);
 }

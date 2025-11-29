@@ -1,12 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;700&family=IBM+Plex+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;700&family=IBM+Plex+Mono&family=Noto+Sans+Mono:wght@400;500;600&display=swap');
 
 :root {
   --main-bg-color: #ffffff;
   --main-text-color: #1a202c;
   --selected-text-color: #ffffff;
   --selected-text-bg-color: #2563eb;
+  --link-color: #2563eb;
+  --link-hover-color: #1d4ed8;
+  --icon-color: #1a202c;
   --twitter-brand: #1da1f2;
   --dull-white: #c5c4bf;
+}
+
+[data-theme="dark"] {
+  --main-bg-color: #0f172a;
+  --main-text-color: #f8fafc;
+  --selected-text-color: #0f172a;
+  --selected-text-bg-color: #60a5fa;
+  --link-color: #60a5fa;
+  --link-hover-color: #93c5fd;
+  --icon-color: #f8fafc;
 }
 
 * {
@@ -14,15 +27,23 @@
   padding: 0;
   font-family: 'Google Sans Flex', sans-serif;
   color: var(--main-text-color);
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
 }
 
 a {
   text-decoration: none !important;
-  color: #2563eb;
+  color: var(--link-color);
+  font-family: 'Noto Sans Mono', 'IBM Plex Mono', monospace;
 }
 
 a:hover {
   text-decoration: underline !important;
+  color: var(--link-hover-color);
 }
 
 .main {
@@ -36,7 +57,7 @@ body {
 
 svg {
   margin: 0.5rem;
-  fill: var(--main-text-color);
+  fill: var(--icon-color);
 }
 
 ::-moz-selection {

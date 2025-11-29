@@ -46,7 +46,7 @@ const IndexPage: React.FC = () => (
             fontSize: "1.15rem",
             maxWidth: "550px",
             lineHeight: "1.6",
-            color: "#4a5568",
+            color: "#ced8feff",
             marginBottom: "2rem",
           }}
         >
