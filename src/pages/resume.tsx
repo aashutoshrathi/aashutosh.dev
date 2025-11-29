@@ -8,9 +8,9 @@ const ResumePage: React.FC = () => {
       <SEO title="Résumé" />
       <div className="w-full h-[calc(100vh-80px)] flex items-center justify-center">
         <iframe
-          src="https://resume.aashutosh.dev#view=FitH&navpanes=0"
+          src="https://files.aashutosh.dev/resume.pdf#view=FitH&navpanes=0"
           className="w-full h-full border-0 bg-white"
-          title="Aashutosh Rathi Resume"
+          title="Résumé of Aashutosh Rathi"
           style={{ minHeight: '600px' }}
         />
       </div>
