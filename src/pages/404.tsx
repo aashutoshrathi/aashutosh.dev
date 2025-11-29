@@ -1,7 +1,7 @@
-import { useEffect } from "react"
+import React, { useEffect } from "react"
 import { navigate } from "gatsby"
 
-const NotFound = () => {
+const NotFound: React.FC = () => {
   useEffect(() => {
     navigate("/")
   }, [])

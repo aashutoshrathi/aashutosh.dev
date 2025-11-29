@@ -1,7 +1,7 @@
 import React from "react"
 import Icon from "./icon"
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer className="text-center mono">
       <div id="social" className="text-center">

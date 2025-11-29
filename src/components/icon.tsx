@@ -1,8 +1,9 @@
 import React from "react"
 import { titleCase } from "../utils/utils"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
+import { IconProps, PathMap } from "../types"
 
-export const path = {
+export const path: PathMap = {
   C:
     "M17.023 9.216s-.386-3.293-3.955-3.385c-3.57-.091-5.402 2.47-5.402 6.13 0 3.66 2.026 6.588 5.498 6.588 3.473 0 3.86-3.66 3.86-3.66l6.656.366s.391 3.306-2.394 5.828C18.5 23.605 15.082 24.017 12.694 24c-2.388-.018-5.698.034-8.9-2.969C.595 18.03.05 15.113.05 12.248c0-2.866.607-6.661 4.414-9.54C7.05.754 9.673.033 12.296.033 23.246.032 23.98 9.28 23.98 9.28z",
   Cpp:
@@ -29,7 +30,7 @@ export const path = {
     "M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z",
 }
 
-const Icon = ({ url, label, width, height, viewBox }) => {
+const Icon: React.FC<IconProps> = ({ url, label, width, height, viewBox }) => {
   const updatedLabel = titleCase(label.replace(/\+/g, "p")) // for c++
   const color = "#ffffff"
   const svgProps = {
@@ -47,7 +48,8 @@ const Icon = ({ url, label, width, height, viewBox }) => {
       >
         {path[updatedLabel] ? (
           <svg {...svgProps}>
-            <path title={updatedLabel} fill={color} d={path[updatedLabel]} />
+            <title>{updatedLabel}</title>
+            <path fill={color} d={path[updatedLabel]} />
           </svg>
         ) : (
           <span> {updatedLabel} </span>

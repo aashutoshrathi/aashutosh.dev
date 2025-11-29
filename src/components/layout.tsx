@@ -1,11 +1,10 @@
 import React from "react"
-import PropTypes from "prop-types"
-
 import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
+import { LayoutProps } from "../types"
 
-const Layout = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <div className="site">
@@ -17,10 +16,6 @@ const Layout = ({ children }) => {
       </div>
     </>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout

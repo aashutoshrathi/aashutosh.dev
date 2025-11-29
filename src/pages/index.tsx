@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Button from "../components/button"
 import Link from "../components/link"
 
-const IndexPage = () => (
+const IndexPage: React.FC = () => (
   <>
     <Layout>
       <SEO title="Home" />

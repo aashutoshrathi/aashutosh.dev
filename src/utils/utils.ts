@@ -1,19 +1,15 @@
-const titleCase = str =>
+const titleCase = (str: string): string =>
   str
     .toLowerCase()
-    .replace(/\b(\w)/g, s => s.toUpperCase())
+    .replace(/\b(\w)/g, (s: string) => s.toUpperCase())
     .split(" ")[0]
 
-const fetchData = async (url) => {
-  // Only fetch on client side
-  if (typeof window === "undefined") {
-    return null
-  }
+const fetchData = async <T = any>(url: string): Promise<T> => {
   const response = await fetch(url)
   return response.json()
 }
 
-const parseBetter = text => {
+const parseBetter = (text: string): string | null => {
   // Only parse on client side where DOMParser is available
   if (typeof window === "undefined") {
     return text

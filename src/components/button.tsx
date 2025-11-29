@@ -1,8 +1,9 @@
 import React from "react"
 import "./button.css"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
+import { ButtonProps } from "../types"
 
-const Button = ({ url, text }) => {
+const Button: React.FC<ButtonProps> = ({ url, text }) => {
   return (
     <OutboundLink
       href={url}

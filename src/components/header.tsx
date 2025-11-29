@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
 
-const Header = () => (
+const Header: React.FC = () => (
   <header>
     <nav className="header">
       <Link className="title mono" to="/">

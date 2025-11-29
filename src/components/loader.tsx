@@ -1,7 +1,7 @@
 import React from "react"
 import "./loader.css"
 
-const Loader = () => (
+const Loader: React.FC = () => (
   <div className="spinner">
     <div className="bounce1"></div>
     <div className="bounce2"></div>

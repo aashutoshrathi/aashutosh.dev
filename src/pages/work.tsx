@@ -6,7 +6,7 @@ import Projects from "../components/projects"
 import SEO from "../components/seo"
 import "./work.css"
 
-const IndexPage = () => {
+const WorkPage: React.FC = () => {
   return (
     <Layout>
       <SEO title="Work" />
@@ -26,4 +26,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default WorkPage

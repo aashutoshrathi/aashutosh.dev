@@ -1,4 +1,6 @@
-const cspDirectives = [
+import type { GatsbyConfig } from "gatsby"
+
+const cspDirectives: string[] = [
   "script-src 'self' 'unsafe-inline' *.cloudfront.net unpkg.com www.google-analytics.com www.googletagmanager.com",
   "style-src 'self' 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com",
   "img-src 'self' data: https:",
@@ -9,7 +11,7 @@ const cspDirectives = [
   // "require-trusted-types-for 'script'",
 ]
 
-module.exports = {
+const config: GatsbyConfig = {
   siteMetadata: {
     title: `Aashutosh Rathi | Developer`,
     description: `I solve problems using code. Currently building stuff @regie.ai. Lead Dev communities at IIITV in past. Feel free to ping me for discussions on Tech || Cosmos`,
@@ -61,8 +63,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Aashutosh Rathi | Dev Portfolio`,
-        short_name: `Aashutosh.Dev`,
+        name: `Aashutosh`,
+        short_name: `aashutosh.dev`,
         start_url: `/`,
         background_color: `#252525`,
         theme_color: `#343b3f`,
@@ -92,3 +94,5 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
 }
+
+export default config

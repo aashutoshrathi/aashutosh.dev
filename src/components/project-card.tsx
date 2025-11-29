@@ -2,8 +2,9 @@ import React from "react"
 import "./project-card.css"
 import Icon from "./icon"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
+import { ProjectCardProps } from "../types"
 
-const ProjectCard = ({ project }) => (
+const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
   <div className="project-card">
     <h3 className="project-card-title"> {project.name.replace(/-/g, " ")} </h3>
     <p className="project-card-description"> {project.description} </p>
