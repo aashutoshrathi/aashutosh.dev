@@ -1,22 +1,6 @@
 .projects {
-  display: inline-grid;
-  justify-content: space-around;
-  grid-template-columns: repeat(3, 25%);
-  margin: 1rem;
-}
-
-@media only screen and (max-width: 768px) {
-  .projects {
-    grid-template-columns: repeat(2, 42%);
-    align-items: stretch;
-    justify-content: space-around;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .projects {
-    grid-template-columns: repeat(1, 95%);
-    align-items: stretch;
-    justify-content: space-around;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
 }

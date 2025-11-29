@@ -2,10 +2,12 @@
   display: flex;
   justify-content: center;
   text-align: center !important;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 text {
-  fill: white !important;
+  fill: var(--main-text-color) !important;
 }
 
 .heading {
@@ -14,4 +16,16 @@ text {
 
 .margin-top-small {
   margin-top: 1rem;
+}
+
+.custom-tooltip {
+  background-color: #ffffff !important;
+  color: #1a202c !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.custom-tooltip.place-top::after {
+  border-top-color: #ffffff !important;
+  border-top-style: solid !important;
+  border-top-width: 6px !important;
 }

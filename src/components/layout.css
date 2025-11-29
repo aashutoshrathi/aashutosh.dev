@@ -1,10 +1,9 @@
 footer {
-  background-color: var(--nav-footer-bg-color);
-  padding: 1rem;
+  padding: 2rem;
 }
 
 header {
-  background-color: var(--nav-footer-bg-color);
+  padding: 1rem 0;
 }
 
 nav {
@@ -25,6 +24,8 @@ nav > * {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .header > * {
@@ -33,6 +34,9 @@ nav > * {
 
 .site-content {
   flex-grow: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .site {
@@ -44,8 +48,8 @@ nav > * {
 
 .title {
   text-align: center;
-  font-family: 'Manrope', sans-serif;
   font-size: 1.3rem !important;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 500px) {

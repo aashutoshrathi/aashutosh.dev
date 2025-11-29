@@ -1,14 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;700&family=IBM+Plex+Mono&display=swap');
 
 :root {
-  --main-bg-color: #343b3f;
-  --selected-text-color: #212121;
-  --selected-text-bg-color: #aadc39;
-  --main-text-color: white;
-  --calendar-text-color: whitesmoke;
-  --nav-footer-bg-color: #252525fa;
-  --small-padding: 1rem;
-  --med-margin: 1.2rem;
+  --main-bg-color: #ffffff;
+  --main-text-color: #1a202c;
+  --selected-text-color: #ffffff;
+  --selected-text-bg-color: #2563eb;
   --twitter-brand: #1da1f2;
   --dull-white: #c5c4bf;
 }
@@ -16,16 +12,17 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Google Sans Flex', sans-serif;
   color: var(--main-text-color);
 }
 
 a {
   text-decoration: none !important;
+  color: #2563eb;
 }
 
 a:hover {
-  text-decoration: none !important;
+  text-decoration: underline !important;
 }
 
 .main {
@@ -39,6 +36,7 @@ body {
 
 svg {
   margin: 0.5rem;
+  fill: var(--main-text-color);
 }
 
 ::-moz-selection {
@@ -52,9 +50,7 @@ svg {
 }
 
 .active {
-  border-bottom: solid 0.1rem white;
-  display: inline;
-  padding-bottom: 0.2rem;
+  font-weight: bold;
 }
 
 .bold {
@@ -74,21 +70,28 @@ svg {
 }
 
 .padding-small {
-  padding: var(--small-padding);
+  padding: 1rem;
 }
 
 .margin-right-medium {
-  margin-right: var(--med-margin);
-}
-
-#name {
-  color: var(--main-text-color);
-  text-align: center;
-  font-size: 2rem;
-  font-family: 'Manrope', sans-serif;
+  margin-right: 1.2rem;
 }
 
 #social a {
   margin: 0.2rem;
   font-size: xx-large;
+}
+
+.mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.blinking-cursor {
+  animation: blink 1s step-start 0s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }

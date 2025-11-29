@@ -5,12 +5,12 @@ import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
 
-const Layout = ({ children, verticallyCenter }) => {
+const Layout = ({ children }) => {
   return (
     <>
       <div className="site">
         <Header />
-        <main className={`${verticallyCenter ? "main" : "site-content"}`}>
+        <main className="site-content">
           {children}
         </main>
         <Footer />
