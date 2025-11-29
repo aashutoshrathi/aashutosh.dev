@@ -4,7 +4,10 @@ const titleCase = (str: string): string =>
     .replace(/\b(\w)/g, (s: string) => s.toUpperCase())
     .split(" ")[0]
 
-const fetchData = async <T = any>(url: string): Promise<T> => {
+const fetchData = async <T>(url: string): Promise<T> => {
+  if (typeof window === "undefined") {
+    throw new Error("fetchData can only be called on the client side")
+  }
   const response = await fetch(url)
   return response.json()
 }

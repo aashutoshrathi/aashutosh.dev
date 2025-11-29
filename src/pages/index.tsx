@@ -44,7 +44,7 @@ const IndexPage: React.FC = () => (
           <Link url="https://regie.ai" external>
             optimizing sales with AI at Regie.ai
           </Link>
-          , while my side quests include rescuing lost souls in StackOverflow's
+          , while my side quests include rescuing lost souls in Stack Overflow's
           Unanswered section and creating dev-tools for competitive programming.
           When I'm not debugging the internet or mastering the art of software
           engineering with humans, I'm writing scripts to turn 'boring' into

@@ -11,8 +11,8 @@ const WorkPage: React.FC = () => {
       <SEO title="Work" />
       <style>{`
         text { fill: var(--main-text-color) !important; }
-        .custom-tooltip { background-color: #ffffff !important; color: #1a202c !important; border: 1px solid #e2e8f0 !important; }
-        .custom-tooltip.place-top::after { border-top-color: #ffffff !important; border-top-style: solid !important; border-top-width: 6px !important; }
+        .custom-tooltip { background-color: var(--main-bg-color) !important; color: var(--main-text-color) !important; border: 1px solid var(--link-color) !important; opacity: 0.9; }
+        .custom-tooltip.place-top::after { border-top-color: var(--main-bg-color) !important; border-top-style: solid !important; border-top-width: 6px !important; }
       `}</style>
       <div className="flex justify-center text-center my-8">
         <GitHubCalendar

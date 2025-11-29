@@ -69,7 +69,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Aashutosh`,
+        name: `Aashutosh Rathi`,
         short_name: `aashutosh.dev`,
         start_url: `/`,
         background_color: `#252525`,

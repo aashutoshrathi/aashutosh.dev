@@ -48,7 +48,7 @@ const Icon: React.FC<IconProps> = ({ url, label, width, height, viewBox }) => {
         rel="noopener noreferrer"
       >
         {path[updatedLabel] ? (
-          <svg {...svgProps}>
+          <svg {...svgProps} aria-label={updatedLabel} role="img">
             <title>{updatedLabel}</title>
             <path d={path[updatedLabel]} />
           </svg>
