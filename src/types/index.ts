@@ -64,3 +64,9 @@ export interface PathMap {
 export interface LayoutProps {
   children: React.ReactNode
 }
+
+export interface SiteQueryResult {
+  site: {
+    siteMetadata: SiteMetadata
+  }
+}

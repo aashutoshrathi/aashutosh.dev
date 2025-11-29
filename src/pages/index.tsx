@@ -20,21 +20,35 @@ const IndexPage: React.FC = () => (
           padding: "0 1rem",
         }}
       >
-        <StaticImage
-          src="../images/pic.webp"
-          alt="Aashutosh Rathi"
-          placeholder="blurred"
-          layout="fixed"
-          width={120}
-          height={120}
-          className="fade-in"
+        <div
+          className="profile-image-container fade-in"
           style={{
-            borderRadius: "50%",
+            position: "relative",
+            width: "120px",
+            height: "120px",
             marginBottom: "1.5rem",
+            borderRadius: "50%",
+            overflow: "hidden",
             animationDelay: "0.1s",
             opacity: 0,
           }}
-        />
+        >
+          {/* @ts-expect-error - pixel-canvas is a web component */}
+          <pixel-canvas data-gap="8" data-speed="50"></pixel-canvas>
+          <StaticImage
+            src="../images/pic.webp"
+            alt="Aashutosh Rathi"
+            placeholder="blurred"
+            layout="fixed"
+            width={120}
+            height={120}
+            style={{
+              borderRadius: "50%",
+              position: "relative",
+              zIndex: 1,
+            }}
+          />
+        </div>
         <h1
           className="fade-in-up"
           style={{
