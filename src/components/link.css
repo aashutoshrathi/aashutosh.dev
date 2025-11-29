@@ -1,0 +1,65 @@
+.custom-link {
+  position: relative;
+  color: #2563eb;
+  text-decoration: none !important;
+  font-weight: 500;
+  display: inline;
+  line-height: 1.2;
+  transition: all 0.25s ease-in-out;
+  border-bottom: none;
+  padding-bottom: 1px;
+}
+
+.custom-link:hover {
+  color: #1d4ed8;
+  border-bottom: 2px dashed #1d4ed8;
+  text-decoration: none !important;
+}
+
+/* Alternative style with animated dashed underline */
+.custom-link.animated {
+  border-bottom: none;
+  background-image: none;
+}
+
+.custom-link.animated:hover {
+  background-image: linear-gradient(
+    to right,
+    #1d4ed8 50%,
+    transparent 50%
+  );
+  background-position: 0 100%;
+  background-size: 6px 2px;
+  background-repeat: repeat-x;
+  animation: dash-move 0.5s linear infinite;
+  border-bottom: none;
+}
+
+@keyframes dash-move {
+  0% {
+    background-position: 0 100%;
+  }
+  100% {
+    background-position: 12px 100%;
+  }
+}
+
+/* Subtle variant with lighter dashes */
+.custom-link.subtle {
+  font-weight: 400;
+  border-bottom: none;
+}
+
+.custom-link.subtle:hover {
+  border-bottom: 2px dashed rgba(37, 99, 235, 0.6);
+}
+
+/* Bold variant with thicker dashes */
+.custom-link.bold {
+  font-weight: 600;
+  border-bottom: none;
+}
+
+.custom-link.bold:hover {
+  border-bottom: 3px dashed #1d4ed8;
+}
