@@ -1,5 +1,4 @@
 import React from "react"
-import "./button.css"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
 import { ButtonProps } from "../types"
 
@@ -9,7 +8,17 @@ const Button: React.FC<ButtonProps> = ({ url, text }) => {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="button"
+      className="inline-block px-6 py-3 rounded-lg font-semibold transition-colors duration-200 ease-in-out no-underline hover:no-underline"
+      style={{
+        backgroundColor: 'var(--link-color)',
+        color: 'var(--main-bg-color)',
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.backgroundColor = 'var(--link-hover-color)'
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.backgroundColor = 'var(--link-color)'
+      }}
     >
       {text}
     </OutboundLink>

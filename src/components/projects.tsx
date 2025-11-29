@@ -3,7 +3,6 @@ import useSWR from "swr"
 import Loader from "../components/loader"
 import { fetchData } from "../utils/utils"
 import ProjectCard from "./project-card"
-import "./projects.css"
 import { Project } from "../types"
 
 const PROJECT_URL = `${process.env.GATSBY_API_URI}projects`
@@ -14,7 +13,7 @@ const Projects: React.FC = () => {
   return (
     <>
       {projects ? (
-        <section className="projects">
+        <section className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-6 mt-8">
           {projects?.map(project => (
             <ProjectCard key={project.id} project={project} />
           ))}

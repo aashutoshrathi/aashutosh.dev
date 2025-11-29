@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;700&family=IBM+Plex+Mono&family=Noto+Sans+Mono:wght@400;500;600&display=swap');
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --main-bg-color: #ffffff;
   --main-text-color: #1a202c;
@@ -22,165 +26,44 @@
   --icon-color: #f8fafc;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'Google Sans Flex', sans-serif;
-  color: var(--main-text-color);
-  box-sizing: border-box;
-}
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+    font-family: 'Google Sans Flex', sans-serif;
+    color: var(--main-text-color);
+  }
 
-html, body {
-  overflow-x: hidden;
-  width: 100%;
-}
+  html, body {
+    @apply overflow-x-hidden w-full;
+  }
 
-a {
-  text-decoration: none !important;
-  color: var(--link-color);
-  font-family: 'Noto Sans Mono', 'IBM Plex Mono', monospace;
-}
+  body {
+    background-color: var(--main-bg-color);
+  }
 
-a:hover {
-  text-decoration: underline !important;
-  color: var(--link-hover-color);
-}
+  a {
+    @apply no-underline font-mono;
+    color: var(--link-color);
+  }
 
-.main {
-  margin-top: auto;
-  margin-bottom: auto;
-}
+  a:hover {
+    @apply underline;
+    color: var(--link-hover-color);
+  }
 
-body {
-  background-color: var(--main-bg-color);
-}
+  svg {
+    @apply m-2;
+    fill: var(--icon-color);
+  }
 
-svg {
-  margin: 0.5rem;
-  fill: var(--icon-color);
-}
+  ::-moz-selection {
+    color: var(--selected-text-color);
+    background: var(--selected-text-bg-color);
+  }
 
-::-moz-selection {
-  color: var(--selected-text-color);
-  background: var(--selected-text-bg-color);
-}
-
-::selection {
-  color: var(--selected-text-color);
-  background: var(--selected-text-bg-color);
-}
-
-.active {
-  font-weight: bold;
-}
-
-.bold {
-  font-weight: bold !important;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.pic {
-  border-radius: 50%;
-  margin-top: 1rem;
-  height: 15rem;
-  width: auto;
-  border: 0.1rem;
-}
-
-.padding-small {
-  padding: 1rem;
-}
-
-.margin-right-medium {
-  margin-right: 1.2rem;
-}
-
-#social a {
-  margin: 0.2rem;
-  font-size: xx-large;
-  display: inline-block;
-  position: relative;
-}
-
-#social a svg {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  filter: drop-shadow(0 0 0px transparent);
-}
-
-#social a:hover svg {
-  fill: var(--link-hover-color);
-  filter: drop-shadow(0 0 8px var(--link-hover-color));
-  transform: rotate(-5deg) scale(1.05);
-}
-
-.mono {
-  font-family: 'IBM Plex Mono', monospace;
-}
-
-.blinking-cursor {
-  animation: blink 1s step-start 0s infinite;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
+  ::selection {
+    color: var(--selected-text-color);
+    background: var(--selected-text-bg-color);
   }
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
-.fade-in {
-  animation: fadeIn 0.6s ease-out forwards;
-}
-
-.about-me {
-  font-size: 1.15rem;
-  max-width: 550px;
-  line-height: 1.6;
-  color: var(--main-text-color);
-  margin-bottom: 2rem;
-  opacity: 0.9;
-}
-
-.profile-image-container {
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.profile-image-container:hover {
-  transform: scale(1.02);
-}
-
-pixel-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}

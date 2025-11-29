@@ -9,29 +9,10 @@ const IndexPage: React.FC = () => (
   <>
     <Layout>
       <SEO title="Home" />
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "column",
-          textAlign: "center",
-          flexGrow: 1,
-          padding: "0 1rem",
-        }}
-      >
+      <div className="flex justify-center items-center flex-col text-center flex-grow px-4">
         <div
-          className="profile-image-container fade-in"
-          style={{
-            position: "relative",
-            width: "120px",
-            height: "120px",
-            marginBottom: "1.5rem",
-            borderRadius: "50%",
-            overflow: "hidden",
-            animationDelay: "0.1s",
-            opacity: 0,
-          }}
+          className="relative w-[120px] h-[120px] mb-6 rounded-full overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-[1.02] animate-fade-in opacity-0"
+          style={{ animationDelay: "0.1s" }}
         >
           {/* @ts-expect-error - pixel-canvas is a web component */}
           <pixel-canvas data-gap="8" data-speed="50"></pixel-canvas>
@@ -50,23 +31,14 @@ const IndexPage: React.FC = () => (
           />
         </div>
         <h1
-          className="fade-in-up"
-          style={{
-            fontSize: "2.5rem",
-            fontWeight: "bold",
-            marginBottom: "1rem",
-            animationDelay: "0.2s",
-            opacity: 0,
-          }}
+          className="text-5xl font-bold mb-4 animate-fade-in-up opacity-0"
+          style={{ animationDelay: "0.2s" }}
         >
           Aashutosh Rathi
         </h1>
         <p
-          className="about-me fade-in-up"
-          style={{
-            animationDelay: "0.3s",
-            opacity: 0,
-          }}
+          className="text-[1.15rem] max-w-[550px] leading-relaxed mb-8 opacity-90 animate-fade-in-up"
+          style={{ animationDelay: "0.3s", color: 'var(--main-text-color)' }}
         >
           Software Engineer by day, automation enthusiast always. I build tools
           for people who hate doing things manually—because I'm definitely one
@@ -81,11 +53,8 @@ const IndexPage: React.FC = () => (
           'automated'—one Chrome extension at a time.
         </p>
         <div
-          className="fade-in-up"
-          style={{
-            animationDelay: "0.4s",
-            opacity: 0,
-          }}
+          className="animate-fade-in-up opacity-0"
+          style={{ animationDelay: "0.4s" }}
         >
           <Button url="mailto:me@aashutosh.dev" text="Get in touch" />
         </div>

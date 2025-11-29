@@ -1,20 +1,15 @@
 import React from "react"
-import Helmet from "react-helmet"
-import Header from "./header"
-import Footer from "./footer"
-import "./layout.css"
-import { LayoutProps } from "../types"
 import { ThemeProvider } from "../context/ThemeContext"
+import { LayoutProps } from "../types"
+import Footer from "./footer"
+import Header from "./header"
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <ThemeProvider>
-      <Helmet>
-        <script type="module" src="https://unpkg.com/pixel-canvas@latest/dist/pixel-canvas.js"></script>
-      </Helmet>
-      <div className="site">
+      <div className="m-0 flex min-h-screen flex-col overflow-x-hidden w-full">
         <Header />
-        <main className="site-content">
+        <main className="flex-grow max-w-3xl mx-auto w-full">
           {children}
         </main>
         <Footer />
