@@ -18,15 +18,15 @@ const cspDirectives: string[] = [
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Aashutosh Rathi | Developer`,
+    title: `aashutosh.dev`,
     description: `I solve problems using code. Currently building stuff @regie.ai. Lead Dev communities at IIITV in past. Feel free to ping me for discussions on Tech || Cosmos`,
-    navigationString: `Aashutosh Rathi | `,
+    navigationString: `aashutosh.dev | `,
     author: `@AashutoshRathi`,
     coverImage: `https://files.aashutosh.dev/pale_blue_dot.jpg`,
     social: [
       {
-        name: `Twitter`,
-        url: `https://twitter.com/AashutoshRathi`,
+        name: `X`,
+        url: `https://x.com/AashutoshRathi`,
       },
       {
         name: `GitHub`,

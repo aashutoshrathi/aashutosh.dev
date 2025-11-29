@@ -14,8 +14,6 @@ const IndexPage: React.FC = () => (
           className="relative w-[120px] h-[120px] mb-6 rounded-full overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-[1.02] animate-fade-in opacity-0"
           style={{ animationDelay: "0.1s" }}
         >
-          {/* @ts-expect-error - pixel-canvas is a web component */}
-          <pixel-canvas data-gap="8" data-speed="50"></pixel-canvas>
           <StaticImage
             src="../images/pic.webp"
             alt="Aashutosh Rathi"
@@ -31,10 +29,10 @@ const IndexPage: React.FC = () => (
           />
         </div>
         <h1
-          className="text-5xl font-bold mb-4 animate-fade-in-up opacity-0"
+          className="text-2xl font-bold mb-4 animate-fade-in-up opacity-0"
           style={{ animationDelay: "0.2s" }}
         >
-          Aashutosh Rathi
+          hey there, I'm Aashutosh! 👋
         </h1>
         <p
           className="text-[1.15rem] max-w-[550px] leading-relaxed mb-8 opacity-90 animate-fade-in-up"
