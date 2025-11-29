@@ -15,6 +15,9 @@ const Header: React.FC = () => (
         <Link to="/timeline/" className="mx-[0.7rem]" activeClassName="font-bold">
           {"Timeline"}
         </Link>
+        <Link to="/uses/" className="mx-[0.7rem]" activeClassName="font-bold">
+          {"Uses"}
+        </Link>
         <OutboundLink
           href="https://blog.aashutosh.dev"
           target="_blank"
