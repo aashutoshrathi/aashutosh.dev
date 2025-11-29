@@ -27,27 +27,31 @@ const IndexPage: React.FC = () => (
           layout="fixed"
           width={120}
           height={120}
+          className="fade-in"
           style={{
             borderRadius: "50%",
             marginBottom: "1.5rem",
+            animationDelay: "0.1s",
+            opacity: 0,
           }}
         />
         <h1
+          className="fade-in-up"
           style={{
             fontSize: "2.5rem",
             fontWeight: "bold",
             marginBottom: "1rem",
+            animationDelay: "0.2s",
+            opacity: 0,
           }}
         >
           Aashutosh Rathi
         </h1>
         <p
+          className="about-me fade-in-up"
           style={{
-            fontSize: "1.15rem",
-            maxWidth: "550px",
-            lineHeight: "1.6",
-            color: "#ced8feff",
-            marginBottom: "2rem",
+            animationDelay: "0.3s",
+            opacity: 0,
           }}
         >
           Software Engineer by day, automation enthusiast always. I build tools
@@ -62,7 +66,15 @@ const IndexPage: React.FC = () => (
           engineering with humans, I'm writing scripts to turn 'boring' into
           'automated'—one Chrome extension at a time.
         </p>
-        <Button url="mailto:me@aashutosh.dev" text="Get in touch" />
+        <div
+          className="fade-in-up"
+          style={{
+            animationDelay: "0.4s",
+            opacity: 0,
+          }}
+        >
+          <Button url="mailto:me@aashutosh.dev" text="Get in touch" />
+        </div>
       </div>
     </Layout>
   </>
