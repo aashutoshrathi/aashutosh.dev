@@ -16,13 +16,12 @@ const Footer = () => {
           label="Dev"
           viewBox="0 0 448 512"
         />
-        <Icon
-          url="https://linkedin.com/in/aashutoshrathi/"
-          label="LinkedIn"
-        />
+        <Icon url="https://linkedin.com/in/aashutoshrathi/" label="LinkedIn" />
         <Icon url="https://fb.com/aashutoshrathi" label="Facebook" />
       </div>
-      <p>> aashutosh@dev: ~$ <span className="blinking-cursor">_</span></p>
+      <p>
+        {">"} aashutosh@dev: ~$ <span className="blinking-cursor">_</span>
+      </p>
     </footer>
   )
 }
