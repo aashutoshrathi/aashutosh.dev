@@ -20,14 +20,9 @@ const Header: React.FC = () => (
         >
           {"Blog"}
         </OutboundLink>
-        <OutboundLink
-          href="https://resume.aashutosh.dev"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mx-[0.7rem]"
-        >
+        <Link to="/resume/" className="mx-[0.7rem]" activeClassName="font-bold">
           {"Résumé"}
-        </OutboundLink>
+        </Link>
       </nav>
     </nav>
   </header>
