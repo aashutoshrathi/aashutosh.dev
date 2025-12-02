@@ -27,20 +27,21 @@
 }
 
 @layer base {
-  * {
-    @apply m-0 p-0 box-border;
+  html, body {
+    @apply overflow-x-hidden w-full m-0 p-0 box-border;
     font-family: 'Google Sans Flex', sans-serif;
     color: var(--main-text-color);
   }
 
-  html, body {
-    @apply overflow-x-hidden w-full;
+  * {
+    @apply box-border;
   }
 
   body {
     background-color: var(--main-bg-color);
   }
 
+  /* Base link styles - will be overridden by prose */
   a {
     @apply no-underline font-mono;
     color: var(--link-color);
@@ -49,6 +50,11 @@
   a:hover {
     @apply underline;
     color: var(--link-hover-color);
+  }
+
+  /* Let prose styles take precedence for blog content */
+  .prose a {
+    @apply font-sans;
   }
 
   svg {

@@ -1,11 +1,17 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import GitHubCalendar from "react-github-calendar"
-import ReactTooltip from "react-tooltip"
+import { Tooltip as ReactTooltip } from "react-tooltip"
 import Layout from "../components/layout"
 import Projects from "../components/projects"
 import SEO from "../components/seo"
 
 const WorkPage: React.FC = () => {
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
   return (
     <Layout>
       <SEO title="Work" />
@@ -15,15 +21,17 @@ const WorkPage: React.FC = () => {
         .custom-tooltip.place-top::after { border-top-color: var(--main-bg-color) !important; border-top-style: solid !important; border-top-width: 6px !important; }
       `}</style>
       <div className="flex justify-center text-center my-8">
-        <GitHubCalendar
-          username="aashutoshrathi"
-          fontSize={16}
-          blockSize={14}
-          hideColorLegend
-          hideTotalCount
-        >
-          <ReactTooltip delayShow={10} html className="custom-tooltip" />
-        </GitHubCalendar>
+        {isClient && (
+          <GitHubCalendar
+            username="aashutoshrathi"
+            fontSize={16}
+            blockSize={14}
+            hideColorLegend
+            hideTotalCount
+          >
+            <ReactTooltip delayShow={10} html className="custom-tooltip" />
+          </GitHubCalendar>
+        )}
       </div>
       <Projects />
     </Layout>
