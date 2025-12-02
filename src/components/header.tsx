@@ -9,7 +9,7 @@ const Header: React.FC = () =>
       <Link className="text-center text-[1.3rem] font-bold font-mono" to="/" onClick={lightHaptic}>
         {"aashutosh.dev"}
       </Link>
-      <nav className="flex flex-row flex-wrap justify-center sm:justify-end items-center gap-4 sm:gap-6">
+      <nav className="flex flex-row flex-wrap justify-center sm:justify-end items-center gap-4 sm:gap-6 px-2">
         <Link to="/timeline/" activeClassName="border-b-2 border-dashed border-link" onClick={lightHaptic}>
           {"About"}
         </Link>

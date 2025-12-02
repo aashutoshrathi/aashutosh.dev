@@ -16,7 +16,7 @@ const commits: Commit[] = [
     hash: "8a3f91",
     type: "feat",
     scope: "career",
-    message: "Deploying Sales Agents at Regie",
+    message: "deploying sales AI agents at Regie",
     details: "+ Added NestJS\n+ Added TypeScript Strict Mode\n+ Optimized Salesforce API",
     date: "Current"
   },
