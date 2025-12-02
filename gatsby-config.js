@@ -17,7 +17,7 @@ const cspDirectives = [
 module.exports = {
   siteMetadata: {
     title: `aashutosh.dev`,
-    description: `I solve problems using code. Currently building stuff @regie.ai. Lead Dev communities at IIITV in past. Feel free to ping me for discussions on Tech || Cosmos`,
+    description: `software engineer by profession, in it for the plot, baking code into stories. writing nibbles and open to quibbles on tech, life and everything in between.`,
     navigationString: `aashutosh.dev | `,
     author: `@AashutoshRathi`,
     coverImage: `https://files.aashutosh.dev/pale_blue_dot.jpg`,
