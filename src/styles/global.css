@@ -61,6 +61,12 @@
     @apply font-sans;
   }
 
+  /* Remove line-by-line backgrounds in code blocks */
+  .prose pre code span,
+  .prose pre code {
+    background-color: transparent !important;
+  }
+
   svg {
     @apply m-2;
     fill: var(--icon-color);
