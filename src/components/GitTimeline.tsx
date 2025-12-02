@@ -122,7 +122,7 @@ const GitTimeline: React.FC = () => {
   }
 
   return (
-    <div className={`${c.bg} ${c.text} font-mono p-4 sm:p-8 min-h-screen`}>
+    <div className={`${c.text} font-mono p-4 sm:p-8 min-h-screen`}>
       <div className="max-w-6xl mx-auto">
         <div className="mb-8">
           <h2 className={`text-lg font-bold ${c.text} mb-2`}>

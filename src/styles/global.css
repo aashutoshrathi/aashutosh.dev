@@ -45,6 +45,10 @@
     user-select: none;
   }
 
+  nav a {
+    user-select: none;
+  }
+
   /* Base link styles - will be overridden by prose */
   a {
     @apply no-underline font-mono;
