@@ -3,6 +3,7 @@ import { ThemeProvider } from "../context/ThemeContext"
 import { LayoutProps } from "../types"
 import Footer from "./footer"
 import Header from "./header"
+import ScrollToTop from "./ScrollToTop"
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
@@ -13,6 +14,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           {children}
         </main>
         <Footer />
+        <ScrollToTop />
       </div>
     </ThemeProvider>
   )
