@@ -44,7 +44,7 @@ const IndexPage: React.FC = () => (
           style={{ animationDelay: "0.1s" }}
         >
           <StaticImage
-            src="../images/pic.webp"
+            src="../images/square.png"
             alt="Aashutosh Rathi"
             placeholder="blurred"
             layout="constrained"
