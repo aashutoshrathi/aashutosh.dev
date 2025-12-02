@@ -139,10 +139,10 @@ const GitTimeline: React.FC = () => {
               {/* Main commit row */}
               <div
                 onClick={() => toggleExpand(index)}
-                className={`flex items-start gap-3 sm:gap-4 cursor-pointer ${c.highlight} transition-colors p-2 -mx-2 rounded group`}
+                className={`flex items-start gap-3 cursor-pointer ${c.highlight} transition-colors p-2 -mx-2 rounded group`}
               >
                 {/* Hash */}
-                <div className={`${c.textLight} text-sm shrink-0 w-16 sm:w-20`}>
+                <div className={`${c.textLight} text-xs sm:text-sm shrink-0 w-14 sm:w-20`}>
                   {commit.hash}
                 </div>
 
@@ -174,16 +174,18 @@ const GitTimeline: React.FC = () => {
 
                 {/* Message */}
                 <div className="flex-1 min-w-0">
-                  <div className="flex flex-wrap items-baseline gap-2">
-                    <span className={`${getTypeColor(commit.type)} font-semibold`}>
-                      {commit.type}
-                    </span>
-                    <span className={`${c.textLight}`}>({commit.scope}):</span>
-                    <span className={`${c.text} break-words`}>
-                      {commit.message}
-                    </span>
+                  <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-baseline gap-1 sm:gap-2">
+                    <div className="flex items-baseline gap-2 flex-wrap">
+                      <span className={`${getTypeColor(commit.type)} font-semibold text-sm sm:text-base`}>
+                        {commit.type}
+                      </span>
+                      <span className={`${c.textLight} text-sm sm:text-base`}>({commit.scope}):</span>
+                      <span className={`${c.text} break-words text-sm sm:text-base`}>
+                        {commit.message}
+                      </span>
+                    </div>
                     <span
-                      className={`${c.textLighter} text-xs ml-auto shrink-0`}
+                      className={`${c.textLighter} text-xs sm:ml-auto`}
                     >
                       {commit.date}
                     </span>
@@ -194,7 +196,7 @@ const GitTimeline: React.FC = () => {
               {/* Expanded diff view */}
               {expandedIndex === index && (
                 <div
-                  className={`ml-[5.5rem] sm:ml-[7.5rem] mt-2 mb-4 border-l-2 ${c.border} pl-4 py-2 ${c.codeBg} rounded-r`}
+                  className={`ml-[4.75rem] sm:ml-[7.5rem] mt-2 mb-4 border-l-2 ${c.border} pl-3 sm:pl-4 py-2 ${c.codeBg} rounded-r`}
                 >
                   <div className={`${c.textLight} text-xs mb-2`}>
                     Changes:
