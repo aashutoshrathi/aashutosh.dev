@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   const [currentWord, setCurrentWord] = useState(0)
   const [currentDrink, setCurrentDrink] = useState(0)
   const words = ["code", "gemini", "claude"]
-  const drinks = ["coffee", "chaas"]
+  const drinks = ["coffee", "chhaas"]
 
   useEffect(() => {
     const interval = setInterval(() => {
