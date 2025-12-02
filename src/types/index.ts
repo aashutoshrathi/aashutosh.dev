@@ -54,11 +54,6 @@ export interface IconProps {
   label: string
   width?: string
   height?: string
-  viewBox?: string
-}
-
-export interface PathMap {
-  [key: string]: string
 }
 
 export interface LayoutProps {
