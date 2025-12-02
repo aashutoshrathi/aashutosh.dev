@@ -21,7 +21,7 @@ const BlogPostTemplate: React.FC<any> = ({ data, children }) => {
       <article className="py-8">
         <div className="mb-8">
           <Link to="/blog/" className="text-link hover:text-link-hover">
-            &larr; Back to Writings
+            &larr; Back to Blog
           </Link>
         </div>
         <header className="mb-8">

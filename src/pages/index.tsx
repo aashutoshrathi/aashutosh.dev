@@ -21,25 +21,21 @@ const IndexPage: React.FC = () => (
             className="text-[1.15rem] max-w-[550px] leading-relaxed mb-8 opacity-90 animate-fade-in-up"
             style={{ animationDelay: "0.3s", color: "var(--main-text-color)" }}
           >
-            Software Engineer by day, automation enthusiast always. I build
-            tools for people who hate doing things manually—because I'm
-            definitely one of them. Currently{" "}
+            Software Engineer by day, automation connoisseur always. Usually found building tools for people who hate doing things manually—because I'm definitely one of them.
+            <br/> Currently{" "}
             <Link url="https://regie.ai" external>
               optimizing sales with AI at Regie.ai
             </Link>
-            , while my side quests include rescuing lost souls in Stack
-            Overflow's Unanswered section and creating dev-tools for
-            competitive programming. When I'm not debugging the internet or
-            mastering the art of software engineering with humans, I'm writing
-            scripts to turn 'boring' into 'automated'—one Chrome extension at a
-            time.
+            , while trying to juggle with my inbox zero goals, some tiny side projects and a bit of writing on <Link url="https://nibbles.dev" external>nibbles.dev</Link> and sometimes on this very blog!
           </p>
           <div
             className="animate-fade-in-up opacity-0 flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
             style={{ animationDelay: "0.4s" }}
           >
-            <Button url="mailto:me@aashutosh.dev" text="Get in touch" />
-            <Button url="https://files.aashutosh.dev/resume.pdf#navpanes=0" text="View Résumé" />
+            <Button
+              url="https://files.aashutosh.dev/resume.pdf#navpanes=0"
+              text="View Résumé"
+            />
           </div>
         </div>
 

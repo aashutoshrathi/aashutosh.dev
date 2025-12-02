@@ -15,7 +15,7 @@ const commits: Commit[] = [
     hash: "8a3f91",
     type: "feat",
     scope: "career",
-    message: "deploy AI engineering architecture at Regie.ai",
+    message: "Deploying Sales Agents at Regie",
     details: "+ Added NestJS\n+ Added TypeScript Strict Mode\n+ Optimized Salesforce API",
     date: "Current"
   },
@@ -123,20 +123,19 @@ const GitTimeline: React.FC = () => {
 
   return (
     <div className={`${c.bg} ${c.text} font-mono p-4 sm:p-8 min-h-screen`}>
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="mb-8">
-          <h2 className={`text-2xl font-bold ${c.text} mb-2`}>
+          <h2 className={`text-lg font-bold ${c.text} mb-2`}>
             $ git log --oneline --graph
           </h2>
           <p className={`${c.textLight} text-sm`}>
-            Interactive timeline of milestones
+            Timeline of milestones
           </p>
         </div>
 
         <div className="space-y-0">
           {commits.map((commit, index) => (
             <div key={index} className="relative">
-              {/* Main commit row */}
               <div
                 onClick={() => toggleExpand(index)}
                 className={`flex items-start gap-3 cursor-pointer ${c.highlight} transition-colors p-2 -mx-2 rounded group`}
@@ -155,7 +154,6 @@ const GitTimeline: React.FC = () => {
                     />
                   )}
 
-                  {/* Commit node */}
                   <div
                     className={`${getTypeColor(
                       commit.type
