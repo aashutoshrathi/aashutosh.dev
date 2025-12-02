@@ -22,21 +22,26 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setThemeState] = useState<Theme>("light")
+  // Get initial theme from the already-set attribute (from SSR script)
+  const getInitialTheme = (): Theme => {
+    if (typeof window !== "undefined") {
+      const currentTheme = document.documentElement.getAttribute("data-theme")
+      if (currentTheme === "dark" || currentTheme === "light") {
+        return currentTheme
+      }
+      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+    }
+    return "light"
+  }
+
+  const [theme, setThemeState] = useState<Theme>(getInitialTheme)
 
   useEffect(() => {
-    // Detect system preference
-    const getSystemTheme = (): Theme => {
-      if (typeof window !== "undefined" && window.matchMedia) {
-        return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
-      }
-      return "light"
+    // Sync with current theme (already set by SSR script, so no flash)
+    const currentTheme = document.documentElement.getAttribute("data-theme") as Theme
+    if (currentTheme && currentTheme !== theme) {
+      setThemeState(currentTheme)
     }
-
-    // Set initial theme based on system preference
-    const systemTheme = getSystemTheme()
-    setThemeState(systemTheme)
-    document.documentElement.setAttribute("data-theme", systemTheme)
 
     // Listen for system theme changes
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
