@@ -29,7 +29,7 @@ const WorkPage: React.FC = () => {
             hideColorLegend
             hideTotalCount
           >
-            <ReactTooltip delayShow={10} html className="custom-tooltip" />
+            <ReactTooltip delayShow={10} className="custom-tooltip" />
           </GitHubCalendar>
         )}
       </div>
