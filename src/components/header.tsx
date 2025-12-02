@@ -10,16 +10,16 @@ const Header: React.FC = () =>
         {"aashutosh.dev"}
       </Link>
       <nav className="flex flex-row flex-wrap justify-center sm:justify-end items-center gap-4 sm:gap-6 px-2">
-        <Link to="/timeline/" activeClassName="border-b-2 border-dashed border-link" onClick={lightHaptic}>
+        <Link to="/timeline/" className="border-b-2 border-dashed border-transparent" activeClassName="!border-link" onClick={lightHaptic}>
           {"About"}
         </Link>
-        <Link to="/blog/" activeClassName="border-b-2 border-dashed border-link" onClick={lightHaptic}>
+        <Link to="/blog/" className="border-b-2 border-dashed border-transparent" activeClassName="!border-link" onClick={lightHaptic}>
           {"Blog"}
         </Link>
-        <Link to="/work/" activeClassName="border-b-2 border-dashed border-link" onClick={lightHaptic}>
+        <Link to="/work/" className="border-b-2 border-dashed border-transparent" activeClassName="!border-link" onClick={lightHaptic}>
           {"Projects"}
         </Link>
-        <Link to="/uses/" activeClassName="border-b-2 border-dashed border-link" onClick={lightHaptic}>
+        <Link to="/uses/" className="border-b-2 border-dashed border-transparent" activeClassName="!border-link" onClick={lightHaptic}>
           {"Uses"}
         </Link>
       </nav>
