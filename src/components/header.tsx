@@ -4,7 +4,7 @@ import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 const Header: React.FC = () => (
   <header className="py-4">
-    <nav className="p-[1%] flex flex-wrap flex-row justify-between items-center max-w-3xl mx-auto max-[500px]:flex-col">
+    <nav className="p-[1%] flex flex-wrap flex-row justify-between items-center px-4 sm:px-6 lg:px-8 max-[500px]:flex-col">
       <Link className="text-center text-[1.3rem] font-bold font-mono p-2" to="/" activeClassName="font-bold">
         {"aashutosh.dev"}
       </Link>
@@ -18,14 +18,9 @@ const Header: React.FC = () => (
         <Link to="/uses/" className="mx-[0.7rem]" activeClassName="font-bold">
           {"Uses"}
         </Link>
-        <OutboundLink
-          href="https://blog.aashutosh.dev"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mx-[0.7rem]"
-        >
+        <Link to="/blog/" className="mx-[0.7rem]" activeClassName="font-bold">
           {"Blog"}
-        </OutboundLink>
+        </Link>
         <Link to="/resume/" className="mx-[0.7rem]" activeClassName="font-bold">
           {"Résumé"}
         </Link>

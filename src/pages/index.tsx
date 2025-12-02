@@ -10,7 +10,6 @@ const IndexPage: React.FC = () => (
     <Layout>
       <SEO title="Home" />
       <div className="flex flex-col md:flex-row justify-center items-center flex-grow px-4 gap-12">
-        {/* Text Content */}
         <div className="md:w-2/3 text-center md:text-left">
           <h1
             className="text-2xl font-bold mb-4 animate-fade-in-up opacity-0"

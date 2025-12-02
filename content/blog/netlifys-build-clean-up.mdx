@@ -1,0 +1,30 @@
+---
+title: "Netlify's build clean-up"
+date: "2024-06-01"
+slug: "netlifys-build-clean-up"
+description: "Builds on Netlify not working as expected? Check if your build depends on dotfiles"
+---
+
+On a fine day in boiling Northern India (_thanks_ **_El Niño_**), I was building a [vocs](https://vocs.dev/) project at work and deploying it to Netlify as a **static build** (_what could go wrong, no?_)
+
+As soon as it deployed, things looked fine at first look, but it was not working as expected, on inspecting it a little, I found that some **assets were not loading properly** and the **search wasn't working** too, but interestingly the same thing works perfectly if I build it manually and deploy the `dist` folder using "[Netlify Drop](https://app.netlify.com/drop)" (_underrated feature btw!_).
+
+I was in the middle of the workday not wanting to spend more than 10 mins on this build. So, I did what I did best, brute force, I started comparing build files of automated builds and manual upload builds.  
+Within a matter of seconds, I realized uh oh, the first folder, doesn't exist when I build with CI automation. What was it? 🥁 `.vocs` directory. And guess what? the directory was responsible for keeping the search index and a few assets. (_BINGO!_)
+
+I went down this rabbit hole of "Who allowed Netlify to remove files from my build?".  
+Ah! It turns out they accepted that they [remove all the dotfiles/folders from the publish directory, except `.well-known`](https://answers.netlify.com/t/netlify-deploy-api-removes-files-and-directories-beginning-with-a-period/37728) And, [_it's not very well-known why we need it._](https://serverfault.com/questions/795467/what-is-the-purpose-of-the-well-known-folder)
+
+Since there were no direct ways to get what I wanted, I did some hacks as suggested on forums and on intuition about what I could do in the least time.
+
+*   ⚒️ Build Command changed from `yarn build` to `yarn build && mv docs/dist/.vocs docs/dist/dotvocs && mv _redirects docs/dist/_redirects` (_basically renamed the dot folder_)
+    
+*   ⏩ And also added `_redirects` file to forward all my requests coming to `.vocs` folder to `dotvocs` (_my new directory_)
+    
+          /.vocs/*  /dotvocs/:splat 200!
+        
+    
+
+And BAM!! we have it all working smoothly.
+
+Hope this helps someone! 🖖🏻
