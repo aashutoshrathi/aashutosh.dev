@@ -8,9 +8,9 @@ const BlogIndex: React.FC<any> = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Blog" />
+      <SEO title="Writings" />
       <div className="py-8">
-        <h1 className="text-4xl font-bold mb-8">Blog</h1>
+        <h1 className="text-4xl font-bold mb-8">Writings</h1>
         <div className="space-y-8">
           {posts.map((post: any) => (
             <article key={post.id}>

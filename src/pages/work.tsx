@@ -14,7 +14,7 @@ const WorkPage: React.FC = () => {
 
   return (
     <Layout>
-      <SEO title="Work" />
+      <SEO title="Projects" />
       <style>{`
         text { fill: var(--main-text-color) !important; }
         .custom-tooltip { background-color: var(--main-bg-color) !important; color: var(--main-text-color) !important; border: 1px solid var(--link-color) !important; opacity: 0.9; }

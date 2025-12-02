@@ -35,10 +35,11 @@ const IndexPage: React.FC = () => (
             time.
           </p>
           <div
-            className="animate-fade-in-up opacity-0"
+            className="animate-fade-in-up opacity-0 flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
             style={{ animationDelay: "0.4s" }}
           >
             <Button url="mailto:me@aashutosh.dev" text="Get in touch" />
+            <Button url="https://files.aashutosh.dev/resume.pdf#navpanes=0" text="View Résumé" />
           </div>
         </div>
 

@@ -184,7 +184,7 @@ const UsesPage: React.FC = () => {
         </div>
 
         <div className="mt-16 pt-8 border-t" style={{ borderColor: 'var(--main-text-color)', opacity: 0.2 }}>
-          <p className="text-sm opacity-60 text-center" style={{ color: 'var(--main-text-color)' }}>
+          <p className="text-sm opacity-80 text-center" style={{ color: 'var(--main-text-color)' }}>
             This page is updated periodically as my setup evolves.
           </p>
         </div>

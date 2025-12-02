@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 const TimelinePage: React.FC = () => {
   return (
     <Layout>
-      <SEO title="Timeline" />
+      <SEO title="About" />
       <GitTimeline />
     </Layout>
   )
