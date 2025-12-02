@@ -38,11 +38,26 @@ module.exports = {
           from: { opacity: '0' },
           to: { opacity: '1' },
         },
+        juggle: {
+          '0%, 100%': {
+            transform: 'translateY(0) rotate(0deg)',
+          },
+          '25%': {
+            transform: 'translateY(-4px) rotate(-3deg)',
+          },
+          '50%': {
+            transform: 'translateY(-8px) rotate(0deg)',
+          },
+          '75%': {
+            transform: 'translateY(-4px) rotate(3deg)',
+          },
+        },
       },
       animation: {
         blink: 'blink 1s step-start infinite',
         'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
         'fade-in': 'fadeIn 0.6s ease-out forwards',
+        'juggle': 'juggle 2s ease-in-out infinite',
       },
       typography: ({ theme }) => ({
         DEFAULT: {

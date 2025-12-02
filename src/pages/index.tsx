@@ -9,7 +9,7 @@ const IndexPage: React.FC = () => (
   <>
     <Layout>
       <SEO title="Home" />
-      <div className="flex flex-col md:flex-row justify-center items-center flex-grow px-4 gap-12">
+      <div className="flex flex-col md:flex-row justify-center items-center min-h-[calc(100vh-200px)] px-4 gap-12">
         <div className="md:w-2/3 text-center md:text-left">
           <h1
             className="text-2xl font-bold mb-4 animate-fade-in-up opacity-0"
@@ -26,7 +26,7 @@ const IndexPage: React.FC = () => (
             <Link url="https://regie.ai" external>
               optimizing sales with AI at Regie.ai
             </Link>
-            , while trying to juggle with my inbox zero goals, some tiny side projects and a bit of writing on <Link url="https://nibbles.dev" external>nibbles.dev</Link> and sometimes on this very blog!
+            , while trying to <span className="italic hover:animate-juggle inline-block cursor-pointer">juggle</span> with my inbox zero goals, some tiny side projects and a bit of writing on <Link url="https://nibbles.dev" external>nibbles.dev</Link> and sometimes on <Link url="/blog">this very blog</Link>!
           </p>
           <div
             className="animate-fade-in-up opacity-0 flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
@@ -48,8 +48,8 @@ const IndexPage: React.FC = () => (
             alt="Aashutosh Rathi"
             placeholder="blurred"
             layout="constrained"
-            width={180}
-            height={180}
+            width={200}
+            height={200}
             style={{ borderRadius: "1rem" }}
           />
         </div>
