@@ -1,94 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;700&family=IBM+Plex+Mono&family=Noto+Sans+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --main-bg-color: #343b3f;
-  --selected-text-color: #212121;
-  --selected-text-bg-color: #aadc39;
-  --main-text-color: white;
-  --calendar-text-color: whitesmoke;
-  --nav-footer-bg-color: #252525fa;
-  --small-padding: 1rem;
-  --med-margin: 1.2rem;
+  --main-bg-color: #ffffff;
+  --main-text-color: #1a202c;
+  --selected-text-color: #ffffff;
+  --selected-text-bg-color: #2563eb;
+  --link-color: #2563eb;
+  --link-hover-color: #1d4ed8;
+  --icon-color: #1a202c;
   --twitter-brand: #1da1f2;
   --dull-white: #c5c4bf;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  color: var(--main-text-color);
+[data-theme="dark"] {
+  --main-bg-color: #0f172a;
+  --main-text-color: #f8fafc;
+  --selected-text-color: #0f172a;
+  --selected-text-bg-color: #60a5fa;
+  --link-color: #60a5fa;
+  --link-hover-color: #93c5fd;
+  --icon-color: #f8fafc;
 }
 
-a {
-  text-decoration: none !important;
+@layer base {
+  html, body {
+    @apply overflow-x-hidden w-full m-0 p-0 box-border;
+    font-family: 'Google Sans Flex', sans-serif;
+    color: var(--main-text-color);
+  }
+
+  * {
+    @apply box-border;
+  }
+
+  body {
+    background-color: var(--main-bg-color);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    user-select: none;
+  }
+
+  nav a {
+    user-select: none;
+  }
+
+  /* Base link styles - will be overridden by prose */
+  a {
+    @apply no-underline font-mono;
+    color: var(--link-color);
+  }
+
+  a:hover {
+    @apply underline;
+    color: var(--link-hover-color);
+  }
+
+  /* Let prose styles take precedence for blog content */
+  .prose a {
+    @apply font-sans;
+  }
+
+  /* Remove line-by-line backgrounds in code blocks */
+  .prose pre code span,
+  .prose pre code {
+    background-color: transparent !important;
+  }
+
+  svg {
+    @apply m-2;
+    fill: var(--icon-color);
+  }
+
+  ::-moz-selection {
+    color: var(--selected-text-color);
+    background: var(--selected-text-bg-color);
+  }
+
+  ::selection {
+    color: var(--selected-text-color);
+    background: var(--selected-text-bg-color);
+  }
 }
 
-a:hover {
-  text-decoration: none !important;
-}
-
-.main {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-body {
-  background-color: var(--main-bg-color);
-}
-
-svg {
-  margin: 0.5rem;
-}
-
-::-moz-selection {
-  color: var(--selected-text-color);
-  background: var(--selected-text-bg-color);
-}
-
-::selection {
-  color: var(--selected-text-color);
-  background: var(--selected-text-bg-color);
-}
-
-.active {
-  border-bottom: solid 0.1rem white;
-  display: inline;
-  padding-bottom: 0.2rem;
-}
-
-.bold {
-  font-weight: bold !important;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.pic {
-  border-radius: 50%;
-  margin-top: 1rem;
-  height: 15rem;
-  width: auto;
-  border: 0.1rem;
-}
-
-.padding-small {
-  padding: var(--small-padding);
-}
-
-.margin-right-medium {
-  margin-right: var(--med-margin);
-}
-
-#name {
-  color: var(--main-text-color);
-  text-align: center;
-  font-size: 2rem;
-  font-family: 'Manrope', sans-serif;
-}
-
-#social a {
-  margin: 0.2rem;
-  font-size: xx-large;
-}

@@ -1,3 +1,9 @@
+const dotenv = require("dotenv");
+
+dotenv.config({
+  path: `.env`,
+});
+
 const cspDirectives = [
   "script-src 'self' 'unsafe-inline' *.cloudfront.net unpkg.com www.google-analytics.com www.googletagmanager.com",
   "style-src 'self' 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com",
@@ -6,20 +12,19 @@ const cspDirectives = [
   "worker-src 'self' blob: data:",
   "connect-src 'self' 'unsafe-inline' api.aashutosh.dev github-contributions-api.jogruber.de www.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com",
   "object-src 'none'",
-  // "require-trusted-types-for 'script'",
-]
+];
 
 module.exports = {
   siteMetadata: {
-    title: `Aashutosh Rathi | Developer`,
+    title: `aashutosh.dev`,
     description: `I solve problems using code. Currently building stuff @regie.ai. Lead Dev communities at IIITV in past. Feel free to ping me for discussions on Tech || Cosmos`,
-    navigationString: `Aashutosh Rathi | `,
+    navigationString: `aashutosh.dev | `,
     author: `@AashutoshRathi`,
     coverImage: `https://files.aashutosh.dev/pale_blue_dot.jpg`,
     social: [
       {
-        name: `Twitter`,
-        url: `https://twitter.com/AashutoshRathi`,
+        name: `X`,
+        url: `https://x.com/AashutoshRathi`,
       },
       {
         name: `GitHub`,
@@ -28,7 +33,6 @@ module.exports = {
     ],
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -40,20 +44,38 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/content/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-react-helmet`,
+    {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: ["UA-37968445-2"],
-        // This object gets passed directly to the gtag config command
-        // This config will be shared across all trackingIds
         gtagConfig: {
           anonymize_ip: true,
           cookie_expires: 0,
         },
-        // This object is used for configuration specific to this plugin
         pluginConfig: {
-          // Puts tracking script in the head instead of the body
           head: true,
-          // Setting this parameter is also optional
           respectDNT: true,
         },
       },
@@ -61,13 +83,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Aashutosh Rathi | Dev Portfolio`,
-        short_name: `Aashutosh.Dev`,
+        name: `Aashutosh Rathi`,
+        short_name: `aashutosh.dev`,
         start_url: `/`,
         background_color: `#252525`,
         theme_color: `#343b3f`,
         display: `minimal-ui`,
-        icon: `src/images/pic.webp`, // This path is relative to the root of the site.
+        icon: `src/images/pic.webp`,
       },
     },
     {
@@ -87,8 +109,5 @@ module.exports = {
         },
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
-}
+};

@@ -1,9 +1,0 @@
-.pill-button {
-  border: none;
-  background-color: var(--nav-footer-bg-color);
-  padding: 0.67rem 1rem !important;
-  display: inline-block;
-  margin: 0.25rem 0.6rem;
-  cursor: pointer;
-  border-radius: 1.6rem;
-}
