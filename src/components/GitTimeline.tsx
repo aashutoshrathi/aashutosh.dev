@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useTheme } from "../context/ThemeContext"
+import { lightHaptic } from "../utils/haptic"
 
 interface Commit {
   hash: string
@@ -58,6 +59,7 @@ const GitTimeline: React.FC = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
 
   const toggleExpand = (index: number) => {
+    lightHaptic()
     setExpandedIndex(expandedIndex === index ? null : index)
   }
 
@@ -206,7 +208,6 @@ const GitTimeline: React.FC = () => {
           ))}
         </div>
 
-        {/* Terminal prompt at the end */}
         <div className={`mt-8 ${c.textLight} flex items-center gap-2`}>
           <span className={`${c.green}`}>→</span>
           <span className="animate-pulse">_</span>

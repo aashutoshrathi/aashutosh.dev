@@ -1,6 +1,7 @@
 import React from "react"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
 import { ButtonProps } from "../types"
+import { mediumHaptic } from "../utils/haptic"
 
 const Button: React.FC<ButtonProps> = ({ url, text }) => {
   return (
@@ -13,6 +14,7 @@ const Button: React.FC<ButtonProps> = ({ url, text }) => {
         backgroundColor: 'var(--link-color)',
         color: 'var(--main-bg-color)',
       }}
+      onClick={() => mediumHaptic()}
       onMouseEnter={(e) => {
         e.currentTarget.style.backgroundColor = 'var(--link-hover-color)'
       }}

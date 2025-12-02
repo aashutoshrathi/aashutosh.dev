@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { mediumHaptic } from "../utils/haptic"
 
 interface CodeBlockProps {
   children: React.ReactNode
@@ -9,6 +10,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ children, className }) => {
   const [copied, setCopied] = useState(false)
 
   const handleCopy = async () => {
+    mediumHaptic()
     // Extract text content from children
     const getTextContent = (node: any): string => {
       if (typeof node === 'string') return node
