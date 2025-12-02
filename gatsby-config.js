@@ -89,7 +89,7 @@ module.exports = {
         background_color: `#252525`,
         theme_color: `#343b3f`,
         display: `minimal-ui`,
-        icon: `src/images/pic.webp`,
+        icon: `src/images/square.png`,
       },
     },
     {
@@ -110,4 +110,4 @@ module.exports = {
       },
     },
   ],
-};
+}
