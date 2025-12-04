@@ -1,9 +1,11 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+
 import { MDXProvider } from "@mdx-js/react"
+import { graphql, Link } from "gatsby"
+
+import CodeBlock from "../components/CodeBlock"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import CodeBlock from "../components/CodeBlock"
 
 const components = {
   pre: (props: any) => <CodeBlock {...props.children.props} />,
@@ -25,11 +27,11 @@ const BlogPostTemplate: React.FC<any> = ({ data, children }) => {
           </Link>
         </div>
         <header className="mb-8">
-          <h1 className="text-4xl font-bold mb-2">{post.frontmatter.title}</h1>
+          <h1 className="mb-2 text-4xl font-bold">{post.frontmatter.title}</h1>
           <p className="text-base opacity-80">{post.frontmatter.date}</p>
         </header>
         <MDXProvider components={components}>
-          <div className="prose prose-lg dark:prose-invert max-w-none">
+          <div className="prose prose-lg max-w-none dark:prose-invert">
             {children}
           </div>
         </MDXProvider>
@@ -39,7 +41,7 @@ const BlogPostTemplate: React.FC<any> = ({ data, children }) => {
 }
 
 export const query = graphql`
-  query($id: String!) {
+  query ($id: String!) {
     mdx(id: { eq: $id }) {
       frontmatter {
         title

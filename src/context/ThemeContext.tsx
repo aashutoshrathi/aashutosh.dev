@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from "react"
+import React, {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useState,
+} from "react"
 
 export type Theme = "light" | "dark"
 
@@ -29,7 +35,9 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
       if (currentTheme === "dark" || currentTheme === "light") {
         return currentTheme
       }
-      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+      return window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light"
     }
     return "light"
   }
@@ -38,7 +46,9 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
   useEffect(() => {
     // Sync with current theme (already set by SSR script, so no flash)
-    const currentTheme = document.documentElement.getAttribute("data-theme") as Theme
+    const currentTheme = document.documentElement.getAttribute(
+      "data-theme"
+    ) as Theme
     if (currentTheme && currentTheme !== theme) {
       setThemeState(currentTheme)
     }

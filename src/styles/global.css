@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;700&family=IBM+Plex+Mono&family=Noto+Sans+Mono:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;700&family=IBM+Plex+Mono&family=Noto+Sans+Mono:wght@400;500;600&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -14,6 +14,7 @@
   --icon-color: #1a202c;
   --twitter-brand: #1da1f2;
   --dull-white: #c5c4bf;
+  @apply bg-white;
 }
 
 [data-theme="dark"] {
@@ -24,12 +25,14 @@
   --link-color: #60a5fa;
   --link-hover-color: #93c5fd;
   --icon-color: #f8fafc;
+  @apply bg-slate-900;
 }
 
 @layer base {
-  html, body {
+  html,
+  body {
     @apply overflow-x-hidden w-full m-0 p-0 box-border;
-    font-family: 'Google Sans Flex', sans-serif;
+    font-family: "Google Sans Flex", sans-serif;
     color: var(--main-text-color);
   }
 
@@ -37,11 +40,12 @@
     @apply box-border;
   }
 
-  body {
-    background-color: var(--main-bg-color);
-  }
-
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     user-select: none;
   }
 
@@ -86,4 +90,3 @@
     background: var(--selected-text-bg-color);
   }
 }
-

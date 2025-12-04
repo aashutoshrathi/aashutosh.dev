@@ -1,8 +1,9 @@
-const dotenv = require("dotenv");
+const dotenv = require("dotenv")
+const path = require("path")
 
 dotenv.config({
   path: `.env`,
-});
+})
 
 const cspDirectives = [
   "script-src 'self' 'unsafe-inline' *.cloudfront.net unpkg.com www.google-analytics.com www.googletagmanager.com",
@@ -12,7 +13,7 @@ const cspDirectives = [
   "worker-src 'self' blob: data:",
   "connect-src 'self' 'unsafe-inline' api.aashutosh.dev github-contributions-api.jogruber.de www.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com",
   "object-src 'none'",
-];
+]
 
 module.exports = {
   siteMetadata: {
@@ -36,6 +37,21 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/layout.tsx`),
+      },
+    },
+    {
+      resolve: "gatsby-plugin-alias-imports",
+      options: {
+        alias: {
+          "@components": path.resolve(__dirname, "./src/components"),
+          "@utils": path.resolve(__dirname, "./src/utils"),
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -1,13 +1,21 @@
 import React from "react"
-import Icon from "./icon"
+
 import { OutboundLink } from "gatsby-plugin-google-gtag"
+
 import { ProjectCardProps } from "../types"
+import Icon from "./icon"
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
-  <div className="bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg p-6 transition-all duration-200 ease-in-out flex flex-col justify-between hover:-translate-y-1 hover:shadow-md">
-    <h3 className="text-xl font-semibold mb-2 text-main-text"> {project.name.replace(/-/g, " ")} </h3>
-    <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow"> {project.description} </p>
-    <div className="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400">
+  <div className="flex flex-col justify-between rounded-lg border border-gray-200 bg-gray-50 p-6 transition-all duration-200 ease-in-out hover:-translate-y-1 hover:shadow-md dark:border-slate-700 dark:bg-slate-800">
+    <h3 className="mb-2 text-xl font-semibold text-main-text">
+      {" "}
+      {project.name.replace(/-/g, " ")}{" "}
+    </h3>
+    <p className="mb-4 flex-grow text-gray-600 dark:text-gray-300">
+      {" "}
+      {project.description}{" "}
+    </p>
+    <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
       <div className="flex items-center [&_svg]:mr-2">
         {project.language ? (
           <>
@@ -18,7 +26,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
           ""
         )}
       </div>
-      <div className="[&_a]:ml-4 [&_a]:underline" style={{ color: 'var(--link-color)' }}>
+      <div
+        className="[&_a]:ml-4 [&_a]:underline"
+        style={{ color: "var(--link-color)" }}
+      >
         <OutboundLink
           href={project.html_url}
           aria-label="Source Code"

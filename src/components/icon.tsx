@@ -1,20 +1,29 @@
 import React from "react"
-import { titleCase } from "../utils/utils"
+
 import { OutboundLink } from "gatsby-plugin-google-gtag"
-import { IconProps } from "../types"
 import {
   FaCode,
-  FaPython,
-  FaJsSquare,
-  FaGithub,
-  FaTwitter,
-  FaStackOverflow,
   FaDev,
-  FaLinkedin,
   FaFacebook,
+  FaGithub,
+  FaJsSquare,
+  FaLinkedin,
+  FaPython,
   FaRust,
+  FaStackOverflow,
+  FaTwitter,
 } from "react-icons/fa"
-import { SiCplusplus, SiTypescript, SiGo, SiJupyter, SiMdx, SiFlutter } from "react-icons/si"
+import {
+  SiCplusplus,
+  SiFlutter,
+  SiGo,
+  SiJupyter,
+  SiMdx,
+  SiTypescript,
+} from "react-icons/si"
+
+import { IconProps } from "../types"
+import { titleCase } from "../utils/utils"
 
 const iconMap: { [key: string]: React.ComponentType } = {
   C: FaCode,
@@ -48,9 +57,7 @@ const Icon: React.FC<IconProps> = ({ url, label, width, height }) => {
         rel="noopener noreferrer"
       >
         {IconComponent ? (
-          <IconComponent
-            aria-label={updatedLabel}
-          />
+          <IconComponent aria-label={updatedLabel} />
         ) : (
           <span> {updatedLabel} </span>
         )}

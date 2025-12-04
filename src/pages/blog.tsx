@@ -1,21 +1,22 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+
+import { graphql, Link } from "gatsby"
+
+import SEO from "@components/seo"
 
 const BlogIndex: React.FC<any> = ({ data }) => {
   const posts = data.allMdx.nodes
 
   return (
-    <Layout>
+    <>
       <SEO title="Blog" />
       <div className="py-8">
-        <h1 className="text-4xl font-bold mb-8">Blog</h1>
+        <h1 className="mb-8 text-4xl font-bold">Blog</h1>
         <div className="space-y-8">
           {posts.map((post: any) => (
             <article key={post.id}>
               <header>
-                <h2 className="text-2xl font-bold mb-1">
+                <h2 className="mb-1 text-2xl font-bold">
                   <Link to={`/blog/${post.frontmatter.slug}`}>
                     {post.frontmatter.title}
                   </Link>
@@ -29,7 +30,7 @@ const BlogIndex: React.FC<any> = ({ data }) => {
           ))}
         </div>
       </div>
-    </Layout>
+    </>
   )
 }
 

@@ -33,18 +33,6 @@ export interface SEOProps {
   title: string
 }
 
-export interface ButtonProps {
-  url: string
-  text: string
-}
-
-export interface LinkProps {
-  url: string
-  children: React.ReactNode
-  external?: boolean
-  className?: string
-}
-
 export interface ProjectCardProps {
   project: Project
 }

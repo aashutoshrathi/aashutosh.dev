@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+
 import { useTheme } from "../context/ThemeContext"
 import { lightHaptic } from "../utils/haptic"
 
@@ -17,8 +18,9 @@ const commits: Commit[] = [
     type: "feat",
     scope: "career",
     message: "deploying sales AI agents at Regie",
-    details: "+ Added NestJS\n+ Added TypeScript Strict Mode\n+ Optimized Salesforce API",
-    date: "Current"
+    details:
+      "+ Added NestJS\n+ Added TypeScript Strict Mode\n+ Optimized Salesforce API",
+    date: "Current",
   },
   {
     hash: "7c2b14",
@@ -26,7 +28,7 @@ const commits: Commit[] = [
     scope: "oss",
     message: "release Testcase Generator v1.0",
     details: "+ Python CLI\n+ Automated Inputs\n- Removed Manual Entry",
-    date: "2024"
+    date: "2024",
   },
   {
     hash: "6d1a92",
@@ -34,7 +36,7 @@ const commits: Commit[] = [
     scope: "stack",
     message: "migrate core dependency to Rust",
     details: "+ Memory Safety\n+ Blazingly Fast\n- Legacy Python Scripts",
-    date: "Experiment"
+    date: "Experiment",
   },
   {
     hash: "5e4c83",
@@ -42,7 +44,7 @@ const commits: Commit[] = [
     scope: "web",
     message: "patch critical boredom with Git-Stalk-CLI",
     details: "+ Node.js\n+ GitHub API\n+ Terminal UI",
-    date: "Side Project"
+    date: "Side Project",
   },
   {
     hash: "3a8e60",
@@ -50,8 +52,8 @@ const commits: Commit[] = [
     scope: "root",
     message: "initial commit aashutoshrathi",
     details: "+ Location: India\n+ Role: Full Stack Engineer",
-    date: "Start"
-  }
+    date: "Start",
+  },
 ]
 
 const GitTimeline: React.FC = () => {
@@ -77,7 +79,7 @@ const GitTimeline: React.FC = () => {
       purple: "text-purple-600",
       red: "text-red-600",
       line: "bg-zinc-300",
-      codeBg: "bg-zinc-100/30"
+      codeBg: "bg-zinc-100/30",
     },
     dark: {
       bg: "bg-slate-950",
@@ -92,8 +94,8 @@ const GitTimeline: React.FC = () => {
       purple: "text-purple-400",
       red: "text-red-400",
       line: "bg-zinc-700",
-      codeBg: "bg-slate-900/30"
-    }
+      codeBg: "bg-slate-900/30",
+    },
   }
 
   const c = colors[theme]
@@ -105,7 +107,7 @@ const GitTimeline: React.FC = () => {
       fix: c.blue,
       chore: c.textLight,
       docs: c.yellow,
-      init: c.purple
+      init: c.purple,
     }
     return typeColors[type] || c.textLight
   }
@@ -124,15 +126,13 @@ const GitTimeline: React.FC = () => {
   }
 
   return (
-    <div className={`${c.text} font-mono p-4 sm:p-8 min-h-screen`}>
-      <div className="max-w-6xl mx-auto">
+    <div className={`${c.text} min-h-screen p-4 font-mono sm:p-8`}>
+      <div className="mx-auto max-w-6xl">
         <div className="mb-8">
           <h2 className={`text-lg font-bold ${c.text} mb-2`}>
             $ git log --oneline --graph
           </h2>
-          <p className={`${c.textLight} text-sm`}>
-            Timeline of milestones
-          </p>
+          <p className={`${c.textLight} text-sm`}>Timeline of milestones</p>
         </div>
 
         <div className="space-y-0">
@@ -140,15 +140,17 @@ const GitTimeline: React.FC = () => {
             <div key={index} className="relative">
               <div
                 onClick={() => toggleExpand(index)}
-                className={`flex items-start gap-3 cursor-pointer ${c.highlight} transition-colors p-2 -mx-2 rounded group`}
+                className={`flex cursor-pointer items-start gap-3 ${c.highlight} group -mx-2 rounded p-2 transition-colors`}
               >
                 {/* Hash */}
-                <div className={`${c.textLight} text-xs sm:text-sm shrink-0 w-14 sm:w-20`}>
+                <div
+                  className={`${c.textLight} w-14 shrink-0 text-xs sm:w-20 sm:text-sm`}
+                >
                   {commit.hash}
                 </div>
 
                 {/* Graph Column */}
-                <div className="relative flex flex-col items-center shrink-0 w-6">
+                <div className="relative flex w-6 shrink-0 flex-col items-center">
                   {/* Vertical line from previous commit */}
                   {index > 0 && (
                     <div
@@ -159,7 +161,7 @@ const GitTimeline: React.FC = () => {
                   <div
                     className={`${getTypeColor(
                       commit.type
-                    )} text-lg z-10 leading-none`}
+                    )} z-10 text-lg leading-none`}
                   >
                     *
                   </div>
@@ -167,26 +169,32 @@ const GitTimeline: React.FC = () => {
                   {/* Vertical line to next commit - extends based on content height */}
                   {index < commits.length - 1 && (
                     <div
-                      className={`absolute top-0 w-0.5 ${c.line} h-full mt-4`}
+                      className={`absolute top-0 w-0.5 ${c.line} mt-4 h-full`}
                     />
                   )}
                 </div>
 
                 {/* Message */}
-                <div className="flex-1 min-w-0">
-                  <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-baseline gap-1 sm:gap-2">
-                    <div className="flex items-baseline gap-2 flex-wrap">
-                      <span className={`${getTypeColor(commit.type)} font-semibold text-sm sm:text-base`}>
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:items-baseline sm:gap-2">
+                    <div className="flex flex-wrap items-baseline gap-2">
+                      <span
+                        className={`${getTypeColor(
+                          commit.type
+                        )} text-sm font-semibold sm:text-base`}
+                      >
                         {commit.type}
                       </span>
-                      <span className={`${c.textLight} text-sm sm:text-base`}>({commit.scope}):</span>
-                      <span className={`${c.text} break-words text-sm sm:text-base`}>
+                      <span className={`${c.textLight} text-sm sm:text-base`}>
+                        ({commit.scope}):
+                      </span>
+                      <span
+                        className={`${c.text} break-words text-sm sm:text-base`}
+                      >
                         {commit.message}
                       </span>
                     </div>
-                    <span
-                      className={`${c.textLighter} text-xs sm:ml-auto`}
-                    >
+                    <span className={`${c.textLighter} text-xs sm:ml-auto`}>
                       {commit.date}
                     </span>
                   </div>
@@ -196,11 +204,9 @@ const GitTimeline: React.FC = () => {
               {/* Expanded diff view */}
               {expandedIndex === index && (
                 <div
-                  className={`ml-[4.75rem] sm:ml-[7.5rem] mt-2 mb-4 border-l-2 ${c.border} pl-3 sm:pl-4 py-2 ${c.codeBg} rounded-r`}
+                  className={`mb-4 ml-[4.75rem] mt-2 border-l-2 sm:ml-[7.5rem] ${c.border} py-2 pl-3 sm:pl-4 ${c.codeBg} rounded-r`}
                 >
-                  <div className={`${c.textLight} text-xs mb-2`}>
-                    Changes:
-                  </div>
+                  <div className={`${c.textLight} mb-2 text-xs`}>Changes:</div>
                   {formatDetails(commit.details)}
                 </div>
               )}

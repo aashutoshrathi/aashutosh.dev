@@ -1,7 +1,11 @@
 import path from "path"
-import type { GatsbyNode } from "gatsby"
 
-export const createPages: GatsbyNode["createPages"] = async ({ graphql, actions }) => {
+import { GatsbyNode } from "gatsby"
+
+export const createPages: GatsbyNode["createPages"] = async ({
+  graphql,
+  actions,
+}) => {
   const { createPage } = actions
 
   const result = await graphql<any>(`
@@ -36,4 +40,3 @@ export const createPages: GatsbyNode["createPages"] = async ({ graphql, actions 
     })
   })
 }
-
