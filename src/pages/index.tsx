@@ -15,11 +15,10 @@ const IndexPage: React.FC = () => {
   const headingRef = useRef<HTMLHeadingElement | null>(null)
   const aboutRef = useRef<HTMLElement | null>(null)
 
-  const matches = useMediaQuery("(min-width: 768px)")
+  const isDesktop = useMediaQuery("(min-width: 768px)")
 
   useGSAP(() => {
     const tl = gsap.timeline()
-    const isDesktop = matches
 
     tl.from(imgWrapperRef.current, {
       scale: 1.1,

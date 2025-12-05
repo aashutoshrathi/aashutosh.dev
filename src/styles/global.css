@@ -14,6 +14,7 @@
   --icon-color: #1a202c;
   --twitter-brand: #1da1f2;
   --dull-white: #c5c4bf;
+
   @apply bg-white;
 
   ::-webkit-scrollbar {
@@ -41,6 +42,7 @@
   --link-color: #60a5fa;
   --link-hover-color: #93c5fd;
   --icon-color: #f8fafc;
+
   @apply bg-slate-900;
 
   ::-webkit-scrollbar {
@@ -88,5 +90,36 @@
 
   ::selection {
     @apply bg-blue-600 text-white;
+  }
+
+  .bounce-1,
+  .bounce-2,
+  .bounce-3 {
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  }
+
+  .bounce-1 {
+    animation-delay: -0.32s;
+  }
+
+  .bounce-2 {
+    animation-delay: -0.16s;
+  }
+
+  @keyframes sk-bouncedelay {
+    0%,
+    80%,
+    100% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+    40% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+
+  text {
+    @apply fill-slate-900 dark:fill-slate-50;
   }
 }
