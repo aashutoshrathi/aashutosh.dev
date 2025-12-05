@@ -10,7 +10,7 @@ export default {
     "",
     "<THIRD_PARTY_MODULES>",
     "",
-    "^(@components|@utils)",
+    "^(@components|@utils|@context)",
     "",
     "^[.]",
     "",
