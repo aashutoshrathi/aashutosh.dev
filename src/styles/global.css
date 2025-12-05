@@ -31,37 +31,12 @@
 @layer base {
   html,
   body {
-    @apply overflow-x-hidden w-full m-0 p-0 box-border;
+    @apply m-0 box-border w-full overflow-x-hidden p-0 text-slate-900 dark:text-slate-50;
     font-family: "Google Sans Flex", sans-serif;
-    color: var(--main-text-color);
   }
 
   * {
     @apply box-border;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    user-select: none;
-  }
-
-  nav a {
-    user-select: none;
-  }
-
-  /* Base link styles - will be overridden by prose */
-  a {
-    @apply no-underline font-mono;
-    color: var(--link-color);
-  }
-
-  a:hover {
-    @apply underline;
-    color: var(--link-hover-color);
   }
 
   /* Let prose styles take precedence for blog content */
@@ -81,12 +56,10 @@
   }
 
   ::-moz-selection {
-    color: var(--selected-text-color);
-    background: var(--selected-text-bg-color);
+    @apply bg-blue-600 text-white;
   }
 
   ::selection {
-    color: var(--selected-text-color);
-    background: var(--selected-text-bg-color);
+    @apply bg-blue-600 text-white;
   }
 }

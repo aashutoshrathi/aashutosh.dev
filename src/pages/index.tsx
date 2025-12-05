@@ -59,7 +59,7 @@ const IndexPage: React.FC = () => {
           </h1>
           <section
             ref={aboutRef}
-            className="mb-8 text-balance text-lg tracking-wide text-slate-900 dark:text-slate-50"
+            className="mb-8 text-balance text-lg tracking-wide"
           >
             <p className="mb-2">
               Software Engineer by day, automation connoisseur always. Usually
