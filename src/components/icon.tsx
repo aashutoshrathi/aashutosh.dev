@@ -22,8 +22,7 @@ import {
   SiTypescript,
 } from "react-icons/si"
 
-import { IconProps } from "../types"
-import { titleCase } from "../utils/utils"
+import { titleCase } from "@utils/utils"
 
 const iconMap: { [key: string]: React.ComponentType } = {
   C: FaCode,
@@ -42,6 +41,13 @@ const iconMap: { [key: string]: React.ComponentType } = {
   Rust: FaRust,
   Go: SiGo,
   Mdx: SiMdx,
+}
+
+interface IconProps {
+  url?: string
+  label: string
+  width?: string
+  height?: string
 }
 
 const Icon: React.FC<IconProps> = ({ url, label, width, height }) => {

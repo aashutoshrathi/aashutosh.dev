@@ -1,9 +1,18 @@
 import React, { useEffect, useState } from "react"
 
 import Loader from "../components/loader"
-import { Project } from "../types"
 import { fetchData } from "../utils/utils"
 import ProjectCard from "./project-card"
+
+export interface Project {
+  id: number
+  name: string
+  description: string | null
+  language: string | null
+  html_url: string
+  homepage: string
+  stargazers_count?: number
+}
 
 const PROJECT_URL = `${process.env.GATSBY_API_URI}projects`
 

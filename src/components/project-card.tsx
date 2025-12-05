@@ -2,8 +2,12 @@ import React from "react"
 
 import { OutboundLink } from "gatsby-plugin-google-gtag"
 
-import { ProjectCardProps } from "../types"
-import Icon from "./icon"
+import Icon from "@components/icon"
+import { Project } from "@components/projects"
+
+interface ProjectCardProps {
+  project: Project
+}
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
   <div className="flex flex-col justify-between rounded-lg border border-gray-200 bg-gray-50 p-6 transition-all duration-200 ease-in-out hover:-translate-y-1 hover:shadow-md dark:border-slate-700 dark:bg-slate-800">
