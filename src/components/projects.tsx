@@ -26,7 +26,7 @@ import {
 } from "react-icons/si"
 import { useMediaQuery } from "usehooks-ts"
 
-import { fetchData, titleCase } from "@utils/utils"
+import { fetchData, titleCase } from "@utils"
 
 export interface Project {
   id: number

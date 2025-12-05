@@ -5,16 +5,6 @@
 @tailwind utilities;
 
 :root {
-  --main-bg-color: #ffffff;
-  --main-text-color: #1a202c;
-  --selected-text-color: #ffffff;
-  --selected-text-bg-color: #2563eb;
-  --link-color: #2563eb;
-  --link-hover-color: #1d4ed8;
-  --icon-color: #1a202c;
-  --twitter-brand: #1da1f2;
-  --dull-white: #c5c4bf;
-
   @apply bg-white;
 
   ::-webkit-scrollbar {
@@ -35,14 +25,6 @@
 }
 
 [data-theme="dark"] {
-  --main-bg-color: #0f172a;
-  --main-text-color: #f8fafc;
-  --selected-text-color: #0f172a;
-  --selected-text-bg-color: #60a5fa;
-  --link-color: #60a5fa;
-  --link-hover-color: #93c5fd;
-  --icon-color: #f8fafc;
-
   @apply bg-slate-900;
 
   ::-webkit-scrollbar {

@@ -5,8 +5,7 @@ import { MDXProvider } from "@mdx-js/react"
 import { graphql, Link } from "gatsby"
 import gsap from "gsap"
 
-import CodeBlock from "@components/code-block"
-import SEO from "@components/seo"
+import { CodeBlock, SEO } from "@components"
 
 import { MDXNode } from "../pages/blog"
 

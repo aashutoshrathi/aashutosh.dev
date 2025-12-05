@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
     <footer className="p-8 text-center font-mono">
       <div
         ref={socialsRef}
-        className="text-center [&_a]:inline-block [&_a]:p-1 [&_a]:text-3xl"
+        className="text-center flex items-center justify-center gap-2"
       >
         <SocialIcon
           link="https://github.com/aashutoshrathi"
@@ -115,7 +115,7 @@ const SocialIcon = ({ link, title, icon }: SocialIconProps) => {
         title={title}
         target="_blank"
         rel="noopener noreferrer"
-        className="rounded-full transition-transform duration-200 hover:scale-110 focus:outline-none focus-visible:ring-1 focus-visible:ring-slate-900 dark:focus-visible:ring-white"
+        className="inline-block p-1 text-3xl rounded-full transition-transform duration-200 hover:scale-110 focus:outline-none focus-visible:ring-1 focus-visible:ring-slate-900 dark:focus-visible:ring-white"
       >
         <Icon />
       </OutboundLink>

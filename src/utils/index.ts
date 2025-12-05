@@ -46,3 +46,17 @@ export const hapticFeedback = (pattern: number | number[] = 10) => {
 export const lightHaptic = () => hapticFeedback(10)
 export const mediumHaptic = () => hapticFeedback(20)
 export const heavyHaptic = () => hapticFeedback(30)
+
+export const titleCase = (str: string): string =>
+  str
+    .toLowerCase()
+    .replace(/\b(\w)/g, (s: string) => s.toUpperCase())
+    .split(" ")[0]
+
+export const fetchData = async <T>(url: string): Promise<T> => {
+  if (typeof window === "undefined") {
+    throw new Error("fetchData can only be called on the client side")
+  }
+  const response = await fetch(url)
+  return response.json()
+}

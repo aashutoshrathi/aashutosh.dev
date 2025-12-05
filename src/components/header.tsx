@@ -5,7 +5,7 @@ import { useLocation } from "@reach/router"
 import { Link } from "gatsby"
 import gsap from "gsap"
 
-import { lightHaptic } from "@utils/haptic"
+import { lightHaptic } from "@utils"
 
 const Header: React.FC = () => {
   const location = useLocation()

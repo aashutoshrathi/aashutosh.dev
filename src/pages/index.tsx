@@ -7,8 +7,8 @@ import { StaticImage } from "gatsby-plugin-image"
 import gsap from "gsap"
 import { useMediaQuery } from "usehooks-ts"
 
-import SEO from "@components/seo"
-import { mediumHaptic } from "@utils/haptic"
+import { SEO } from "@components"
+import { mediumHaptic } from "@utils"
 
 const IndexPage: React.FC = () => {
   const imgWrapperRef = useRef<HTMLDivElement | null>(null)

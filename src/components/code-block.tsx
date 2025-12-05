@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-import { mediumHaptic } from "@utils/haptic"
+import { mediumHaptic } from "@utils"
 
 interface CodeBlockProps {
   children: React.ReactNode

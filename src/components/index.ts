@@ -1,0 +1,7 @@
+export { default as CodeBlock } from "./code-block"
+export { default as Footer } from "./footer"
+export { default as Header } from "./header"
+export { default as Layout } from "./layout"
+export { default as Projects } from "./projects"
+export { default as ScrollToTop } from "./scroll-to-top"
+export { default as SEO } from "./seo"

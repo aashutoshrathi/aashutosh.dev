@@ -3,8 +3,7 @@ import React, { useEffect, useState } from "react"
 import GitHubCalendar from "react-github-calendar"
 import { Tooltip as ReactTooltip } from "react-tooltip"
 
-import Projects from "@components/projects"
-import SEO from "@components/seo"
+import { Projects, SEO } from "@components"
 
 const WorkPage: React.FC = () => {
   const [monthsToShow, setMonthsToShow] = useState(12)

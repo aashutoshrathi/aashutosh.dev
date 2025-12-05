@@ -4,7 +4,7 @@ import { useGSAP } from "@gsap/react"
 import { graphql, Link } from "gatsby"
 import gsap from "gsap"
 
-import SEO from "@components/seo"
+import { SEO } from "@components"
 
 export type MDXNode = {
   id: string

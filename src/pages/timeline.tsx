@@ -5,7 +5,7 @@ import clsx from "clsx"
 import gsap, { SteppedEase } from "gsap"
 import TextPlugin from "gsap/TextPlugin"
 
-import SEO from "@components/seo"
+import { SEO } from "@components"
 
 gsap.registerPlugin(TextPlugin)
 

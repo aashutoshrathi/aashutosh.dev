@@ -4,7 +4,7 @@ import { useGSAP } from "@gsap/react"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
 import gsap from "gsap"
 
-import SEO from "@components/seo"
+import { SEO } from "@components"
 
 interface Item {
   name: string
