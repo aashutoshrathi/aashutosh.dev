@@ -1,5 +1,6 @@
 import React, { useState } from "react"
-import { mediumHaptic } from "../utils/haptic"
+
+import { mediumHaptic } from "@utils"
 
 interface CodeBlockProps {
   children: React.ReactNode
@@ -13,10 +14,10 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ children, className }) => {
     mediumHaptic()
     // Extract text content from children
     const getTextContent = (node: any): string => {
-      if (typeof node === 'string') return node
-      if (Array.isArray(node)) return node.map(getTextContent).join('')
+      if (typeof node === "string") return node
+      if (Array.isArray(node)) return node.map(getTextContent).join("")
       if (node?.props?.children) return getTextContent(node.props.children)
-      return ''
+      return ""
     }
 
     const code = getTextContent(children)
@@ -29,22 +30,22 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ children, className }) => {
   const language = className?.replace(/language-/, "") || "text"
 
   return (
-    <div className="relative group my-4">
-      <div className="absolute top-3 right-3 z-10 flex items-center gap-2">
+    <div className="group relative my-4">
+      <div className="absolute right-3 top-3 z-10 flex items-center gap-2">
         {language !== "text" && (
-          <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono px-2 py-1 bg-zinc-800/80 dark:bg-zinc-900/80 rounded backdrop-blur-sm">
+          <span className="rounded bg-zinc-800/80 px-2 py-1 font-mono text-xs text-zinc-400 backdrop-blur-sm dark:bg-zinc-900/80 dark:text-zinc-500">
             {language}
           </span>
         )}
         <button
           onClick={handleCopy}
-          className="opacity-0 group-hover:opacity-100 transition-opacity px-3 py-1 bg-zinc-700 hover:bg-zinc-600 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-white text-xs rounded font-mono shadow-lg"
+          className="rounded bg-zinc-700 px-3 py-1 font-mono text-xs text-white opacity-0 shadow-lg transition-opacity hover:bg-zinc-600 group-hover:opacity-100 dark:bg-zinc-800 dark:hover:bg-zinc-700"
           aria-label="Copy code"
         >
           {copied ? "✓ Copied!" : "Copy"}
         </button>
       </div>
-      <pre className="!mt-0 !mb-0">
+      <pre className="!mb-0 !mt-0">
         <code className={className}>{children}</code>
       </pre>
     </div>

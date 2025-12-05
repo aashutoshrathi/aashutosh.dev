@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect, useState } from "react"
+
 import { FaArrowUp } from "react-icons/fa"
 
 const ScrollToTop = () => {
@@ -32,7 +33,7 @@ const ScrollToTop = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="p-2 sm:p-3 rounded-full bg-gray-800 text-white shadow-lg hover:bg-gray-700 focus:outline-none"
+          className="rounded-full bg-gray-800 p-4 text-white shadow-lg hover:bg-gray-700 focus:outline-none sm:p-3"
         >
           <FaArrowUp />
         </button>

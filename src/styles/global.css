@@ -1,68 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;700&family=IBM+Plex+Mono&family=Noto+Sans+Mono:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;700&family=IBM+Plex+Mono&family=Noto+Sans+Mono:wght@400;500;600&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --main-bg-color: #ffffff;
-  --main-text-color: #1a202c;
-  --selected-text-color: #ffffff;
-  --selected-text-bg-color: #2563eb;
-  --link-color: #2563eb;
-  --link-hover-color: #1d4ed8;
-  --icon-color: #1a202c;
-  --twitter-brand: #1da1f2;
-  --dull-white: #c5c4bf;
+  @apply bg-white;
+
+  ::-webkit-scrollbar {
+    @apply h-2 w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-200;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-slate-400;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-500;
+  }
 }
 
 [data-theme="dark"] {
-  --main-bg-color: #0f172a;
-  --main-text-color: #f8fafc;
-  --selected-text-color: #0f172a;
-  --selected-text-bg-color: #60a5fa;
-  --link-color: #60a5fa;
-  --link-hover-color: #93c5fd;
-  --icon-color: #f8fafc;
+  @apply bg-slate-900;
+
+  ::-webkit-scrollbar {
+    @apply h-2 w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-slate-600;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-500;
+  }
 }
 
 @layer base {
-  html, body {
-    @apply overflow-x-hidden w-full m-0 p-0 box-border;
-    font-family: 'Google Sans Flex', sans-serif;
-    color: var(--main-text-color);
+  html,
+  body {
+    @apply m-0 box-border w-full overflow-x-hidden p-0 text-slate-900 dark:text-slate-50;
+    font-family: "Google Sans Flex", sans-serif;
   }
 
   * {
     @apply box-border;
   }
 
-  body {
-    background-color: var(--main-bg-color);
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    user-select: none;
-  }
-
-  nav a {
-    user-select: none;
-  }
-
-  /* Base link styles - will be overridden by prose */
-  a {
-    @apply no-underline font-mono;
-    color: var(--link-color);
-  }
-
-  a:hover {
-    @apply underline;
-    color: var(--link-hover-color);
-  }
-
   /* Let prose styles take precedence for blog content */
   .prose a {
-    @apply font-sans;
+    @apply relative inline font-sans text-blue-600 no-underline transition-colors duration-200 before:absolute before:bottom-0 before:h-px before:w-0 before:bg-current before:transition-all before:content-[''] hover:text-blue-700 hover:no-underline hover:before:w-full focus:outline-none focus-visible:before:w-full dark:text-blue-400 dark:hover:text-blue-300;
   }
 
   /* Remove line-by-line backgrounds in code blocks */
@@ -71,19 +66,42 @@
     background-color: transparent !important;
   }
 
-  svg {
-    @apply m-2;
-    fill: var(--icon-color);
-  }
-
   ::-moz-selection {
-    color: var(--selected-text-color);
-    background: var(--selected-text-bg-color);
+    @apply bg-blue-600 text-white;
   }
 
   ::selection {
-    color: var(--selected-text-color);
-    background: var(--selected-text-bg-color);
+    @apply bg-blue-600 text-white;
+  }
+
+  .bounce-1,
+  .bounce-2,
+  .bounce-3 {
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  }
+
+  .bounce-1 {
+    animation-delay: -0.32s;
+  }
+
+  .bounce-2 {
+    animation-delay: -0.16s;
+  }
+
+  @keyframes sk-bouncedelay {
+    0%,
+    80%,
+    100% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+    40% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+
+  text {
+    @apply fill-slate-900 dark:fill-slate-50;
   }
 }
-

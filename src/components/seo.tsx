@@ -1,24 +1,56 @@
 import React from "react"
-import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
-import { SEOProps, MetaTag, SiteQueryResult } from "../types"
 
-const SEO: React.FC<SEOProps> = ({ description = "", lang = "en", meta = [], title }) => {
-  const { site } = useStaticQuery<SiteQueryResult>(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-            navigationString
-            coverImage
-          }
+import { graphql, useStaticQuery } from "gatsby"
+import Helmet from "react-helmet"
+
+interface SiteQueryResult {
+  site: {
+    siteMetadata: {
+      title: string
+      description: string
+      author: string
+      navigationString: string
+      coverImage: string
+      social: Array<{
+        name: string
+        url: string
+      }>
+    }
+  }
+}
+
+interface MetaTag {
+  name?: string
+  property?: string
+  content: string
+}
+
+export interface SEOProps {
+  description?: string
+  lang?: string
+  meta?: MetaTag[]
+  title: string
+}
+
+const SEO: React.FC<SEOProps> = ({
+  description = "",
+  lang = "en",
+  meta = [],
+  title,
+}) => {
+  const { site } = useStaticQuery<SiteQueryResult>(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          description
+          author
+          navigationString
+          coverImage
         }
       }
-    `
-  )
+    }
+  `)
 
   const metaDescription = description || site.siteMetadata.description
 
