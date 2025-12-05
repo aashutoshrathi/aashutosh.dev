@@ -1,9 +1,12 @@
 import React, { useEffect } from "react"
 
-import { LayoutProps } from "../types"
-import Footer from "./footer"
-import Header from "./header"
-import ScrollToTop from "./ScrollToTop"
+import Footer from "@components/footer"
+import Header from "@components/header"
+import ScrollToTop from "@components/scroll-to-top"
+
+export interface LayoutProps {
+  children: React.ReactNode
+}
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   useEffect(() => {

@@ -15,6 +15,22 @@
   --twitter-brand: #1da1f2;
   --dull-white: #c5c4bf;
   @apply bg-white;
+
+  ::-webkit-scrollbar {
+    @apply h-2 w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-200;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-slate-400;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-500;
+  }
 }
 
 [data-theme="dark"] {
@@ -26,6 +42,22 @@
   --link-hover-color: #93c5fd;
   --icon-color: #f8fafc;
   @apply bg-slate-900;
+
+  ::-webkit-scrollbar {
+    @apply h-2 w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-slate-600;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-500;
+  }
 }
 
 @layer base {
@@ -41,18 +73,13 @@
 
   /* Let prose styles take precedence for blog content */
   .prose a {
-    @apply font-sans;
+    @apply relative inline font-sans text-blue-600 no-underline transition-colors duration-200 before:absolute before:bottom-0 before:h-px before:w-0 before:bg-current before:transition-all before:content-[''] hover:text-blue-700 hover:no-underline hover:before:w-full focus:outline-none focus-visible:before:w-full dark:text-blue-400 dark:hover:text-blue-300;
   }
 
   /* Remove line-by-line backgrounds in code blocks */
   .prose pre code span,
   .prose pre code {
     background-color: transparent !important;
-  }
-
-  svg {
-    @apply m-2;
-    fill: var(--icon-color);
   }
 
   ::-moz-selection {

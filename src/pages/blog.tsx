@@ -6,7 +6,7 @@ import gsap from "gsap"
 
 import SEO from "@components/seo"
 
-type MDXNode = {
+export type MDXNode = {
   id: string
   excerpt: string
   frontmatter: {

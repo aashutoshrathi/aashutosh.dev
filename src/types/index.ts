@@ -44,10 +44,6 @@ export interface IconProps {
   height?: string
 }
 
-export interface LayoutProps {
-  children: React.ReactNode
-}
-
 export interface SiteQueryResult {
   site: {
     siteMetadata: SiteMetadata
