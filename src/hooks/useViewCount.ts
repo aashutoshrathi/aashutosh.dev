@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-const API_BASE_URL = process.env.GATSBY_API_URI || "https://api.aashutosh.dev/"
+const API_BASE_URL = process.env.GATSBY_API_URI
 
 interface ViewCountResponse {
   slug: string
@@ -17,7 +17,7 @@ export const useViewCount = (slug: string) => {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    if (!slug || typeof window === "undefined") {
+    if (!slug || typeof window === "undefined" || !API_BASE_URL) {
       setIsLoading(false)
       return
     }
@@ -29,9 +29,6 @@ export const useViewCount = (slug: string) => {
           `${API_BASE_URL}views/${encodeURIComponent(slug)}`,
           {
             method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
           }
         )
 

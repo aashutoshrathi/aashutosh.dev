@@ -28,6 +28,9 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps> = ({
   const post = data.mdx
   const { viewCount, isLoading } = useViewCount(post.frontmatter.slug)
 
+  // Determine which view count to display (API > frontmatter > null)
+  const displayedViewCount = viewCount ?? post.frontmatter.viewCount
+
   const backRef = useRef<HTMLDivElement | null>(null)
   const titleRef = useRef<HTMLHeadingElement | null>(null)
   const contentRef = useRef<HTMLDivElement | null>(null)
@@ -81,14 +84,11 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps> = ({
           <h1 className="mb-2 text-4xl font-bold">{post.frontmatter.title}</h1>
           <div className="flex items-center gap-4 text-base opacity-80">
             <p>{post.frontmatter.date}</p>
-            {(viewCount !== null || post.frontmatter.viewCount) && (
+            {displayedViewCount !== null && displayedViewCount !== undefined && (
               <p className="flex items-center gap-1">
-                <span>👁️</span>
+                <span aria-label="views">👁️</span>
                 <span>
-                  {!isLoading
-                    ? (viewCount ?? post.frontmatter.viewCount ?? 0).toLocaleString()
-                    : "..."}{" "}
-                  views
+                  {!isLoading ? displayedViewCount.toLocaleString() : "..."} views
                 </span>
               </p>
             )}
