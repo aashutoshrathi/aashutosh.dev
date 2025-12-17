@@ -6,6 +6,7 @@ import { graphql, Link } from "gatsby"
 import gsap from "gsap"
 
 import { CodeBlock, SEO } from "@components"
+import { useViewCount } from "../hooks/useViewCount"
 
 import { MDXNode } from "../pages/blog"
 
@@ -25,6 +26,7 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps> = ({
   children,
 }) => {
   const post = data.mdx
+  const { viewCount, isLoading } = useViewCount(post.frontmatter.slug)
 
   const backRef = useRef<HTMLDivElement | null>(null)
   const titleRef = useRef<HTMLHeadingElement | null>(null)
@@ -77,7 +79,20 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps> = ({
         </div>
         <header ref={titleRef} className="mb-8">
           <h1 className="mb-2 text-4xl font-bold">{post.frontmatter.title}</h1>
-          <p className="text-base opacity-80">{post.frontmatter.date}</p>
+          <div className="flex items-center gap-4 text-base opacity-80">
+            <p>{post.frontmatter.date}</p>
+            {(viewCount !== null || post.frontmatter.viewCount) && (
+              <p className="flex items-center gap-1">
+                <span>👁️</span>
+                <span>
+                  {!isLoading
+                    ? (viewCount ?? post.frontmatter.viewCount ?? 0).toLocaleString()
+                    : "..."}{" "}
+                  views
+                </span>
+              </p>
+            )}
+          </div>
         </header>
         <MDXProvider components={components}>
           <div
@@ -99,6 +114,8 @@ export const query = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        slug
+        viewCount
       }
       excerpt
     }

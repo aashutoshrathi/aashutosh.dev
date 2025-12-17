@@ -2,6 +2,17 @@ import path from "path"
 
 import { GatsbyNode } from "gatsby"
 
+export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] =
+  ({ actions }) => {
+    const { createTypes } = actions
+
+    createTypes(`
+    type MdxFrontmatter {
+      viewCount: Int
+    }
+  `)
+  }
+
 export const createPages: GatsbyNode["createPages"] = async ({
   graphql,
   actions,
