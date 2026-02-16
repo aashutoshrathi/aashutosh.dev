@@ -127,6 +127,11 @@ const sections: Array<{ title: string; items: Item[] }> = [
         description: "Just the laptop - portable and distraction-free workflow",
       },
       {
+        name: "Dell S2725DC",
+        description: "Monitor for extended workspace",
+        link: "https://amzn.in/d/0b2kZSBX",
+      },
+      {
         name: "Portronics My Buddy K11",
         description: "Desk pad for comfortable workspace",
         link: "https://www.amazon.in/dp/B0CWS3V8QN",
