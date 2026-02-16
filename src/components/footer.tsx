@@ -1,10 +1,8 @@
-import React, { useRef, useState } from "react"
+import React, { useRef } from "react"
 
 import { useGSAP } from "@gsap/react"
 import { useLocation } from "@reach/router"
-import { OutboundLink } from "gatsby-plugin-google-gtag"
 import gsap from "gsap"
-import { IconType } from "react-icons"
 import {
   FaDev,
   FaGithub,
@@ -12,6 +10,9 @@ import {
   FaStackOverflow,
   FaTwitter,
 } from "react-icons/fa"
+
+import LoopingText from "./looping-text"
+import SocialIcon from "./social-icon"
 
 const Footer: React.FC = () => {
   const location = useLocation()
@@ -94,96 +95,6 @@ const Footer: React.FC = () => {
         </span>
       </p>
     </footer>
-  )
-}
-
-interface SocialIconProps {
-  link: string
-  title: string
-  icon: IconType
-}
-
-const SocialIcon = ({ link, title, icon }: SocialIconProps) => {
-  const Icon = icon
-
-  const iconRef = useRef<HTMLSpanElement | null>(null)
-
-  return (
-    <span ref={iconRef} className="inline-block">
-      <OutboundLink
-        href={link}
-        title={title}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-block p-1 text-3xl rounded-full transition-transform duration-200 hover:scale-110 focus:outline-none focus-visible:ring-1 focus-visible:ring-slate-900 dark:focus-visible:ring-white"
-      >
-        <Icon />
-      </OutboundLink>
-    </span>
-  )
-}
-
-interface LoopingTextProps {
-  texts: string[]
-  duration: number
-}
-
-const LoopingText = ({ texts, duration }: LoopingTextProps) => {
-  const [activeTextIndex, setActiveTextIndex] = useState(-1)
-
-  const textsRef = useRef<HTMLDivElement | null>(null)
-
-  useGSAP(
-    () => {
-      if (!textsRef.current) return
-
-      const tl = gsap.timeline()
-
-      tl.set(".char", { y: activeTextIndex === -1 ? 0 : "100%" })
-        .fromTo(
-          ".char",
-          {
-            y: activeTextIndex === -1 ? 0 : "100%",
-          },
-          {
-            y: 0,
-            ease: "circ.out",
-            duration: 0.7,
-            stagger: 0.05,
-          }
-        )
-        .to(
-          ".char",
-          {
-            y: "-100%",
-            ease: "circ.in",
-            duration: 0.35,
-            stagger: 0.05,
-            onComplete: () => {
-              setActiveTextIndex((currentIndex) => {
-                if (currentIndex === -1) {
-                  return 1
-                }
-                return (currentIndex + 1) % texts.length
-              })
-            },
-          },
-          `+=${duration}`
-        )
-    },
-    { scope: textsRef, dependencies: [activeTextIndex] }
-  )
-
-  const currentActiveIndex = activeTextIndex === -1 ? 0 : activeTextIndex
-
-  return (
-    <div ref={textsRef} className="inline-block overflow-hidden">
-      {texts[currentActiveIndex].split("").map((char, idx) => (
-        <span key={idx} className="char inline-block">
-          {char}
-        </span>
-      ))}
-    </div>
   )
 }
 
