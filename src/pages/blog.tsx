@@ -14,6 +14,7 @@ export type MDXNode = {
     description: string
     slug: string
     title: string
+    viewCount?: number
   }
 }
 
