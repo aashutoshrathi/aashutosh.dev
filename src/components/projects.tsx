@@ -108,8 +108,8 @@ const Projects: React.FC = () => {
 
     fetchData<Project[]>(PROJECT_URL)
       .then(setProjects)
-      .catch((err) => {
-        console.error("Failed to fetch projects, using dummy data:", err)
+      .catch(() => {
+        console.error("Failed to fetch projects, using dummy data.")
         setProjects(DUMMY_PROJECTS)
       })
   }, [])
