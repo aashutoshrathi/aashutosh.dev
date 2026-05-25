@@ -5,12 +5,16 @@ import { MDXProvider } from "@mdx-js/react"
 import { graphql, Link } from "gatsby"
 import gsap from "gsap"
 
-import { CodeBlock, SEO } from "@components"
+import { CodeBlock, SEO, type CodeBlockProps } from "@components"
 
 import { MDXNode } from "../pages/blog"
 
+interface MDXPreProps extends React.HTMLAttributes<HTMLPreElement> {
+  children: React.ReactElement<CodeBlockProps>
+}
+
 const components = {
-  pre: (props: any) => <CodeBlock {...props.children.props} />,
+  pre: (props: MDXPreProps) => <CodeBlock {...props.children.props} />,
 }
 
 interface BlogPostTemplateProps {

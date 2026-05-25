@@ -1,5 +1,5 @@
 export { default as AnimatedDetails } from "./animated-details"
-export { default as CodeBlock } from "./code-block"
+export { default as CodeBlock, type CodeBlockProps } from "./code-block"
 export { default as Footer } from "./footer"
 export { default as Header } from "./header"
 export { default as Layout } from "./layout"
