@@ -1,7 +1,7 @@
 const isIOS = () => {
   if (typeof window === "undefined") return false
   return (
-    /iPad|iPhone|iPod/.test(navigator.userAgent) && !(window as any).MSStream
+    /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
   )
 }
 
@@ -10,7 +10,7 @@ const playTapSound = (duration: number) => {
   if (typeof window === "undefined") return
   try {
     const audioContext = new (
-      window.AudioContext || (window as any).webkitAudioContext
+      window.AudioContext || window.webkitAudioContext
     )()
     const oscillator = audioContext.createOscillator()
     const gainNode = audioContext.createGain()
