@@ -5,24 +5,28 @@ const isIOS = () => {
   )
 }
 
+let sharedAudioContext: AudioContext | null = null
+
 // iOS fallback: subtle audio feedback
 const playTapSound = (duration: number) => {
   if (typeof window === "undefined") return
   try {
-    const audioContext = new (
-      window.AudioContext || (window as any).webkitAudioContext
-    )()
-    const oscillator = audioContext.createOscillator()
-    const gainNode = audioContext.createGain()
+    if (!sharedAudioContext) {
+      sharedAudioContext = new (
+        window.AudioContext || (window as any).webkitAudioContext
+      )()
+    }
+    const oscillator = sharedAudioContext.createOscillator()
+    const gainNode = sharedAudioContext.createGain()
 
     oscillator.connect(gainNode)
-    gainNode.connect(audioContext.destination)
+    gainNode.connect(sharedAudioContext.destination)
 
     oscillator.frequency.value = 1000
     gainNode.gain.value = 0.01 // Very quiet
 
     oscillator.start()
-    oscillator.stop(audioContext.currentTime + duration / 1000)
+    oscillator.stop(sharedAudioContext.currentTime + duration / 1000)
   } catch (e) {
     // Silently fail if audio context not available
   }
