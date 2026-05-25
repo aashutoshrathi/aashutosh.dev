@@ -2,7 +2,7 @@ import React, { useState } from "react"
 
 import { mediumHaptic } from "@utils"
 
-interface CodeBlockProps {
+export interface CodeBlockProps {
   children: React.ReactNode
   className?: string
 }
