@@ -15,8 +15,21 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ children, className }) => {
     // Extract text content from children
     const getTextContent = (node: any): string => {
       if (typeof node === "string") return node
-      if (Array.isArray(node)) return node.map(getTextContent).join("")
-      if (node?.props?.children) return getTextContent(node.props.children)
+      if (typeof node === "number") return String(node)
+      if (Array.isArray(node)) {
+        let text = ""
+        for (let i = 0; i < node.length; i++) {
+          text += getTextContent(node[i])
+        }
+        return text
+      }
+      if (
+        React.isValidElement(node) &&
+        node.props &&
+        "children" in (node.props as any)
+      ) {
+        return getTextContent((node.props as any).children)
+      }
       return ""
     }
 
