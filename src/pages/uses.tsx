@@ -146,6 +146,8 @@ const UsesPage: React.FC = () => {
   const subHeadingRef = useRef<HTMLParagraphElement | null>(null)
 
   useGSAP(() => {
+    if (!usesRef.current) return
+
     const tl = gsap.timeline()
 
     tl.from(headingRef.current, {
@@ -160,7 +162,7 @@ const UsesPage: React.FC = () => {
         ease: "power2.out",
         duration: 0.2,
       })
-      .from(usesRef.current?.querySelectorAll(".section")!, {
+      .from(usesRef.current.querySelectorAll(".section"), {
         y: -8,
         opacity: 0,
         ease: "power2.out",
@@ -168,7 +170,7 @@ const UsesPage: React.FC = () => {
         duration: 0.2,
       })
       .from(
-        usesRef.current?.querySelectorAll(".section-item")!,
+        usesRef.current.querySelectorAll(".section-item"),
         {
           y: -8,
           opacity: 0,
