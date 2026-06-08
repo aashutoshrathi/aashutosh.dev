@@ -5,6 +5,7 @@ import { useLocation } from "@reach/router"
 import { Link } from "gatsby"
 import gsap from "gsap"
 
+import { AnimatedLink } from "@components"
 import { lightHaptic } from "@utils"
 
 const Header: React.FC = () => {
@@ -54,34 +55,18 @@ const Header: React.FC = () => {
           ref={navLinksRef}
           className="flex flex-row flex-wrap items-center justify-center gap-4 px-2 sm:justify-end sm:gap-6"
         >
-          <Link
-            to="/timeline"
-            className="relative inline font-sans text-blue-600 no-underline transition-colors duration-200 before:absolute before:bottom-0 before:h-px before:w-0 before:bg-current before:transition-all before:content-[''] hover:text-blue-700 hover:no-underline hover:before:w-full focus:outline-none focus-visible:before:w-full dark:text-blue-400 dark:hover:text-blue-300"
-            onClick={lightHaptic}
-          >
+          <AnimatedLink to="/timeline" onClick={lightHaptic}>
             About
-          </Link>
-          <Link
-            to="/blog"
-            className="relative inline font-sans text-blue-600 no-underline transition-colors duration-200 before:absolute before:bottom-0 before:h-px before:w-0 before:bg-current before:transition-all before:content-[''] hover:text-blue-700 hover:no-underline hover:before:w-full focus:outline-none focus-visible:before:w-full dark:text-blue-400 dark:hover:text-blue-300"
-            onClick={lightHaptic}
-          >
+          </AnimatedLink>
+          <AnimatedLink to="/blog" onClick={lightHaptic}>
             Blog
-          </Link>
-          <Link
-            to="/work"
-            className="relative inline font-sans text-blue-600 no-underline transition-colors duration-200 before:absolute before:bottom-0 before:h-px before:w-0 before:bg-current before:transition-all before:content-[''] hover:text-blue-700 hover:no-underline hover:before:w-full focus:outline-none focus-visible:before:w-full dark:text-blue-400 dark:hover:text-blue-300"
-            onClick={lightHaptic}
-          >
+          </AnimatedLink>
+          <AnimatedLink to="/work" onClick={lightHaptic}>
             Projects
-          </Link>
-          <Link
-            to="/uses"
-            className="relative inline font-sans text-blue-600 no-underline transition-colors duration-200 before:absolute before:bottom-0 before:h-px before:w-0 before:bg-current before:transition-all before:content-[''] hover:text-blue-700 hover:no-underline hover:before:w-full focus:outline-none focus-visible:before:w-full dark:text-blue-400 dark:hover:text-blue-300"
-            onClick={lightHaptic}
-          >
+          </AnimatedLink>
+          <AnimatedLink to="/uses" onClick={lightHaptic}>
             Uses
-          </Link>
+          </AnimatedLink>
         </div>
       </nav>
     </header>

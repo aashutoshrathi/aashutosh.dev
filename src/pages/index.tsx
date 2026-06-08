@@ -8,7 +8,7 @@ import gsap from "gsap"
 import { Tooltip as ReactTooltip } from "react-tooltip"
 import { useMediaQuery } from "usehooks-ts"
 
-import { SEO } from "@components"
+import { SEO, AnimatedLink } from "@components"
 import { mediumHaptic } from "@utils"
 
 const IndexPage: React.FC = () => {
@@ -37,7 +37,7 @@ const IndexPage: React.FC = () => {
         ease: "power1.out",
         duration: 0.5,
       },
-      "<0.1"
+      "<0.1",
     )
 
     if (aboutRef.current) {
@@ -134,14 +134,9 @@ const IndexPage: React.FC = () => {
             </p>
             <p className="mb-6">
               <span>Currently </span>
-              <OutboundLink
-                href="https://regie.ai"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative inline font-sans text-blue-600 no-underline transition-colors duration-200 before:absolute before:bottom-0 before:h-px before:w-0 before:bg-current before:transition-all before:content-[''] hover:text-blue-700 hover:no-underline hover:before:w-full focus:outline-none focus-visible:before:w-full dark:text-blue-400 dark:hover:text-blue-300"
-              >
+              <AnimatedLink href="https://regie.ai">
                 optimizing sales with AI at Regie.ai
-              </OutboundLink>
+              </AnimatedLink>
               <span>
                 , while trying to{" "}
                 <span ref={juggleRef} className="inline-block cursor-default">
@@ -150,21 +145,11 @@ const IndexPage: React.FC = () => {
                 with my inbox zero goals, some tiny side projects and a bit of
                 writing on{" "}
               </span>
-              <OutboundLink
-                href="https://nibbles.dev"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative inline font-sans text-blue-600 no-underline transition-colors duration-200 before:absolute before:bottom-0 before:h-px before:w-0 before:bg-current before:transition-all before:content-[''] hover:text-blue-700 hover:no-underline hover:before:w-full focus:outline-none focus-visible:before:w-full dark:text-blue-400 dark:hover:text-blue-300"
-              >
+              <AnimatedLink href="https://nibbles.dev">
                 nibbles.dev
-              </OutboundLink>
+              </AnimatedLink>
               <span> and sometimes on </span>
-              <Link
-                to="/blog"
-                className="relative inline font-sans text-blue-600 no-underline transition-colors duration-200 before:absolute before:bottom-0 before:h-px before:w-0 before:bg-current before:transition-all before:content-[''] hover:text-blue-700 hover:no-underline hover:before:w-full focus:outline-none focus-visible:before:w-full dark:text-blue-400 dark:hover:text-blue-300"
-              >
-                this very blog
-              </Link>
+              <AnimatedLink to="/blog">this very blog</AnimatedLink>
               <span>!</span>
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row md:justify-start">
