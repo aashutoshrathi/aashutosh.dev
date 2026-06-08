@@ -1,5 +1,35 @@
 import { describe, it, expect, beforeEach, afterEach, mock } from "bun:test"
-import { fetchData } from "./index"
+import { fetchData, titleCase } from "./index"
+
+describe("titleCase", () => {
+  it("should capitalize a single word", () => {
+    expect(titleCase("hello")).toBe("Hello")
+    expect(titleCase("WORLD")).toBe("World")
+  })
+
+  it("should return only the first segment for multi-word strings", () => {
+    expect(titleCase("hello world")).toBe("Hello")
+    expect(titleCase("foo bar baz")).toBe("Foo")
+  })
+
+  it("should handle mixed case strings correctly", () => {
+    expect(titleCase("hElLo")).toBe("Hello")
+    expect(titleCase("jAvAsCrIpT")).toBe("Javascript")
+  })
+
+  it("should return an empty string for an empty input", () => {
+    expect(titleCase("")).toBe("")
+  })
+
+  it("should return an empty string for inputs with leading whitespace", () => {
+    expect(titleCase("  leading space")).toBe("")
+  })
+
+  it("should handle special characters correctly", () => {
+    expect(titleCase("c++")).toBe("C++")
+    expect(titleCase("c#")).toBe("C#")
+  })
+})
 
 describe("fetchData", () => {
   let originalWindow: typeof globalThis.window
