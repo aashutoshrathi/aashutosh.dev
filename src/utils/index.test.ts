@@ -1,5 +1,4 @@
 import { describe, it, expect, beforeEach, afterEach, mock } from "bun:test"
-import { fetchData } from "./index"
 
 describe("fetchData", () => {
   let originalWindow: typeof globalThis.window
@@ -19,6 +18,12 @@ describe("fetchData", () => {
     // @ts-ignore
     delete (globalThis as any).window
 
+    // We clear bun require cache using import.meta.require if possible,
+    // or just assume we should test using a freshly required module.
+    // However, since we mock global environment, let's just make sure we require it fresh
+    Loader.registry.delete(Bun.resolveSync("./index.ts", import.meta.dir));
+    const { fetchData } = await import("./index.ts")
+
     await expect(fetchData("https://api.example.com")).rejects.toThrow(
       "fetchData can only be called on the client side",
     )
@@ -32,6 +37,9 @@ describe("fetchData", () => {
     globalThis.fetch = mock().mockResolvedValue({
       json: mock().mockResolvedValue(mockResponse),
     } as any)
+
+    Loader.registry.delete(Bun.resolveSync("./index.ts", import.meta.dir));
+    const { fetchData } = await import("./index.ts")
 
     const result = await fetchData("https://api.example.com")
     expect(globalThis.fetch).toHaveBeenCalledWith("https://api.example.com")

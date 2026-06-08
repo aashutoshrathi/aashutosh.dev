@@ -1,0 +1,3 @@
+[test]
+env = { "BUN_ENV" = "test" }
+preload = ["./setup-tests.ts"]
