@@ -11,6 +11,7 @@
     "dotenv": "^8.2.0",
     "gatsby": "^5.15.0",
     "gatsby-plugin-alias-imports": "^1.0.5",
+    "gatsby-plugin-csp": "^1.1.4",
     "gatsby-plugin-google-gtag": "^5.15.0",
     "gatsby-plugin-image": "^3.15.0",
     "gatsby-plugin-layout": "^4.15.0",
