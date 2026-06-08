@@ -1,3 +1,4 @@
+export { default as AnimatedLink } from "./animated-link"
 export { default as AnimatedDetails } from "./animated-details"
 export { default as CodeBlock, type CodeBlockProps } from "./code-block"
 export { default as Footer } from "./footer"

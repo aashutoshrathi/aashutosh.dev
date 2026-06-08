@@ -1,10 +1,9 @@
 import React, { useRef } from "react"
 
 import { useGSAP } from "@gsap/react"
-import { OutboundLink } from "gatsby-plugin-google-gtag"
 import gsap from "gsap"
 
-import { SEO } from "@components"
+import { SEO, AnimatedLink } from "@components"
 
 interface Item {
   name: string
@@ -27,14 +26,9 @@ const sections: Array<{ title: string; items: Item[] }> = [
         description: (
           <>
             Terminal emulator for macOS with tmux integration ➜{" "}
-            <OutboundLink
-              href="https://iterm.aashutosh.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative inline font-sans text-blue-600 no-underline transition-colors duration-200 before:absolute before:bottom-0 before:h-px before:w-0 before:bg-current before:transition-all before:content-[''] hover:text-blue-700 hover:no-underline hover:before:w-full focus:outline-none focus-visible:before:w-full dark:text-blue-400 dark:hover:text-blue-300"
-            >
+            <AnimatedLink href="https://iterm.aashutosh.dev">
               my config
-            </OutboundLink>
+            </AnimatedLink>
           </>
         ),
       },
@@ -176,7 +170,7 @@ const UsesPage: React.FC = () => {
           stagger: 0.02,
           duration: 0.2,
         },
-        "<0.1"
+        "<0.1",
       )
   }, [])
 
@@ -208,14 +202,12 @@ const UsesPage: React.FC = () => {
                       className="border-l-2 py-2 pl-4 transition-all duration-100 hover:border-l-4 border-blue-600 dark:border-blue-400"
                     >
                       {item.link ? (
-                        <a
+                        <AnimatedLink
                           href={item.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="mb-1 relative font-semibold text-xl inline font-sans text-blue-600 no-underline transition-colors duration-200 before:absolute before:bottom-0 before:h-px before:w-0 before:bg-current before:transition-all before:content-[''] hover:text-blue-700 hover:no-underline hover:before:w-full focus:outline-none focus-visible:before:w-full dark:text-blue-400 dark:hover:text-blue-300"
+                          className="mb-1 text-xl font-semibold"
                         >
                           {item.name}
-                        </a>
+                        </AnimatedLink>
                       ) : (
                         <h3 className="mb-1 text-xl font-semibold">
                           {item.name}

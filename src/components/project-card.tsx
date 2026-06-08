@@ -1,6 +1,5 @@
 import React from "react"
 
-import { OutboundLink } from "gatsby-plugin-google-gtag"
 import {
   FaCode,
   FaDev,
@@ -23,6 +22,7 @@ import {
   SiTypescript,
 } from "react-icons/si"
 
+import { AnimatedLink } from "@components"
 import { titleCase } from "@utils"
 
 import { Project } from "../types"
@@ -69,27 +69,22 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </span>
         )}
         <div>
-          <OutboundLink
+          <AnimatedLink
             href={project.html_url}
             aria-label="Source Code"
-            className="relative inline font-sans text-blue-600 no-underline transition-colors duration-200 before:absolute before:bottom-0 before:h-px before:w-0 before:bg-current before:transition-all before:content-[''] hover:text-blue-700 hover:no-underline hover:before:w-full focus:outline-none focus-visible:before:w-full dark:text-blue-400 dark:hover:text-blue-300"
             title="Source Code"
-            rel="noopener noreferrer"
-            target="_blank"
           >
             Code
-          </OutboundLink>
+          </AnimatedLink>
           {project.homepage && (
-            <OutboundLink
+            <AnimatedLink
               href={project.homepage}
-              className="relative ml-4 inline font-sans text-blue-600 no-underline transition-colors duration-200 before:absolute before:bottom-0 before:h-px before:w-0 before:bg-current before:transition-all before:content-[''] hover:text-blue-700 hover:no-underline hover:before:w-full focus:outline-none focus-visible:before:w-full dark:text-blue-400 dark:hover:text-blue-300"
+              className="ml-4"
               aria-label="Demo/Docs"
               title="Demo/Docs"
-              rel="noopener noreferrer"
-              target="_blank"
             >
               Demo
-            </OutboundLink>
+            </AnimatedLink>
           )}
         </div>
       </div>
