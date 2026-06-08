@@ -1,7 +1,6 @@
 import React from "react"
 
 import { graphql, useStaticQuery } from "gatsby"
-import Helmet from "react-helmet"
 
 interface SiteQueryResult {
   site: {
@@ -118,14 +117,13 @@ const SEO: React.FC<SEOProps> = ({
   ]
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={`${site.siteMetadata.navigationString}%s`}
-      meta={metaTags}
-    />
+    <>
+      <html lang={lang} />
+      <title>{`${site.siteMetadata.navigationString}${title}`}</title>
+      {metaTags.map((meta, index) => (
+        <meta key={index} {...meta} />
+      ))}
+    </>
   )
 }
 

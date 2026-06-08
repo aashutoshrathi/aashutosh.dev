@@ -32,7 +32,6 @@ const WorkPage: React.FC = () => {
 
   return (
     <>
-      <SEO title="Projects" />
       <div className="my-8 flex justify-center text-center">
         <GitHubCalendar
           username="aashutoshrathi"
@@ -71,3 +70,5 @@ const WorkPage: React.FC = () => {
 }
 
 export default WorkPage
+
+export const Head = () => <SEO title="Projects" />
