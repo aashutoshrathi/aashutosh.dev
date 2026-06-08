@@ -6,8 +6,8 @@ import { useMediaQuery } from "usehooks-ts"
 
 import { fetchData } from "@utils"
 
-import ProjectCard from "./project-card"
 import { Project } from "../types"
+import ProjectCard from "./project-card"
 
 const PROJECT_URL = `${process.env.GATSBY_API_URI}projects`
 
@@ -68,6 +68,10 @@ const DUMMY_PROJECTS: Project[] = [
   },
 ]
 
+const renderProject = (project: Project) => (
+  <ProjectCard key={project.id} project={project} />
+)
+
 const Projects: React.FC = () => {
   const [projects, setProjects] = useState<Project[] | null>(null)
   const projectsRef = useRef<HTMLElement | null>(null)
@@ -116,9 +120,7 @@ const Projects: React.FC = () => {
 
   return projects ? (
     <section ref={projectsRef} className="mt-8 grid md:grid-cols-2 gap-6">
-      {projects?.map((project) => (
-        <ProjectCard key={project.id} project={project} />
-      ))}
+      {projects?.map(renderProject)}
     </section>
   ) : (
     <div className="mt-24 mx-auto w-20 text-center">
