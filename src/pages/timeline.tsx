@@ -101,8 +101,6 @@ const TimelinePage: React.FC = () => {
 
   return (
     <>
-      <SEO title="About" />
-
       <div className="text-zinc-800 dark:text-zinc-100 min-h-[calc(100vh-216px)] p-4 font-mono sm:p-8">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8">
@@ -130,3 +128,5 @@ const TimelinePage: React.FC = () => {
 }
 
 export default TimelinePage
+
+export const Head = () => <SEO title="About" />

@@ -182,7 +182,6 @@ const UsesPage: React.FC = () => {
 
   return (
     <>
-      <SEO title="Uses" />
       <div ref={usesRef} className="mx-auto max-w-3xl px-4 py-8">
         <div className="mb-12">
           <h1 ref={headingRef} className="mb-4 text-4xl font-bold">
@@ -239,3 +238,5 @@ const UsesPage: React.FC = () => {
 }
 
 export default UsesPage
+
+export const Head = () => <SEO title="Uses" />

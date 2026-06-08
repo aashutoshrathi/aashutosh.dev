@@ -52,7 +52,6 @@ const BlogIndex: React.FC<BlogIndexProps> = ({ data }) => {
 
   return (
     <>
-      <SEO title="Blog" />
       <div className="py-8">
         <h1 ref={headingRef} className="mb-8 text-4xl font-bold">
           Blog
@@ -83,6 +82,8 @@ const BlogIndex: React.FC<BlogIndexProps> = ({ data }) => {
 }
 
 export default BlogIndex
+
+export const Head = () => <SEO title="Blog" />
 
 export const query = graphql`
   query {

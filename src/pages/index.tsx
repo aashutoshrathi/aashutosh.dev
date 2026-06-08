@@ -104,7 +104,6 @@ const IndexPage: React.FC = () => {
 
   return (
     <>
-      <SEO title="Home" />
       <ReactTooltip
         id="em-dash-tooltip"
         place="top"
@@ -198,3 +197,5 @@ const IndexPage: React.FC = () => {
 }
 
 export default IndexPage
+
+export const Head = () => <SEO title="Home" />

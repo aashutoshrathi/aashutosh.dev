@@ -66,10 +66,6 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps> = ({
 
   return (
     <>
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-      />
       <article className="py-8">
         <div ref={backRef} className="mb-8">
           <Link
@@ -110,3 +106,10 @@ export const query = graphql`
 `
 
 export default BlogPostTemplate
+
+export const Head = ({ data }: BlogPostTemplateProps) => (
+  <SEO
+    title={data.mdx.frontmatter.title}
+    description={data.mdx.frontmatter.description || data.mdx.excerpt}
+  />
+)
