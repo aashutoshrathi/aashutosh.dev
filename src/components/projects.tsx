@@ -92,11 +92,11 @@ const Projects: React.FC = () => {
             stagger: 0.04,
             ease: "expo.in",
             duration: 0.4,
-          }
+          },
         )
       }
     },
-    { dependencies: [projects?.length] }
+    { dependencies: [projects?.length] },
   )
 
   useEffect(() => {
@@ -109,7 +109,9 @@ const Projects: React.FC = () => {
     fetchData<Project[]>(PROJECT_URL)
       .then(setProjects)
       .catch(() => {
-        console.error("Failed to fetch projects, using dummy data.")
+        if (process.env.NODE_ENV === "development") {
+          console.error("Failed to fetch projects, using dummy data.")
+        }
         setProjects(DUMMY_PROJECTS)
       })
   }, [])
