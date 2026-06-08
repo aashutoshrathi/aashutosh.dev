@@ -1,5 +1,37 @@
 import { describe, it, expect, beforeEach, afterEach, mock } from "bun:test"
-import { fetchData } from "./index"
+import { fetchData, hapticFeedback } from "./index"
+
+describe("hapticFeedback", () => {
+  let originalWindow: typeof globalThis.window
+  let originalNavigator: typeof globalThis.navigator
+
+  beforeEach(() => {
+    originalWindow = globalThis.window
+    originalNavigator = globalThis.navigator
+  })
+
+  afterEach(() => {
+    globalThis.window = originalWindow
+    globalThis.navigator = originalNavigator
+  })
+
+  it("should not throw when iOS AudioContext throws an error", () => {
+    // @ts-ignore
+    globalThis.navigator = {
+      userAgent: "iPhone",
+    }
+
+    // @ts-ignore
+    globalThis.window = {
+      MSStream: undefined,
+      AudioContext: mock().mockImplementation(() => {
+        throw new Error("AudioContext error")
+      }),
+    }
+
+    expect(() => hapticFeedback(10)).not.toThrow()
+  })
+})
 
 describe("fetchData", () => {
   let originalWindow: typeof globalThis.window
