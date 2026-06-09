@@ -110,6 +110,7 @@ module.exports = {
           "script-src":
             "'self' *.cloudfront.net unpkg.com www.google-analytics.com www.googletagmanager.com",
           "style-src": "'self' fonts.googleapis.com fonts.gstatic.com",
+          "style-src-attr": "'unsafe-inline'",
           "img-src": "'self' data: blob: https:",
           "font-src": "'self' data: fonts.googleapis.com fonts.gstatic.com",
           "worker-src": "'self' blob: data:",
