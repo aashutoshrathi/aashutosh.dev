@@ -16,16 +16,30 @@ const MAX_PROJECTS = 10
 /* Repos that shouldn't show up as projects (e.g. the profile README) */
 const EXCLUDED_REPOS = new Set([GITHUB_USERNAME, "homebrew-tap"])
 
-const selectRecentProjects = (repos: Project[]): Project[] =>
-  repos
-    .filter(
-      (repo) =>
-        !repo.fork &&
-        !repo.archived &&
-        repo.description &&
-        !EXCLUDED_REPOS.has(repo.name)
+type ProjectSort = "recent" | "stars"
+
+const SORT_OPTIONS: { value: ProjectSort; label: string }[] = [
+  { value: "recent", label: "Recent" },
+  { value: "stars", label: "Most starred" },
+]
+
+const filterProjects = (repos: Project[]): Project[] =>
+  repos.filter(
+    (repo) =>
+      !repo.fork &&
+      !repo.archived &&
+      repo.description &&
+      !EXCLUDED_REPOS.has(repo.name)
+  )
+
+const sortProjects = (repos: Project[], sortBy: ProjectSort): Project[] => {
+  if (sortBy === "stars") {
+    return [...repos].sort(
+      (a, b) => (b.stargazers_count ?? 0) - (a.stargazers_count ?? 0)
     )
-    .slice(0, MAX_PROJECTS)
+  }
+  return repos // API already returns most recently pushed first
+}
 
 const DUMMY_PROJECTS: Project[] = [
   {
@@ -81,8 +95,13 @@ const DUMMY_PROJECTS: Project[] = [
 
 const Projects: React.FC = () => {
   const [projects, setProjects] = useState<Project[] | null>(null)
+  const [sortBy, setSortBy] = useState<ProjectSort>("recent")
   const projectsRef = useRef<HTMLElement | null>(null)
   const isDesktop = useMediaQuery("(min-width: 768px)")
+
+  const displayedProjects = projects
+    ? sortProjects(projects, sortBy).slice(0, MAX_PROJECTS)
+    : null
 
   useGSAP(
     () => {
@@ -113,7 +132,7 @@ const Projects: React.FC = () => {
 
   useEffect(() => {
     fetchData<Project[]>(PROJECTS_URL)
-      .then((repos) => setProjects(selectRecentProjects(repos)))
+      .then((repos) => setProjects(filterProjects(repos)))
       .catch(() => {
         if (process.env.NODE_ENV === "development") {
           console.error("Failed to fetch projects, using dummy data.")
@@ -122,12 +141,35 @@ const Projects: React.FC = () => {
       })
   }, [])
 
-  return projects ? (
-    <section ref={projectsRef} className="mt-8 grid md:grid-cols-2 gap-6">
-      {projects?.map((project) => (
-        <ProjectCard key={project.id} project={project} />
-      ))}
-    </section>
+  return displayedProjects ? (
+    <>
+      <div
+        className="mt-8 flex justify-end gap-1 rounded-lg"
+        role="group"
+        aria-label="Sort projects"
+      >
+        {SORT_OPTIONS.map((option) => (
+          <button
+            key={option.value}
+            type="button"
+            onClick={() => setSortBy(option.value)}
+            aria-pressed={sortBy === option.value}
+            className={`rounded-lg px-3 py-1.5 text-sm transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-700 dark:focus-visible:ring-blue-300 ${
+              sortBy === option.value
+                ? "bg-blue-600 font-semibold text-white dark:bg-blue-400 dark:text-slate-900"
+                : "text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-slate-800"
+            }`}
+          >
+            {option.label}
+          </button>
+        ))}
+      </div>
+      <section ref={projectsRef} className="mt-4 grid md:grid-cols-2 gap-6">
+        {displayedProjects.map((project) => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
+      </section>
+    </>
   ) : (
     <div className="mt-24 mx-auto w-20 text-center">
       <div className="size-4 bg-white rounded-full inline-block bounce-1" />
