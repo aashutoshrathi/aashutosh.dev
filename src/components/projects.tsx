@@ -14,7 +14,7 @@ const PROJECTS_URL = `https://api.github.com/users/${GITHUB_USERNAME}/repos?per_
 const MAX_PROJECTS = 10
 
 /* Repos that shouldn't show up as projects (e.g. the profile README) */
-const EXCLUDED_REPOS = new Set([GITHUB_USERNAME])
+const EXCLUDED_REPOS = new Set([GITHUB_USERNAME, "homebrew-tap"])
 
 const selectRecentProjects = (repos: Project[]): Project[] =>
   repos
@@ -37,15 +37,6 @@ const DUMMY_PROJECTS: Project[] = [
     html_url: "https://github.com/aashutoshrathi/toki",
     homepage: "http://toki.aashutosh.dev/",
     stargazers_count: 5,
-  },
-  {
-    id: 1298207913,
-    name: "homebrew-tap",
-    description: "Homebrew tap for Toki",
-    language: "Ruby",
-    html_url: "https://github.com/aashutoshrathi/homebrew-tap",
-    homepage: null,
-    stargazers_count: 1,
   },
   {
     id: 105375545,
