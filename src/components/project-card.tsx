@@ -11,14 +11,19 @@ import {
   FaPython,
   FaRust,
   FaStackOverflow,
+  FaStar,
   FaTwitter,
 } from "react-icons/fa"
 import {
   SiCplusplus,
+  SiCss3,
   SiFlutter,
   SiGo,
+  SiHtml5,
   SiJupyter,
   SiMdx,
+  SiRuby,
+  SiSwift,
   SiTypescript,
 } from "react-icons/si"
 
@@ -34,15 +39,19 @@ interface ProjectCardProps {
 const iconMap: { [key: string]: React.ComponentType } = {
   C: FaCode,
   Cpp: SiCplusplus,
+  Css: SiCss3,
   Dev: FaDev,
   Facebook: FaFacebook,
   Flutter: SiFlutter,
   Github: FaGithub,
+  Html: SiHtml5,
   Javascript: FaJsSquare,
   Jupyter: SiJupyter,
   Linkedin: FaLinkedin,
   Python: FaPython,
+  Ruby: SiRuby,
   Stackoverflow: FaStackOverflow,
+  Swift: SiSwift,
   Twitter: FaTwitter,
   Typescript: SiTypescript,
   Rust: FaRust,
@@ -62,12 +71,24 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         {project.description}
       </p>
       <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
-        {project.language && Icon && (
-          <span className="flex items-center [&_svg]:mr-2">
-            <Icon />
-            <span>{project.language}</span>
-          </span>
-        )}
+        <span className="flex items-center gap-3">
+          {project.language && Icon && (
+            <span className="flex items-center [&_svg]:mr-2">
+              <Icon />
+              <span>{project.language}</span>
+            </span>
+          )}
+          {!!project.stargazers_count && (
+            <span
+              className="flex items-center [&_svg]:mr-1 [&_svg]:text-amber-500"
+              title={`${project.stargazers_count} stars`}
+              aria-label={`${project.stargazers_count} stars`}
+            >
+              <FaStar />
+              <span>{project.stargazers_count}</span>
+            </span>
+          )}
+        </span>
         <div>
           <AnimatedLink
             href={project.html_url}

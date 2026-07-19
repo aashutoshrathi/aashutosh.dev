@@ -4,8 +4,11 @@ export interface Project {
   description: string | null
   language: string | null
   html_url: string
-  homepage: string
+  homepage: string | null
   stargazers_count?: number
+  fork?: boolean
+  archived?: boolean
+  pushed_at?: string
 }
 
 export type CommitType = "feat" | "ship" | "chore" | "fix" | "init"

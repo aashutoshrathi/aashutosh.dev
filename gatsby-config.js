@@ -115,7 +115,7 @@ module.exports = {
           "font-src": "'self' data: fonts.googleapis.com fonts.gstatic.com",
           "worker-src": "'self' blob: data:",
           "connect-src":
-            "'self' api.aashutosh.dev github-contributions-api.jogruber.de www.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com",
+            "'self' api.github.com github-contributions-api.jogruber.de www.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com",
           "object-src": "'none'",
         },
       },
