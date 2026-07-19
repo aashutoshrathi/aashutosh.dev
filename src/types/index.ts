@@ -11,6 +11,16 @@ export interface Project {
   pushed_at?: string
 }
 
+export interface Contribution {
+  id: number
+  title: string
+  html_url: string
+  repository_url: string
+  pull_request?: {
+    merged_at?: string | null
+  }
+}
+
 export type CommitType = "feat" | "ship" | "chore" | "fix" | "init"
 
 export interface Commit {
