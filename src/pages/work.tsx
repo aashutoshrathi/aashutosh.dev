@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react"
 import GitHubCalendar from "react-github-calendar"
 import { Tooltip as ReactTooltip } from "react-tooltip"
 
-import { Projects, SEO } from "@components"
+import { Contributions, Projects, SEO } from "@components"
 
 const WorkPage: React.FC = () => {
   const [monthsToShow, setMonthsToShow] = useState(12)
@@ -60,12 +60,12 @@ const WorkPage: React.FC = () => {
               })
             }
             return data
-          }}
-        >
+          }}>
           <ReactTooltip delayShow={10} className="custom-tooltip" />
         </GitHubCalendar>
       </div>
       <Projects />
+      <Contributions />
     </>
   )
 }

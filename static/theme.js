@@ -1,12 +1,23 @@
-(function() {
+;(function () {
   function getTheme() {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark';
+    try {
+      var stored = window.localStorage.getItem("theme")
+      if (stored === "light" || stored === "dark") {
+        return stored
+      }
+    } catch (e) {
+      /* storage unavailable — fall through to system preference */
     }
-    return 'light';
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      return "dark"
+    }
+    return "light"
   }
 
-  const theme = getTheme();
-  document.documentElement.setAttribute('data-theme', theme);
-  document.documentElement.classList.add(theme);
-})();
+  var theme = getTheme()
+  document.documentElement.setAttribute("data-theme", theme)
+  document.documentElement.classList.add(theme)
+})()

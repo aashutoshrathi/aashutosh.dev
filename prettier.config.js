@@ -1,4 +1,5 @@
 export default {
+  bracketSameLine: true,
   endOfLine: "lf",
   semi: false,
   singleQuote: false,

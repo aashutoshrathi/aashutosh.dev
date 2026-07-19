@@ -1,4 +1,5 @@
-import { describe, it, expect, beforeEach, afterEach, mock } from "bun:test"
+import { afterEach, beforeEach, describe, expect, it, mock } from "bun:test"
+
 import { fetchData, titleCase } from "./index"
 
 describe("titleCase", () => {
@@ -50,7 +51,7 @@ describe("fetchData", () => {
     delete (globalThis as any).window
 
     await expect(fetchData("https://api.example.com")).rejects.toThrow(
-      "fetchData can only be called on the client side",
+      "fetchData can only be called on the client side"
     )
   })
 

@@ -3,6 +3,8 @@ import React, { useRef, useState } from "react"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 
+import { shouldReduceMotion } from "@utils"
+
 interface LoopingTextProps {
   texts: string[]
   duration: number
@@ -15,6 +17,7 @@ const LoopingText = ({ texts, duration }: LoopingTextProps) => {
 
   useGSAP(
     () => {
+      if (shouldReduceMotion()) return
       if (!textsRef.current) return
 
       const tl = gsap.timeline()

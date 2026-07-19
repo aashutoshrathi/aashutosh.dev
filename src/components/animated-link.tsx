@@ -1,7 +1,8 @@
 import React from "react"
-import { Link, GatsbyLinkProps } from "gatsby"
-import { OutboundLink } from "gatsby-plugin-google-gtag"
+
 import clsx from "clsx"
+import { GatsbyLinkProps, Link } from "gatsby"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 type AnimatedLinkProps = Omit<
   React.AnchorHTMLAttributes<HTMLAnchorElement>,
@@ -37,8 +38,7 @@ const AnimatedLink: React.FC<AnimatedLinkProps> = ({
         target="_blank"
         rel="noopener noreferrer"
         className={classes}
-        {...(props as any)}
-      >
+        {...(props as any)}>
         {children}
       </OutboundLink>
     )

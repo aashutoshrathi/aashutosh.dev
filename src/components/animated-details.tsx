@@ -3,6 +3,8 @@ import React, { useRef } from "react"
 import clsx from "clsx"
 import gsap from "gsap"
 
+import { shouldReduceMotion } from "@utils"
+
 import { Commit } from "../types"
 
 interface AnimatedDetailsProps {
@@ -15,6 +17,9 @@ const AnimatedDetails: React.FC<AnimatedDetailsProps> = ({ commit }) => {
   const isAnimating = useRef<boolean>(false)
 
   const handleToggle = (e: React.MouseEvent<HTMLElement, MouseEvent>): void => {
+    /* Reduced motion: fall back to the native, instant <details> toggle */
+    if (shouldReduceMotion()) return
+
     const details = detailsRef.current
     const content = contentRef.current
 
@@ -75,8 +80,7 @@ const AnimatedDetails: React.FC<AnimatedDetailsProps> = ({ commit }) => {
             "focus-visible:ring-purple-600 dark:focus-visible:ring-purple-400":
               commit.type === "init",
           }
-        )}
-      >
+        )}>
         <span className="text-zinc-500 w-14 shrink-0 text-xs sm:w-20 self-start md:self-auto md:mt-0 mt-1 sm:text-sm">
           {commit.hash}
         </span>
@@ -87,8 +91,7 @@ const AnimatedDetails: React.FC<AnimatedDetailsProps> = ({ commit }) => {
             "text-orange-600 dark:text-orange-400": commit.type === "chore",
             "text-blue-600 dark:text-blue-400": commit.type === "fix",
             "text-purple-600 dark:text-purple-400": commit.type === "init",
-          })}
-        >
+          })}>
           ∗
         </span>
         <span className="flex items-start md:flex-row flex-col md:gap-2">
@@ -99,8 +102,7 @@ const AnimatedDetails: React.FC<AnimatedDetailsProps> = ({ commit }) => {
               "text-orange-600 dark:text-orange-400": commit.type === "chore",
               "text-blue-600 dark:text-blue-400": commit.type === "fix",
               "text-purple-600 dark:text-purple-400": commit.type === "init",
-            })}
-          >
+            })}>
             {commit.type} ({commit.scope}):
           </span>
           <span>{commit.message}</span>
@@ -112,8 +114,7 @@ const AnimatedDetails: React.FC<AnimatedDetailsProps> = ({ commit }) => {
 
       <div
         ref={contentRef}
-        className="grid gap-2 pt-1 grid-cols-[80px,10px,1fr] md:grid-cols-[80px,10px,1fr,100px] overflow-hidden"
-      >
+        className="grid gap-2 pt-1 grid-cols-[80px,10px,1fr] md:grid-cols-[80px,10px,1fr,100px] overflow-hidden">
         <div className="col-start-3 relative">
           {commit.details.map((detail) => (
             <p
@@ -121,8 +122,7 @@ const AnimatedDetails: React.FC<AnimatedDetailsProps> = ({ commit }) => {
               className={clsx("text-sm", {
                 "text-green-600 dark:text-green-400": detail.startsWith("+"),
                 "text-red-600 dark:text-red-400": detail.startsWith("-"),
-              })}
-            >
+              })}>
               {detail}
             </p>
           ))}

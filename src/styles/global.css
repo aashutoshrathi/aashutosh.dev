@@ -105,3 +105,20 @@
     @apply fill-slate-900 dark:fill-slate-50;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .bounce-1,
+  .bounce-2,
+  .bounce-3 {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

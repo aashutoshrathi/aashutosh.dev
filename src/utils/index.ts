@@ -1,8 +1,8 @@
+export * from "./theme"
+
 const isIOS = () => {
   if (typeof window === "undefined") return false
-  return (
-    /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
-  )
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
 }
 
 // iOS fallback: subtle audio feedback
@@ -46,6 +46,10 @@ export const hapticFeedback = (pattern: number | number[] = 10) => {
 export const lightHaptic = () => hapticFeedback(10)
 export const mediumHaptic = () => hapticFeedback(20)
 export const heavyHaptic = () => hapticFeedback(30)
+
+export const shouldReduceMotion = (): boolean =>
+  typeof window !== "undefined" &&
+  window.matchMedia("(prefers-reduced-motion: reduce)").matches
 
 export const titleCase = (str: string): string =>
   str

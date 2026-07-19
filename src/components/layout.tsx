@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 
 import { Footer, Header, ScrollToTop } from "@components"
+import { applyTheme, getStoredTheme } from "@utils"
 
 export interface LayoutProps {
   children: React.ReactNode
@@ -10,9 +11,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
 
+    /* Follow system theme only while the user hasn't picked one manually */
     const handleChange = (e: MediaQueryListEvent) => {
-      const newTheme = e.matches ? "dark" : "light"
-      document.documentElement.setAttribute("data-theme", newTheme)
+      if (getStoredTheme()) return
+      applyTheme(e.matches ? "dark" : "light", false)
     }
 
     mediaQuery.addEventListener("change", handleChange)

@@ -8,8 +8,8 @@ import gsap from "gsap"
 import { Tooltip as ReactTooltip } from "react-tooltip"
 import { useMediaQuery } from "usehooks-ts"
 
-import { SEO, AnimatedLink } from "@components"
-import { mediumHaptic } from "@utils"
+import { AnimatedLink, SEO } from "@components"
+import { mediumHaptic, shouldReduceMotion } from "@utils"
 
 const IndexPage: React.FC = () => {
   const imgWrapperRef = useRef<HTMLDivElement | null>(null)
@@ -20,6 +20,7 @@ const IndexPage: React.FC = () => {
   const isDesktop = useMediaQuery("(min-width: 768px)")
 
   useGSAP(() => {
+    if (shouldReduceMotion()) return
     const tl = gsap.timeline()
 
     tl.from(imgWrapperRef.current, {
@@ -37,7 +38,7 @@ const IndexPage: React.FC = () => {
         ease: "power1.out",
         duration: 0.5,
       },
-      "<0.1",
+      "<0.1"
     )
 
     if (aboutRef.current) {
@@ -117,8 +118,7 @@ const IndexPage: React.FC = () => {
           </h1>
           <section
             ref={aboutRef}
-            className="mb-8 text-balance text-lg tracking-wide"
-          >
+            className="mb-8 text-balance text-lg tracking-wide">
             <p className="mb-2">
               Software Engineer by day, automation connoisseur always. Usually
               found building tools for people who hate doing things manually
@@ -126,8 +126,7 @@ const IndexPage: React.FC = () => {
                 data-tooltip-id="em-dash-tooltip"
                 data-tooltip-content="not AI generated"
                 aria-label="not AI generated"
-                className="cursor-help"
-              >
+                className="cursor-help">
                 —
               </span>
               because I'm definitely one of them.
@@ -158,8 +157,7 @@ const IndexPage: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block rounded-lg bg-blue-600 px-4 py-2 text-base font-semibold text-white no-underline transition-colors duration-200 ease-in-out hover:bg-blue-700 hover:no-underline focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-700 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:bg-blue-400 dark:text-slate-900 dark:hover:bg-blue-300 dark:focus-visible:ring-blue-300 dark:focus-visible:ring-offset-slate-900"
-                onClick={mediumHaptic}
-              >
+                onClick={mediumHaptic}>
                 View Résumé
               </OutboundLink>
             </div>
