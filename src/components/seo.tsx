@@ -11,6 +11,7 @@ interface SiteQueryResult {
       author: string
       navigationString: string
       coverImage: string
+      siteUrl: string
       social: Array<{
         name: string
         url: string
@@ -27,6 +28,7 @@ interface MetaTag {
 
 export interface SEOProps {
   description?: string
+  image?: string | null
   lang?: string
   meta?: MetaTag[]
   title: string
@@ -34,6 +36,7 @@ export interface SEOProps {
 
 const SEO: React.FC<SEOProps> = ({
   description = "",
+  image = null,
   lang = "en",
   meta = [],
   title,
@@ -47,12 +50,20 @@ const SEO: React.FC<SEOProps> = ({
           author
           navigationString
           coverImage
+          siteUrl
         }
       }
     }
   `)
 
   const metaDescription = description || site.siteMetadata.description
+
+  /* Per-post images may be absolute URLs or site-relative paths */
+  const metaImage = image
+    ? image.startsWith("http")
+      ? image
+      : `${site.siteMetadata.siteUrl}${image}`
+    : site.siteMetadata.coverImage
 
   const metaTags: MetaTag[] = [
     {
@@ -77,11 +88,11 @@ const SEO: React.FC<SEOProps> = ({
     },
     {
       property: `og:image`,
-      content: `${site.siteMetadata.coverImage}`,
+      content: metaImage,
     },
     {
       name: `twitter:card`,
-      content: `summary`,
+      content: image ? `summary_large_image` : `summary`,
     },
     {
       property: `twitter:url`,
@@ -101,7 +112,7 @@ const SEO: React.FC<SEOProps> = ({
     },
     {
       property: `twitter:image`,
-      content: `${site.siteMetadata.coverImage}`,
+      content: metaImage,
     },
     ...meta,
   ]

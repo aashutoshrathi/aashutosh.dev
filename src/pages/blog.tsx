@@ -10,11 +10,15 @@ import { shouldReduceMotion } from "@utils"
 export type MDXNode = {
   id: string
   excerpt: string
+  fields: {
+    timeToRead: number
+  }
   frontmatter: {
     date: string
     description: string
     slug: string
     title: string
+    ogImage?: string | null
   }
 }
 
@@ -85,7 +89,9 @@ const BlogIndex: React.FC<BlogIndexProps> = ({ data }) => {
                     {post.frontmatter.title}
                   </Link>
                 </h2>
-                <small className="opacity-80">{post.frontmatter.date}</small>
+                <small className="opacity-80">
+                  {post.frontmatter.date} · {post.fields.timeToRead} min read
+                </small>
               </header>
               <section>
                 <p className="mt-2">{post.frontmatter.description}</p>
@@ -106,6 +112,9 @@ export const query = graphql`
       nodes {
         id
         excerpt
+        fields {
+          timeToRead
+        }
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
           title

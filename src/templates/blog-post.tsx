@@ -73,6 +73,7 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps> = ({
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        image={post.frontmatter.ogImage}
       />
       <article className="py-8">
         <div ref={backRef} className="mb-8">
@@ -85,7 +86,9 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps> = ({
         </div>
         <header ref={titleRef} className="mb-8">
           <h1 className="mb-2 text-4xl font-bold">{post.frontmatter.title}</h1>
-          <p className="text-base opacity-80">{post.frontmatter.date}</p>
+          <p className="text-base opacity-80">
+            {post.frontmatter.date} · {post.fields.timeToRead} min read
+          </p>
         </header>
         <MDXProvider components={components}>
           <div
@@ -103,10 +106,14 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps> = ({
 export const query = graphql`
   query ($id: String!) {
     mdx(id: { eq: $id }) {
+      fields {
+        timeToRead
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        ogImage
       }
       excerpt
     }
