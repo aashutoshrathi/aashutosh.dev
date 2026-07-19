@@ -5,7 +5,7 @@ import { useLocation } from "@reach/router"
 import { Link } from "gatsby"
 import gsap from "gsap"
 
-import { AnimatedLink } from "@components"
+import { AnimatedLink, ThemeToggle } from "@components"
 import { lightHaptic } from "@utils"
 
 const Header: React.FC = () => {
@@ -67,6 +67,7 @@ const Header: React.FC = () => {
           <AnimatedLink to="/uses" onClick={lightHaptic}>
             Uses
           </AnimatedLink>
+          <ThemeToggle />
         </div>
       </nav>
     </header>
