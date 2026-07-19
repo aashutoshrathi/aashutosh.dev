@@ -73,6 +73,53 @@ module.exports = {
     },
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMdx } }) =>
+              allMdx.nodes.map((node) => ({
+                title: node.frontmatter.title,
+                date: node.frontmatter.date,
+                description: node.frontmatter.description || node.excerpt,
+                url: `${site.siteMetadata.siteUrl}/blog/${node.frontmatter.slug}`,
+                guid: `${site.siteMetadata.siteUrl}/blog/${node.frontmatter.slug}`,
+              })),
+            query: `
+              {
+                allMdx(sort: { frontmatter: { date: DESC } }) {
+                  nodes {
+                    excerpt
+                    frontmatter {
+                      title
+                      date
+                      slug
+                      description
+                    }
+                  }
+                }
+              }
+            `,
+            output: `/rss.xml`,
+            title: `aashutosh.dev`,
+          },
+        ],
+      },
+    },
     /*
      * Only load analytics when a GA4 measurement ID is configured.
      * Universal Analytics (UA-*) was sunset by Google in July 2023.
