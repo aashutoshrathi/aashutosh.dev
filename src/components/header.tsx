@@ -65,6 +65,9 @@ const Header: React.FC = () => {
           <AnimatedLink to="/work" onClick={lightHaptic}>
             Projects
           </AnimatedLink>
+          <AnimatedLink to="/now" onClick={lightHaptic}>
+            Now
+          </AnimatedLink>
           <AnimatedLink to="/uses" onClick={lightHaptic}>
             Uses
           </AnimatedLink>
