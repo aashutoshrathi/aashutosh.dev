@@ -11,6 +11,8 @@ import {
   FaTwitter,
 } from "react-icons/fa"
 
+import { shouldReduceMotion } from "@utils"
+
 import LoopingText from "./looping-text"
 import SocialIcon from "./social-icon"
 
@@ -25,6 +27,7 @@ const Footer: React.FC = () => {
   const builtWithRef = useRef<HTMLParagraphElement | null>(null)
 
   useGSAP(() => {
+    if (shouldReduceMotion()) return
     const tl = gsap.timeline()
     const delay = location.pathname === "/" ? 2 : 0.25
 

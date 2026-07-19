@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 import gsap from "gsap"
 
 import { AnimatedLink, ThemeToggle } from "@components"
-import { lightHaptic } from "@utils"
+import { lightHaptic, shouldReduceMotion } from "@utils"
 
 const Header: React.FC = () => {
   const location = useLocation()
@@ -15,6 +15,7 @@ const Header: React.FC = () => {
   const navLinksRef = useRef<HTMLDivElement | null>(null)
 
   useGSAP(() => {
+    if (shouldReduceMotion()) return
     const tl = gsap.timeline()
     const delay = location.pathname === "/" ? 1.75 : 0.25
 

@@ -4,7 +4,7 @@ import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { useMediaQuery } from "usehooks-ts"
 
-import { fetchData } from "@utils"
+import { fetchData, shouldReduceMotion } from "@utils"
 
 import { Project } from "../types"
 import ProjectCard from "./project-card"
@@ -86,6 +86,7 @@ const Projects: React.FC = () => {
 
   useGSAP(
     () => {
+      if (shouldReduceMotion()) return
       const tl = gsap.timeline()
 
       if (projectsRef.current) {

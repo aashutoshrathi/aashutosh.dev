@@ -5,6 +5,7 @@ import { graphql, Link } from "gatsby"
 import gsap from "gsap"
 
 import { SEO } from "@components"
+import { shouldReduceMotion } from "@utils"
 
 export type MDXNode = {
   id: string
@@ -30,6 +31,7 @@ const BlogIndex: React.FC<BlogIndexProps> = ({ data }) => {
   const postsRef = useRef<HTMLDivElement | null>(null)
 
   useGSAP(() => {
+    if (shouldReduceMotion()) return
     const tl = gsap.timeline()
 
     tl.from(headingRef.current, {

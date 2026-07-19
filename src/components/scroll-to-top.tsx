@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react"
 
 import { FaArrowUp } from "react-icons/fa"
 
+import { shouldReduceMotion } from "@utils"
+
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false)
 
@@ -16,7 +18,7 @@ const ScrollToTop = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: shouldReduceMotion() ? "auto" : "smooth",
     })
   }
 

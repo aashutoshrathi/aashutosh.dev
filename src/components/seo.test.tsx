@@ -1,8 +1,10 @@
-import { describe, it, expect, mock, beforeEach } from "bun:test"
 import React from "react"
+
 import { render } from "@testing-library/react"
-import SEO from "./seo"
+import { beforeEach, describe, expect, it, mock } from "bun:test"
 import Helmet from "react-helmet"
+
+import SEO from "./seo"
 
 // Mock Gatsby's useStaticQuery
 const mockUseStaticQuery = mock().mockReturnValue({
@@ -35,11 +37,15 @@ describe("SEO component", () => {
 
     // Check default description fallback
     const metaTags = helmet.metaTags
-    const descriptionTag = metaTags.find((tag: any) => tag.name === "description")
+    const descriptionTag = metaTags.find(
+      (tag: any) => tag.name === "description"
+    )
     expect(descriptionTag?.content).toBe("Site Description")
 
     // Check specific custom tags
-    const twitterCreatorTag = metaTags.find((tag: any) => tag.name === "twitter:creator")
+    const twitterCreatorTag = metaTags.find(
+      (tag: any) => tag.name === "twitter:creator"
+    )
     expect(twitterCreatorTag?.content).toBe("Site Author")
   })
 
@@ -56,8 +62,12 @@ describe("SEO component", () => {
 
     // Helmet deals with overrides depending on the tag properties.
     // For arrays, custom description should be the content of our specific tag.
-    const descriptionTags = metaTags.filter((tag: any) => tag.name === "description")
-    expect(descriptionTags[descriptionTags.length - 1].content).toBe("Custom Description")
+    const descriptionTags = metaTags.filter(
+      (tag: any) => tag.name === "description"
+    )
+    expect(descriptionTags[descriptionTags.length - 1].content).toBe(
+      "Custom Description"
+    )
 
     const customTag = metaTags.find((tag: any) => tag.name === "custom")
     expect(customTag?.content).toBe("custom-value")
@@ -68,7 +78,9 @@ describe("SEO component", () => {
 
     const helmet = Helmet.peek()
     const metaTags = helmet.metaTags
-    const descriptionTag = metaTags.find((tag: any) => tag.name === "description")
+    const descriptionTag = metaTags.find(
+      (tag: any) => tag.name === "description"
+    )
     expect(descriptionTag?.content).toBe("Explicit Description")
   })
 
