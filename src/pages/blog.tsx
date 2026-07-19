@@ -72,8 +72,7 @@ const BlogIndex: React.FC<BlogIndexProps> = ({ data }) => {
           <AnimatedLink
             href="https://nibbles.dev"
             className="shrink-0 font-semibold"
-            aria-label="Subscribe to Nibbles newsletter"
-          >
+            aria-label="Subscribe to Nibbles newsletter">
             Subscribe at nibbles.dev →
           </AnimatedLink>
         </aside>
@@ -84,8 +83,7 @@ const BlogIndex: React.FC<BlogIndexProps> = ({ data }) => {
                 <h2>
                   <Link
                     to={`/blog/${post.frontmatter.slug}`}
-                    className="relative mb-1 text-2xl font-bold inline font-sans text-blue-600 no-underline transition-colors duration-200 before:absolute before:bottom-0 before:h-px before:w-0 before:bg-current before:transition-all before:content-[''] hover:text-blue-700 hover:no-underline hover:before:w-full focus:outline-none focus-visible:before:w-full dark:text-blue-400 dark:hover:text-blue-300"
-                  >
+                    className="relative mb-1 text-2xl font-bold inline font-sans text-blue-600 no-underline transition-colors duration-200 before:absolute before:bottom-0 before:h-px before:w-0 before:bg-current before:transition-all before:content-[''] hover:text-blue-700 hover:no-underline hover:before:w-full focus:outline-none focus-visible:before:w-full dark:text-blue-400 dark:hover:text-blue-300">
                     {post.frontmatter.title}
                   </Link>
                 </h2>

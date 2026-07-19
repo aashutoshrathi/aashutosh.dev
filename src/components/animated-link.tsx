@@ -38,8 +38,7 @@ const AnimatedLink: React.FC<AnimatedLinkProps> = ({
         target="_blank"
         rel="noopener noreferrer"
         className={classes}
-        {...(props as any)}
-      >
+        {...(props as any)}>
         {children}
       </OutboundLink>
     )

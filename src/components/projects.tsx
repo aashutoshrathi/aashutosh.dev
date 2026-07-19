@@ -146,8 +146,7 @@ const Projects: React.FC = () => {
       <div
         className="mt-8 flex justify-end gap-1 rounded-lg"
         role="group"
-        aria-label="Sort projects"
-      >
+        aria-label="Sort projects">
         {SORT_OPTIONS.map((option) => (
           <button
             key={option.value}
@@ -158,8 +157,7 @@ const Projects: React.FC = () => {
               sortBy === option.value
                 ? "bg-blue-600 font-semibold text-white dark:bg-blue-400 dark:text-slate-900"
                 : "text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-slate-800"
-            }`}
-          >
+            }`}>
             {option.label}
           </button>
         ))}

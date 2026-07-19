@@ -60,8 +60,7 @@ const WorkPage: React.FC = () => {
               })
             }
             return data
-          }}
-        >
+          }}>
           <ReactTooltip delayShow={10} className="custom-tooltip" />
         </GitHubCalendar>
       </div>

@@ -82,8 +82,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             <span
               className="flex items-center [&_svg]:mr-1 [&_svg]:text-amber-500"
               title={`${project.stargazers_count} stars`}
-              aria-label={`${project.stargazers_count} stars`}
-            >
+              aria-label={`${project.stargazers_count} stars`}>
               <FaStar />
               <span>{project.stargazers_count}</span>
             </span>
@@ -93,8 +92,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <AnimatedLink
             href={project.html_url}
             aria-label="Source Code"
-            title="Source Code"
-          >
+            title="Source Code">
             Code
           </AnimatedLink>
           {project.homepage && (
@@ -102,8 +100,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               href={project.homepage}
               className="ml-4"
               aria-label="Demo/Docs"
-              title="Demo/Docs"
-            >
+              title="Demo/Docs">
               Demo
             </AnimatedLink>
           )}

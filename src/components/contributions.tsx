@@ -52,8 +52,7 @@ const Contributions: React.FC = () => {
               <span
                 className="mt-1 shrink-0 text-purple-600 dark:text-purple-400"
                 title="Merged pull request"
-                aria-label="Merged pull request"
-              >
+                aria-label="Merged pull request">
                 <GoGitMerge />
               </span>
               <div className="flex flex-grow flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">

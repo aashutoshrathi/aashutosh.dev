@@ -203,13 +203,11 @@ const UsesPage: React.FC = () => {
                   <div className="section-item">
                     <div
                       key={itemIdx}
-                      className="border-l-2 py-2 pl-4 transition-all duration-100 hover:border-l-4 border-blue-600 dark:border-blue-400"
-                    >
+                      className="border-l-2 py-2 pl-4 transition-all duration-100 hover:border-l-4 border-blue-600 dark:border-blue-400">
                       {item.link ? (
                         <AnimatedLink
                           href={item.link}
-                          className="mb-1 text-xl font-semibold"
-                        >
+                          className="mb-1 text-xl font-semibold">
                           {item.name}
                         </AnimatedLink>
                       ) : (

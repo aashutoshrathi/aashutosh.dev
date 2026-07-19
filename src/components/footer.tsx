@@ -52,8 +52,7 @@ const Footer: React.FC = () => {
     <footer className="p-8 text-center font-mono">
       <div
         ref={socialsRef}
-        className="text-center flex items-center justify-center gap-2"
-      >
+        className="text-center flex items-center justify-center gap-2">
         <SocialIcon
           link="https://github.com/aashutoshrathi"
           title="GitHub"
@@ -82,8 +81,7 @@ const Footer: React.FC = () => {
       </div>
       <p
         ref={builtWithRef}
-        className="mt-2 flex items-center justify-center text-sm text-zinc-500 dark:text-zinc-400"
-      >
+        className="mt-2 flex items-center justify-center text-sm text-zinc-500 dark:text-zinc-400">
         <span className="mr-1 inline-block">{">"} built with </span>
         <span className="inline-block h-5 min-w-11 text-right">
           <LoopingText texts={emotions} duration={2.75} />
