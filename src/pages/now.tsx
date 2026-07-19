@@ -45,9 +45,8 @@ const NowPage: React.FC = () => {
       title: "Working",
       items: [
         <>
-          Optimizing sales with AI at{" "}
-          <AnimatedLink href="https://regie.ai">Regie.ai</AnimatedLink> —
-          shipping things that make outbound less robotic.
+          Making experience, APIs and dials better at{" "}
+          <AnimatedLink href="https://go.regie.ai">Regie.ai</AnimatedLink>.
         </>,
       ],
     },
