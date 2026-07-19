@@ -5,9 +5,12 @@ import { MDXProvider } from "@mdx-js/react"
 import { graphql, Link } from "gatsby"
 import gsap from "gsap"
 
-import { CodeBlock, SEO, type CodeBlockProps } from "@components"
+import { CodeBlock, SEO } from "@components"
+import { shouldReduceMotion } from "@utils"
 
 import { MDXNode } from "../pages/blog"
+
+import type { CodeBlockProps } from "@components"
 
 interface MDXPreProps extends React.HTMLAttributes<HTMLPreElement> {
   children: React.ReactElement<CodeBlockProps>
@@ -35,6 +38,7 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps> = ({
   const contentRef = useRef<HTMLDivElement | null>(null)
 
   useGSAP(() => {
+    if (shouldReduceMotion()) return
     const tl = gsap.timeline()
 
     if (titleRef.current) {
@@ -69,6 +73,7 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps> = ({
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        image={post.frontmatter.ogImage}
       />
       <article className="py-8">
         <div ref={backRef} className="mb-8">
@@ -81,7 +86,9 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps> = ({
         </div>
         <header ref={titleRef} className="mb-8">
           <h1 className="mb-2 text-4xl font-bold">{post.frontmatter.title}</h1>
-          <p className="text-base opacity-80">{post.frontmatter.date}</p>
+          <p className="text-base opacity-80">
+            {post.frontmatter.date} · {post.fields.timeToRead} min read
+          </p>
         </header>
         <MDXProvider components={components}>
           <div
@@ -99,10 +106,14 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps> = ({
 export const query = graphql`
   query ($id: String!) {
     mdx(id: { eq: $id }) {
+      fields {
+        timeToRead
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        ogImage
       }
       excerpt
     }

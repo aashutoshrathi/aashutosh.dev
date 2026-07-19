@@ -3,6 +3,8 @@ import React, { useRef } from "react"
 import clsx from "clsx"
 import gsap from "gsap"
 
+import { shouldReduceMotion } from "@utils"
+
 import { Commit } from "../types"
 
 interface AnimatedDetailsProps {
@@ -15,6 +17,9 @@ const AnimatedDetails: React.FC<AnimatedDetailsProps> = ({ commit }) => {
   const isAnimating = useRef<boolean>(false)
 
   const handleToggle = (e: React.MouseEvent<HTMLElement, MouseEvent>): void => {
+    /* Reduced motion: fall back to the native, instant <details> toggle */
+    if (shouldReduceMotion()) return
+
     const details = detailsRef.current
     const content = contentRef.current
 

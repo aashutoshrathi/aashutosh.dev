@@ -3,7 +3,8 @@ import React, { useRef } from "react"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 
-import { SEO, AnimatedLink } from "@components"
+import { AnimatedLink, SEO } from "@components"
+import { shouldReduceMotion } from "@utils"
 
 interface Item {
   name: string
@@ -140,6 +141,7 @@ const UsesPage: React.FC = () => {
   const subHeadingRef = useRef<HTMLParagraphElement | null>(null)
 
   useGSAP(() => {
+    if (shouldReduceMotion()) return
     if (!usesRef.current) return
 
     const tl = gsap.timeline()
@@ -172,7 +174,7 @@ const UsesPage: React.FC = () => {
           stagger: 0.02,
           duration: 0.2,
         },
-        "<0.1",
+        "<0.1"
       )
   }, [])
 

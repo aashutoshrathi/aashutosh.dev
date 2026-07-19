@@ -1,4 +1,4 @@
 interface Window {
-  MSStream?: any;
-  webkitAudioContext?: typeof AudioContext;
+  MSStream?: any
+  webkitAudioContext?: typeof AudioContext
 }

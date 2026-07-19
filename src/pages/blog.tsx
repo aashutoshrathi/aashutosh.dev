@@ -4,16 +4,21 @@ import { useGSAP } from "@gsap/react"
 import { graphql, Link } from "gatsby"
 import gsap from "gsap"
 
-import { SEO } from "@components"
+import { AnimatedLink, SEO } from "@components"
+import { shouldReduceMotion } from "@utils"
 
 export type MDXNode = {
   id: string
   excerpt: string
+  fields: {
+    timeToRead: number
+  }
   frontmatter: {
     date: string
     description: string
     slug: string
     title: string
+    ogImage?: string | null
   }
 }
 
@@ -30,6 +35,7 @@ const BlogIndex: React.FC<BlogIndexProps> = ({ data }) => {
   const postsRef = useRef<HTMLDivElement | null>(null)
 
   useGSAP(() => {
+    if (shouldReduceMotion()) return
     const tl = gsap.timeline()
 
     tl.from(headingRef.current, {
@@ -57,6 +63,20 @@ const BlogIndex: React.FC<BlogIndexProps> = ({ data }) => {
         <h1 ref={headingRef} className="mb-8 text-4xl font-bold">
           Blog
         </h1>
+        <aside className="mb-10 flex flex-col gap-2 rounded-lg border border-gray-200 bg-gray-50 px-4 py-5 sm:flex-row sm:items-center sm:justify-between dark:border-slate-700 dark:bg-slate-800">
+          <p className="text-gray-600 dark:text-gray-300">
+            📬 Like these? You&apos;ll love{" "}
+            <span className="font-semibold">Nibbles</span> — my bite-sized tech
+            newsletter.
+          </p>
+          <AnimatedLink
+            href="https://nibbles.dev"
+            className="shrink-0 font-semibold"
+            aria-label="Subscribe to Nibbles newsletter"
+          >
+            Subscribe at nibbles.dev →
+          </AnimatedLink>
+        </aside>
         <div ref={postsRef} className="space-y-8">
           {data.allMdx.nodes.map((post) => (
             <article key={post.id}>
@@ -69,7 +89,9 @@ const BlogIndex: React.FC<BlogIndexProps> = ({ data }) => {
                     {post.frontmatter.title}
                   </Link>
                 </h2>
-                <small className="opacity-80">{post.frontmatter.date}</small>
+                <small className="opacity-80">
+                  {post.frontmatter.date} · {post.fields.timeToRead} min read
+                </small>
               </header>
               <section>
                 <p className="mt-2">{post.frontmatter.description}</p>
@@ -90,6 +112,9 @@ export const query = graphql`
       nodes {
         id
         excerpt
+        fields {
+          timeToRead
+        }
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
           title

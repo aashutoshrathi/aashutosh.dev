@@ -5,6 +5,7 @@ import gsap, { SteppedEase } from "gsap"
 import TextPlugin from "gsap/TextPlugin"
 
 import { AnimatedDetails, SEO } from "@components"
+import { shouldReduceMotion } from "@utils"
 
 import { Commit } from "../types"
 
@@ -64,6 +65,7 @@ const TimelinePage: React.FC = () => {
   const commitsRef = useRef<HTMLDivElement | null>(null)
 
   useGSAP(() => {
+    if (shouldReduceMotion()) return
     const tl = gsap.timeline()
 
     tl.to(headerRef.current, {

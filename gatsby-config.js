@@ -8,6 +8,7 @@ dotenv.config({
 module.exports = {
   siteMetadata: {
     title: `aashutosh.dev`,
+    siteUrl: `https://aashutosh.dev`,
     description: `software engineer by profession, in it for the plot, baking code into stories. writing nibbles and open to quibbles on tech, life and everything in between.`,
     navigationString: `aashutosh.dev | `,
     author: `@AashutoshRathi`,
@@ -72,20 +73,75 @@ module.exports = {
     },
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
-      resolve: `gatsby-plugin-google-gtag`,
+      resolve: `gatsby-plugin-feed`,
       options: {
-        trackingIds: ["UA-37968445-2"],
-        gtagConfig: {
-          anonymize_ip: true,
-          cookie_expires: 0,
-        },
-        pluginConfig: {
-          head: true,
-          respectDNT: true,
-        },
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMdx } }) =>
+              allMdx.nodes.map((node) => ({
+                title: node.frontmatter.title,
+                date: node.frontmatter.date,
+                description: node.frontmatter.description || node.excerpt,
+                url: `${site.siteMetadata.siteUrl}/blog/${node.frontmatter.slug}`,
+                guid: `${site.siteMetadata.siteUrl}/blog/${node.frontmatter.slug}`,
+              })),
+            query: `
+              {
+                allMdx(sort: { frontmatter: { date: DESC } }) {
+                  nodes {
+                    excerpt
+                    frontmatter {
+                      title
+                      date
+                      slug
+                      description
+                    }
+                  }
+                }
+              }
+            `,
+            output: `/rss.xml`,
+            title: `aashutosh.dev`,
+          },
+        ],
       },
     },
+    /*
+     * Only load analytics when a GA4 measurement ID is configured.
+     * Universal Analytics (UA-*) was sunset by Google in July 2023.
+     */
+    ...(process.env.GATSBY_GA_MEASUREMENT_ID
+      ? [
+          {
+            resolve: `gatsby-plugin-google-gtag`,
+            options: {
+              trackingIds: [process.env.GATSBY_GA_MEASUREMENT_ID],
+              gtagConfig: {
+                anonymize_ip: true,
+                cookie_expires: 0,
+              },
+              pluginConfig: {
+                head: true,
+                respectDNT: true,
+              },
+            },
+          },
+        ]
+      : []),
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

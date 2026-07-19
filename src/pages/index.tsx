@@ -8,8 +8,8 @@ import gsap from "gsap"
 import { Tooltip as ReactTooltip } from "react-tooltip"
 import { useMediaQuery } from "usehooks-ts"
 
-import { SEO, AnimatedLink } from "@components"
-import { mediumHaptic } from "@utils"
+import { AnimatedLink, SEO } from "@components"
+import { mediumHaptic, shouldReduceMotion } from "@utils"
 
 const IndexPage: React.FC = () => {
   const imgWrapperRef = useRef<HTMLDivElement | null>(null)
@@ -20,6 +20,7 @@ const IndexPage: React.FC = () => {
   const isDesktop = useMediaQuery("(min-width: 768px)")
 
   useGSAP(() => {
+    if (shouldReduceMotion()) return
     const tl = gsap.timeline()
 
     tl.from(imgWrapperRef.current, {
@@ -37,7 +38,7 @@ const IndexPage: React.FC = () => {
         ease: "power1.out",
         duration: 0.5,
       },
-      "<0.1",
+      "<0.1"
     )
 
     if (aboutRef.current) {
