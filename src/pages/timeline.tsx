@@ -72,7 +72,7 @@ const TimelinePage: React.FC = () => {
       text: {
         value: "$ git log --oneline --graph",
       },
-      duration: 1,
+      duration: 0.6,
       ease: "none",
     })
       .fromTo(
@@ -94,7 +94,7 @@ const TimelinePage: React.FC = () => {
       tl.from(commitsRef.current.children, {
         y: -12,
         opacity: 0,
-        stagger: 0.04,
+        stagger: 0.02,
         ease: "power3.out",
         duration: 0.2,
       })
