@@ -59,8 +59,8 @@ const NowPage: React.FC = () => {
           </AnimatedLink>{" "}
           <img
             alt="GitHub Release"
-            src="https://img.shields.io/github/v/release/aashutoshrathi/toki?style=flat-square&label=%20"
-            className="inline-block h-5 align-middle"
+            src="https://img.shields.io/github/v/release/aashutoshrathi/toki?style=flat&label=release&color=2563eb"
+            className="inline align-text-bottom"
           />{" "}
           - a native macOS menu bar app to keep an eye on Claude Code and Codex
           usage (yes, there's a{" "}
@@ -80,8 +80,8 @@ const NowPage: React.FC = () => {
           <strong>M3 - Money MicroManager</strong>{" "}
           <img
             alt="WIP"
-            src="https://img.shields.io/badge/status-WIP-yellow?style=flat-square"
-            className="inline-block h-5 align-middle"
+            src="https://img.shields.io/badge/WIP-64748b?style=flat"
+            className="inline align-text-bottom"
           />{" "}
           - cross-platform personal finance app.
         </>,
@@ -91,8 +91,8 @@ const NowPage: React.FC = () => {
           </AnimatedLink>{" "}
           <img
             alt="WIP"
-            src="https://img.shields.io/badge/status-WIP-yellow?style=flat-square"
-            className="inline-block h-5 align-middle"
+            src="https://img.shields.io/badge/WIP-64748b?style=flat"
+            className="inline align-text-bottom"
           />{" "}
           - a trust-first home services marketplace for tier-3 cities.
         </>,
