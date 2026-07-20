@@ -12,9 +12,27 @@ import ProjectCard from "./project-card"
 const GITHUB_USERNAME = "aashutoshrathi"
 const PROJECTS_URL = `https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100&type=owner&sort=pushed&direction=desc`
 const MAX_PROJECTS = 10
+const CACHE_KEY = "github-projects"
 
 /* Repos that shouldn't show up as projects (e.g. the profile README) */
 const EXCLUDED_REPOS = new Set([GITHUB_USERNAME, "homebrew-tap"])
+
+const loadProjectsCache = (): Project[] | null => {
+  try {
+    const raw = localStorage.getItem(CACHE_KEY)
+    if (raw) {
+      const parsed = JSON.parse(raw)
+      if (Array.isArray(parsed)) return parsed as Project[]
+    }
+  } catch {}
+  return null
+}
+
+const saveProjectsCache = (data: Project[]) => {
+  try {
+    localStorage.setItem(CACHE_KEY, JSON.stringify(data))
+  } catch {}
+}
 
 type ProjectSort = "recent" | "stars"
 
@@ -94,7 +112,7 @@ const DUMMY_PROJECTS: Project[] = [
 ]
 
 const Projects: React.FC = () => {
-  const [projects, setProjects] = useState<Project[] | null>(null)
+  const [projects, setProjects] = useState<Project[] | null>(loadProjectsCache)
   const [sortBy, setSortBy] = useState<ProjectSort>("recent")
   const projectsRef = useRef<HTMLElement | null>(null)
   const isDesktop = useMediaQuery("(min-width: 768px)")
@@ -132,12 +150,16 @@ const Projects: React.FC = () => {
 
   useEffect(() => {
     fetchData<Project[]>(PROJECTS_URL)
-      .then((repos) => setProjects(filterProjects(repos)))
+      .then((repos) => {
+        const filtered = filterProjects(repos)
+        setProjects(filtered)
+        saveProjectsCache(filtered)
+      })
       .catch(() => {
         if (process.env.NODE_ENV === "development") {
           console.error("Failed to fetch projects, using dummy data.")
         }
-        setProjects(DUMMY_PROJECTS)
+        if (!loadProjectsCache()) setProjects(DUMMY_PROJECTS)
       })
   }, [])
 

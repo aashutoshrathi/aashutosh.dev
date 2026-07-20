@@ -230,9 +230,8 @@ const UsesPage: React.FC = () => {
               </h2>
               <div className="space-y-6">
                 {section.items.map((item, itemIdx) => (
-                  <div className="section-item">
+                  <div key={itemIdx} className="section-item">
                     <div
-                      key={itemIdx}
                       className="border-l-2 py-2 pl-4 transition-all duration-100 hover:border-l-4 border-blue-600 dark:border-blue-400">
                       {item.link ? (
                         <AnimatedLink
