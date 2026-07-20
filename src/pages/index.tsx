@@ -35,14 +35,14 @@ const IndexPage: React.FC = () => {
       y: 0,
       opacity: 1,
       ease: "power2.out",
-      duration: 0.7,
+      duration: 0.25,
     }).to(
       headingRef.current,
       {
         y: 0,
         opacity: 1,
         ease: "power1.out",
-        duration: 0.5,
+        duration: 0.3,
       },
       "<0.1"
     )
@@ -52,7 +52,7 @@ const IndexPage: React.FC = () => {
         y: 12,
         opacity: 0,
         ease: "power1.out",
-        stagger: 0.3,
+        stagger: 0.05,
       })
     }
 
