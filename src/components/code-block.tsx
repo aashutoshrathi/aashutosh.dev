@@ -13,22 +13,15 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ children, className }) => {
   const handleCopy = async () => {
     mediumHaptic()
     // Extract text content from children
-    const getTextContent = (node: any): string => {
-      if (typeof node === "string") return node
-      if (typeof node === "number") return String(node)
-      if (Array.isArray(node)) {
-        let text = ""
-        for (let i = 0; i < node.length; i++) {
-          text += getTextContent(node[i])
-        }
-        return text
+    const getTextContent = (node: React.ReactNode): string => {
+      if (typeof node === "string" || typeof node === "number") {
+        return String(node)
       }
-      if (
-        React.isValidElement(node) &&
-        node.props &&
-        "children" in (node.props as any)
-      ) {
-        return getTextContent((node.props as any).children)
+      if (Array.isArray(node)) {
+        return node.map(getTextContent).join("")
+      }
+      if (React.isValidElement<{ children?: React.ReactNode }>(node)) {
+        return getTextContent(node.props.children)
       }
       return ""
     }
