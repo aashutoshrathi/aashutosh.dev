@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React, { useRef, useState } from "react"
 
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
@@ -12,7 +12,13 @@ interface Item {
   link?: string
 }
 
-const sections: Array<{ title: string; items: Item[] }> = [
+const UsesPage: React.FC = () => {
+  const usesRef = useRef<HTMLDivElement | null>(null)
+  const headingRef = useRef<HTMLHeadingElement | null>(null)
+  const subHeadingRef = useRef<HTMLParagraphElement | null>(null)
+  const [copied, setCopied] = useState(false)
+
+  const sections: Array<{ title: string; items: Item[] }> = [
   {
     title: "💻 Editor & Terminal",
     items: [
@@ -48,6 +54,18 @@ const sections: Array<{ title: string; items: Item[] }> = [
             <AnimatedLink href="http://statusline.aashutosh.dev">
               my statusline
             </AnimatedLink>
+            <br />
+            <pre
+              className="mt-1 inline-block cursor-pointer rounded bg-slate-100 px-2 py-1 font-mono text-sm transition-colors dark:bg-slate-800"
+              onClick={() => {
+                navigator.clipboard.writeText(
+                  "curl -fsSL https://isl.aashutosh.dev | bash"
+                )
+                setCopied(true)
+                setTimeout(() => setCopied(false), 1500)
+              }}>
+              {copied ? "Copied!" : "curl -fsSL https://isl.aashutosh.dev | bash"}
+            </pre>
           </>
         ),
       },
@@ -124,6 +142,11 @@ const sections: Array<{ title: string; items: Item[] }> = [
         description: "AI-powered note-taking for meetings",
         link: "https://www.granola.so/",
       },
+      {
+        name: "Toki",
+        description: "Managing agents and budgeting tokens",
+        link: "https://toki.aashutosh.dev",
+      },
     ],
   },
   {
@@ -146,11 +169,6 @@ const sections: Array<{ title: string; items: Item[] }> = [
     ],
   },
 ]
-
-const UsesPage: React.FC = () => {
-  const usesRef = useRef<HTMLDivElement | null>(null)
-  const headingRef = useRef<HTMLHeadingElement | null>(null)
-  const subHeadingRef = useRef<HTMLParagraphElement | null>(null)
 
   useGSAP(() => {
     if (shouldReduceMotion()) return
