@@ -87,10 +87,10 @@ describe("SEO component", () => {
   it("uses provided lang or falls back to 'en'", () => {
     render(<SEO title="Page Title" />)
     let helmet = Helmet.peek()
-    expect(helmet.htmlAttributes.lang).toBe("en")
+    expect(helmet.htmlAttributes?.lang).toBe("en")
 
     render(<SEO title="Page Title" lang="fr" />)
     helmet = Helmet.peek()
-    expect(helmet.htmlAttributes.lang).toBe("fr")
+    expect(helmet.htmlAttributes?.lang).toBe("fr")
   })
 })
