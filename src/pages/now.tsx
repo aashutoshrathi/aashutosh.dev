@@ -22,9 +22,9 @@ const NowPage: React.FC = () => {
 
     const tl = gsap.timeline()
 
-    tl.from(headingRef.current, {
-      y: -12,
-      opacity: 0,
+    tl.to(headingRef.current, {
+      y: 0,
+      opacity: 1,
       ease: "power3.out",
       duration: 0.25,
     })
@@ -57,7 +57,7 @@ const NowPage: React.FC = () => {
           <AnimatedLink href="https://github.com/aashutoshrathi/toki">
             toki
           </AnimatedLink>{" "}
-          — a native macOS menu bar app to keep an eye on Claude Code and Codex
+          - a native macOS menu bar app to keep an eye on Claude Code and Codex
           usage (yes, there's a{" "}
           <AnimatedLink href="https://github.com/aashutoshrathi/homebrew-tap">
             Homebrew tap
@@ -69,7 +69,7 @@ const NowPage: React.FC = () => {
           <AnimatedLink href="https://github.com/aashutoshrathi/pratinidhi">
             pratinidhi
           </AnimatedLink>{" "}
-          — because proxies are fun.
+          - because proxies are fun.
         </>,
       ],
     },
@@ -96,11 +96,11 @@ const NowPage: React.FC = () => {
     <>
       <SEO
         title="Now"
-        description="What Aashutosh is up to right now — work, side projects and writing."
+        description="What Aashutosh is up to right now - work, side projects and writing."
       />
       <div className="mx-auto max-w-3xl px-4 py-8">
         <div className="mb-12">
-          <h1 ref={headingRef} className="mb-4 text-4xl font-bold">
+          <h1 ref={headingRef} className="animate-init mb-4 text-4xl font-bold opacity-0 -translate-y-3">
             Now
           </h1>
           <p className="text-lg leading-relaxed opacity-90">

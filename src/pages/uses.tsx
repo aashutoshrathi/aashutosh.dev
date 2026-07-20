@@ -39,6 +39,18 @@ const sections: Array<{ title: string; items: Item[] }> = [
           "Modern terminal for macOS, slowly moving all my workflows here",
         link: "https://www.warp.dev/",
       },
+      {
+        name: "Claude Code",
+        link: "https://claude.com/product/claude-code",
+        description: (
+          <>
+            AI-powered terminal coding agent with{" "}
+            <AnimatedLink href="http://statusline.aashutosh.dev">
+              my statusline
+            </AnimatedLink>
+          </>
+        ),
+      },
     ],
   },
   {
@@ -146,9 +158,9 @@ const UsesPage: React.FC = () => {
 
     const tl = gsap.timeline()
 
-    tl.from(headingRef.current, {
-      y: -12,
-      opacity: 0,
+    tl.to(headingRef.current, {
+      y: 0,
+      opacity: 1,
       ease: "power3.out",
       duration: 0.25,
     })
@@ -183,7 +195,7 @@ const UsesPage: React.FC = () => {
       <SEO title="Uses" />
       <div ref={usesRef} className="mx-auto max-w-3xl px-4 py-8">
         <div className="mb-12">
-          <h1 ref={headingRef} className="mb-4 text-4xl font-bold">
+          <h1 ref={headingRef} className="animate-init mb-4 text-4xl font-bold opacity-0 -translate-y-3">
             Uses
           </h1>
           <p ref={subHeadingRef} className="text-lg leading-relaxed opacity-90">

@@ -17,7 +17,7 @@ const Header: React.FC = () => {
   useGSAP(() => {
     if (shouldReduceMotion()) return
     const tl = gsap.timeline()
-    const delay = location.pathname === "/" ? 1.75 : 0.25
+    const delay = location.pathname === "/" ? 0.3 : 0.25
 
     tl.from(navRef.current, {
       opacity: 0,

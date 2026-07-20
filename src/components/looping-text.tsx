@@ -11,7 +11,7 @@ interface LoopingTextProps {
 }
 
 const LoopingText = ({ texts, duration }: LoopingTextProps) => {
-  const [activeTextIndex, setActiveTextIndex] = useState(-1)
+  const [activeTextIndex, setActiveTextIndex] = useState(0)
 
   const textsRef = useRef<HTMLDivElement | null>(null)
 
@@ -22,19 +22,16 @@ const LoopingText = ({ texts, duration }: LoopingTextProps) => {
 
       const tl = gsap.timeline()
 
-      tl.set(".char", { y: activeTextIndex === -1 ? 0 : "100%" })
-        .fromTo(
-          ".char",
-          {
-            y: activeTextIndex === -1 ? 0 : "100%",
-          },
-          {
-            y: 0,
-            ease: "circ.out",
-            duration: 0.7,
-            stagger: 0.05,
-          }
-        )
+      tl.fromTo(
+        ".char",
+        { y: "100%" },
+        {
+          y: 0,
+          ease: "circ.out",
+          duration: 0.7,
+          stagger: 0.05,
+        }
+      )
         .to(
           ".char",
           {
@@ -43,12 +40,9 @@ const LoopingText = ({ texts, duration }: LoopingTextProps) => {
             duration: 0.35,
             stagger: 0.05,
             onComplete: () => {
-              setActiveTextIndex((currentIndex) => {
-                if (currentIndex === -1) {
-                  return 1
-                }
-                return (currentIndex + 1) % texts.length
-              })
+              setActiveTextIndex(
+                (currentIndex) => (currentIndex + 1) % texts.length
+              )
             },
           },
           `+=${duration}`
@@ -57,11 +51,9 @@ const LoopingText = ({ texts, duration }: LoopingTextProps) => {
     { scope: textsRef, dependencies: [activeTextIndex] }
   )
 
-  const currentActiveIndex = activeTextIndex === -1 ? 0 : activeTextIndex
-
   return (
     <div ref={textsRef} className="inline-block overflow-hidden">
-      {texts[currentActiveIndex].split("").map((char, idx) => (
+      {texts[activeTextIndex].split("").map((char, idx) => (
         <span key={idx} className="char inline-block">
           {char}
         </span>

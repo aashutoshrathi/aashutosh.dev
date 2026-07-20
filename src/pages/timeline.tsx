@@ -80,11 +80,11 @@ const TimelinePage: React.FC = () => {
         { autoAlpha: 0, x: -20 },
         { autoAlpha: 1, duration: 1, repeat: -1, ease: SteppedEase.config(1) }
       )
-      .from(
+      .to(
         subHeaderRef.current,
         {
-          y: -10,
-          opacity: 0,
+          y: 0,
+          opacity: 1,
           ease: "power1.out",
         },
         "<0.1"
@@ -114,7 +114,7 @@ const TimelinePage: React.FC = () => {
                 className="text-lg h-7 inline-block font-bold  text-zinc-800 dark:text-zinc-100 mb-2"
               />
               <span ref={cursorRef}>█</span>
-              <p ref={subHeaderRef} className="text-zinc-500 text-sm">
+              <p ref={subHeaderRef} className="animate-init text-zinc-500 text-sm opacity-0 -translate-y-[10px]">
                 Timeline of milestones
               </p>
             </header>
