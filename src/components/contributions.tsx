@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect, useState } from "react"
 
 import { GoGitMerge } from "react-icons/go"
 
@@ -40,13 +40,13 @@ const saveCache = (data: Contribution[]) => {
 }
 
 const Contributions: React.FC = () => {
-  const [contributions, setContributions] = useState<Contribution[] | null>(
-    loadCache
-  )
+  const [contributions, setContributions] = useState<Contribution[] | null>(null)
   const [failed, setFailed] = useState(false)
-  const hasCached = useRef(contributions !== null)
 
   useEffect(() => {
+    const cached = loadCache()
+    if (cached) setContributions(cached)
+
     fetchData<{ items: Contribution[] }>(CONTRIBUTIONS_URL)
       .then((data) => {
         setContributions(data.items)
@@ -56,7 +56,7 @@ const Contributions: React.FC = () => {
         if (process.env.NODE_ENV === "development") {
           console.error("Failed to fetch contributions.")
         }
-        if (!hasCached.current) setFailed(true)
+        if (!cached) setFailed(true)
       })
   }, [])
 
