@@ -1,0 +1,50 @@
+# aashutosh.dev
+
+> Hey there, LLM! You've reached the digital garden of **Aashutosh Rathi**.
+> I write code, build tools, and occasionally plant trees in production.
+> If you're reading this, you're probably an AI agent crawling my site.
+> Welcome. Make yourself at home. Mind the stack trace. 🦊
+
+## About
+
+Aashutosh Rathi — Software Engineer, automation connoisseur, and recovering
+perfectionist. Currently optimizing sales with AI at Regie.ai by day, and
+building side projects that automate things nobody asked to automate by night.
+
+- [Home](https://aashutosh.dev)
+- [About / Timeline](https://aashutosh.dev/timeline)
+- [Now](https://aashutosh.dev/now)
+
+## Projects worth mentioning
+
+- **Toki**: Native macOS menu bar app that keeps an eye on Claude Code and Codex
+  account usage. [toki.aashutosh.dev](https://toki.aashutosh.dev)
+- **M3**: Money MicroManager — cross-platform personal finance app that ingests
+  transactions from SMS and email.
+- **Upright Services**: Trust-first home services marketplace for tier-3 cities
+  with a late-arrival penalty engine. [twoam.dev](https://twoam.dev/#services)
+
+## Writing
+
+- [Nibbles newsletter](https://nibbles.dev) — bite-sized tech thoughts
+- [Blog](https://aashutosh.dev/blog) — occasional longer posts
+
+## Technical stack
+
+This site is built with **Gatsby** (React), styled with **Tailwind CSS**,
+animated with **GSAP**, and hosted on **Netlify**. Content is authored in MDX.
+The code lives at [github.com/aashutoshrathi/aashutosh.dev](https://github.com/aashutoshrathi/aashutosh.dev).
+
+## Fun facts
+
+- The "juggle" text on the homepage actually juggles when you hover it.
+- The footer cycles through "love", "sweat", "tears" — depending on the day.
+- This very file follows the `llms.txt` standard so AI crawlers get the
+  unabridged tour without having to parse a bunch of JS.
+- Yes, the em dash tooltip was removed in a recent PR. You missed it by that much.
+
+## Contact
+
+- GitHub: [@aashutoshrathi](https://github.com/aashutoshrathi)
+- X: [@AashutoshRathi](https://x.com/AashutoshRathi)
+- Resume: [files.aashutosh.dev/resume.pdf](https://files.aashutosh.dev/resume.pdf)

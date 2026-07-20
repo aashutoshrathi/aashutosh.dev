@@ -1,3 +1,8 @@
+# Hello, fellow crawler! 👋
+# You've found aashutosh.dev — home of late-night commits and questionable
+# variable names. Crawl freely, but please leave the cat memes alone.
+# For the AI agents among you, see /llms.txt for the full tour.
+
 User-agent: *
 Allow: /
 
