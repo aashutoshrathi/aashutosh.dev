@@ -57,6 +57,11 @@ const NowPage: React.FC = () => {
           <AnimatedLink href="https://github.com/aashutoshrathi/toki">
             toki
           </AnimatedLink>{" "}
+          <img
+            alt="GitHub Release"
+            src="https://img.shields.io/github/v/release/aashutoshrathi/toki?style=flat-square&label=%20"
+            className="inline-block h-5 align-middle"
+          />{" "}
           - a native macOS menu bar app to keep an eye on Claude Code and Codex
           usage (yes, there's a{" "}
           <AnimatedLink href="https://github.com/aashutoshrathi/homebrew-tap">
@@ -70,6 +75,26 @@ const NowPage: React.FC = () => {
             pratinidhi
           </AnimatedLink>{" "}
           - because proxies are fun.
+        </>,
+        <>
+          <strong>M3 - Money MicroManager</strong>{" "}
+          <img
+            alt="WIP"
+            src="https://img.shields.io/badge/status-WIP-yellow?style=flat-square"
+            className="inline-block h-5 align-middle"
+          />{" "}
+          - cross-platform personal finance app.
+        </>,
+        <>
+          <AnimatedLink href="https://twoam.dev/#services">
+            Upright Services
+          </AnimatedLink>{" "}
+          <img
+            alt="WIP"
+            src="https://img.shields.io/badge/status-WIP-yellow?style=flat-square"
+            className="inline-block h-5 align-middle"
+          />{" "}
+          - a trust-first home services marketplace for tier-3 cities.
         </>,
       ],
     },
@@ -88,6 +113,13 @@ const NowPage: React.FC = () => {
       title: "Chasing",
       items: [
         "Inbox zero (perpetually), fewer manual chores, more automation.",
+      ],
+    },
+    {
+      title: "Living",
+      items: [
+        "Cafe Hopping in Indiranagar with my better half",
+        "Scrolling all cat memes",
       ],
     },
   ]
