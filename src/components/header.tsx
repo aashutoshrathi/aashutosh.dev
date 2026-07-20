@@ -1,7 +1,7 @@
 import React, { useRef } from "react"
 
 import { useGSAP } from "@gsap/react"
-import { useLocation } from "@reach/router"
+import { useLocation } from "@gatsbyjs/reach-router"
 import { Link } from "gatsby"
 import gsap from "gsap"
 
