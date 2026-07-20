@@ -112,7 +112,7 @@ const DUMMY_PROJECTS: Project[] = [
 ]
 
 const Projects: React.FC = () => {
-  const [projects, setProjects] = useState<Project[] | null>(loadProjectsCache)
+  const [projects, setProjects] = useState<Project[] | null>(null)
   const [sortBy, setSortBy] = useState<ProjectSort>("recent")
   const projectsRef = useRef<HTMLElement | null>(null)
   const isDesktop = useMediaQuery("(min-width: 768px)")
@@ -149,6 +149,9 @@ const Projects: React.FC = () => {
   )
 
   useEffect(() => {
+    const cached = loadProjectsCache()
+    if (cached) setProjects(cached)
+
     fetchData<Project[]>(PROJECTS_URL)
       .then((repos) => {
         const filtered = filterProjects(repos)
@@ -159,7 +162,7 @@ const Projects: React.FC = () => {
         if (process.env.NODE_ENV === "development") {
           console.error("Failed to fetch projects, using dummy data.")
         }
-        if (!loadProjectsCache()) setProjects(DUMMY_PROJECTS)
+        if (!cached) setProjects(DUMMY_PROJECTS)
       })
   }, [])
 

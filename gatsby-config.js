@@ -159,14 +159,13 @@ module.exports = {
       options: {
         disableOnDev: true,
         reportOnly: false,
-        mergeScriptHashes: true,
-        mergeStyleHashes: true,
+        mergeScriptHashes: false,
+        mergeStyleHashes: false,
         mergeDefaultDirectives: true,
         directives: {
           "script-src":
-            "'self' *.cloudfront.net unpkg.com www.google-analytics.com www.googletagmanager.com",
-          "style-src": "'self' fonts.googleapis.com fonts.gstatic.com",
-          "style-src-attr": "'unsafe-inline'",
+            "'self' *.cloudfront.net unpkg.com www.google-analytics.com www.googletagmanager.com 'unsafe-inline'",
+          "style-src": "'self' fonts.googleapis.com fonts.gstatic.com 'unsafe-inline'",
           "img-src": "'self' data: blob: https:",
           "font-src": "'self' data: fonts.googleapis.com fonts.gstatic.com",
           "worker-src": "'self' blob: data:",
