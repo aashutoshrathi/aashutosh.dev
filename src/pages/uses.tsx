@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React, { useRef, useState } from "react"
 
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
@@ -12,7 +12,13 @@ interface Item {
   link?: string
 }
 
-const sections: Array<{ title: string; items: Item[] }> = [
+const UsesPage: React.FC = () => {
+  const usesRef = useRef<HTMLDivElement | null>(null)
+  const headingRef = useRef<HTMLHeadingElement | null>(null)
+  const subHeadingRef = useRef<HTMLParagraphElement | null>(null)
+  const [copied, setCopied] = useState(false)
+
+  const sections: Array<{ title: string; items: Item[] }> = [
   {
     title: "💻 Editor & Terminal",
     items: [
@@ -38,6 +44,30 @@ const sections: Array<{ title: string; items: Item[] }> = [
         description:
           "Modern terminal for macOS, slowly moving all my workflows here",
         link: "https://www.warp.dev/",
+      },
+      {
+        name: "Claude Code",
+        link: "https://claude.com/product/claude-code",
+        description: (
+          <>
+            AI-powered terminal coding agent with{" "}
+            <AnimatedLink href="http://statusline.aashutosh.dev">
+              my statusline
+            </AnimatedLink>
+            <br />
+            <pre
+              className="mt-1 inline-block cursor-pointer rounded bg-slate-100 px-2 py-1 font-mono text-sm transition-colors dark:bg-slate-800"
+              onClick={() => {
+                navigator.clipboard.writeText(
+                  "curl -fsSL https://isl.aashutosh.dev | bash"
+                )
+                setCopied(true)
+                setTimeout(() => setCopied(false), 1500)
+              }}>
+              {copied ? "Copied!" : "curl -fsSL https://isl.aashutosh.dev | bash"}
+            </pre>
+          </>
+        ),
       },
     ],
   },
@@ -112,6 +142,11 @@ const sections: Array<{ title: string; items: Item[] }> = [
         description: "AI-powered note-taking for meetings",
         link: "https://www.granola.so/",
       },
+      {
+        name: "Toki",
+        description: "Managing agents and budgeting tokens",
+        link: "https://toki.aashutosh.dev",
+      },
     ],
   },
   {
@@ -135,20 +170,15 @@ const sections: Array<{ title: string; items: Item[] }> = [
   },
 ]
 
-const UsesPage: React.FC = () => {
-  const usesRef = useRef<HTMLDivElement | null>(null)
-  const headingRef = useRef<HTMLHeadingElement | null>(null)
-  const subHeadingRef = useRef<HTMLParagraphElement | null>(null)
-
   useGSAP(() => {
     if (shouldReduceMotion()) return
     if (!usesRef.current) return
 
     const tl = gsap.timeline()
 
-    tl.from(headingRef.current, {
-      y: -12,
-      opacity: 0,
+    tl.to(headingRef.current, {
+      y: 0,
+      opacity: 1,
       ease: "power3.out",
       duration: 0.25,
     })
@@ -183,7 +213,7 @@ const UsesPage: React.FC = () => {
       <SEO title="Uses" />
       <div ref={usesRef} className="mx-auto max-w-3xl px-4 py-8">
         <div className="mb-12">
-          <h1 ref={headingRef} className="mb-4 text-4xl font-bold">
+          <h1 ref={headingRef} className="animate-init mb-4 text-4xl font-bold opacity-0 -translate-y-3">
             Uses
           </h1>
           <p ref={subHeadingRef} className="text-lg leading-relaxed opacity-90">
@@ -200,9 +230,8 @@ const UsesPage: React.FC = () => {
               </h2>
               <div className="space-y-6">
                 {section.items.map((item, itemIdx) => (
-                  <div className="section-item">
+                  <div key={itemIdx} className="section-item">
                     <div
-                      key={itemIdx}
                       className="border-l-2 py-2 pl-4 transition-all duration-100 hover:border-l-4 border-blue-600 dark:border-blue-400">
                       {item.link ? (
                         <AnimatedLink

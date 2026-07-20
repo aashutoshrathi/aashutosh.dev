@@ -22,9 +22,9 @@ const NowPage: React.FC = () => {
 
     const tl = gsap.timeline()
 
-    tl.from(headingRef.current, {
-      y: -12,
-      opacity: 0,
+    tl.to(headingRef.current, {
+      y: 0,
+      opacity: 1,
       ease: "power3.out",
       duration: 0.25,
     })
@@ -57,7 +57,12 @@ const NowPage: React.FC = () => {
           <AnimatedLink href="https://github.com/aashutoshrathi/toki">
             toki
           </AnimatedLink>{" "}
-          — a native macOS menu bar app to keep an eye on Claude Code and Codex
+          <img
+            alt="GitHub Release"
+            src="https://img.shields.io/github/v/release/aashutoshrathi/toki?style=flat&label=release&color=2563eb"
+            className="inline align-text-bottom"
+          />{" "}
+          - a native macOS menu bar app to keep an eye on Claude Code and Codex
           usage (yes, there's a{" "}
           <AnimatedLink href="https://github.com/aashutoshrathi/homebrew-tap">
             Homebrew tap
@@ -69,7 +74,27 @@ const NowPage: React.FC = () => {
           <AnimatedLink href="https://github.com/aashutoshrathi/pratinidhi">
             pratinidhi
           </AnimatedLink>{" "}
-          — because proxies are fun.
+          - because proxies are fun.
+        </>,
+        <>
+          <strong>M3 - Money MicroManager</strong>{" "}
+          <img
+            alt="WIP"
+            src="https://img.shields.io/badge/WIP-64748b?style=flat"
+            className="inline align-text-bottom"
+          />{" "}
+          - cross-platform personal finance app.
+        </>,
+        <>
+          <AnimatedLink href="https://twoam.dev/#services">
+            Upright Services
+          </AnimatedLink>{" "}
+          <img
+            alt="WIP"
+            src="https://img.shields.io/badge/WIP-64748b?style=flat"
+            className="inline align-text-bottom"
+          />{" "}
+          - a trust-first home services marketplace for tier-3 cities.
         </>,
       ],
     },
@@ -90,17 +115,24 @@ const NowPage: React.FC = () => {
         "Inbox zero (perpetually), fewer manual chores, more automation.",
       ],
     },
+    {
+      title: "Living",
+      items: [
+        "Cafe Hopping in Indiranagar with my better half",
+        "Scrolling all cat memes",
+      ],
+    },
   ]
 
   return (
     <>
       <SEO
         title="Now"
-        description="What Aashutosh is up to right now — work, side projects and writing."
+        description="What Aashutosh is up to right now - work, side projects and writing."
       />
       <div className="mx-auto max-w-3xl px-4 py-8">
         <div className="mb-12">
-          <h1 ref={headingRef} className="mb-4 text-4xl font-bold">
+          <h1 ref={headingRef} className="animate-init mb-4 text-4xl font-bold opacity-0 -translate-y-3">
             Now
           </h1>
           <p className="text-lg leading-relaxed opacity-90">

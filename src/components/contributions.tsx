@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 
 import { GoGitMerge } from "react-icons/go"
 
@@ -9,6 +9,7 @@ import { Contribution } from "../types"
 
 const GITHUB_USERNAME = "aashutoshrathi"
 const CONTRIBUTIONS_URL = `https://api.github.com/search/issues?q=type:pr+is:merged+author:${GITHUB_USERNAME}+-user:${GITHUB_USERNAME}&sort=updated&order=desc&per_page=8`
+const CACHE_KEY = "github-contributions"
 
 const repoFullName = (repositoryUrl: string): string =>
   repositoryUrl.replace("https://api.github.com/repos/", "")
@@ -21,25 +22,56 @@ const formatMergedAt = (mergedAt?: string | null): string | null => {
   })
 }
 
+const loadCache = (): Contribution[] | null => {
+  try {
+    const raw = localStorage.getItem(CACHE_KEY)
+    if (raw) {
+      const parsed = JSON.parse(raw)
+      if (Array.isArray(parsed)) return parsed as Contribution[]
+    }
+  } catch {}
+  return null
+}
+
+const saveCache = (data: Contribution[]) => {
+  try {
+    localStorage.setItem(CACHE_KEY, JSON.stringify(data))
+  } catch {}
+}
+
 const Contributions: React.FC = () => {
   const [contributions, setContributions] = useState<Contribution[] | null>(
-    null
+    loadCache
   )
   const [failed, setFailed] = useState(false)
+  const hasCached = useRef(contributions !== null)
 
   useEffect(() => {
     fetchData<{ items: Contribution[] }>(CONTRIBUTIONS_URL)
-      .then((data) => setContributions(data.items))
+      .then((data) => {
+        setContributions(data.items)
+        saveCache(data.items)
+      })
       .catch(() => {
         if (process.env.NODE_ENV === "development") {
           console.error("Failed to fetch contributions.")
         }
-        setFailed(true)
+        if (!hasCached.current) setFailed(true)
       })
   }, [])
 
-  /* Nothing worth showing (still loading, request failed or no PRs) */
-  if (!contributions || failed || contributions.length === 0) return null
+  if (failed) {
+    return (
+      <section className="mt-12">
+        <h2 className="mb-4 text-2xl font-bold">Open Source Contributions</h2>
+        <p className="text-sm text-gray-500 dark:text-gray-400">
+          Could not load contributions right now.
+        </p>
+      </section>
+    )
+  }
+
+  if (!contributions || contributions.length === 0) return null
 
   return (
     <section className="mt-12">

@@ -106,11 +106,21 @@
   }
 }
 
+@layer utilities {
+  .animate-init {
+    @apply opacity-0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .bounce-1,
   .bounce-2,
   .bounce-3 {
     animation: none;
+  }
+
+  .animate-init {
+    @apply opacity-100;
   }
 
   *,

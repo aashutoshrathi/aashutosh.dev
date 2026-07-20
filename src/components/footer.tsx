@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
   useGSAP(() => {
     if (shouldReduceMotion()) return
     const tl = gsap.timeline()
-    const delay = location.pathname === "/" ? 2 : 0.25
+    const delay = location.pathname === "/" ? 0.4 : 0.25
 
     if (socialsRef.current) {
       tl.from(socialsRef.current.children, {
@@ -41,9 +41,9 @@ const Footer: React.FC = () => {
       })
     }
 
-    tl.from(builtWithRef.current, {
-      y: 12,
-      opacity: 0,
+    tl.to(builtWithRef.current, {
+      y: 0,
+      opacity: 1,
       ease: "power3.out",
     })
   }, [])
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
       </div>
       <p
         ref={builtWithRef}
-        className="mt-2 flex items-center justify-center text-sm text-zinc-500 dark:text-zinc-400">
+        className="animate-init mt-2 flex items-center justify-center text-sm text-zinc-500 opacity-0 dark:text-zinc-400 translate-y-3">
         <span className="mr-1 inline-block">{">"} built with </span>
         <span className="inline-block h-5 min-w-11 text-right">
           <LoopingText texts={emotions} duration={2.75} />

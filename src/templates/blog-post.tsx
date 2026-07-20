@@ -51,16 +51,16 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps> = ({
       })
     }
 
-    tl.from(backRef.current, {
-      y: 8,
-      opacity: 0,
+    tl.to(backRef.current, {
+      y: 0,
+      opacity: 1,
       ease: "power3.out",
       duration: 0.2,
-    }).from(
+    }).to(
       contentRef.current,
       {
-        y: -8,
-        opacity: 0,
+        y: 0,
+        opacity: 1,
         ease: "power3.out",
         duration: 0.4,
       },
@@ -76,7 +76,7 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps> = ({
         image={post.frontmatter.ogImage}
       />
       <article className="py-8">
-        <div ref={backRef} className="mb-8">
+        <div ref={backRef} className="animate-init mb-8 opacity-0 translate-y-2">
           <Link
             to="/blog"
             className="relative text-sm inline font-sans text-blue-600 no-underline transition-colors duration-200 before:absolute before:bottom-0 before:h-px before:w-0 before:bg-current before:transition-all before:content-[''] hover:text-blue-700 hover:no-underline hover:before:w-full focus:outline-none focus-visible:before:w-full dark:text-blue-400 dark:hover:text-blue-300">
@@ -92,7 +92,7 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps> = ({
         <MDXProvider components={components}>
           <div
             ref={contentRef}
-            className="prose prose-lg max-w-none dark:prose-invert">
+            className="animate-init prose prose-lg max-w-none opacity-0 dark:prose-invert -translate-y-2">
             {children}
           </div>
         </MDXProvider>

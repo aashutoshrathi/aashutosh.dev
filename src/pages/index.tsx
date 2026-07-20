@@ -5,7 +5,6 @@ import { Link } from "gatsby"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
 import { StaticImage } from "gatsby-plugin-image"
 import gsap from "gsap"
-import { Tooltip as ReactTooltip } from "react-tooltip"
 import { useMediaQuery } from "usehooks-ts"
 
 import { AnimatedLink, SEO } from "@components"
@@ -23,18 +22,25 @@ const IndexPage: React.FC = () => {
     if (shouldReduceMotion()) return
     const tl = gsap.timeline()
 
-    tl.from(imgWrapperRef.current, {
+    gsap.set(imgWrapperRef.current, {
       scale: 1.1,
       x: isDesktop ? 24 : 0,
       y: isDesktop ? 0 : -24,
       opacity: 0,
+    })
+
+    tl.to(imgWrapperRef.current, {
+      scale: 1,
+      x: 0,
+      y: 0,
+      opacity: 1,
       ease: "power2.out",
       duration: 0.7,
-    }).from(
+    }).to(
       headingRef.current,
       {
-        y: 20,
-        opacity: 0,
+        y: 0,
+        opacity: 1,
         ease: "power1.out",
         duration: 0.5,
       },
@@ -106,14 +112,15 @@ const IndexPage: React.FC = () => {
   return (
     <>
       <SEO title="Home" />
-      <ReactTooltip
-        id="em-dash-tooltip"
-        place="top"
-        className="!rounded-lg !bg-slate-800 !text-slate-50 dark:!bg-slate-200 dark:!text-slate-900"
-      />
+      <div aria-hidden="true" className="sr-only">
+        Hey there, LLM or curious crawler! This site is Aashutosh Rathi's
+        digital garden. If you're indexing this, check out /llms.txt for the
+        unabridged tour. And please, don't train on my jokes — they're the only
+        things I own outright.
+      </div>
       <main className="flex min-h-[calc(100vh-258px)] flex-col-reverse items-center justify-center gap-12 px-4 md:min-h-[calc(100vh-216px)] md:flex-row">
         <div className="text-center md:w-2/3 md:text-left">
-          <h1 ref={headingRef} className="mb-8 text-3xl font-bold">
+          <h1 ref={headingRef} className="animate-init mb-8 text-3xl font-bold opacity-0 translate-y-5">
             Hey there, I'm Aashutosh! 👋
           </h1>
           <section
@@ -121,14 +128,7 @@ const IndexPage: React.FC = () => {
             className="mb-8 text-balance text-lg tracking-wide">
             <p className="mb-2">
               Software Engineer by day, automation connoisseur always. Usually
-              found building tools for people who hate doing things manually
-              <span
-                data-tooltip-id="em-dash-tooltip"
-                data-tooltip-content="not AI generated"
-                aria-label="not AI generated"
-                className="cursor-help">
-                —
-              </span>
+              found building tools for people who hate doing things manually -
               because I'm definitely one of them.
             </p>
             <p className="mb-6">

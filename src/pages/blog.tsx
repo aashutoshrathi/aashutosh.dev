@@ -38,9 +38,9 @@ const BlogIndex: React.FC<BlogIndexProps> = ({ data }) => {
     if (shouldReduceMotion()) return
     const tl = gsap.timeline()
 
-    tl.from(headingRef.current, {
-      y: -16,
-      opacity: 0,
+    tl.to(headingRef.current, {
+      y: 0,
+      opacity: 1,
       ease: "power3.out",
       duration: 0.4,
     })
@@ -60,13 +60,13 @@ const BlogIndex: React.FC<BlogIndexProps> = ({ data }) => {
     <>
       <SEO title="Blog" />
       <div className="py-8">
-        <h1 ref={headingRef} className="mb-8 text-4xl font-bold">
+        <h1 ref={headingRef} className="animate-init mb-8 text-4xl font-bold opacity-0 -translate-y-4">
           Blog
         </h1>
         <aside className="mb-10 flex flex-col gap-2 rounded-lg border border-gray-200 bg-gray-50 px-4 py-5 sm:flex-row sm:items-center sm:justify-between dark:border-slate-700 dark:bg-slate-800">
           <p className="text-gray-600 dark:text-gray-300">
             📬 Like these? You&apos;ll love{" "}
-            <span className="font-semibold">Nibbles</span> — my bite-sized tech
+            <span className="font-semibold">Nibbles</span> - my bite-sized tech
             newsletter.
           </p>
           <AnimatedLink
