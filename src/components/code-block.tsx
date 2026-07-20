@@ -23,7 +23,6 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ children, className }) => {
       if (React.isValidElement<{ children?: React.ReactNode }>(node)) {
         return getTextContent(node.props.children)
       }
-      }
       return ""
     }
 

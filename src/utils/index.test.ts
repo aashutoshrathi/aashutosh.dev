@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, mock } from "bun:test"
 
-import { fetchData, titleCase } from "./index"
+import { fetchData, hapticFeedback, titleCase } from "./index"
 
 describe("titleCase", () => {
   it("should capitalize a single word", () => {
@@ -67,5 +67,105 @@ describe("fetchData", () => {
     const result = await fetchData("https://api.example.com")
     expect(globalThis.fetch).toHaveBeenCalledWith("https://api.example.com")
     expect(result).toEqual(mockResponse)
+  })
+})
+
+describe("hapticFeedback", () => {
+  let originalWindow: typeof globalThis.window
+  let originalNavigator: PropertyDescriptor | undefined
+
+  beforeEach(() => {
+    originalWindow = globalThis.window
+    originalNavigator = Object.getOwnPropertyDescriptor(globalThis, "navigator")
+  })
+
+  afterEach(() => {
+    globalThis.window = originalWindow
+    if (originalNavigator) {
+      Object.defineProperty(globalThis, "navigator", originalNavigator)
+    }
+  })
+
+  it("should do nothing if window is undefined", () => {
+    // @ts-ignore
+    delete (globalThis as any).window
+    expect(() => hapticFeedback()).not.toThrow()
+  })
+
+  it("should use AudioContext on iOS with number pattern", () => {
+    const mockStop = mock()
+    const mockAudioContext = mock().mockImplementation(() => ({
+      createOscillator: mock().mockReturnValue({
+        connect: mock(),
+        frequency: { value: 0 },
+        start: mock(),
+        stop: mockStop,
+      }),
+      createGain: mock().mockReturnValue({
+        connect: mock(),
+        gain: { value: 0 },
+      }),
+      destination: {},
+      currentTime: 0,
+    }))
+
+    // @ts-ignore
+    globalThis.window = { AudioContext: mockAudioContext }
+    Object.defineProperty(globalThis, "navigator", {
+      value: { userAgent: "iPhone" },
+      writable: true,
+      configurable: true,
+    })
+
+    hapticFeedback(15)
+    expect(mockAudioContext).toHaveBeenCalled()
+    expect(mockStop).toHaveBeenCalledWith(0.015)
+  })
+
+  it("should use webkitAudioContext on iOS with array pattern", () => {
+    const mockStop = mock()
+    const mockAudioContext = mock().mockImplementation(() => ({
+      createOscillator: mock().mockReturnValue({
+        connect: mock(),
+        frequency: { value: 0 },
+        start: mock(),
+        stop: mockStop,
+      }),
+      createGain: mock().mockReturnValue({
+        connect: mock(),
+        gain: { value: 0 },
+      }),
+      destination: {},
+      currentTime: 0,
+    }))
+
+    // @ts-ignore
+    globalThis.window = { webkitAudioContext: mockAudioContext }
+    Object.defineProperty(globalThis, "navigator", {
+      value: { userAgent: "iPad" },
+      writable: true,
+      configurable: true,
+    })
+
+    hapticFeedback([25, 10, 25])
+    expect(mockAudioContext).toHaveBeenCalled()
+    expect(mockStop).toHaveBeenCalledWith(0.025)
+  })
+
+  it("should silently fail on iOS if audio context throws an error", () => {
+    const mockAudioContext = mock().mockImplementation(() => {
+      throw new Error("AudioContext not supported")
+    })
+
+    // @ts-ignore
+    globalThis.window = { AudioContext: mockAudioContext }
+    Object.defineProperty(globalThis, "navigator", {
+      value: { userAgent: "iPhone" },
+      writable: true,
+      configurable: true,
+    })
+
+    expect(() => hapticFeedback(10)).not.toThrow()
+    expect(mockAudioContext).toHaveBeenCalled()
   })
 })
