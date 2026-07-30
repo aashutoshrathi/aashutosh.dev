@@ -1,65 +1,15 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { useRef, useState } from "react"
 
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { useMediaQuery } from "usehooks-ts"
 
-import { fetchData, shouldReduceMotion } from "@utils"
+import { shouldReduceMotion } from "@utils"
 
 import { Project } from "../types"
 import ProjectCard from "./project-card"
 
-const GITHUB_USERNAME = "aashutoshrathi"
-const PROJECTS_URL = `https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100&type=owner&sort=pushed&direction=desc`
-const MAX_PROJECTS = 10
-const CACHE_KEY = "github-projects"
-
-/* Repos that shouldn't show up as projects (e.g. the profile README) */
-const EXCLUDED_REPOS = new Set([GITHUB_USERNAME, "homebrew-tap"])
-
-const loadProjectsCache = (): Project[] | null => {
-  try {
-    const raw = localStorage.getItem(CACHE_KEY)
-    if (raw) {
-      const parsed = JSON.parse(raw)
-      if (Array.isArray(parsed)) return parsed as Project[]
-    }
-  } catch {}
-  return null
-}
-
-const saveProjectsCache = (data: Project[]) => {
-  try {
-    localStorage.setItem(CACHE_KEY, JSON.stringify(data))
-  } catch {}
-}
-
-type ProjectSort = "recent" | "stars"
-
-const SORT_OPTIONS: { value: ProjectSort; label: string }[] = [
-  { value: "recent", label: "Recent" },
-  { value: "stars", label: "Most starred" },
-]
-
-const filterProjects = (repos: Project[]): Project[] =>
-  repos.filter(
-    (repo) =>
-      !repo.fork &&
-      !repo.archived &&
-      repo.description &&
-      !EXCLUDED_REPOS.has(repo.name)
-  )
-
-const sortProjects = (repos: Project[], sortBy: ProjectSort): Project[] => {
-  if (sortBy === "stars") {
-    return [...repos].sort(
-      (a, b) => (b.stargazers_count ?? 0) - (a.stargazers_count ?? 0)
-    )
-  }
-  return repos // API already returns most recently pushed first
-}
-
-const DUMMY_PROJECTS: Project[] = [
+const FEATURED_PROJECTS: Project[] = [
   {
     id: 1277131490,
     name: "toki",
@@ -111,15 +61,28 @@ const DUMMY_PROJECTS: Project[] = [
   },
 ]
 
+type ProjectSort = "recent" | "stars"
+
+const SORT_OPTIONS: { value: ProjectSort; label: string }[] = [
+  { value: "recent", label: "Recent" },
+  { value: "stars", label: "Most starred" },
+]
+
+const sortProjects = (repos: Project[], sortBy: ProjectSort): Project[] => {
+  if (sortBy === "stars") {
+    return [...repos].sort(
+      (a, b) => (b.stargazers_count ?? 0) - (a.stargazers_count ?? 0)
+    )
+  }
+  return repos
+}
+
 const Projects: React.FC = () => {
-  const [projects, setProjects] = useState<Project[] | null>(null)
   const [sortBy, setSortBy] = useState<ProjectSort>("recent")
   const projectsRef = useRef<HTMLElement | null>(null)
   const isDesktop = useMediaQuery("(min-width: 768px)")
 
-  const displayedProjects = projects
-    ? sortProjects(projects, sortBy).slice(0, MAX_PROJECTS)
-    : null
+  const displayedProjects = sortProjects(FEATURED_PROJECTS, sortBy)
 
   useGSAP(
     () => {
@@ -145,28 +108,10 @@ const Projects: React.FC = () => {
         )
       }
     },
-    { dependencies: [projects?.length] }
+    { dependencies: [sortBy] }
   )
 
-  useEffect(() => {
-    const cached = loadProjectsCache()
-    if (cached) setProjects(cached)
-
-    fetchData<Project[]>(PROJECTS_URL)
-      .then((repos) => {
-        const filtered = filterProjects(repos)
-        setProjects(filtered)
-        saveProjectsCache(filtered)
-      })
-      .catch(() => {
-        if (process.env.NODE_ENV === "development") {
-          console.error("Failed to fetch projects, using dummy data.")
-        }
-        if (!cached) setProjects(DUMMY_PROJECTS)
-      })
-  }, [])
-
-  return displayedProjects ? (
+  return (
     <>
       <div
         className="mt-8 flex justify-end gap-1 rounded-lg"
@@ -193,12 +138,6 @@ const Projects: React.FC = () => {
         ))}
       </section>
     </>
-  ) : (
-    <div className="mt-24 mx-auto w-20 text-center">
-      <div className="size-4 bg-white rounded-full inline-block bounce-1" />
-      <div className="size-4 bg-white rounded-full inline-block bounce-2" />
-      <div className="size-4 bg-white rounded-full inline-block bounce-3" />
-    </div>
   )
 }
 
