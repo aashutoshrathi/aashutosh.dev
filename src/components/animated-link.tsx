@@ -35,8 +35,7 @@ const getFaviconCandidates = (href: string, isDark: boolean): string[] => {
       `https://${host}/favicon-dark.svg`,
       `https://${host}/favicon-dark.png`,
     ]
-    const google = `https://www.google.com/s2/favicons?domain=${host}&sz=16`
-    return isDark ? [...dark, ...light, google] : [...light, ...dark, google]
+    return isDark ? [...dark, ...light] : [...light, ...dark]
   } catch {
     return []
   }
@@ -74,8 +73,8 @@ const Favicon: React.FC<{ href: string }> = ({ href }) => {
     <img
       src={candidates[idx]}
       alt=""
-      width={12}
-      height={12}
+      width={13}
+      height={13}
       loading="lazy"
       onError={() => setIdx((i) => i + 1)}
       className="mr-1 inline-block size-3 align-middle opacity-80"
