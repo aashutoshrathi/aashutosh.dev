@@ -62,7 +62,18 @@ const Header: React.FC = () => {
                 ? "font-semibold text-blue-700 dark:text-blue-300"
                 : undefined
             }>
-            Timeline
+            Journey
+          </AnimatedLink>
+          <AnimatedLink
+            to="/work"
+            onClick={lightHaptic}
+            aria-current={location.pathname === "/work" ? "page" : undefined}
+            className={
+              location.pathname === "/work"
+                ? "font-semibold text-blue-700 dark:text-blue-300"
+                : undefined
+            }>
+            Work
           </AnimatedLink>
           <AnimatedLink
             to="/blog"
@@ -76,17 +87,6 @@ const Header: React.FC = () => {
                 : undefined
             }>
             Blog
-          </AnimatedLink>
-          <AnimatedLink
-            to="/work"
-            onClick={lightHaptic}
-            aria-current={location.pathname === "/work" ? "page" : undefined}
-            className={
-              location.pathname === "/work"
-                ? "font-semibold text-blue-700 dark:text-blue-300"
-                : undefined
-            }>
-            Projects
           </AnimatedLink>
           <AnimatedLink
             to="/now"

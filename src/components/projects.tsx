@@ -121,6 +121,15 @@ const DUMMY_PROJECTS: Project[] = [
     homepage: "http://t.me/git_profile_bot",
     stargazers_count: 26,
   },
+  {
+    id: 999999001,
+    name: "dig",
+    description: "Search companion for nibbles.dev - dig through bite-sized notes, fast and offline-friendly.",
+    language: "TypeScript",
+    html_url: "https://github.com/the-nibble/dig",
+    homepage: "https://dig.nibbles.dev",
+    stargazers_count: 0,
+  },
 ]
 
 const Projects: React.FC = () => {

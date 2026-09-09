@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react"
 
 import { useGSAP } from "@gsap/react"
-import { Link } from "gatsby"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
 import { StaticImage } from "gatsby-plugin-image"
 import gsap from "gsap"
@@ -144,9 +143,11 @@ const IndexPage: React.FC = () => {
             ref={aboutRef}
             className="mb-8 text-balance text-lg tracking-wide">
             <p className="mb-2">
-              Software Engineer by day, automation enthusiast always. I build
-              tools for people who hate doing things manually - because I am
-              one of them.
+              Software engineer, delegates boring tasks to agents, wrote
+              weekly at{" "}
+              <AnimatedLink href="https://nibbles.dev">nibbles.dev</AnimatedLink>
+              , active on{" "}
+              <AnimatedLink href="https://x.com/AashutoshRathi">X</AnimatedLink>.
             </p>
             <p className="mb-6">
               <span>Currently </span>
@@ -172,7 +173,7 @@ const IndexPage: React.FC = () => {
               <AnimatedLink to="/blog">this very blog</AnimatedLink>
               <span>!</span>
             </p>
-            <div className="flex flex-col justify-center gap-4 sm:flex-row md:justify-start">
+            <div className="flex justify-center md:justify-start">
               <OutboundLink
                 href="https://files.aashutosh.dev/resume.pdf#navpanes=0"
                 target="_blank"
@@ -181,11 +182,6 @@ const IndexPage: React.FC = () => {
                 onClick={mediumHaptic}>
                 View Résumé
               </OutboundLink>
-              <Link
-                to="/work"
-                className="inline-flex items-center justify-center rounded-lg border border-gray-200 px-4 py-2 text-base font-semibold no-underline transition-colors hover:bg-gray-50 focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-700 focus-visible:ring-offset-2 dark:border-slate-700 dark:hover:bg-slate-800 dark:focus-visible:ring-blue-300">
-                Explore work →
-              </Link>
             </div>
             <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
               Weekend project? Try{" "}
