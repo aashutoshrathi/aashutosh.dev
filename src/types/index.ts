@@ -30,4 +30,5 @@ export interface Commit {
   message: string
   details: readonly string[]
   date: string
+  graph?: string
 }
