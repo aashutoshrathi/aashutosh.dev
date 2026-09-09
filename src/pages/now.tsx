@@ -78,7 +78,7 @@ const NowPage: React.FC = () => {
           <AnimatedLink href="https://cr.aashutosh.dev">
             Chupa Rustam
           </AnimatedLink>{" "}
-          (social deduction, pass-the-phone) - free, offline, no sign-up.
+          (social deduction, online) - free, no sign-up.
         </>,
         <>
           Tiny edge experiments like{" "}

@@ -184,7 +184,7 @@ const IndexPage: React.FC = () => {
               <AnimatedLink href="https://cr.aashutosh.dev">
                 Chupa Rustam
               </AnimatedLink>{" "}
-              - free pass-the-phone party games.
+              - free online party games.
             </p>
           </section>
         </div>

@@ -40,7 +40,7 @@ const GAMES: Game[] = [
     title: "Chupa Rustam",
     tagline: "one of you gets nothing",
     description:
-      "Everyone gets the word. One of you gets nothing. A free pass-the-phone party game - bluff, deduce, and call out the rustam before they blend in.",
+      "Everyone gets the word. One of you gets nothing. A free online party game - bluff, deduce, and call out the rustam before they blend in.",
     href: "https://cr.aashutosh.dev",
     accent: "from-amber-600 to-orange-600",
     accentDark: "dark:from-amber-500 dark:to-orange-500",
@@ -127,7 +127,7 @@ const FreeGames: React.FC = () => {
                   {game.time}
                 </span>
                 <span className="rounded-full bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-600 dark:bg-slate-700 dark:text-gray-300">
-                  Pass-the-phone
+                  Online
                 </span>
               </div>
 

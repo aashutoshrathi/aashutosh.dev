@@ -31,7 +31,7 @@ const commits: Commit[] = [
     scope: "games",
     message: "launch Marker & Mayhem and Chupa Rustam",
     details: [
-      "+ Pass-the-phone, offline-first, no login party games",
+      "+ Online multiplayer, no login party games",
       "+ mnm.aashutosh.dev - one word, both teams, 90s",
       "+ cr.aashutosh.dev - everyone gets it, one gets nothing",
     ],
