@@ -62,8 +62,9 @@ const NowPage: React.FC = () => {
             src="https://img.shields.io/github/v/release/aashutoshrathi/toki?style=flat&label=release&color=2563eb"
             className="inline align-text-bottom"
           />{" "}
-          - a native macOS menu bar app to keep an eye on Claude Code and Codex
-          usage (yes, there's a{" "}
+          - native macOS menu bar app for every AI coding agent you run. Tracks
+          usage and spend across Claude Code, Codex, Cursor and more, with live
+          sessions and remote control (
           <AnimatedLink href="https://github.com/aashutoshrathi/homebrew-tap">
             Homebrew tap
           </AnimatedLink>

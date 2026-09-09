@@ -131,9 +131,9 @@ const IndexPage: React.FC = () => {
             ref={aboutRef}
             className="mb-8 text-balance text-lg tracking-wide">
             <p className="mb-2">
-              Software Engineer by day, automation connoisseur always. Usually
-              found building tools for people who hate doing things manually -
-              because I'm definitely one of them.
+              Software Engineer by day, automation enthusiast always. I build
+              tools for people who hate doing things manually - because I am
+              one of them.
             </p>
             <p className="mb-6">
               <span>Currently </span>
@@ -141,22 +141,21 @@ const IndexPage: React.FC = () => {
                 optimizing sales with AI at Regie.ai
               </AnimatedLink>
               <span>
-                , while trying to{" "}
+                , while{" "}
                 <span
                   ref={juggleRef}
                   className="inline-block cursor-default focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-600 dark:focus-visible:ring-blue-400 rounded-sm"
                   tabIndex={0}
                   role="button"
                   aria-label="juggle - hover to animate">
-                  juggle
+                  juggling
                 </span>{" "}
-                with my inbox zero goals, some tiny side projects and a bit of
-                writing on{" "}
+                inbox zero, side projects, and writing on{" "}
               </span>
               <AnimatedLink href="https://nibbles.dev">
                 nibbles.dev
               </AnimatedLink>
-              <span> and sometimes on </span>
+              <span> and occasionally on </span>
               <AnimatedLink to="/blog">this very blog</AnimatedLink>
               <span>!</span>
             </p>
