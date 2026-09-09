@@ -62,7 +62,7 @@ const Header: React.FC = () => {
                 ? "font-semibold text-blue-700 dark:text-blue-300"
                 : undefined
             }>
-            Journey
+            About
           </AnimatedLink>
           <AnimatedLink
             to="/work"

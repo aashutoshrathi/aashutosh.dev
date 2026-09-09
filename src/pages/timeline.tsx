@@ -195,7 +195,7 @@ export default TimelinePage
 
 export const Head = () => (
   <SEO
-    title="Journey"
-    description="Journey of Aashutosh Rathi - Technical Lead at Regie.ai, ex Stackr, Jio, IIIT Vadodara. Maker of toki, Marker & Mayhem and Chupa Rustam."
+    title="About"
+    description="About Aashutosh Rathi - Technical Lead at Regie.ai, ex Stackr, Jio, IIIT Vadodara. Maker of toki, Marker & Mayhem and Chupa Rustam."
   />
 )

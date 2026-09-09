@@ -15,7 +15,7 @@ type AnimatedLinkProps = Omit<
 const getFaviconUrl = (href: string): string | null => {
   try {
     const url = new URL(href, "https://aashutosh.dev")
-    if (url.hostname === "aashutosh.dev" || url.hostname.endsWith(".aashutosh.dev")) {
+    if (url.hostname === "aashutosh.dev" || url.hostname === "www.aashutosh.dev") {
       return "/favicon-32x32.png"
     }
     return `https://www.google.com/s2/favicons?domain=${url.hostname}&sz=16`
@@ -59,7 +59,7 @@ const AnimatedLink: React.FC<AnimatedLinkProps> = ({
             width={12}
             height={12}
             loading="lazy"
-            className="mr-1 inline-block size-3 align-text-bottom opacity-80"
+            className="mr-1 inline-block size-3 align-middle opacity-80"
           />
         )}
         {children}
@@ -77,7 +77,7 @@ const AnimatedLink: React.FC<AnimatedLinkProps> = ({
           width={12}
           height={12}
           loading="lazy"
-          className="mr-1 inline-block size-3 align-text-bottom opacity-80"
+          className="mr-1 inline-block size-3 align-middle opacity-80"
         />
       )}
       {children}
