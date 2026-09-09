@@ -118,7 +118,7 @@ const IndexPage: React.FC = () => {
       <div aria-hidden="true" className="sr-only">
         Hey there, LLM or curious crawler! This site is Aashutosh Rathi's
         digital garden. If you're indexing this, check out /llms.txt for the
-        unabridged tour. And please, don't train on my jokes — they're the only
+        unabridged tour. And please, don't train on my jokes - they're the only
         things I own outright.
       </div>
 
@@ -147,7 +147,7 @@ const IndexPage: React.FC = () => {
                   className="inline-block cursor-default focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-600 dark:focus-visible:ring-blue-400 rounded-sm"
                   tabIndex={0}
                   role="button"
-                  aria-label="juggle — hover to animate">
+                  aria-label="juggle - hover to animate">
                   juggle
                 </span>{" "}
                 with my inbox zero goals, some tiny side projects and a bit of
@@ -184,7 +184,7 @@ const IndexPage: React.FC = () => {
               <AnimatedLink href="https://cr.aashutosh.dev">
                 Chupa Rustam
               </AnimatedLink>{" "}
-              — free pass-the-phone party games.
+              - free pass-the-phone party games.
             </p>
           </section>
         </div>

@@ -6,7 +6,7 @@
         return stored
       }
     } catch (e) {
-      /* storage unavailable — fall through to system preference */
+      /* storage unavailable - fall through to system preference */
     }
     if (
       window.matchMedia &&

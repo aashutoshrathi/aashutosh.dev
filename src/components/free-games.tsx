@@ -26,7 +26,7 @@ const GAMES: Game[] = [
     title: "Marker & Mayhem",
     tagline: "one word, both teams, 90 seconds",
     description:
-      "A Pictionary host that runs the whole game from one phone. Both teams draw the same word at the same time — it keeps the clock, keeps the tally, and never shows the word to the guessers.",
+      "A Pictionary host that runs the whole game from one phone. Both teams draw the same word at the same time - it keeps the clock, keeps the tally, and never shows the word to the guessers.",
     href: "https://mnm.aashutosh.dev",
     github: "https://github.com/aashutoshrathi/mnm",
     accent: "from-indigo-600 to-violet-600",
@@ -40,7 +40,7 @@ const GAMES: Game[] = [
     title: "Chupa Rustam",
     tagline: "one of you gets nothing",
     description:
-      "Everyone gets the word. One of you gets nothing. A free pass-the-phone party game — bluff, deduce, and call out the rustam before they blend in.",
+      "Everyone gets the word. One of you gets nothing. A free pass-the-phone party game - bluff, deduce, and call out the rustam before they blend in.",
     href: "https://cr.aashutosh.dev",
     accent: "from-amber-600 to-orange-600",
     accentDark: "dark:from-amber-500 dark:to-orange-500",

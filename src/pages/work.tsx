@@ -74,7 +74,7 @@ const WorkPage: React.FC = () => {
       <div className="mt-12">
         <h2 className="mb-1 text-2xl font-bold tracking-tight">Open Source</h2>
         <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">
-          A few favorites from GitHub — sorted by recent activity or stars.
+          A few favorites from GitHub - sorted by recent activity or stars.
           Contributions live below.
         </p>
         <Projects />

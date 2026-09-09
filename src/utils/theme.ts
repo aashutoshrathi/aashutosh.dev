@@ -35,7 +35,7 @@ export const applyTheme = (theme: Theme, persist = true) => {
     try {
       window.localStorage.setItem(THEME_STORAGE_KEY, theme)
     } catch {
-      // storage unavailable (private mode, etc.) — theme still applies
+      // storage unavailable (private mode, etc.) - theme still applies
     }
   }
 }

@@ -16,7 +16,7 @@ const NotFound: React.FC = () => {
       </h1>
       <p className="mt-3 max-w-prose text-gray-600 dark:text-gray-300">
         The page you’re looking for doesn’t exist. It might have been moved,
-        renamed, or maybe you typed a little too fast — happens to the best of
+        renamed, or maybe you typed a little too fast - happens to the best of
         us.
       </p>
       <div className="mt-8 flex gap-3">
@@ -32,7 +32,7 @@ const NotFound: React.FC = () => {
         </Link>
       </div>
       <p className="mt-6 font-mono text-xs text-gray-400 dark:text-gray-500">
-        If you arrived via an old link, try checking the nav — About lives at
+        If you arrived via an old link, try checking the nav - About lives at
         /timeline.
       </p>
     </main>

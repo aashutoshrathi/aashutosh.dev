@@ -17,13 +17,13 @@ const commits: Commit[] = [
     hash: "9f3a12",
     type: "feat",
     scope: "career",
-    message: "ship sales AI at Regie.ai — experience, APIs & dialers",
+    message: "ship sales AI at Regie.ai - experience, APIs & dialers",
     details: [
       "+ NestJS + TypeScript Strict Mode across services",
       "+ Salesforce & Outreach API performance wins",
       "+ AI dialer experiences for GTM teams",
     ],
-    date: "2024 — Now",
+    date: "2024 - Now",
   },
   {
     hash: "8e1b44",
@@ -32,16 +32,16 @@ const commits: Commit[] = [
     message: "launch Marker & Mayhem and Chupa Rustam",
     details: [
       "+ Pass-the-phone, offline-first, no login party games",
-      "+ mnm.aashutosh.dev — one word, both teams, 90s",
-      "+ cr.aashutosh.dev — everyone gets it, one gets nothing",
+      "+ mnm.aashutosh.dev - one word, both teams, 90s",
+      "+ cr.aashutosh.dev - everyone gets it, one gets nothing",
     ],
-    date: "2025 — 2026",
+    date: "2025 - 2026",
   },
   {
     hash: "8a3f91",
     type: "feat",
     scope: "toki",
-    message: "build toki — macOS menu bar for Codex & Claude usage",
+    message: "build toki - macOS menu bar for Codex & Claude usage",
     details: [
       "+ Swift + Homebrew tap (toki.aashutosh.dev)",
       "+ Session tracking, budgets, remote control",
@@ -55,68 +55,68 @@ const commits: Commit[] = [
     scope: "oss",
     message: "maintain Testcase Generator, Insta Downloader, etc.",
     details: [
-      "+ Testcase Generator — 110 stars, Python CLI for TCs",
-      "+ Insta Downloader — 82 stars, 80k+ users",
+      "+ Testcase Generator - 110 stars, Python CLI for TCs",
+      "+ Insta Downloader - 82 stars, 80k+ users",
       "+ git-profiler-bot, PruneR, Pick-a-Cherry",
     ],
-    date: "2018 — Now",
+    date: "2018 - Now",
   },
   {
     hash: "6d1a92",
     type: "chore",
     scope: "edge",
-    message: "explore the edge — pratinidhi, gantavya, status-on-the-edge",
+    message: "explore the edge - pratinidhi, gantavya, status-on-the-edge",
     details: [
       "+ Tiny edge proxies and status utilities",
       "+ TypeScript + Cloudflare Workers",
       "+ Fun because proxies are fun",
     ],
-    date: "2023 — 2024",
+    date: "2023 - 2024",
   },
   {
     hash: "6a0c33",
     type: "feat",
     scope: "writing",
-    message: "write nibbles.dev & blog — bite-sized tech notes",
+    message: "write nibbles.dev & blog - bite-sized tech notes",
     details: [
       "+ Weekly nibbles on tech, tooling, and shipping",
       "+ Long-form on aashutosh.dev/blog",
       "+ Release notes at Regie, naturally",
     ],
-    date: "2022 — Now",
+    date: "2022 - Now",
   },
   {
     hash: "5e4c83",
     type: "fix",
     scope: "web",
-    message: "patch boredom — Git-Stalk-CLI, dcart, labper",
+    message: "patch boredom - Git-Stalk-CLI, dcart, labper",
     details: [
-      "+ Git-Stalk-CLI — 44 stars, stalk peers' contributions",
-      "+ dcart — decentralized market prototype",
-      "+ labper — Django lab management (24 stars)",
+      "+ Git-Stalk-CLI - 44 stars, stalk peers' contributions",
+      "+ dcart - decentralized market prototype",
+      "+ labper - Django lab management (24 stars)",
     ],
-    date: "2019 — 2021",
+    date: "2019 - 2021",
   },
   {
     hash: "4b9d20",
     type: "feat",
     scope: "career",
-    message: "early career — full-stack, automation, tooling",
+    message: "early career - full-stack, automation, tooling",
     details: [
       "+ Focus: APIs, dev tooling, DX",
       "+ Bias to automate anything done twice",
       "+ Learning in public, shipping in small PRs",
     ],
-    date: "2017 — 2021",
+    date: "2017 - 2021",
   },
   {
     hash: "3a8e60",
     type: "init",
     scope: "root",
-    message: "initial commit — aashutosh.rathi in India",
+    message: "initial commit - aashutosh.rathi in India",
     details: [
       "+ Location: Bengaluru, India",
-      "+ Role: Software Engineer — automation connoisseur",
+      "+ Role: Software Engineer - automation connoisseur",
       "+ Interests: devtools, edge, tiny games, cafe hopping",
     ],
     date: "init",
@@ -179,7 +179,7 @@ const TimelinePage: React.FC = () => {
 
   return (
     <>
-      {/* About hero — human readable */}
+      {/* About hero - human readable */}
       <div ref={heroRef} className="mx-auto max-w-6xl px-4 py-8 sm:px-8">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:gap-10">
           <div className="shrink-0">
@@ -210,7 +210,7 @@ const TimelinePage: React.FC = () => {
 
             <div className="prose prose-slate mt-6 max-w-none text-[15px] leading-relaxed dark:prose-invert prose-a:font-semibold">
               <p>
-                Hey — I&apos;m Aashutosh. I build tools for people who hate
+                Hey, I&apos;m Aashutosh. I build tools for people who hate
                 doing things manually (because I&apos;m definitely one of them).
                 By day I&apos;m at <strong>Regie.ai</strong> making sales
                 experiences, APIs, and dialers more human. By night I&apos;m
@@ -225,7 +225,7 @@ const TimelinePage: React.FC = () => {
               <p>
                 When I&apos;m not coding, you&apos;ll find me cafe-hopping in
                 Indiranagar with my better half, collecting cat memes, or
-                writing <AnimatedLink href="https://nibbles.dev">nibbles</AnimatedLink> — bite-sized notes on
+                writing <AnimatedLink href="https://nibbles.dev">nibbles</AnimatedLink> - bite-sized notes on
                 shipping software.
               </p>
             </div>
@@ -248,7 +248,7 @@ const TimelinePage: React.FC = () => {
                   Open Source
                 </p>
                 <p className="mt-1 text-sm leading-snug">
-                  400+ stars across tools people actually use — testcase-gen,
+                  400+ stars across tools people actually use - testcase-gen,
                   insta-downloader, toki, and more.
                 </p>
               </div>
@@ -286,7 +286,7 @@ const TimelinePage: React.FC = () => {
         </div>
       </div>
 
-      {/* Git log timeline — the fun, nerdy part */}
+      {/* Git log timeline - the fun, nerdy part */}
       <div className="min-h-[320px] p-4 font-mono text-zinc-800 dark:text-zinc-100 sm:p-8">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8">
@@ -299,7 +299,7 @@ const TimelinePage: React.FC = () => {
               <p
                 ref={subHeaderRef}
                 className="animate-init -translate-y-[10px] text-sm text-zinc-500 opacity-0">
-                A not-quite-serious commit history — expand any line for
+                A not-quite-serious commit history - expand any line for
                 details. The real story is above.
               </p>
             </header>
@@ -317,13 +317,13 @@ const TimelinePage: React.FC = () => {
               Full-stack engineer who loves DX, APIs, and tiny tools that save
               a minute every day. Comfortable across TypeScript, Python, Swift,
               and the edge. Open to quibbles on tech, life, and everything in
-              between — say hi at{" "}
+              between - say hi at{" "}
               <AnimatedLink href="https://x.com/AashutoshRathi">x.com/AashutoshRathi</AnimatedLink>{" "}
               or <AnimatedLink href="https://github.com/aashutoshrathi">GitHub</AnimatedLink>.
             </p>
             <p className="mt-3 text-xs text-gray-500 dark:text-gray-400">
               This page lives at <code className="rounded bg-white px-1 py-0.5 dark:bg-slate-900">/timeline</code>{" "}
-              and is linked as “About” in the nav — because a timeline is the
+              and is linked as “About” in the nav - because a timeline is the
               most honest about page for an engineer.
             </p>
           </div>
@@ -338,6 +338,6 @@ export default TimelinePage
 export const Head = () => (
   <SEO
     title="About"
-    description="About Aashutosh Rathi — software engineer at Regie.ai, maker of toki, Marker & Mayhem and Chupa Rustam. Automation, open source, and tiny delightful tools."
+    description="About Aashutosh Rathi - software engineer at Regie.ai, maker of toki, Marker & Mayhem and Chupa Rustam. Automation, open source, and tiny delightful tools."
   />
 )

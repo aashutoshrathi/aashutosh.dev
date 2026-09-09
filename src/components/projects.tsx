@@ -64,7 +64,7 @@ const DUMMY_PROJECTS: Project[] = [
     id: 1343990722,
     name: "mnm",
     description:
-      "Marker & Mayhem — a Pictionary host for one phone. Both teams draw the same word at the same time, with clock and tally built in.",
+      "Marker & Mayhem - a Pictionary host for one phone. Both teams draw the same word at the same time, with clock and tally built in.",
     language: "JavaScript",
     html_url: "https://github.com/aashutoshrathi/mnm",
     homepage: "https://mnm.aashutosh.dev/",
@@ -84,7 +84,7 @@ const DUMMY_PROJECTS: Project[] = [
     id: 105375545,
     name: "Testcase-Generator",
     description:
-      "⚡️ Handy script for HackerRank, HackerEarth and CodeChef TCs generation — paste once, get edge cases for free.",
+      "⚡️ Handy script for HackerRank, HackerEarth and CodeChef TCs generation - paste once, get edge cases for free.",
     language: "Python",
     html_url: "https://github.com/aashutoshrathi/Testcase-Generator",
     homepage: "https://tcgen.aashutosh.dev/",
@@ -94,7 +94,7 @@ const DUMMY_PROJECTS: Project[] = [
     id: 236274583,
     name: "aashutosh.dev",
     description:
-      "My digital garden — Gatsby + Tailwind + GSAP, writing about automation, tools, and life in between.",
+      "My digital garden - Gatsby + Tailwind + GSAP, writing about automation, tools, and life in between.",
     language: "MDX",
     html_url: "https://github.com/aashutoshrathi/aashutosh.dev",
     homepage: "https://aashutosh.dev",
@@ -104,7 +104,7 @@ const DUMMY_PROJECTS: Project[] = [
     id: 115751881,
     name: "Insta-Downloader-Extension",
     description:
-      "Browser extension that injects download buttons ⬇️ for media on Instagram Web — 80k+ users, Firefox + Chrome.",
+      "Browser extension that injects download buttons ⬇️ for media on Instagram Web - 80k+ users, Firefox + Chrome.",
     language: "JavaScript",
     html_url: "https://github.com/aashutoshrathi/Insta-Downloader-Extension",
     homepage:
@@ -115,7 +115,7 @@ const DUMMY_PROJECTS: Project[] = [
     id: 150223916,
     name: "git-profiler-bot",
     description:
-      "Telegram bot that fetches GitHub profiles on the fly — quick lookups without leaving chat.",
+      "Telegram bot that fetches GitHub profiles on the fly - quick lookups without leaving chat.",
     language: "Python",
     html_url: "https://github.com/aashutoshrathi/git-profiler-bot",
     homepage: "http://t.me/git_profile_bot",
