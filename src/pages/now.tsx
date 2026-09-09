@@ -66,7 +66,9 @@ const NowPage: React.FC = () => {
           />{" "}
           - native macOS menu bar app for every AI coding agent you run. Tracks
           usage and spend across Claude Code, Codex, Cursor and more, with live
-          sessions and remote control (
+          sessions and <AnimatedLink href="https://rc.toki.aashutosh.dev">
+            universal remote control
+          </AnimatedLink> (
           <AnimatedLink href="https://github.com/aashutoshrathi/homebrew-tap">
             Homebrew tap
           </AnimatedLink>
