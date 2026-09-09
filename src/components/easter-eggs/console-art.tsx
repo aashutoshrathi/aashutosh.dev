@@ -19,6 +19,12 @@ export const useConsoleArt = () => {
       "color: #ffffff; font-weight: bold",
       "color: #94a3b8"
     )
+    console.log("%cEaster eggs:", "color: #ffffff; font-weight: bold; margin-top: 8px;")
+    console.log("%c • Konami ↑↑↓↓←→←→BA → matrix rain", "color: #94a3b8")
+    console.log("%c • Press : then type work / timeline / uses / blog / now → vim navigate", "color: #94a3b8")
+    console.log("%c • Open after 1am → owl says go to sleep 🦉", "color: #94a3b8")
+    console.log("%c • Check the Fun section for Spotify and Chess widgets", "color: #94a3b8")
+    console.log("%c • Games at mnm.aashutosh.dev and cr.aashutosh.dev", "color: #94a3b8")
     ;(window as any).aashutosh = {
       hint: "You found the console. Try window.aashutosh.matrix()",
       matrix: () => {

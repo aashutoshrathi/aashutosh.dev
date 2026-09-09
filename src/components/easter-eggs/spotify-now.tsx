@@ -1,7 +1,11 @@
 import React from "react"
 import useSWR from "swr"
 
-const fetcher = (url: string) => fetch(url).then((r) => r.json())
+const fetcher = async (url: string) => {
+  const r = await fetch(url)
+  if (!r.ok) return null
+  return r.json()
+}
 
 type SpotifyData = {
   isPlaying: boolean
@@ -14,43 +18,12 @@ type SpotifyData = {
 const SPOTIFY_USER_ID = "qrj9kefbm3lg85izu15i2q333"
 
 const SpotifyNow: React.FC = () => {
-  const { data } = useSWR<SpotifyData>(`/api/spotify-now?user=${SPOTIFY_USER_ID}`, fetcher, {
+  const { data } = useSWR<SpotifyData>(`/.netlify/functions/spotify-now?user=${SPOTIFY_USER_ID}`, fetcher, {
     refreshInterval: 30000,
     shouldRetryOnError: false,
   })
 
-  if (!data) {
-    return (
-      <div className="rounded-lg bg-gray-50 p-3 text-sm text-gray-500 dark:bg-slate-800 dark:text-gray-400">
-        <a
-          href={`https://open.spotify.com/user/${SPOTIFY_USER_ID}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 dark:text-blue-400">
-          Spotify
-        </a>{" "}
-        - not playing right now, but you can read{" "}
-        <a href="https://nibbles.dev" className="text-blue-600 dark:text-blue-400">
-          nibbles
-        </a>{" "}
-        instead
-      </div>
-    )
-  }
-
-  if (!data.isPlaying) {
-    return (
-      <div className="flex items-center gap-3 rounded-lg bg-gray-50 p-3 dark:bg-slate-800">
-        <span className="text-lg">🎧</span>
-        <div className="min-w-0">
-          <p className="truncate text-sm font-medium">Not playing right now</p>
-          {data.title && (
-            <p className="truncate text-xs text-gray-500">Last: {data.title} - {data.artist}</p>
-          )}
-        </div>
-      </div>
-    )
-  }
+  if (!data || !data.isPlaying) return null
 
   return (
     <a

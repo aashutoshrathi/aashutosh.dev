@@ -4,6 +4,8 @@ import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 
 import { AnimatedLink, SEO } from "@components"
+import ChessWidget from "../components/easter-eggs/chess-widget"
+import SpotifyNow from "../components/easter-eggs/spotify-now"
 import { shouldReduceMotion } from "@utils"
 
 const LAST_UPDATED = "September 2026"
@@ -167,6 +169,11 @@ const NowPage: React.FC = () => {
               </ul>
             </section>
           ))}
+        </div>
+
+        <div className="mt-12 grid gap-4 sm:grid-cols-2">
+          <SpotifyNow />
+          <ChessWidget />
         </div>
 
         <p className="mt-12 text-sm text-gray-500 dark:text-gray-400">
