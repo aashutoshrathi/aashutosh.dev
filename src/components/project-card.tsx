@@ -93,6 +93,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <div>
           <AnimatedLink
             href={project.html_url}
+            hideFavicon
             aria-label="Source Code"
             title="Source Code">
             Code
@@ -100,6 +101,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           {project.homepage && (
             <AnimatedLink
               href={project.homepage}
+              hideFavicon
               className="ml-4"
               aria-label="Demo/Docs"
               title="Demo/Docs">

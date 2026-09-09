@@ -13,30 +13,61 @@ type AnimatedLinkProps = Omit<
   hideFavicon?: boolean
 }
 
-const getFaviconCandidates = (href: string): string[] => {
+const getFaviconCandidates = (href: string, isDark: boolean): string[] => {
   try {
     const url = new URL(href, "https://aashutosh.dev")
     if (url.hostname === "aashutosh.dev" || url.hostname === "www.aashutosh.dev") {
       return []
     }
     const host = url.hostname
-    return [
+    const light = [
       `https://${host}/favicon.ico`,
       `https://${host}/favicon.svg`,
       `https://${host}/icon.svg`,
       `https://${host}/favicon.png`,
       `https://${host}/icon.png`,
       `https://${host}/apple-touch-icon.png`,
-      `https://www.google.com/s2/favicons?domain=${host}&sz=16`,
     ]
+    const dark = [
+      `https://${host}/favicon-dark.ico`,
+      `https://${host}/icon-dark.svg`,
+      `https://${host}/favicon-dark.svg`,
+      `https://${host}/favicon-dark.png`,
+    ]
+    const google = `https://www.google.com/s2/favicons?domain=${host}&sz=16`
+    return isDark ? [...dark, ...light, google] : [...light, ...dark, google]
   } catch {
     return []
   }
 }
 
 const Favicon: React.FC<{ href: string }> = ({ href }) => {
-  const candidates = React.useMemo(() => getFaviconCandidates(href), [href])
+  const [isDark, setIsDark] = React.useState(false)
+  React.useEffect(() => {
+    const update = () => {
+      const attr = typeof document !== "undefined" ? document.documentElement.getAttribute("data-theme") : null
+      if (attr === "dark" || attr === "light") {
+        setIsDark(attr === "dark")
+      } else if (typeof window !== "undefined" && window.matchMedia) {
+        setIsDark(window.matchMedia("(prefers-color-scheme: dark)").matches)
+      }
+    }
+    update()
+    const mq = typeof window !== "undefined" ? window.matchMedia("(prefers-color-scheme: dark)") : null
+    const observer = typeof MutationObserver !== "undefined" ? new MutationObserver(update) : null
+    if (typeof document !== "undefined" && observer) {
+      observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme", "class"] })
+    }
+    mq?.addEventListener?.("change", update)
+    return () => {
+      observer?.disconnect()
+      mq?.removeEventListener?.("change", update)
+    }
+  }, [])
+
+  const candidates = React.useMemo(() => getFaviconCandidates(href, isDark), [href, isDark])
   const [idx, setIdx] = React.useState(0)
+  React.useEffect(() => setIdx(0), [candidates])
   if (candidates.length === 0 || idx >= candidates.length) return null
   return (
     <img
@@ -54,6 +85,7 @@ const Favicon: React.FC<{ href: string }> = ({ href }) => {
 const AnimatedLink: React.FC<AnimatedLinkProps> = ({
   to,
   href,
+  hideFavicon,
   className,
   children,
   ...props
@@ -78,7 +110,7 @@ const AnimatedLink: React.FC<AnimatedLinkProps> = ({
         rel="noopener noreferrer"
         className={classes}
         {...(props as any)}>
-        {href && <Favicon href={href} />}
+        {href && !hideFavicon && <Favicon href={href} />}
         {children}
       </OutboundLink>
     )
@@ -87,7 +119,7 @@ const AnimatedLink: React.FC<AnimatedLinkProps> = ({
   // Fallback if neither to nor href is provided
   return (
     <a className={classes} {...(props as any)}>
-      {href && <Favicon href={href} />}
+      {href && !hideFavicon && <Favicon href={href} />}
       {children}
     </a>
   )
