@@ -13,8 +13,6 @@ interface Game {
   description: string
   href: string
   github?: string
-  accent: string
-  accentDark: string
   emoji: string
   players: string
   time: string
@@ -29,8 +27,6 @@ const GAMES: Game[] = [
       "A Pictionary host that runs the whole game from one phone. Both teams draw the same word at the same time - it keeps the clock, keeps the tally, and never shows the word to the guessers.",
     href: "https://mnm.aashutosh.dev",
     github: "https://github.com/aashutoshrathi/mnm",
-    accent: "from-indigo-600 to-violet-600",
-    accentDark: "dark:from-indigo-500 dark:to-violet-500",
     emoji: "🎨",
     players: "4+ players",
     time: "∞ rounds",
@@ -42,10 +38,8 @@ const GAMES: Game[] = [
     description:
       "Everyone gets the word. One of you gets nothing. A free online party game - bluff, deduce, and call out the rustam before they blend in.",
     href: "https://cr.aashutosh.dev",
-    accent: "from-amber-600 to-orange-600",
-    accentDark: "dark:from-amber-500 dark:to-orange-500",
     emoji: "🕵️",
-    players: "3–10 players",
+    players: "3-10 players",
     time: "5 min / round",
   },
 ]
@@ -67,13 +61,13 @@ const FreeGames: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      aria-labelledby="free-games-heading"
+      aria-labelledby="fun-heading"
       className="mt-12">
       <div className="mb-6 flex items-baseline justify-between gap-4">
         <h2
-          id="free-games-heading"
+          id="fun-heading"
           className="text-2xl font-bold tracking-tight">
-          Free Games
+          Fun
         </h2>
         <span className="hidden text-sm text-gray-500 dark:text-gray-400 sm:inline">
           No installs · no sign-ups · just open and play
@@ -84,13 +78,7 @@ const FreeGames: React.FC = () => {
         {GAMES.map((game) => (
           <article
             key={game.title}
-            className="game-card group relative flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white transition-all duration-200 hover:-translate-y-1 hover:shadow-lg dark:border-slate-700 dark:bg-slate-800">
-            {/* accent bar */}
-            <div
-              className={`h-1.5 w-full bg-gradient-to-r ${game.accent} ${game.accentDark}`}
-              aria-hidden="true"
-            />
-
+            className="game-card group flex flex-col overflow-hidden rounded-xl bg-gray-50 transition-all duration-200 hover:shadow-md dark:bg-slate-800">
             <div className="flex flex-grow flex-col p-5">
               <div className="mb-3 flex items-start justify-between gap-3">
                 <div className="flex items-center gap-3">

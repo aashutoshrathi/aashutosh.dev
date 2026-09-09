@@ -21,8 +21,8 @@ const Header: React.FC = () => {
 
     tl.from(navRef.current, {
       opacity: 0,
-      translateY: "-50%",
-      animationDuration: 750,
+      y: "-50%",
+      duration: 0.75,
       ease: "power2.out",
       delay,
     })
@@ -30,8 +30,8 @@ const Header: React.FC = () => {
     if (navLinksRef.current) {
       tl.from(navLinksRef.current.children, {
         opacity: 0,
-        translateY: "-50%",
-        animationDuration: 500,
+        y: "-50%",
+        duration: 0.5,
         ease: "power3.out",
         stagger: 0.04,
       })

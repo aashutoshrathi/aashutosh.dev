@@ -62,5 +62,8 @@ export const fetchData = async <T>(url: string): Promise<T> => {
     throw new Error("fetchData can only be called on the client side")
   }
   const response = await fetch(url)
+  if (!response.ok) {
+    throw new Error(`fetch failed: ${response.status} ${response.statusText}`)
+  }
   return response.json()
 }
