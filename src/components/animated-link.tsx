@@ -16,7 +16,12 @@ type AnimatedLinkProps = Omit<
 const getFaviconCandidates = (href: string, isDark: boolean): string[] => {
   try {
     const url = new URL(href, "https://aashutosh.dev")
-    if (url.hostname === "aashutosh.dev" || url.hostname === "www.aashutosh.dev") {
+    if (
+      url.hostname === "aashutosh.dev" ||
+      url.hostname === "www.aashutosh.dev" ||
+      url.hostname === "github.com" ||
+      url.hostname === "www.github.com"
+    ) {
       return []
     }
     const host = url.hostname
