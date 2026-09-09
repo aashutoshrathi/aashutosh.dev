@@ -119,16 +119,45 @@ const AnimatedDetails: React.FC<AnimatedDetailsProps> = ({ commit }) => {
         ref={contentRef}
         className="grid gap-2 pt-1 grid-cols-[80px,40px,1fr] md:grid-cols-[80px,40px,1fr,100px] overflow-hidden">
         <div className="col-start-3 relative">
-          {commit.details.map((detail) => (
-            <p
-              key={detail}
-              className={clsx("text-sm", {
-                "text-green-600 dark:text-green-400": detail.startsWith("+"),
-                "text-red-600 dark:text-red-400": detail.startsWith("-"),
-              })}>
-              {detail}
-            </p>
-          ))}
+          {commit.details.map((detail) => {
+            const linkify = (text: string) => {
+              const regex = /((?:https?:\/\/)?[a-zA-Z0-9-]+\.[a-zA-Z0-9.-]+\.[a-z]{2,}(?:\/[^\s]*)?)/g
+              const parts = text.split(regex)
+              return parts.map((part, i) => {
+                if (part && regex.test(part)) {
+                  // reset regex lastIndex for next test
+                  regex.lastIndex = 0
+                  const isUrl = part.includes(".")
+                  if (isUrl) {
+                    const href = part.startsWith("http") ? part : `https://${part}`
+                    return (
+                      <a
+                        key={i}
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline decoration-dotted underline-offset-2 hover:text-blue-600 dark:hover:text-blue-400"
+                        onClick={(e) => e.stopPropagation()}>
+                        {part}
+                      </a>
+                    )
+                  }
+                }
+                regex.lastIndex = 0
+                return part
+              })
+            }
+            return (
+              <p
+                key={detail}
+                className={clsx("text-sm", {
+                  "text-green-600 dark:text-green-400": detail.startsWith("+"),
+                  "text-red-600 dark:text-red-400": detail.startsWith("-"),
+                })}>
+                {linkify(detail)}
+              </p>
+            )
+          })}
         </div>
       </div>
     </details>

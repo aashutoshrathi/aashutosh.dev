@@ -86,4 +86,4 @@ const WorkPage: React.FC = () => {
 
 export default WorkPage
 
-export const Head = () => <SEO title="Projects" />
+export const Head = () => <SEO title="Work" />
