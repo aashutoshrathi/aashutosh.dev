@@ -16,7 +16,7 @@ const getFaviconUrl = (href: string): string | null => {
   try {
     const url = new URL(href, "https://aashutosh.dev")
     if (url.hostname === "aashutosh.dev" || url.hostname === "www.aashutosh.dev") {
-      return "/favicon-32x32.png"
+      return null
     }
     return `https://www.google.com/s2/favicons?domain=${url.hostname}&sz=16`
   } catch {
