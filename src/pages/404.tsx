@@ -1,16 +1,10 @@
-import React, { useEffect } from "react"
+import React from "react"
 
 import { Link } from "gatsby"
 
 import { SEO } from "@components"
 
 const NotFound: React.FC = () => {
-  useEffect(() => {
-    const id = setTimeout(() => {
-      // gentle redirect after user has seen the message
-    }, 5000)
-    return () => clearTimeout(id)
-  }, [])
 
   return (
     <main className="mx-auto flex min-h-[50vh] max-w-2xl flex-col items-center justify-center px-4 py-16 text-center">

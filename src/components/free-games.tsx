@@ -61,7 +61,6 @@ const FreeGames: React.FC = () => {
       stagger: 0.08,
       duration: 0.35,
       ease: "power2.out",
-      scrollTrigger: undefined,
     })
   }, [])
 
