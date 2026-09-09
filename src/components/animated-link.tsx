@@ -41,6 +41,42 @@ const getFaviconCandidates = (href: string, isDark: boolean): string[] => {
   }
 }
 
+const FAVICON_CACHE_KEY = "favicon-cache-v1"
+const FAVICON_TTL = 7 * 24 * 60 * 60 * 1000 // 1 week
+
+const getCachedFavicon = (host: string, isDark: boolean): string | null => {
+  try {
+    const raw = localStorage.getItem(FAVICON_CACHE_KEY)
+    if (!raw) return null
+    const data = JSON.parse(raw) as Record<string, { url: string; ts: number }>
+    const key = `${host}:${isDark ? "dark" : "light"}`
+    const entry = data[key]
+    if (!entry) return null
+    if (Date.now() - entry.ts > FAVICON_TTL) {
+      delete data[key]
+      localStorage.setItem(FAVICON_CACHE_KEY, JSON.stringify(data))
+      return null
+    }
+    return entry.url
+  } catch {
+    return null
+  }
+}
+
+const setCachedFavicon = (host: string, isDark: boolean, url: string) => {
+  try {
+    const raw = localStorage.getItem(FAVICON_CACHE_KEY)
+    const data = raw ? (JSON.parse(raw) as Record<string, { url: string; ts: number }>) : {}
+    const key = `${host}:${isDark ? "dark" : "light"}`
+    data[key] = { url, ts: Date.now() }
+    const now = Date.now()
+    for (const k of Object.keys(data)) {
+      if (now - data[k].ts > FAVICON_TTL) delete data[k]
+    }
+    localStorage.setItem(FAVICON_CACHE_KEY, JSON.stringify(data))
+  } catch {}
+}
+
 const Favicon: React.FC<{ href: string }> = ({ href }) => {
   const [isDark, setIsDark] = React.useState(false)
   React.useEffect(() => {
@@ -65,7 +101,20 @@ const Favicon: React.FC<{ href: string }> = ({ href }) => {
     }
   }, [])
 
-  const candidates = React.useMemo(() => getFaviconCandidates(href, isDark), [href, isDark])
+  const candidates = React.useMemo(() => {
+    const base = getFaviconCandidates(href, isDark)
+    if (base.length === 0) return base
+    try {
+      const url = new URL(href, "https://aashutosh.dev")
+      const cached = getCachedFavicon(url.hostname, isDark)
+      if (cached && base.includes(cached)) {
+        return [cached, ...base.filter((c) => c !== cached)]
+      }
+      if (cached) return [cached, ...base]
+    } catch {}
+    return base
+  }, [href, isDark])
+
   const [idx, setIdx] = React.useState(0)
   React.useEffect(() => setIdx(0), [candidates])
   if (candidates.length === 0 || idx >= candidates.length) return null
@@ -73,9 +122,15 @@ const Favicon: React.FC<{ href: string }> = ({ href }) => {
     <img
       src={candidates[idx]}
       alt=""
-      width={13}
-      height={13}
+      width={12}
+      height={12}
       loading="lazy"
+      onLoad={() => {
+        try {
+          const url = new URL(href, "https://aashutosh.dev")
+          setCachedFavicon(url.hostname, isDark, candidates[idx])
+        } catch {}
+      }}
       onError={() => setIdx((i) => i + 1)}
       className="mr-1 inline-block size-3 align-middle opacity-80"
     />
