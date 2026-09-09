@@ -67,7 +67,7 @@ const AnimatedDetails: React.FC<AnimatedDetailsProps> = ({ commit }) => {
       <summary
         onClick={handleToggle}
         className={clsx(
-          "grid focus:outline-none focus-visible:ring-1 md:grid-cols-[80px,10px,1fr,100px] grid-cols-[80px,10px,1fr] rounded cursor-pointer items-center gap-x-2 py-1 px-2",
+          "grid focus:outline-none focus-visible:ring-1 md:grid-cols-[80px,40px,1fr,100px] grid-cols-[80px,40px,1fr] rounded cursor-pointer items-center gap-x-2 py-1 px-2",
           {
             "focus-visible:ring-green-600 dark:focus-visible:ring-green-400":
               commit.type === "feat",
@@ -85,14 +85,17 @@ const AnimatedDetails: React.FC<AnimatedDetailsProps> = ({ commit }) => {
           {commit.hash}
         </span>
         <span
-          className={clsx("relative text-lg shrink-0 leading-none self-start", {
-            "text-green-600 dark:text-green-400": commit.type === "feat",
-            "text-yellow-600 dark:text-yellow-400": commit.type === "ship",
-            "text-orange-600 dark:text-orange-400": commit.type === "chore",
-            "text-blue-600 dark:text-blue-400": commit.type === "fix",
-            "text-purple-600 dark:text-purple-400": commit.type === "init",
-          })}>
-          ∗
+          className={clsx(
+            "relative shrink-0 self-start whitespace-pre font-mono text-sm leading-none",
+            {
+              "text-green-600 dark:text-green-400": commit.type === "feat",
+              "text-yellow-600 dark:text-yellow-400": commit.type === "ship",
+              "text-orange-600 dark:text-orange-400": commit.type === "chore",
+              "text-blue-600 dark:text-blue-400": commit.type === "fix",
+              "text-purple-600 dark:text-purple-400": commit.type === "init",
+            }
+          )}>
+          {commit.graph ?? "∗"}
         </span>
         <span className="flex items-start md:flex-row flex-col md:gap-2">
           <span
@@ -114,18 +117,47 @@ const AnimatedDetails: React.FC<AnimatedDetailsProps> = ({ commit }) => {
 
       <div
         ref={contentRef}
-        className="grid gap-2 pt-1 grid-cols-[80px,10px,1fr] md:grid-cols-[80px,10px,1fr,100px] overflow-hidden">
+        className="grid gap-2 pt-1 grid-cols-[80px,40px,1fr] md:grid-cols-[80px,40px,1fr,100px] overflow-hidden">
         <div className="col-start-3 relative">
-          {commit.details.map((detail) => (
-            <p
-              key={detail}
-              className={clsx("text-sm", {
-                "text-green-600 dark:text-green-400": detail.startsWith("+"),
-                "text-red-600 dark:text-red-400": detail.startsWith("-"),
-              })}>
-              {detail}
-            </p>
-          ))}
+          {commit.details.map((detail) => {
+            const linkify = (text: string) => {
+              const regex = /((?:https?:\/\/)?[a-zA-Z0-9-]+\.[a-zA-Z0-9.-]+\.[a-z]{2,}(?:\/[^\s]*)?)/g
+              const parts = text.split(regex)
+              return parts.map((part, i) => {
+                if (part && regex.test(part)) {
+                  // reset regex lastIndex for next test
+                  regex.lastIndex = 0
+                  const isUrl = part.includes(".")
+                  if (isUrl) {
+                    const href = part.startsWith("http") ? part : `https://${part}`
+                    return (
+                      <a
+                        key={i}
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline decoration-dotted underline-offset-2 hover:text-blue-600 dark:hover:text-blue-400"
+                        onClick={(e) => e.stopPropagation()}>
+                        {part}
+                      </a>
+                    )
+                  }
+                }
+                regex.lastIndex = 0
+                return part
+              })
+            }
+            return (
+              <p
+                key={detail}
+                className={clsx("text-sm", {
+                  "text-green-600 dark:text-green-400": detail.startsWith("+"),
+                  "text-red-600 dark:text-red-400": detail.startsWith("-"),
+                })}>
+                {linkify(detail)}
+              </p>
+            )
+          })}
         </div>
       </div>
     </details>

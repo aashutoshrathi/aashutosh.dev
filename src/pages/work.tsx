@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react"
 import GitHubCalendar from "react-github-calendar"
 import { Tooltip as ReactTooltip } from "react-tooltip"
 
-import { Contributions, Projects, SEO } from "@components"
+import { Contributions, FreeGames, Projects, SEO } from "@components"
 
 const WorkPage: React.FC = () => {
   const [monthsToShow, setMonthsToShow] = useState(12)
@@ -32,7 +32,14 @@ const WorkPage: React.FC = () => {
 
   return (
     <>
-      <div className="my-8 flex justify-center text-center">
+      <div className="mx-auto mt-6 max-w-3xl px-2 text-center">
+        <h1 className="text-3xl font-bold tracking-tight">Work &amp; Play</h1>
+        <p className="mt-2 text-gray-600 dark:text-gray-300">
+          Code that shipped, games you can play tonight, and the commit graph
+          to prove I was there.
+        </p>
+      </div>
+      <div className="my-8 flex justify-center text-center overflow-x-auto">
         <GitHubCalendar
           username="aashutoshrathi"
           fontSize={16}
@@ -63,7 +70,15 @@ const WorkPage: React.FC = () => {
           <ReactTooltip delayShow={10} className="custom-tooltip" />
         </GitHubCalendar>
       </div>
-      <Projects />
+      <FreeGames />
+      <div className="mt-12">
+        <h2 className="mb-1 text-2xl font-bold tracking-tight">Open Source</h2>
+        <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">
+          A few favorites from GitHub - sorted by recent activity or stars.
+          Contributions live below.
+        </p>
+        <Projects />
+      </div>
       <Contributions />
     </>
   )
@@ -71,4 +86,4 @@ const WorkPage: React.FC = () => {
 
 export default WorkPage
 
-export const Head = () => <SEO title="Projects" />
+export const Head = () => <SEO title="Work" />

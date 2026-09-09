@@ -1,0 +1,8 @@
+[build]
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/spotify-now"
+  to = "/.netlify/functions/spotify-now"
+  status = 200
+  force = false

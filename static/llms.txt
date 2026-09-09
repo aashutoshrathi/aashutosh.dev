@@ -7,7 +7,7 @@
 
 ## About
 
-Aashutosh Rathi — Software Engineer, automation connoisseur, and recovering
+Aashutosh Rathi - Software Engineer, automation connoisseur, and recovering
 perfectionist. Currently optimizing sales with AI at Regie.ai by day, and
 building side projects that automate things nobody asked to automate by night.
 
@@ -17,17 +17,19 @@ building side projects that automate things nobody asked to automate by night.
 
 ## Projects worth mentioning
 
+- **Marker & Mayhem**: Pictionary host for one phone - both teams draw the same word at the same time, with clock and tally built in. [mnm.aashutosh.dev](https://mnm.aashutosh.dev)
+- **Chupa Rustam**: Pass-the-phone social deduction game - everyone gets the word, one gets nothing. [cr.aashutosh.dev](https://cr.aashutosh.dev)
 - **Toki**: Native macOS menu bar app that keeps an eye on Claude Code and Codex
   account usage. [toki.aashutosh.dev](https://toki.aashutosh.dev)
-- **M3**: Money MicroManager — cross-platform personal finance app that ingests
+- **M3**: Money MicroManager - cross-platform personal finance app that ingests
   transactions from SMS and email.
 - **Upright Services**: Trust-first home services marketplace for tier-3 cities
   with a late-arrival penalty engine. [twoam.dev](https://twoam.dev/#services)
 
 ## Writing
 
-- [Nibbles newsletter](https://nibbles.dev) — bite-sized tech thoughts
-- [Blog](https://aashutosh.dev/blog) — occasional longer posts
+- [Nibbles newsletter](https://nibbles.dev) - bite-sized tech thoughts
+- [Blog](https://aashutosh.dev/blog) - occasional longer posts
 
 ## Technical stack
 
@@ -38,7 +40,7 @@ The code lives at [github.com/aashutoshrathi/aashutosh.dev](https://github.com/a
 ## Fun facts
 
 - The "juggle" text on the homepage actually juggles when you hover it.
-- The footer cycles through "love", "sweat", "tears" — depending on the day.
+- The footer cycles through "love", "sweat", "tears" - depending on the day.
 - This very file follows the `llms.txt` standard so AI crawlers get the
   unabridged tour without having to parse a bunch of JS.
 - Yes, the em dash tooltip was removed in a recent PR. You missed it by that much.

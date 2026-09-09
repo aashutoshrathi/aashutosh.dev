@@ -13,48 +13,103 @@ gsap.registerPlugin(TextPlugin)
 
 const commits: Commit[] = [
   {
-    hash: "8a3f91",
+    hash: "a1b2c3",
     type: "feat",
     scope: "career",
-    message: "deploying sales AI agents at Regie",
+    message: "Technical Lead at Regie.ai - AI-first SEP",
     details: [
-      "+ Added NestJS",
-      "+ Added TypeScript Strict Mode",
-      "+ Optimized Salesforce API",
+      "+ Feb 2025 - Present, Bengaluru (TypeScript / Next / AWS / MCP)",
+      "+ Led AI-first SEP, improved usability and retention",
+      "+ Lead Integration and Dialer teams, faster onboarding",
     ],
-    date: "Current",
+    date: "2025 - Present",
+    graph: "*",
   },
   {
-    hash: "7c2b14",
+    hash: "f6a7b8",
     type: "ship",
-    scope: "oss",
-    message: "release Testcase Generator v1.0",
-    details: ["+ Python CLI", "+ Automated Inputs", "- Removed Manual Entry"],
+    scope: "games",
+    message: "launch Marker & Mayhem and Chupa Rustam",
+    details: [
+      "+ Online multiplayer, no login party games",
+      "+ mnm.aashutosh.dev - one word, both teams, 90s",
+      "+ cr.aashutosh.dev - everyone gets it, one gets nothing",
+    ],
+    date: "2025 - 2026",
+    graph: "| *",
+  },
+  {
+    hash: "a7b8c9",
+    type: "feat",
+    scope: "toki",
+    message: "build toki - menu bar for Codex & Claude usage",
+    details: [
+      "+ Swift + Homebrew tap (toki.aashutosh.dev)",
+      "+ Session tracking, budgets, remote control",
+    ],
+    date: "2025",
+    graph: "| *",
+  },
+  {
+    hash: "b2c3d4",
+    type: "ship",
+    scope: "stackr",
+    message: "Lead SE at Stackr Labs - rollup SDK",
+    details: [
+      "+ Feb 2024 - Dec 2024 (TypeScript / Go / Rust / Wasm)",
+      "+ SDK for rollups like web apps, built auxiliary tools",
+      "+ Led zkVM benchmarking 2024 edition - Code and Blog",
+    ],
     date: "2024",
+    graph: "|/",
   },
   {
-    hash: "6d1a92",
-    type: "chore",
-    scope: "stack",
-    message: "migrate core dependency to Rust",
-    details: ["+ Memory Safety", "+ Blazingly Fast", "- Legacy Python Scripts"],
-    date: "Experiment",
+    hash: "c3d4e5",
+    type: "feat",
+    scope: "regie",
+    message: "Senior SE at Regie.ai - Autopilot & AI Toolkit",
+    details: [
+      "+ Dec 2021 - Feb 2024 (TypeScript / Next / AWS)",
+      "+ Led Autopilot flagship, infra, 3rd party integrations",
+      "+ Built CMS, live collaboration, AI Toolkit, browser extension",
+    ],
+    date: "2021 - 2024",
+    graph: "*",
   },
   {
-    hash: "5e4c83",
+    hash: "d4e5f6",
+    type: "feat",
+    scope: "jio",
+    message: "SDE at Jio - SMS & t.jio",
+    details: [
+      "+ Aug 2020 - Dec 2021, Mumbai (NodeJS / Go / React / SMPP / Azure)",
+      "+ Built scalable SMS API over HTTP",
+      "+ Built t.jio URL shortener dashboard",
+    ],
+    date: "2020 - 2021",
+    graph: "*",
+  },
+  {
+    hash: "b8c9d0",
     type: "fix",
-    scope: "web",
+    scope: "oss",
     message: "patch critical boredom with Git-Stalk-CLI",
     details: ["+ Node.js", "+ GitHub API", "+ Terminal UI"],
     date: "Side Project",
+    graph: "*",
   },
   {
-    hash: "3a8e60",
+    hash: "e5f6a7",
     type: "init",
-    scope: "root",
-    message: "initial commit aashutoshrathi",
-    details: ["+ Location: India", "+ Role: Full Stack Engineer"],
-    date: "Start",
+    scope: "edu",
+    message: "B.Tech CS at IIIT Vadodara",
+    details: [
+      "+ 2016 - 2020, CPI 8.92/10",
+      "+ DSA, OS, Networks, Distributed Systems, AI",
+      "+ OpenClassrooms Frontend Path 2019",
+    ],
+    date: "2016 - 2020",
+    graph: "*",
   },
 ]
 
@@ -92,31 +147,38 @@ const TimelinePage: React.FC = () => {
 
     if (commitsRef.current) {
       tl.from(commitsRef.current.children, {
-        y: -12,
+        y: -10,
         opacity: 0,
-        stagger: 0.02,
+        stagger: 0.03,
         ease: "power3.out",
-        duration: 0.2,
+        duration: 0.25,
       })
     }
   }, [])
 
   return (
     <>
-      <div className="text-zinc-800 dark:text-zinc-100 min-h-[calc(100vh-216px)] p-4 font-mono sm:p-8">
+      <div className="min-h-[calc(100vh-216px)] p-4 font-mono text-zinc-800 dark:text-zinc-100 sm:p-8">
         <div className="mx-auto max-w-6xl">
-          <div className="mb-8">
-            <header>
+          <header className="mb-8">
+            <div className="flex flex-wrap items-baseline gap-2">
               <h2
                 ref={headerRef}
-                className="text-lg h-7 inline-block font-bold  text-zinc-800 dark:text-zinc-100 mb-2"
+                className="min-h-7 text-lg font-bold leading-8 text-zinc-800 dark:text-zinc-100"
               />
-              <span ref={cursorRef}>█</span>
-              <p ref={subHeaderRef} className="animate-init text-zinc-500 text-sm opacity-0 -translate-y-[10px]">
-                Timeline of milestones
-              </p>
-            </header>
-          </div>
+              <span
+                ref={cursorRef}
+                aria-hidden="true"
+                className="text-lg font-bold leading-8">
+                █
+              </span>
+            </div>
+            <p
+              ref={subHeaderRef}
+              className="animate-init mt-2 -translate-y-2 text-sm leading-relaxed text-zinc-500 opacity-0">
+              Timeline of milestones - expand any line for details.
+            </p>
+          </header>
 
           <div ref={commitsRef} className="grid gap-2">
             {commits.map((commit) => (
@@ -131,4 +193,9 @@ const TimelinePage: React.FC = () => {
 
 export default TimelinePage
 
-export const Head = () => <SEO title="About" />
+export const Head = () => (
+  <SEO
+    title="About"
+    description="About Aashutosh Rathi - Technical Lead at Regie.ai, ex Stackr, Jio, IIIT Vadodara. Maker of toki, Marker & Mayhem and Chupa Rustam."
+  />
+)

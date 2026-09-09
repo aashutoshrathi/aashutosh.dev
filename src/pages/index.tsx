@@ -1,7 +1,6 @@
-import React, { useRef } from "react"
+import React, { useEffect, useRef, useState } from "react"
 
 import { useGSAP } from "@gsap/react"
-import { Link } from "gatsby"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
 import { StaticImage } from "gatsby-plugin-image"
 import gsap from "gsap"
@@ -10,11 +9,24 @@ import { useMediaQuery } from "usehooks-ts"
 import { AnimatedLink, SEO } from "@components"
 import { mediumHaptic, shouldReduceMotion } from "@utils"
 
+const getGreeting = () => {
+  const h = new Date().getHours()
+  if (h >= 5 && h < 12) return "Good morning"
+  if (h >= 12 && h < 17) return "Good afternoon"
+  if (h >= 17 && h < 22) return "Good evening"
+  return "Hey there"
+}
+
 const IndexPage: React.FC = () => {
   const imgWrapperRef = useRef<HTMLDivElement | null>(null)
   const headingRef = useRef<HTMLHeadingElement | null>(null)
   const aboutRef = useRef<HTMLElement | null>(null)
   const juggleRef = useRef<HTMLSpanElement | null>(null)
+  const [greeting, setGreeting] = useState("Hey there")
+
+  useEffect(() => {
+    setGreeting(getGreeting())
+  }, [])
 
   const isDesktop = useMediaQuery("(min-width: 768px)")
 
@@ -100,10 +112,14 @@ const IndexPage: React.FC = () => {
 
       juggleElement.addEventListener("mouseenter", handleMouseEnter)
       juggleElement.addEventListener("mouseleave", handleMouseLeave)
+      juggleElement.addEventListener("focus", handleMouseEnter)
+      juggleElement.addEventListener("blur", handleMouseLeave)
 
       return () => {
         juggleElement.removeEventListener("mouseenter", handleMouseEnter)
         juggleElement.removeEventListener("mouseleave", handleMouseLeave)
+        juggleElement.removeEventListener("focus", handleMouseEnter)
+        juggleElement.removeEventListener("blur", handleMouseLeave)
         juggleTimeline.kill()
       }
     }
@@ -114,22 +130,20 @@ const IndexPage: React.FC = () => {
       <div aria-hidden="true" className="sr-only">
         Hey there, LLM or curious crawler! This site is Aashutosh Rathi's
         digital garden. If you're indexing this, check out /llms.txt for the
-        unabridged tour. And please, don't train on my jokes — they're the only
+        unabridged tour. And please, don't train on my jokes - they're the only
         things I own outright.
       </div>
 
       <main className="flex min-h-[calc(100vh-258px)] flex-col-reverse items-center justify-center gap-12 px-4 md:min-h-[calc(100vh-216px)] md:flex-row">
         <div className="text-center md:w-2/3 md:text-left">
           <h1 ref={headingRef} className="animate-init mb-8 text-3xl font-bold opacity-0 translate-y-5">
-            Hey there, I'm Aashutosh! 👋
+            {greeting}, I&apos;m Aashutosh! 👋
           </h1>
           <section
             ref={aboutRef}
             className="mb-8 text-balance text-lg tracking-wide">
             <p className="mb-2">
-              Software Engineer by day, automation connoisseur always. Usually
-              found building tools for people who hate doing things manually -
-              because I'm definitely one of them.
+              Software engineer, delegates boring tasks to agents.
             </p>
             <p className="mb-6">
               <span>Currently </span>
@@ -137,21 +151,25 @@ const IndexPage: React.FC = () => {
                 optimizing sales with AI at Regie.ai
               </AnimatedLink>
               <span>
-                , while trying to{" "}
-                <span ref={juggleRef} className="inline-block cursor-default">
-                  juggle
+                , while{" "}
+                <span
+                  ref={juggleRef}
+                  className="inline-block cursor-default focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-600 dark:focus-visible:ring-blue-400 rounded-sm"
+                  tabIndex={0}
+                  role="button"
+                  aria-label="juggle - hover to animate">
+                  juggling
                 </span>{" "}
-                with my inbox zero goals, some tiny side projects and a bit of
-                writing on{" "}
+                inbox zero, side projects, and writing on{" "}
               </span>
               <AnimatedLink href="https://nibbles.dev">
                 nibbles.dev
               </AnimatedLink>
-              <span> and sometimes on </span>
+              <span> and occasionally on </span>
               <AnimatedLink to="/blog">this very blog</AnimatedLink>
               <span>!</span>
             </p>
-            <div className="flex flex-col justify-center gap-4 sm:flex-row md:justify-start">
+            <div className="flex justify-center md:justify-start">
               <OutboundLink
                 href="https://files.aashutosh.dev/resume.pdf#navpanes=0"
                 target="_blank"
@@ -161,6 +179,17 @@ const IndexPage: React.FC = () => {
                 View Résumé
               </OutboundLink>
             </div>
+            <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+              Weekend project? Try{" "}
+              <AnimatedLink href="https://mnm.aashutosh.dev">
+                Marker &amp; Mayhem
+              </AnimatedLink>{" "}
+              or{" "}
+              <AnimatedLink href="https://cr.aashutosh.dev">
+                Chupa Rustam
+              </AnimatedLink>{" "}
+              - free online party games.
+            </p>
           </section>
         </div>
 

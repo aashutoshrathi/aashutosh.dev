@@ -165,11 +165,11 @@ module.exports = {
           "script-src":
             "'self' *.cloudfront.net unpkg.com www.google-analytics.com www.googletagmanager.com 'unsafe-inline'",
           "style-src": "'self' fonts.googleapis.com fonts.gstatic.com 'unsafe-inline'",
-          "img-src": "'self' data: blob: https:",
+          "img-src": "'self' data: blob: https: i.scdn.co",
           "font-src": "'self' data: fonts.googleapis.com fonts.gstatic.com",
           "worker-src": "'self' blob: data:",
           "connect-src":
-            "'self' api.github.com github-contributions-api.jogruber.de www.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com",
+            "'self' api.github.com github-contributions-api.jogruber.de www.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com api.spotify.com open.spotify.com api.chess.com",
           "object-src": "'none'",
         },
       },

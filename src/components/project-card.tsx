@@ -62,18 +62,20 @@ const iconMap: { [key: string]: React.ComponentType } = {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const updatedLabel = titleCase(project.language?.replace(/\+/g, "p") || "")
-  const Icon = iconMap[updatedLabel]
+  const Icon = iconMap[updatedLabel] ?? (project.language ? FaCode : null)
 
   return (
-    <div className="flex flex-col justify-between rounded-lg border border-gray-200 bg-gray-50 px-4 py-5 transition-all duration-200 ease-in-out dark:border-slate-700 dark:bg-slate-800">
-      <h3 className="mb-2 text-xl font-semibold">{project.name}</h3>
-      <p className="mb-4 flex-grow text-gray-600 dark:text-gray-300">
+    <div className="group flex flex-col justify-between rounded-lg border border-gray-200 bg-gray-50 px-4 py-5 transition-all duration-200 ease-in-out hover:-translate-y-0.5 hover:shadow-md dark:border-slate-700 dark:bg-slate-800">
+      <h3 className="mb-2 line-clamp-1 text-xl font-semibold" title={project.name}>
+        {project.name}
+      </h3>
+      <p className="mb-4 line-clamp-3 flex-grow text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
         {project.description}
       </p>
-      <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
+      <div className="flex flex-wrap items-center justify-between gap-2 text-sm text-gray-500 dark:text-gray-400">
         <span className="flex items-center gap-3">
           {project.language && Icon && (
-            <span className="flex items-center [&_svg]:mr-2">
+            <span className="flex items-center [&_svg]:mr-1.5">
               <Icon />
               <span>{project.language}</span>
             </span>
@@ -91,6 +93,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <div>
           <AnimatedLink
             href={project.html_url}
+            hideFavicon
             aria-label="Source Code"
             title="Source Code">
             Code
@@ -98,6 +101,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           {project.homepage && (
             <AnimatedLink
               href={project.homepage}
+              hideFavicon
               className="ml-4"
               aria-label="Demo/Docs"
               title="Demo/Docs">

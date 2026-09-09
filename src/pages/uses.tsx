@@ -28,6 +28,11 @@ const UsesPage: React.FC = () => {
         link: "https://code.visualstudio.com/insiders/",
       },
       {
+        name: "Zed",
+        description: "High-performance, multiplayer code editor for focused sessions",
+        link: "https://zed.dev/",
+      },
+      {
         name: "iTerm2",
         link: "https://iterm2.com/",
         description: (
@@ -93,6 +98,10 @@ const UsesPage: React.FC = () => {
         link: "https://store.google.com/product/pixel_9_pro",
       },
       {
+        name: "iPad (11-inch, M5)",
+        description: "Tablet for reading, sketching and sidecar display",
+      },
+      {
         name: "Pixel Buds Pro 2",
         description: "Wireless earbuds with active noise cancellation",
         link: "https://store.google.com/product/pixel_buds_pro_2",
@@ -144,7 +153,14 @@ const UsesPage: React.FC = () => {
       },
       {
         name: "Toki",
-        description: "Managing agents and budgeting tokens",
+        description: (
+          <>
+            Managing agents and budgeting tokens —{" "}
+            <AnimatedLink href="https://rc.toki.aashutosh.dev">
+              remote control
+            </AnimatedLink>
+          </>
+        ),
         link: "https://toki.aashutosh.dev",
       },
     ],

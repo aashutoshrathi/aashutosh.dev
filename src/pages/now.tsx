@@ -4,9 +4,11 @@ import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 
 import { AnimatedLink, SEO } from "@components"
+import ChessWidget from "../components/easter-eggs/chess-widget"
+import SpotifyNow from "../components/easter-eggs/spotify-now"
 import { shouldReduceMotion } from "@utils"
 
-const LAST_UPDATED = "July 2026"
+const LAST_UPDATED = "September 2026"
 
 interface NowSection {
   title: string
@@ -62,12 +64,26 @@ const NowPage: React.FC = () => {
             src="https://img.shields.io/github/v/release/aashutoshrathi/toki?style=flat&label=release&color=2563eb"
             className="inline align-text-bottom"
           />{" "}
-          - a native macOS menu bar app to keep an eye on Claude Code and Codex
-          usage (yes, there's a{" "}
+          - native macOS menu bar app for every AI coding agent you run. Tracks
+          usage and spend across Claude Code, Codex, Cursor and more, with live
+          sessions and <AnimatedLink href="https://rc.toki.aashutosh.dev">
+            universal remote control
+          </AnimatedLink> (
           <AnimatedLink href="https://github.com/aashutoshrathi/homebrew-tap">
             Homebrew tap
           </AnimatedLink>
           ).
+        </>,
+        <>
+          Weekend games:{" "}
+          <AnimatedLink href="https://mnm.aashutosh.dev">
+            Marker &amp; Mayhem
+          </AnimatedLink>{" "}
+          (Pictionary for one phone) and{" "}
+          <AnimatedLink href="https://cr.aashutosh.dev">
+            Chupa Rustam
+          </AnimatedLink>{" "}
+          (social deduction, online) - free, no sign-up.
         </>,
         <>
           Tiny edge experiments like{" "}
@@ -155,6 +171,11 @@ const NowPage: React.FC = () => {
               </ul>
             </section>
           ))}
+        </div>
+
+        <div className="mt-12 grid gap-4 sm:grid-cols-2">
+          <SpotifyNow />
+          <ChessWidget />
         </div>
 
         <p className="mt-12 text-sm text-gray-500 dark:text-gray-400">
