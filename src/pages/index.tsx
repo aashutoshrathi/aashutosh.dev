@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React, { useEffect, useRef, useState } from "react"
 
 import { useGSAP } from "@gsap/react"
 import { Link } from "gatsby"
@@ -10,11 +10,24 @@ import { useMediaQuery } from "usehooks-ts"
 import { AnimatedLink, SEO } from "@components"
 import { mediumHaptic, shouldReduceMotion } from "@utils"
 
+const getGreeting = () => {
+  const h = new Date().getHours()
+  if (h >= 5 && h < 12) return "Good morning"
+  if (h < 17) return "Good afternoon"
+  if (h < 22) return "Good evening"
+  return "Hey there"
+}
+
 const IndexPage: React.FC = () => {
   const imgWrapperRef = useRef<HTMLDivElement | null>(null)
   const headingRef = useRef<HTMLHeadingElement | null>(null)
   const aboutRef = useRef<HTMLElement | null>(null)
   const juggleRef = useRef<HTMLSpanElement | null>(null)
+  const [greeting, setGreeting] = useState("Hey there")
+
+  useEffect(() => {
+    setGreeting(getGreeting())
+  }, [])
 
   const isDesktop = useMediaQuery("(min-width: 768px)")
 
@@ -125,7 +138,7 @@ const IndexPage: React.FC = () => {
       <main className="flex min-h-[calc(100vh-258px)] flex-col-reverse items-center justify-center gap-12 px-4 md:min-h-[calc(100vh-216px)] md:flex-row">
         <div className="text-center md:w-2/3 md:text-left">
           <h1 ref={headingRef} className="animate-init mb-8 text-3xl font-bold opacity-0 translate-y-5">
-            Hey there, I'm Aashutosh! 👋
+            {greeting}, I&apos;m Aashutosh! 👋
           </h1>
           <section
             ref={aboutRef}
