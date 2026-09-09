@@ -153,7 +153,14 @@ const UsesPage: React.FC = () => {
       },
       {
         name: "Toki",
-        description: "Managing agents and budgeting tokens",
+        description: (
+          <>
+            Managing agents and budgeting tokens —{" "}
+            <AnimatedLink href="https://rc.toki.aashutosh.dev">
+              remote control
+            </AnimatedLink>
+          </>
+        ),
         link: "https://toki.aashutosh.dev",
       },
     ],
