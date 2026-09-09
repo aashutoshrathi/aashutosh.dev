@@ -68,7 +68,7 @@ const DUMMY_PROJECTS: Project[] = [
     language: "JavaScript",
     html_url: "https://github.com/aashutoshrathi/mnm",
     homepage: "https://mnm.aashutosh.dev/",
-    stargazers_count: 2,
+    stargazers_count: 0,
   },
   {
     id: 1277131490,
@@ -104,7 +104,7 @@ const DUMMY_PROJECTS: Project[] = [
     id: 115751881,
     name: "Insta-Downloader-Extension",
     description:
-      "Browser extension that injects download buttons ⬇️ for media on Instagram Web - 80k+ users, Firefox + Chrome.",
+      "Browser extension that injects download buttons ⬇️ for media on Instagram Web",
     language: "JavaScript",
     html_url: "https://github.com/aashutoshrathi/Insta-Downloader-Extension",
     homepage:
