@@ -100,10 +100,14 @@ const IndexPage: React.FC = () => {
 
       juggleElement.addEventListener("mouseenter", handleMouseEnter)
       juggleElement.addEventListener("mouseleave", handleMouseLeave)
+      juggleElement.addEventListener("focus", handleMouseEnter)
+      juggleElement.addEventListener("blur", handleMouseLeave)
 
       return () => {
         juggleElement.removeEventListener("mouseenter", handleMouseEnter)
         juggleElement.removeEventListener("mouseleave", handleMouseLeave)
+        juggleElement.removeEventListener("focus", handleMouseEnter)
+        juggleElement.removeEventListener("blur", handleMouseLeave)
         juggleTimeline.kill()
       }
     }
@@ -138,7 +142,12 @@ const IndexPage: React.FC = () => {
               </AnimatedLink>
               <span>
                 , while trying to{" "}
-                <span ref={juggleRef} className="inline-block cursor-default">
+                <span
+                  ref={juggleRef}
+                  className="inline-block cursor-default focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-600 dark:focus-visible:ring-blue-400 rounded-sm"
+                  tabIndex={0}
+                  role="button"
+                  aria-label="juggle — hover to animate">
                   juggle
                 </span>{" "}
                 with my inbox zero goals, some tiny side projects and a bit of
@@ -160,7 +169,23 @@ const IndexPage: React.FC = () => {
                 onClick={mediumHaptic}>
                 View Résumé
               </OutboundLink>
+              <Link
+                to="/work"
+                className="inline-flex items-center justify-center rounded-lg border border-gray-200 px-4 py-2 text-base font-semibold no-underline transition-colors hover:bg-gray-50 focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-700 focus-visible:ring-offset-2 dark:border-slate-700 dark:hover:bg-slate-800 dark:focus-visible:ring-blue-300">
+                Explore work →
+              </Link>
             </div>
+            <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+              Weekend project? Try{" "}
+              <AnimatedLink href="https://mnm.aashutosh.dev">
+                Marker &amp; Mayhem
+              </AnimatedLink>{" "}
+              or{" "}
+              <AnimatedLink href="https://cr.aashutosh.dev">
+                Chupa Rustam
+              </AnimatedLink>{" "}
+              — free pass-the-phone party games.
+            </p>
           </section>
         </div>
 

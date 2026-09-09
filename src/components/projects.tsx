@@ -61,29 +61,40 @@ const sortProjects = (repos: Project[], sortBy: ProjectSort): Project[] => {
 
 const DUMMY_PROJECTS: Project[] = [
   {
+    id: 1343990722,
+    name: "mnm",
+    description:
+      "Marker & Mayhem — a Pictionary host for one phone. Both teams draw the same word at the same time, with clock and tally built in.",
+    language: "JavaScript",
+    html_url: "https://github.com/aashutoshrathi/mnm",
+    homepage: "https://mnm.aashutosh.dev/",
+    stargazers_count: 2,
+  },
+  {
     id: 1277131490,
     name: "toki",
     description:
-      "Native macOS menu bar app for tracking Claude Code and Codex account usage.",
+      "Native macOS menu bar app for managing Claude Code and Codex usage, sessions, and remote control via Homebrew.",
     language: "Swift",
     html_url: "https://github.com/aashutoshrathi/toki",
-    homepage: "http://toki.aashutosh.dev/",
-    stargazers_count: 5,
+    homepage: "https://toki.aashutosh.dev/",
+    stargazers_count: 21,
   },
   {
     id: 105375545,
     name: "Testcase-Generator",
     description:
-      "⚡️ Handy script for HackerRank, HackerEarth and CodeChef TCs Generation.",
+      "⚡️ Handy script for HackerRank, HackerEarth and CodeChef TCs generation — paste once, get edge cases for free.",
     language: "Python",
     html_url: "https://github.com/aashutoshrathi/Testcase-Generator",
     homepage: "https://tcgen.aashutosh.dev/",
-    stargazers_count: 109,
+    stargazers_count: 110,
   },
   {
     id: 236274583,
     name: "aashutosh.dev",
-    description: "~/aashutosh",
+    description:
+      "My digital garden — Gatsby + Tailwind + GSAP, writing about automation, tools, and life in between.",
     language: "MDX",
     html_url: "https://github.com/aashutoshrathi/aashutosh.dev",
     homepage: "https://aashutosh.dev",
@@ -93,7 +104,7 @@ const DUMMY_PROJECTS: Project[] = [
     id: 115751881,
     name: "Insta-Downloader-Extension",
     description:
-      "A browser extension that injects download buttons ⬇️ for media on Instagram Web",
+      "Browser extension that injects download buttons ⬇️ for media on Instagram Web — 80k+ users, Firefox + Chrome.",
     language: "JavaScript",
     html_url: "https://github.com/aashutoshrathi/Insta-Downloader-Extension",
     homepage:
@@ -103,7 +114,8 @@ const DUMMY_PROJECTS: Project[] = [
   {
     id: 150223916,
     name: "git-profiler-bot",
-    description: "Telegram bot which fetches GitHub Profiles.",
+    description:
+      "Telegram bot that fetches GitHub profiles on the fly — quick lookups without leaving chat.",
     language: "Python",
     html_url: "https://github.com/aashutoshrathi/git-profiler-bot",
     homepage: "http://t.me/git_profile_bot",
@@ -169,7 +181,7 @@ const Projects: React.FC = () => {
   return displayedProjects ? (
     <>
       <div
-        className="mt-8 flex justify-end gap-1 rounded-lg"
+        className="mt-2 flex justify-end gap-1 rounded-lg"
         role="group"
         aria-label="Sort projects">
         {SORT_OPTIONS.map((option) => (
@@ -194,10 +206,14 @@ const Projects: React.FC = () => {
       </section>
     </>
   ) : (
-    <div className="mt-24 mx-auto w-20 text-center">
-      <div className="size-4 bg-white rounded-full inline-block bounce-1" />
-      <div className="size-4 bg-white rounded-full inline-block bounce-2" />
-      <div className="size-4 bg-white rounded-full inline-block bounce-3" />
+    <div
+      className="mt-16 flex justify-center gap-2"
+      role="status"
+      aria-label="Loading projects">
+      <div className="size-3 animate-bounce rounded-full bg-slate-400 [animation-delay:-0.32s] dark:bg-slate-200" />
+      <div className="size-3 animate-bounce rounded-full bg-slate-400 [animation-delay:-0.16s] dark:bg-slate-200" />
+      <div className="size-3 animate-bounce rounded-full bg-slate-400 dark:bg-slate-200" />
+      <span className="sr-only">Loading projects…</span>
     </div>
   )
 }

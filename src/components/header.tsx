@@ -53,19 +53,61 @@ const Header: React.FC = () => {
         <div
           ref={navLinksRef}
           className="flex flex-row flex-wrap items-center justify-center gap-4 px-2 sm:justify-end sm:gap-6">
-          <AnimatedLink to="/timeline" onClick={lightHaptic}>
+          <AnimatedLink
+            to="/timeline"
+            onClick={lightHaptic}
+            aria-current={location.pathname === "/timeline" ? "page" : undefined}
+            className={
+              location.pathname === "/timeline"
+                ? "font-semibold text-blue-700 dark:text-blue-300"
+                : undefined
+            }>
             About
           </AnimatedLink>
-          <AnimatedLink to="/blog" onClick={lightHaptic}>
+          <AnimatedLink
+            to="/blog"
+            onClick={lightHaptic}
+            aria-current={
+              location.pathname.startsWith("/blog") ? "page" : undefined
+            }
+            className={
+              location.pathname.startsWith("/blog")
+                ? "font-semibold text-blue-700 dark:text-blue-300"
+                : undefined
+            }>
             Blog
           </AnimatedLink>
-          <AnimatedLink to="/work" onClick={lightHaptic}>
+          <AnimatedLink
+            to="/work"
+            onClick={lightHaptic}
+            aria-current={location.pathname === "/work" ? "page" : undefined}
+            className={
+              location.pathname === "/work"
+                ? "font-semibold text-blue-700 dark:text-blue-300"
+                : undefined
+            }>
             Projects
           </AnimatedLink>
-          <AnimatedLink to="/now" onClick={lightHaptic}>
+          <AnimatedLink
+            to="/now"
+            onClick={lightHaptic}
+            aria-current={location.pathname === "/now" ? "page" : undefined}
+            className={
+              location.pathname === "/now"
+                ? "font-semibold text-blue-700 dark:text-blue-300"
+                : undefined
+            }>
             Now
           </AnimatedLink>
-          <AnimatedLink to="/uses" onClick={lightHaptic}>
+          <AnimatedLink
+            to="/uses"
+            onClick={lightHaptic}
+            aria-current={location.pathname === "/uses" ? "page" : undefined}
+            className={
+              location.pathname === "/uses"
+                ? "font-semibold text-blue-700 dark:text-blue-300"
+                : undefined
+            }>
             Uses
           </AnimatedLink>
           <ThemeToggle />

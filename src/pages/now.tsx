@@ -6,7 +6,7 @@ import gsap from "gsap"
 import { AnimatedLink, SEO } from "@components"
 import { shouldReduceMotion } from "@utils"
 
-const LAST_UPDATED = "July 2026"
+const LAST_UPDATED = "September 2026"
 
 interface NowSection {
   title: string
@@ -68,6 +68,17 @@ const NowPage: React.FC = () => {
             Homebrew tap
           </AnimatedLink>
           ).
+        </>,
+        <>
+          Weekend games:{" "}
+          <AnimatedLink href="https://mnm.aashutosh.dev">
+            Marker &amp; Mayhem
+          </AnimatedLink>{" "}
+          (Pictionary for one phone) and{" "}
+          <AnimatedLink href="https://cr.aashutosh.dev">
+            Chupa Rustam
+          </AnimatedLink>{" "}
+          (social deduction, pass-the-phone) — free, offline, no sign-up.
         </>,
         <>
           Tiny edge experiments like{" "}
