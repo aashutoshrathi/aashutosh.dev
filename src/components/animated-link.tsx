@@ -23,6 +23,7 @@ const getFaviconCandidates = (href: string): string[] => {
       `https://${host}/favicon.ico`,
       `https://${host}/favicon.svg`,
       `https://${host}/favicon.png`,
+      `https://${host}/apple-touch-icon.png`,
       `https://www.google.com/s2/favicons?domain=${host}&sz=16`,
     ]
   } catch {
