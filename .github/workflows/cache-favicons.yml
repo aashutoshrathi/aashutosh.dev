@@ -3,14 +3,22 @@ name: Cache Favicons
 on:
   pull_request:
     paths:
-      - "src/**/*"
-      - "content/**/*"
+      - "src/pages/index.tsx"
+      - "src/pages/blog.tsx"
+      - "src/pages/uses.tsx"
+      - "src/pages/now.tsx"
+      - "src/templates/blog-post.tsx"
+      - "content/blog/**/*"
       - "scripts/cache-favicons.mjs"
   push:
     branches: [master]
     paths:
-      - "src/**/*"
-      - "content/**/*"
+      - "src/pages/index.tsx"
+      - "src/pages/blog.tsx"
+      - "src/pages/uses.tsx"
+      - "src/pages/now.tsx"
+      - "src/templates/blog-post.tsx"
+      - "content/blog/**/*"
 
 permissions:
   contents: write

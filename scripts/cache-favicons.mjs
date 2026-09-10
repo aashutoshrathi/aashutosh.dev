@@ -39,48 +39,23 @@ const STATIC_HOSTS = [
   "apple.com",
   "open.spotify.com",
   "api.chess.com",
+  "files.aashutosh.dev",
+  "img.shields.io",
+  "nownownow.com",
+  "twoam.dev",
+  "www.amazon.in",
+  "www.apple.com",
+  "www.docker.com",
+  "www.fitbit.com",
+  "www.granola.so",
+  "www.greensoul.online",
+  "www.postman.com",
+  "www.raycast.com",
+  "www.sony.co.in",
+  "www.warp.dev",
 ]
 
-const scanHosts = () => {
-  const hosts = new Set(STATIC_HOSTS)
-  const srcDir = path.join(root, "src")
-  const scanFile = (file) => {
-    try {
-      const content = fs.readFileSync(file, "utf8")
-      const regex = /https?:\/\/([a-zA-Z0-9.-]+\.[a-z]{2,})/g
-      let m
-      while ((m = regex.exec(content)) !== null) {
-        try {
-          const url = new URL(m[0])
-          const host = url.hostname
-          if (host && !host.includes("localhost") && !host.includes("aashutosh.dev") && host !== "aashutosh.dev") {
-            // keep all external hosts, including subdomains of aashutosh.dev except root
-            // we already handle aashutosh.dev subdomains via explicit list, but allow any
-          }
-          if (host) hosts.add(host)
-        } catch {}
-      }
-    } catch {}
-  }
-  const walk = (dir) => {
-    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-      const full = path.join(dir, entry.name)
-      if (entry.isDirectory()) {
-        if (["node_modules", ".cache", "public", ".git"].includes(entry.name)) continue
-        walk(full)
-      } else if (/\.(ts|tsx|js|jsx|mdx|md|json)$/.test(entry.name)) {
-        scanFile(full)
-      }
-    }
-  }
-  if (fs.existsSync(srcDir)) walk(srcDir)
-  // also scan content/blog
-  const contentDir = path.join(root, "content")
-  if (fs.existsSync(contentDir)) walk(contentDir)
-  return Array.from(hosts)
-}
-
-const HOSTS = scanHosts()
+const HOSTS = STATIC_HOSTS
 
 const CANDIDATES = (host) => [
   `https://${host}/favicon.ico`,
