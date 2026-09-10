@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 
 import { AnimatedLink, SEO } from "@components"
+import SpotifyNow from "../components/easter-eggs/spotify-now"
 import { mediumHaptic } from "@utils"
 
 const getGreeting = () => {
@@ -144,6 +145,12 @@ const IndexPage: React.FC = () => {
               </AnimatedLink>{" "}
               - free online party games.
             </p>
+            {/* The widget renders nothing unless music is playing, and the
+                fetch resolves after mount. Hold the height so the centered
+                hero does not shift when it appears or drops out. */}
+            <div className="mt-6 min-h-[76px] md:max-w-md">
+              <SpotifyNow />
+            </div>
           </section>
         </div>
 
