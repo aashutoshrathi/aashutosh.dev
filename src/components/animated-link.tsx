@@ -26,6 +26,8 @@ const getFaviconCandidates = (href: string, isDark: boolean): string[] => {
     }
     const host = url.hostname
     const light = [
+      `/favicons/${host}.png`,
+      `/favicons/${host}.svg`,
       `https://${host}/favicon.ico`,
       `https://${host}/favicon.svg`,
       `https://${host}/icon.svg`,
@@ -35,6 +37,7 @@ const getFaviconCandidates = (href: string, isDark: boolean): string[] => {
       `https://${host}/apple-touch-icon.png`,
     ]
     const dark = [
+      `/favicons/${host}-dark.png`,
       `https://${host}/favicon-dark.ico`,
       `https://${host}/icon-dark.svg`,
       `https://${host}/favicon-dark.svg`,
