@@ -27,7 +27,7 @@ const GAMES: Game[] = [
       "A Pictionary host that runs the whole game from one phone. Both teams draw the same word at the same time - it keeps the clock, keeps the tally, and never shows the word to the guessers.",
     href: "https://mnm.aashutosh.dev",
     github: "https://github.com/aashutoshrathi/mnm",
-    favicon: "/favicons/mnm.aashutosh.dev.png",
+    favicon: "/favicons/mnm.aashutosh.dev.svg",
     players: "4+ players",
     time: "∞ rounds",
     badge: "New",
