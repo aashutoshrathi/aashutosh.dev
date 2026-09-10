@@ -97,11 +97,7 @@ const IndexPage: React.FC = () => {
           </h1>
           <section className="mb-8 text-balance text-lg tracking-wide">
             <p className="mb-2">
-              Software engineer, delegates boring tasks to agents, wrote
-              weekly at{" "}
-              <AnimatedLink href="https://nibbles.dev">nibbles.dev</AnimatedLink>
-              , active on{" "}
-              <AnimatedLink href="https://x.com/AashutoshRathi">X</AnimatedLink>.
+              Software engineer, delegates boring tasks to agents.
             </p>
             <p className="mb-6">
               <span>Currently </span>
