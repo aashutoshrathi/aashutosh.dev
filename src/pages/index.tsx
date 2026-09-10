@@ -148,9 +148,7 @@ const IndexPage: React.FC = () => {
             {/* The widget renders nothing unless music is playing, and the
                 fetch resolves after mount. Hold the height so the centered
                 hero does not shift when it appears or drops out. */}
-            <div className="mt-6 min-h-[76px] max-w-md mx-auto md:mx-0">
-              <SpotifyNow />
-            </div>
+            <SpotifyNow />
           </section>
         </div>
 
