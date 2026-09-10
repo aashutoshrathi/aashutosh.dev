@@ -177,7 +177,7 @@ const UsesPage: React.FC = () => {
       {
         name: "Green Soul Elevate",
         description: "Multi-purpose adjustable table for flexible work setups",
-        link: "https://www.greensoul.online/products/green-soul-elevate-multi-purpose-adjustable-table?variant=51233597849917&country=IN&currency=INR&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&srsltid=AfmBOooFapsMw4O6GDg40EDiGCOclLDxl8LIdjnXZfM88H-VNzMHKi7tugI",
+        link: "https://www.greensoul.online/products/green-soul-elevate-multi-purpose-adjustable-table",
       },
       {
         name: "Dell S2725DC",
