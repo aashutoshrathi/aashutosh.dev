@@ -64,7 +64,7 @@ const DUMMY_PROJECTS: Project[] = [
     id: 1343990722,
     name: "mnm",
     description:
-      "Marker & Mayhem - a Pictionary host for one phone. Both teams draw the same word at the same time, with clock and tally built in.",
+      "Marker & Mayhem - an online Pictionary host. Everyone joins from their own phone, both teams draw the same word at the same time, with clock and tally built in.",
     language: "JavaScript",
     html_url: "https://github.com/aashutoshrathi/mnm",
     homepage: "https://mnm.aashutosh.dev/",

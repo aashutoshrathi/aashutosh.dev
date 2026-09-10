@@ -3,7 +3,13 @@ import React, { useEffect, useState } from "react"
 import GitHubCalendar from "react-github-calendar"
 import { Tooltip as ReactTooltip } from "react-tooltip"
 
-import { Contributions, FreeGames, Projects, SEO } from "@components"
+import {
+  AnimatedLink,
+  Contributions,
+  FreeGames,
+  Projects,
+  SEO,
+} from "@components"
 
 const WorkPage: React.FC = () => {
   const [monthsToShow, setMonthsToShow] = useState(12)
@@ -37,6 +43,13 @@ const WorkPage: React.FC = () => {
         <p className="mt-2 text-gray-600 dark:text-gray-300">
           Code that shipped, games you can play tonight, and the commit graph
           to prove I was there.
+        </p>
+        <p className="mt-3 text-sm text-gray-500 dark:text-gray-400">
+          Want the short version?{" "}
+          <AnimatedLink href="https://files.aashutosh.dev/resume.pdf#navpanes=0">
+            Grab the résumé
+          </AnimatedLink>
+          .
         </p>
       </div>
       <div className="my-8 flex justify-center text-center overflow-x-auto">

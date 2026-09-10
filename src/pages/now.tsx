@@ -78,7 +78,7 @@ const NowPage: React.FC = () => {
           <AnimatedLink href="https://mnm.aashutosh.dev">
             Marker &amp; Mayhem
           </AnimatedLink>{" "}
-          (Pictionary for one phone) and{" "}
+          (Pictionary, online) and{" "}
           <AnimatedLink href="https://cr.aashutosh.dev">
             Chupa Rustam
           </AnimatedLink>{" "}

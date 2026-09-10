@@ -17,8 +17,8 @@ building side projects that automate things nobody asked to automate by night.
 
 ## Projects worth mentioning
 
-- **Marker & Mayhem**: Pictionary host for one phone - both teams draw the same word at the same time, with clock and tally built in. [mnm.aashutosh.dev](https://mnm.aashutosh.dev)
-- **Chupa Rustam**: Pass-the-phone social deduction game - everyone gets the word, one gets nothing. [cr.aashutosh.dev](https://cr.aashutosh.dev)
+- **Marker & Mayhem**: Online Pictionary host - everyone joins from their own phone and both teams draw the same word at the same time, with clock and tally built in. [mnm.aashutosh.dev](https://mnm.aashutosh.dev)
+- **Chupa Rustam**: Online social deduction game - everyone gets the word, one gets nothing. [cr.aashutosh.dev](https://cr.aashutosh.dev)
 - **Toki**: Native macOS menu bar app that keeps an eye on Claude Code and Codex
   account usage. [toki.aashutosh.dev](https://toki.aashutosh.dev)
 - **M3**: Money MicroManager - cross-platform personal finance app that ingests

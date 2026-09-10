@@ -34,6 +34,30 @@ describe("SEO component", () => {
     )
   })
 
+  it("falls back to the site title when no page title is given", () => {
+    const { container } = render(<SEO />)
+    expect(container.querySelector("title")?.textContent).toBe("Site Title")
+    expect(
+      container
+        .querySelector('meta[property="og:title"]')
+        ?.getAttribute("content")
+    ).toBe("Site Title")
+  })
+
+  it("uses the site-qualified title for og:title and twitter:title", () => {
+    const { container } = render(<SEO title="Page Title" />)
+    expect(
+      container
+        .querySelector('meta[property="og:title"]')
+        ?.getAttribute("content")
+    ).toBe("Site Navigation | Page Title")
+    expect(
+      container
+        .querySelector('meta[name="twitter:title"]')
+        ?.getAttribute("content")
+    ).toBe("Site Navigation | Page Title")
+  })
+
   it("renders default description from siteMetadata", () => {
     const { container } = render(<SEO title="Page Title" />)
     const description = container.querySelector('meta[name="description"]')

@@ -1,13 +1,11 @@
 import React, { useEffect, useRef, useState } from "react"
 
-import { OutboundLink } from "gatsby-plugin-google-gtag"
 import { StaticImage } from "gatsby-plugin-image"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 
 import { AnimatedLink, SEO } from "@components"
 import SpotifyNow from "../components/easter-eggs/spotify-now"
-import { mediumHaptic } from "@utils"
 
 const getGreeting = () => {
   const h = new Date().getHours()
@@ -124,33 +122,7 @@ const IndexPage: React.FC = () => {
               <AnimatedLink to="/blog">this very blog</AnimatedLink>
               <span>!</span>
             </p>
-            <div className="flex justify-center md:justify-start">
-              <OutboundLink
-                href="https://files.aashutosh.dev/resume.pdf#navpanes=0"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block rounded-lg bg-blue-600 px-4 py-2 text-base font-semibold text-white no-underline transition-colors duration-200 ease-in-out hover:bg-blue-700 hover:no-underline focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-700 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:bg-blue-400 dark:text-slate-900 dark:hover:bg-blue-300 dark:focus-visible:ring-blue-300 dark:focus-visible:ring-offset-slate-900"
-                onClick={mediumHaptic}>
-                View Résumé
-              </OutboundLink>
-            </div>
-            <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
-              Weekend project? Try{" "}
-              <AnimatedLink href="https://mnm.aashutosh.dev">
-                Marker &amp; Mayhem
-              </AnimatedLink>{" "}
-              or{" "}
-              <AnimatedLink href="https://cr.aashutosh.dev">
-                Chupa Rustam
-              </AnimatedLink>{" "}
-              - free online party games.
-            </p>
-            {/* The widget renders nothing unless music is playing, and the
-                fetch resolves after mount. Hold the height so the centered
-                hero does not shift when it appears or drops out. */}
-            <div className="mt-6 min-h-[76px] max-w-md mx-auto md:mx-0">
-              <SpotifyNow />
-            </div>
+            <SpotifyNow />
           </section>
         </div>
 
@@ -172,4 +144,6 @@ const IndexPage: React.FC = () => {
 
 export default IndexPage
 
-export const Head = () => <SEO title="Home" />
+export const Head = () => (
+  <SEO description="Aashutosh Rathi - software engineer at Regie.ai, delegating boring tasks to agents. Side projects, free party games, and notes on tools, automation and life." />
+)

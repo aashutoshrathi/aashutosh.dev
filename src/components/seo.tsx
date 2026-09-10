@@ -30,7 +30,8 @@ export interface SEOProps {
   image?: string | null
   lang?: string
   meta?: MetaTag[]
-  title: string
+  /* Omit on the landing page so the title is just the site name */
+  title?: string
 }
 
 const SEO: React.FC<SEOProps> = ({
@@ -57,6 +58,11 @@ const SEO: React.FC<SEOProps> = ({
 
   const metaDescription = description || site.siteMetadata.description
 
+  /* Share cards should show the same title as the tab, not the bare page label */
+  const pageTitle = title
+    ? `${site.siteMetadata.navigationString}${title}`
+    : site.siteMetadata.title
+
   /* Per-post images may be absolute URLs or site-relative paths */
   const metaImage = image
     ? image.startsWith("http")
@@ -71,7 +77,7 @@ const SEO: React.FC<SEOProps> = ({
     },
     {
       property: `og:title`,
-      content: title,
+      content: pageTitle,
     },
     {
       property: `og:url`,
@@ -103,7 +109,7 @@ const SEO: React.FC<SEOProps> = ({
     },
     {
       name: `twitter:title`,
-      content: title,
+      content: pageTitle,
     },
     {
       name: `twitter:description`,
@@ -119,7 +125,7 @@ const SEO: React.FC<SEOProps> = ({
   return (
     <>
       <html lang={lang} />
-      <title>{`${site.siteMetadata.navigationString}${title}`}</title>
+      <title>{pageTitle}</title>
       {metaTags.map((meta, index) => (
         <meta key={index} {...meta} />
       ))}

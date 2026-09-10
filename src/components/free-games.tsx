@@ -23,7 +23,7 @@ const GAMES: Game[] = [
     title: "Marker & Mayhem",
     tagline: "one word, both teams, 90 seconds",
     description:
-      "A Pictionary host that runs the whole game from one phone. Both teams draw the same word at the same time - it keeps the clock, keeps the tally, and never shows the word to the guessers.",
+      "A Pictionary host that runs the whole game online - everyone joins from their own phone. Both teams draw the same word at the same time, and it keeps the clock, keeps the tally, and never shows the word to the guessers.",
     href: "https://mnm.aashutosh.dev",
     github: "https://github.com/aashutoshrathi/mnm",
     players: "4+ players",
@@ -54,13 +54,21 @@ const FreeGames: React.FC = () => {
 
   useGSAP(() => {
     if (shouldReduceMotion() || !sectionRef.current) return
-    gsap.from(sectionRef.current.querySelectorAll(".game-card"), {
-      y: 16,
-      opacity: 0,
-      stagger: 0.08,
-      duration: 0.35,
-      ease: "power2.out",
-    })
+    /* fromTo, not from: `from` infers the end value from whatever opacity the
+       card happens to have when its staggered tween initialises, which could
+       leave the later cards stuck part-way faded. */
+    gsap.fromTo(
+      sectionRef.current.querySelectorAll(".game-card"),
+      { y: 16, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.08,
+        duration: 0.35,
+        ease: "power2.out",
+        clearProps: "opacity,transform",
+      }
+    )
   }, [])
 
   return (
