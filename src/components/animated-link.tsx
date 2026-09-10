@@ -82,6 +82,12 @@ const setCachedFavicon = (host: string, isDark: boolean, url: string) => {
   } catch {}
 }
 
+const EMOJI_FALLBACK: Record<string, string> = {
+  "toki.aashutosh.dev": "🖥️",
+  "api.chess.com": "♟️",
+  "chess.com": "♟️",
+}
+
 const Favicon: React.FC<{ href: string }> = ({ href }) => {
   const [isDark, setIsDark] = React.useState(false)
   React.useEffect(() => {
@@ -121,8 +127,30 @@ const Favicon: React.FC<{ href: string }> = ({ href }) => {
   }, [href, isDark])
 
   const [idx, setIdx] = React.useState(0)
-  React.useEffect(() => setIdx(0), [candidates])
-  if (candidates.length === 0 || idx >= candidates.length) return null
+  const [failed, setFailed] = React.useState(false)
+  React.useEffect(() => {
+    setIdx(0)
+    setFailed(false)
+  }, [candidates])
+
+  if (candidates.length === 0 || failed) {
+    try {
+      const url = new URL(href, "https://aashutosh.dev")
+      const emoji = EMOJI_FALLBACK[url.hostname]
+      if (emoji) {
+        return <span className="mr-1 inline-block align-middle text-xs">{emoji}</span>
+      }
+    } catch {}
+    return null
+  }
+  if (idx >= candidates.length) {
+    try {
+      const url = new URL(href, "https://aashutosh.dev")
+      const emoji = EMOJI_FALLBACK[url.hostname]
+      if (emoji) return <span className="mr-1 inline-block align-middle text-xs">{emoji}</span>
+    } catch {}
+    return null
+  }
   return (
     <img
       src={candidates[idx]}
@@ -136,7 +164,18 @@ const Favicon: React.FC<{ href: string }> = ({ href }) => {
           setCachedFavicon(url.hostname, isDark, candidates[idx])
         } catch {}
       }}
-      onError={() => setIdx((i) => i + 1)}
+      onError={() => {
+        if (idx + 1 >= candidates.length) {
+          try {
+            const url = new URL(href, "https://aashutosh.dev")
+            if (EMOJI_FALLBACK[url.hostname]) {
+              setFailed(true)
+              return
+            }
+          } catch {}
+        }
+        setIdx((i) => i + 1)
+      }}
       className="mr-1 inline-block size-3 align-middle opacity-80"
     />
   )

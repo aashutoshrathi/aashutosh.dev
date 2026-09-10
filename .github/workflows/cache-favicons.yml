@@ -1,0 +1,53 @@
+name: Cache Favicons
+
+on:
+  pull_request:
+    paths:
+      - "src/**/*"
+      - "content/**/*"
+      - "scripts/cache-favicons.mjs"
+  push:
+    branches: [master]
+    paths:
+      - "src/**/*"
+      - "content/**/*"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  cache-favicons:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Cache favicons
+        run: node scripts/cache-favicons.mjs
+      - name: Check for new favicons
+        id: check
+        run: |
+          if [ -n "$(git status --porcelain static/favicons/)" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+            git status --short static/favicons/
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+      - name: Commit new favicons
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add static/favicons/
+          git commit -m "chore: cache favicons for new links"
+          git push
+      - name: Comment on PR
+        if: steps.check.outputs.changed == 'true' && github.event_name == 'pull_request'
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: "✨ Cached new favicons for links added in this PR. They will be served from `/favicons/` instead of live fetching."

@@ -13,7 +13,7 @@ interface Game {
   description: string
   href: string
   github?: string
-  emoji: string
+  favicon: string
   players: string
   time: string
   badge?: string
@@ -27,7 +27,7 @@ const GAMES: Game[] = [
       "A Pictionary host that runs the whole game from one phone. Both teams draw the same word at the same time - it keeps the clock, keeps the tally, and never shows the word to the guessers.",
     href: "https://mnm.aashutosh.dev",
     github: "https://github.com/aashutoshrathi/mnm",
-    emoji: "🎨",
+    favicon: "/favicons/mnm.aashutosh.dev.png",
     players: "4+ players",
     time: "∞ rounds",
     badge: "New",
@@ -38,7 +38,7 @@ const GAMES: Game[] = [
     description:
       "Everyone gets the word. One of you gets nothing. A free online party game - bluff, deduce, and call out the rustam before they blend in.",
     href: "https://cr.aashutosh.dev",
-    emoji: "🕵️",
+    favicon: "/favicons/cr.aashutosh.dev.png",
     players: "3-10 players",
     time: "5 min / round",
   },
@@ -82,11 +82,14 @@ const FreeGames: React.FC = () => {
             <div className="flex flex-grow flex-col p-5">
               <div className="mb-3 flex items-start justify-between gap-3">
                 <div className="flex items-center gap-3">
-                  <span
-                    className="flex size-10 items-center justify-center rounded-lg bg-gray-100 text-xl dark:bg-slate-700"
-                    aria-hidden="true">
-                    {game.emoji}
-                  </span>
+                  <img
+                    src={game.favicon}
+                    alt=""
+                    width={40}
+                    height={40}
+                    loading="lazy"
+                    className="size-10 rounded-lg bg-gray-100 object-contain p-1 dark:bg-slate-700"
+                  />
                   <div>
                     <h3 className="text-lg font-bold leading-tight">
                       {game.title}

@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SOURCE_URL="https://statusline.aashutosh.dev"
+TARGET_FILE="${HOME}/.claude/statusline.sh"
+TARGET_DIR="$(dirname "$TARGET_FILE")"
+
+cat <<'EOF'
+This will rip and replace your current ~/.claude/statusline.sh
+with Aashutosh's Statusline file from:
+https://statusline.aashutosh.dev
+EOF
+
+read -r -p "Proceed with rip and replace? [y/N]: " confirm </dev/tty
+case "${confirm:-}" in
+    y|Y|yes|YES)
+        ;;
+    *)
+        echo "Aborted. No changes made."
+        exit 0
+        ;;
+esac
+
+if ! command -v curl >/dev/null 2>&1; then
+    echo "Error: curl is required but not installed."
+    exit 1
+fi
+
+mkdir -p "$TARGET_DIR"
+
+tmp_file="$(mktemp "${TMPDIR:-/tmp}/statusline.XXXXXX")"
+cleanup() {
+    rm -f "$tmp_file"
+}
+trap cleanup EXIT
+
+if ! curl -fsSL "$SOURCE_URL" -o "$tmp_file"; then
+    echo "Error: failed to fetch statusline from $SOURCE_URL"
+    exit 1
+fi
+
+if [ ! -s "$tmp_file" ]; then
+    echo "Error: fetched file is empty."
+    exit 1
+fi
+
+if [ -f "$TARGET_FILE" ]; then
+    backup_file="${TARGET_FILE}.bak.$(date +%Y%m%d%H%M%S)"
+    cp "$TARGET_FILE" "$backup_file"
+    echo "Backup created: $backup_file"
+fi
+
+cp "$tmp_file" "$TARGET_FILE"
+chmod +x "$TARGET_FILE"
+
+echo "Installed Aashutosh's statusline to $TARGET_FILE"

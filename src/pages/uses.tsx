@@ -100,11 +100,17 @@ const UsesPage: React.FC = () => {
       {
         name: "iPad (11-inch, M5)",
         description: "Tablet for reading, sketching and sidecar display",
+        link: "https://www.apple.com/in/shop/buy-ipad/ipad",
       },
       {
         name: "Pixel Buds Pro 2",
         description: "Wireless earbuds with active noise cancellation",
         link: "https://store.google.com/product/pixel_buds_pro_2",
+      },
+      {
+        name: "Sony WH-1000XM6",
+        description: "Over-ear headphones with industry-leading noise cancellation",
+        link: "https://www.sony.co.in/electronics/headband-headphones/wh-1000xm6",
       },
       {
         name: "Fitbit Inspire 2",
@@ -169,8 +175,9 @@ const UsesPage: React.FC = () => {
     title: "🪑 Desk Setup",
     items: [
       {
-        name: "Minimal Setup",
-        description: "Just the laptop - portable and distraction-free workflow",
+        name: "Green Soul Elevate",
+        description: "Multi-purpose adjustable table for flexible work setups",
+        link: "https://www.greensoul.online/products/green-soul-elevate-multi-purpose-adjustable-table?variant=51233597849917&country=IN&currency=INR&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&srsltid=AfmBOooFapsMw4O6GDg40EDiGCOclLDxl8LIdjnXZfM88H-VNzMHKi7tugI",
       },
       {
         name: "Dell S2725DC",
