@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from "react"
 
-import { useGSAP } from "@gsap/react"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
 import { StaticImage } from "gatsby-plugin-image"
+import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
-import { useMediaQuery } from "usehooks-ts"
 
 import { AnimatedLink, SEO } from "@components"
-import { mediumHaptic, shouldReduceMotion } from "@utils"
+import SpotifyNow from "../components/easter-eggs/spotify-now"
+import { mediumHaptic } from "@utils"
 
 const getGreeting = () => {
   const h = new Date().getHours()
@@ -18,9 +18,6 @@ const getGreeting = () => {
 }
 
 const IndexPage: React.FC = () => {
-  const imgWrapperRef = useRef<HTMLDivElement | null>(null)
-  const headingRef = useRef<HTMLHeadingElement | null>(null)
-  const aboutRef = useRef<HTMLElement | null>(null)
   const juggleRef = useRef<HTMLSpanElement | null>(null)
   const [greeting, setGreeting] = useState("Hey there")
 
@@ -28,47 +25,7 @@ const IndexPage: React.FC = () => {
     setGreeting(getGreeting())
   }, [])
 
-  const isDesktop = useMediaQuery("(min-width: 768px)")
-
   useGSAP(() => {
-    if (shouldReduceMotion()) return
-    const tl = gsap.timeline()
-
-    gsap.set(imgWrapperRef.current, {
-      scale: 1.1,
-      x: isDesktop ? 24 : 0,
-      y: isDesktop ? 0 : -24,
-      opacity: 0,
-    })
-
-    tl.to(imgWrapperRef.current, {
-      scale: 1,
-      x: 0,
-      y: 0,
-      opacity: 1,
-      ease: "power2.out",
-      duration: 0.25,
-    }).to(
-      headingRef.current,
-      {
-        y: 0,
-        opacity: 1,
-        ease: "power1.out",
-        duration: 0.3,
-      },
-      "<0.1"
-    )
-
-    if (aboutRef.current) {
-      tl.from(aboutRef.current.children, {
-        y: 12,
-        opacity: 0,
-        ease: "power1.out",
-        stagger: 0.05,
-      })
-    }
-
-    // Juggle animation on hover
     if (juggleRef.current) {
       const juggleElement = juggleRef.current
       const juggleTimeline = gsap.timeline({ paused: true, repeat: -1 })
@@ -136,12 +93,10 @@ const IndexPage: React.FC = () => {
 
       <main className="flex min-h-[calc(100vh-258px)] flex-col-reverse items-center justify-center gap-12 px-4 md:min-h-[calc(100vh-216px)] md:flex-row">
         <div className="text-center md:w-2/3 md:text-left">
-          <h1 ref={headingRef} className="animate-init mb-8 text-3xl font-bold opacity-0 translate-y-5">
+          <h1 className="mb-8 text-3xl font-bold">
             {greeting}, I&apos;m Aashutosh! 👋
           </h1>
-          <section
-            ref={aboutRef}
-            className="mb-8 text-balance text-lg tracking-wide">
+          <section className="mb-8 text-balance text-lg tracking-wide">
             <p className="mb-2">
               Software engineer, delegates boring tasks to agents.
             </p>
@@ -190,10 +145,16 @@ const IndexPage: React.FC = () => {
               </AnimatedLink>{" "}
               - free online party games.
             </p>
+            {/* The widget renders nothing unless music is playing, and the
+                fetch resolves after mount. Hold the height so the centered
+                hero does not shift when it appears or drops out. */}
+            <div className="mt-6 min-h-[76px] md:max-w-md">
+              <SpotifyNow />
+            </div>
           </section>
         </div>
 
-        <div ref={imgWrapperRef}>
+        <div>
           <StaticImage
             src="../images/square.png"
             alt="Aashutosh Rathi"

@@ -1,3 +1,4 @@
+export * from "./favicon"
 export * from "./theme"
 
 const isIOS = () => {

@@ -30,15 +30,18 @@ const SpotifyNow: React.FC = () => {
       href={data.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-3 rounded-lg bg-gray-50 p-3 transition hover:bg-gray-100 dark:bg-slate-800 dark:hover:bg-slate-700">
+      className="group flex items-center gap-3 rounded-lg bg-gray-50 p-3 transition hover:bg-gray-100 dark:bg-slate-800 dark:hover:bg-slate-700">
       {data.image && <img src={data.image} alt="" width={40} height={40} className="rounded" />}
-      <div className="min-w-0">
+      <div className="min-w-0 flex-1">
         <p className="flex items-center gap-1 text-xs font-semibold uppercase tracking-widest text-green-600">
           <span className="inline-block size-2 animate-pulse rounded-full bg-green-500" /> Now playing
         </p>
         <p className="truncate text-sm font-medium">{data.title}</p>
         <p className="truncate text-xs text-gray-500">{data.artist}</p>
       </div>
+      <span className="shrink-0 rounded-full bg-green-500 px-3 py-1.5 text-xs font-semibold text-white transition group-hover:bg-green-600">
+        Listen Along
+      </span>
     </a>
   )
 }
