@@ -30,7 +30,7 @@ const SpotifyNow: React.FC = () => {
       href={data.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group mx-auto mt-6 flex max-w-md items-center gap-3 rounded-lg bg-gray-50 p-3 text-left transition hover:bg-gray-100 md:mx-0 dark:bg-slate-800 dark:hover:bg-slate-700">
+      className="group mx-auto mt-6 flex max-w-md fade-in-up items-center gap-3 rounded-lg bg-gray-50 p-3 text-left transition hover:bg-gray-100 md:mx-0 dark:bg-slate-800 dark:hover:bg-slate-700">
       {data.image && <img src={data.image} alt="" width={40} height={40} className="rounded" />}
       <div className="min-w-0 flex-1">
         <p className="flex items-center gap-1 text-xs font-semibold uppercase tracking-widest text-green-600">
