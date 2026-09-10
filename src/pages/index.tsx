@@ -145,5 +145,5 @@ const IndexPage: React.FC = () => {
 export default IndexPage
 
 export const Head = () => (
-  <SEO description="Aashutosh Rathi - software engineer at Regie.ai, delegating boring tasks to agents. Side projects, free party games, and notes on tools, automation and life." />
+  <SEO description="Aashutosh Rathi - software engineer by profession, in it for the plot, baking code into stories. nibbles and quibbles on tech, life and everything in between." />
 )
