@@ -1,1 +1,350 @@
-{}
+{
+  "https://12ft.io/": {
+    "reason": "DEPTH_ZERO_SELF_SIGNED_CERT",
+    "since": "2026-10-25"
+  },
+  "https://app.jellylade.com/": {
+    "reason": "ENOTFOUND",
+    "since": "2026-10-25"
+  },
+  "https://apps.apple.com/us/app/arc-mobile-companion/id1669785846": {
+    "reason": "HTTP 404",
+    "since": "2026-10-25"
+  },
+  "https://archive.is/": {
+    "reason": "HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://archive.ph/k5RyH": {
+    "reason": "HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://archive.ph/rUQxM": {
+    "reason": "HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://archive.ph/upxPn": {
+    "reason": "HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://archive.today/": {
+    "reason": "HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://blog.bettersheets.co/simply-email-yourself-from-a-google-sheet": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://blog.thoughtspile.tech/2021/11/15/unintentional-layout-effect": {
+    "reason": "ERR_TLS_CERT_ALTNAME_INVALID",
+    "since": "2026-10-25"
+  },
+  "https://claude.com/product/claude-code": {
+    "reason": "no usable title",
+    "since": "2026-10-25"
+  },
+  "https://divye.sh/": {
+    "reason": "ENOTFOUND",
+    "since": "2026-10-25"
+  },
+  "https://education.github.com/students/octernships": {
+    "reason": "HTTP 404",
+    "since": "2026-10-25"
+  },
+  "https://en.wikipedia.org/wiki/Matt_Welsh_/(computer_scientist/)": {
+    "reason": "HTTP 404",
+    "since": "2026-10-25"
+  },
+  "https://gamma.app/": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://github.com/aashutoshrathi/aashutosh.dev": {
+    "reason": "image: HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://github.com/aashutoshrathi/Insta-Downloader-Extension": {
+    "reason": "image: HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://github.com/aashutoshrathi/mnm": {
+    "reason": "image: HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://github.com/aashutoshrathi/nestjs-redis": {
+    "reason": "image: HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://github.com/aashutoshrathi/pratinidhi": {
+    "reason": "image: HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://github.com/aashutoshrathi/quietest": {
+    "reason": "image: HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://github.com/aashutoshrathi/Testcase-Generator": {
+    "reason": "image: HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://github.com/aashutoshrathi/toki": {
+    "reason": "image: HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://github.com/denolehov/obsidian-git": {
+    "reason": "image: HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://github.com/DoneDeal0/alright-react-app": {
+    "reason": "HTTP 404",
+    "since": "2026-10-25"
+  },
+  "https://github.com/gaomingqi/Track-Anything": {
+    "reason": "image: HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://github.com/iiab/iiab": {
+    "reason": "image: HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://github.com/irgolic/AutoPR": {
+    "reason": "image: HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://github.com/jonschlinkert/word-wrap/pull/33": {
+    "reason": "image: HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://github.com/kamranahmedse/code-reviews": {
+    "reason": "image: HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://github.com/kevmo314/magic-copy": {
+    "reason": "image: HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://github.com/kslambert/hacker-news-arc-boost": {
+    "reason": "image: HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://github.com/leetcode-mafia/cheetah": {
+    "reason": "image: HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://github.com/openai/shap-e": {
+    "reason": "image: HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://github.com/sindresorhus/np": {
+    "reason": "image: HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://github.com/skunight/nestjs-redis": {
+    "reason": "image: HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://github.com/Stability-AI/StableLM": {
+    "reason": "image: HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://github.com/the-nibble/dig": {
+    "reason": "image: HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://github.com/wabarc/wayback": {
+    "reason": "image: HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://github.com/zilliztech/GPTCache": {
+    "reason": "image: HTTP 429",
+    "since": "2026-10-25"
+  },
+  "https://heypi.com/talk": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://huggingface.co/spaces/stabilityai/stablelm-tuned-alpha-chat": {
+    "reason": "HTTP 401",
+    "since": "2026-10-25"
+  },
+  "https://iterm.aashutosh.dev/": {
+    "reason": "not a page (application/json)",
+    "since": "2026-10-25"
+  },
+  "https://lamini.ai/": {
+    "reason": "ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR",
+    "since": "2026-10-25"
+  },
+  "https://segment-anything.com/": {
+    "reason": "ENOTFOUND",
+    "since": "2026-10-25"
+  },
+  "https://segment-anything.com/demo": {
+    "reason": "ENOTFOUND",
+    "since": "2026-10-25"
+  },
+  "https://serverfault.com/questions/795467/what-is-the-purpose-of-the-well-known-folder": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://sketchplanations.com/subscribe": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://stackoverflow.com/a/61897567/7326407": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://statusline.aashutosh.dev/": {
+    "reason": "not a page (application/x-sh)",
+    "since": "2026-10-25"
+  },
+  "https://thenibble.substack.com/": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://tidyfirst.substack.com/p/90-of-my-skills-are-now-worth-0": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://twitter.com/_workchronicles": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://twitter.com/AashutoshRathi": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://twitter.com/avtansk": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://twitter.com/b0rk": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://twitter.com/Blr_ChessClub": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://twitter.com/dalequark": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://twitter.com/kamranahmedse": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://twitter.com/Kautukkundan": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://twitter.com/t3dotgg": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://vercel.com/templates/next.js/postgres-pgvector": {
+    "reason": "no usable title",
+    "since": "2026-10-25"
+  },
+  "https://vitalik.eth.limo/general/2023/12/28/cypherpunk.html": {
+    "reason": "image: ENOTFOUND",
+    "since": "2026-10-25"
+  },
+  "https://web.mit.edu/jemorris/humor/500-miles": {
+    "reason": "not a page (text/plain)",
+    "since": "2026-10-25"
+  },
+  "https://windowai.io/": {
+    "reason": "no usable title",
+    "since": "2026-10-25"
+  },
+  "https://www.analyticsinsight.net/chegg-launches-its-gpt-4-compatible-cheggmate-learning-service": {
+    "reason": "HTTP 404",
+    "since": "2026-10-25"
+  },
+  "https://www.centered.app/download": {
+    "reason": "HTTP 404",
+    "since": "2026-10-25"
+  },
+  "https://www.coscreen.co/": {
+    "reason": "ERR_SSL_SSL/TLS_ALERT_HANDSHAKE_FAILURE",
+    "since": "2026-10-25"
+  },
+  "https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://www.forbes.com/sites/konstantinebuhler/2023/04/11/ai-50-2023-generative-ai-trends?sh=229afd3e7c0e": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://www.granola.so/": {
+    "reason": "no usable title",
+    "since": "2026-10-25"
+  },
+  "https://www.ndtv.com/feature/mark-zuckerberg-wins-gold-and-silver-medals-in-his-first-jiu-jitsu-tournament-see-pics-4012857": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://www.nokiapure.com/": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://www.npmjs.com/package/ioredis": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://www.npmjs.com/package/ocr-space-api-wrapper": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://www.nytimes.com/2023/04/16/technology/google-search-engine-ai.html": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://www.phind.com/": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://www.producthunt.com/posts/ai-marketplace-by-zentask-ai": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://www.producthunt.com/posts/enhance-ai": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://www.producthunt.com/posts/figma-export-to-video": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://www.pullnow.com/": {
+    "reason": "ECONNRESET",
+    "since": "2026-10-25"
+  },
+  "https://www.querykitty.com/": {
+    "reason": "no usable title",
+    "since": "2026-10-25"
+  },
+  "https://www.reddit.com/r/MacOS/comments/pl2mzq/comment/iavxdht?context=3": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://www.reuters.com/technology/ai-pioneer-says-its-threat-world-may-be-more-urgent-than-climate-change-2023-05-05": {
+    "reason": "HTTP 401",
+    "since": "2026-10-25"
+  },
+  "https://www.science.org/content/article/it-s-just-mind-boggling-more-19-000-undersea-volcanoes-discovered": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://www.sony.co.in/electronics/headband-headphones/wh-1000xm6": {
+    "reason": "HTTP 403",
+    "since": "2026-10-25"
+  },
+  "https://www.ycombinator.com/events/summerconf2023": {
+    "reason": "HTTP 404",
+    "since": "2026-10-25"
+  }
+}
