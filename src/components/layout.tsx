@@ -5,6 +5,7 @@ import ConsoleArt from "./easter-eggs/console-art"
 import KonamiMatrix from "./easter-eggs/konami-matrix"
 import MidnightOwl from "./easter-eggs/midnight-owl"
 import VimNavigator from "./easter-eggs/vim-navigator"
+import LinkPreview from "./link-preview"
 import { applyTheme, getStoredTheme } from "@utils"
 
 export interface LayoutProps {
@@ -40,6 +41,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </main>
       <Footer />
       <ScrollToTop />
+      <LinkPreview />
     </div>
   )
 }

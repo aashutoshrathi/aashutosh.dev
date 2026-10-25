@@ -1,0 +1,1841 @@
+{
+  "links": {
+    "https://academy.meetiqm.com/curriculum/index.html": {
+      "title": "IQM Academy Curriculum",
+      "description": "Quantum computing in your browser."
+    },
+    "https://addons.mozilla.org/en-US/firefox/addon/instagram-media-downloader": {
+      "title": "Client Challenge"
+    },
+    "https://amzn.in/d/0b2kZSBX": {
+      "title": "Amazon.in"
+    },
+    "https://anshumanv.dev/": {
+      "title": "Anshuman Verma",
+      "description": "Welcome to Anshuman's personal space on the internet and dev portfolio. Anshuman is a Software Engineer with interest in anime and football.",
+      "site": "anshumanv.dev",
+      "image": "/og-cache/b4c65652b3eb.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#a8a8a8"
+    },
+    "https://answers.netlify.com/t/netlify-deploy-api-removes-files-and-directories-beginning-with-a-period/37728": {
+      "title": "Netlify deploy API removes files and directories beginning with a period",
+      "description": "I use the deploy API to deploy my site with a zip file. I discovered today that apparently Netlify removes files and directories within the zip file that begin with a period. This is problematic as my site has a…",
+      "site": "Netlify Support Forums",
+      "image": "/og-cache/5a6086707bd9.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#181858"
+    },
+    "https://anvaka.github.io/map-of-reddit?x=18239&y=12514&z=46488.09635705632&v=2": {
+      "title": "Map of Reddit",
+      "description": "This website shows a map of reddit. Each dot is a subreddit. Two dots within the same cluster are usually close to each other if multiple users frequently leave comments on both subreddits",
+      "image": "/og-cache/35c4b78aa91e.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#181848"
+    },
+    "https://api.slack.com/automation": {
+      "title": "Slack developer docs | Slack Developer Docs",
+      "description": "Welcome to the Slack API docs, the place where ideas turn into interactive apps, workflows get automated, and Slack becomes the platform that powers your workday."
+    },
+    "https://app.launchgravity.com/data-drops/y-combinator-winter-2023-batch": {
+      "title": "Gravity"
+    },
+    "https://app.netlify.com/drop": {
+      "title": "Netlify Drop",
+      "description": "Drag and drop a folder, zip file, or single HTML file to publish a website instantly — no account required. Get a live, shareable link in seconds.",
+      "image": "/og-cache/0bf9053ce301.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#081838"
+    },
+    "https://arc.net/gift/9c7b51c0": {
+      "title": "A friend is sharing Arc with you!",
+      "description": "Experience a calmer, more personal internet in this browser designed for you. Let go of the clicks, the clutter, the distractions.",
+      "image": "/og-cache/72a9f096fe4b.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8e8"
+    },
+    "https://archive.org/details/microsoftencartapremiumedition2009": {
+      "title": "Microsoft Encarta Premium Edition 2009 : Microsoft Corporation : Free Download, Borrow, and Streaming",
+      "description": "Microsoft Encarta was a digital multimedia encyclopedia published by Microsoft Corporation from 1993 to 2009. Originally sold on CD-ROM or DVD, it was also...",
+      "site": "Internet Archive"
+    },
+    "https://arxiv.org/abs/1706.03762": {
+      "title": "Attention Is All You Need",
+      "description": "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an…",
+      "site": "arXiv.org",
+      "image": "/og-cache/d9316ccdca8c.webp",
+      "width": 600,
+      "height": 350,
+      "color": "#f8f8f8"
+    },
+    "https://awesome-movies.life/": {
+      "title": "awesome-movies"
+    },
+    "https://blog.aashutosh.dev/nibble-1": {
+      "title": "Nibble #1",
+      "description": "ReDoS, AGI, The Algorithm, tools to live by, and some crazy video from the web",
+      "site": "xp.tar.gz by Aashutosh",
+      "image": "/og-cache/a8d50b78249a.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#080808"
+    },
+    "https://blog.aashutosh.dev/nibble-2": {
+      "title": "Nibble #2",
+      "description": "WebGPU, Quantum Courses, GPT is still killing it, PWA Builders, YC Chatbot and more",
+      "site": "xp.tar.gz by Aashutosh",
+      "image": "/og-cache/62f9c76a675b.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#080808"
+    },
+    "https://blog.aashutosh.dev/nibble-3": {
+      "title": "Nibble #3",
+      "description": "Inst-Inpaint, Sea levels, SBOM, trPC, self-hosted way back, and more",
+      "site": "xp.tar.gz by Aashutosh",
+      "image": "/og-cache/c29105ade931.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#080808"
+    },
+    "https://blog.aashutosh.dev/nibble-4": {
+      "title": "Nibble #4 | aashutosh.dev",
+      "description": "Node 20, TS 5.1 Beta, GPTCache, Null Island and more",
+      "site": "xp.tar.gz by Aashutosh",
+      "image": "/og-cache/bcc5f3bc92db.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#080808"
+    },
+    "https://blog.aashutosh.dev/nibble-5": {
+      "title": "Nibble #5",
+      "description": "GAuth can do cloud sync, why finetune? when you can build LLM, track object in video, Opera makes a comeback and more",
+      "site": "xp.tar.gz by Aashutosh",
+      "image": "/og-cache/40bd16a940cd.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#080808"
+    },
+    "https://blog.google/products/android/nearby-share-windows": {
+      "title": "Share files easily between Android devices and Windows PCs",
+      "description": "We are introducing Nearby Share Beta for Windows, an app that helps you share files between Android devices and Windows PCs.",
+      "site": "Google",
+      "image": "/og-cache/cac03a1ad541.webp",
+      "width": 600,
+      "height": 338,
+      "color": "#f8f8f8"
+    },
+    "https://blog.replit.com/llm-training?ck_subscriber_id=1652259708": {
+      "title": "How to train your own Large Language Models | Replit",
+      "description": "Learn how Replit trains Large Language Models (LLMs) using Databricks, Hugging Face, and MosaicML Introduction Large Language Models, like OpenAI's GPT-4 or Google's PaLM, have taken the world of artificial…",
+      "site": "Replit Blog",
+      "image": "/og-cache/919cf852374a.webp",
+      "width": 600,
+      "height": 343,
+      "color": "#f8f8f8"
+    },
+    "https://camrobjones.com/hackercast": {
+      "title": "Hackercast",
+      "description": "An AI-generated podcast summary of Hacker News",
+      "image": "/og-cache/62288836d9fb.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#f8c808"
+    },
+    "https://cassidoo.co/": {
+      "title": "Cassidy Williams",
+      "description": "I'm Cassidy Williams, a software engineer, mom, and overall nerd in Chicago. I write about tech, projects, and whatever else I'm thinking about!",
+      "image": "/og-cache/e9795a4d989e.webp",
+      "width": 600,
+      "height": 314,
+      "color": "#f8f8f8"
+    },
+    "https://claude.com/product/claude-code": {
+      "title": "Claude Code by Anthropic | AI Coding Agent, Terminal, IDE",
+      "description": "Anthropic's agentic coding tool for developers. Claude Code understands your codebase, edits files, runs commands, and helps you ship faster.",
+      "site": "Claude",
+      "image": "/og-cache/0ccb1f6b268b.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#f8f8e8"
+    },
+    "https://code.visualstudio.com/insiders": {
+      "title": "Download Visual Studio Code Insiders",
+      "description": "Get early access to the latest AI agent features in VS Code with the Insiders Build. New builds daily with cutting-edge agent workflows. Available on Mac, Linux, and Windows.",
+      "image": "/og-cache/26354ecf63c2.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#282838"
+    },
+    "https://codeium.com/blog/copilot-trains-on-gpl-codeium-does-not": {
+      "title": "GitHub Copilot Emits GPL. Codeium Does Not.",
+      "description": "Demonstrating that GitHub Copilot trains on non-permissive licenses and cannot filter suggestions properly, while Codeium avoids legal risk.",
+      "site": "Devin",
+      "image": "/og-cache/20427a62f9f3.webp",
+      "width": 600,
+      "height": 336,
+      "color": "#d8d8b8"
+    },
+    "https://copilot4dating.com/": {
+      "title": "Copilot for Dating",
+      "description": "Spark chats and ignite chemistry with AI assistance",
+      "site": "Copilot for Dating"
+    },
+    "https://cr.aashutosh.dev/": {
+      "title": "Chupa Rustam",
+      "description": "Everyone gets the word. One of you gets nothing. A free pass-the-phone party game.",
+      "image": "/og-cache/4cfa3dbf2bcc.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#181808"
+    },
+    "https://daily.dev/blog/seed-round": {
+      "title": "daily.dev raised an $11M seed round 🎉",
+      "description": "daily.dev, a developer-focused startup, has raised $11 million in seed funding to build the world’s largest professional network for the global developer community. The platform aims to provide a space for developers…",
+      "site": "daily.dev",
+      "image": "/og-cache/60334d6c4d24.webp",
+      "width": 600,
+      "height": 314,
+      "color": "#180848"
+    },
+    "https://devblogs.microsoft.com/typescript/announcing-typescript-5-1-beta": {
+      "title": "Announcing TypeScript 5.1 Beta",
+      "description": "Today we're announcing our beta release of TypeScript 5.1! To get started using the beta, you can get it through NuGet, or through npm with the following",
+      "site": "TypeScript",
+      "image": "/og-cache/aa86599618a2.webp",
+      "width": 562,
+      "height": 350,
+      "color": "#183868"
+    },
+    "https://developer.chrome.com/blog/webgpu-release": {
+      "title": "Chrome ships WebGPU | Blog",
+      "description": "The Chrome team ships WebGPU, which allows high-performance 3D graphics and data-parallel computation on the web.",
+      "site": "Chrome for Developers",
+      "image": "/og-cache/1bd60e2f802c.webp",
+      "width": 600,
+      "height": 366,
+      "color": "#888898"
+    },
+    "https://developer.chrome.com/docs/devtools": {
+      "title": "Chrome DevTools",
+      "description": "Debug and optimize your web applications with Chrome DevTools.",
+      "site": "Chrome for Developers"
+    },
+    "https://dig.nibbles.dev/": {
+      "title": "dig",
+      "description": "Search The Nibble's editions - tools, TILs, reads & quotes, plus when each topic first and last came up.",
+      "site": "The Nibble",
+      "image": "/og-cache/e21fbb64b5b2.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#080808"
+    },
+    "https://docs.google.com/forms/d/e/1FAIpQLSezc0OHUUuzH8MEmaagh1d6yduyAe4WWpYYAm-7skm74V7NoQ/viewform": {
+      "title": "OpenAI for Startups Application",
+      "description": "Self-funded startups (i.e. not associated with a VC firm) are eligible to apply to receive up to $2,500 (equivalent to 1.25 billion gpt-3.5-turbo tokens) in OpenAI API credits valid for 1 year to explore the…",
+      "site": "Google Docs",
+      "image": "/og-cache/8043f2f15bbb.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#f8f8f8"
+    },
+    "https://dontasktoask.com/": {
+      "title": "Don't ask to ask, just ask",
+      "image": "/og-cache/2c005e63a891.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#080808"
+    },
+    "https://economictimes.indiatimes.com/prime/money-and-markets/a-30-fall-since-listing-how-lics-ipo-became-indias-biggest-wealth-destroyer/primearticleshow/92212792.cms": {
+      "title": "A 30% fall since listing: how LIC’s IPO became one of India’s biggest wealth destroyers",
+      "description": "Shares of Indias largest life insurer have declined for 10 straight sessions, eroding 29.6% value from its issue price of INR949. LIC also saw its market cap decline to INR4.3 lakh crore, wiping out INR1.7 lakh crore…",
+      "site": "The Economic Times",
+      "image": "/og-cache/23b75177f096.webp",
+      "width": 600,
+      "height": 325,
+      "color": "#080808"
+    },
+    "https://education.github.com/pack": {
+      "title": "GitHub Student Developer Pack",
+      "description": "The best developer tools, free for students. Get your GitHub Student Developer Pack now.",
+      "site": "GitHub Education",
+      "image": "/og-cache/c4d8f732db4c.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#d8f8f8"
+    },
+    "https://education.nationalgeographic.org/resource/dividing-species-wallace-line-map": {
+      "title": "Dividing Species: Wallace Line Map",
+      "description": "Use this infographic to teach students about the Wallace Line, a hypothetical boundary separating the biogeographical regions of Asia and Australia.",
+      "image": "/og-cache/e8b9a4e8b2d2.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#98d8f8"
+    },
+    "https://en.wikipedia.org/wiki/Collective_effervescence": {
+      "title": "Collective effervescence - Wikipedia"
+    },
+    "https://en.wikipedia.org/wiki/Crown_shyness": {
+      "title": "Crown shyness - Wikipedia",
+      "image": "/og-cache/0e2dc9dfd93f.webp",
+      "width": 600,
+      "height": 450,
+      "color": "#181818"
+    },
+    "https://en.wikipedia.org/wiki/Geoffrey_Hinton": {
+      "title": "Geoffrey Hinton - Wikipedia",
+      "image": "/og-cache/12dd4ea577ec.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#080808"
+    },
+    "https://eqeq.js.org/": {
+      "title": "JavaScript Equality Table Game",
+      "description": "Find out how well you know (or don't know) the JavaScript == operator rules",
+      "image": "/og-cache/6402b62cf321.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#d8d8d8"
+    },
+    "https://floor796.com/": {
+      "title": "Floor796",
+      "description": "A huge animation scene with many references to memes, games, films, series, anime, music groups",
+      "site": "Floor796",
+      "image": "/og-cache/0417ac7ce669.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#e8e8e8"
+    },
+    "https://freefy.app/": {
+      "title": "Free Music Online – Unlimited Songs with No Audio Ads",
+      "description": "Listen to free music online with Freefy. Stream millions of songs, albums, artists, and playlists without audio ads or a subscription.",
+      "site": "Freefy",
+      "image": "/og-cache/937f6a5ca150.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#181818"
+    },
+    "https://github.com/aashutoshrathi/aashutosh.dev": {
+      "title": "aashutoshrathi/aashutosh.dev: ~/aashutosh",
+      "description": "~/aashutosh.",
+      "site": "GitHub",
+      "image": "/og-cache/7ed946587781.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/aashutoshrathi/git-profiler-bot": {
+      "title": "aashutoshrathi/git-profiler-bot",
+      "description": "Telegram bot which fetches GitHub Profiles.",
+      "site": "GitHub",
+      "image": "/og-cache/571aeb2f2975.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/aashutoshrathi/homebrew-tap": {
+      "title": "aashutoshrathi/homebrew-tap",
+      "description": "Homebrew tap for Toki.",
+      "site": "GitHub",
+      "image": "/og-cache/27697a8d132b.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/aashutoshrathi/Insta-Downloader-Extension": {
+      "title": "aashutoshrathi/Insta-Downloader-Extension",
+      "description": "A browser extension that injects download buttons ⬇️ for media on Instagram Web - aashutoshrathi/Insta-Downloader-Extension",
+      "site": "GitHub",
+      "image": "/og-cache/b90acea6f2e4.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/aashutoshrathi/mnm": {
+      "title": "aashutoshrathi/mnm",
+      "description": "Marker & Mayhem - Pictionary for the masses.",
+      "site": "GitHub",
+      "image": "/og-cache/087e55f97f93.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/aashutoshrathi/nestjs-redis": {
+      "title": "aashutoshrathi/nestjs-redis",
+      "description": "nestjs redis module.",
+      "site": "GitHub",
+      "image": "/og-cache/ac02c9797cd5.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/aashutoshrathi/pratinidhi": {
+      "title": "aashutoshrathi/pratinidhi",
+      "description": "a proxy server on the edge.",
+      "site": "GitHub",
+      "image": "/og-cache/6875594cb348.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/aashutoshrathi/quietest": {
+      "title": "aashutoshrathi/quietest",
+      "description": "Mute the tests in GitHub PRs. Review the code that matters. - aashutoshrathi/quietest",
+      "site": "GitHub",
+      "image": "/og-cache/f7af6417ac74.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/aashutoshrathi/Testcase-Generator": {
+      "title": "aashutoshrathi/Testcase-Generator",
+      "description": "⚡️ Handy script for HackerRank, HackerEarth and CodeChef TCs Generation. - aashutoshrathi/Testcase-Generator",
+      "site": "GitHub",
+      "image": "/og-cache/7d81f11573e7.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/aashutoshrathi/toki": {
+      "title": "aashutoshrathi/toki",
+      "description": "Native macOS menu bar app for managing usage, sessions and remotely controlling your AI Agents. - aashutoshrathi/toki",
+      "site": "GitHub",
+      "image": "/og-cache/0ddfbf7a65f6.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/bfirsh/jsnes": {
+      "title": "bfirsh/jsnes",
+      "description": "A JavaScript NES emulator.",
+      "site": "GitHub",
+      "image": "/og-cache/44a3b88a3856.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/dair-ai/ML-Papers-of-the-Week": {
+      "title": "dair-ai/AI-Papers-of-the-Week",
+      "description": "🔥Highlighting the top ML papers every week.",
+      "site": "GitHub",
+      "image": "/og-cache/efd9a0960798.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/denolehov/obsidian-git": {
+      "title": "Vinzent03/obsidian-git",
+      "description": "Integrate Git version control with automatic commit-and-sync and other advanced features in Obsidian.md - Vinzent03/obsidian-git",
+      "site": "GitHub",
+      "image": "/og-cache/fab64a104041.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/gaomingqi/Track-Anything": {
+      "title": "gaomingqi/Track-Anything",
+      "description": "Track-Anything is a flexible and interactive tool for video object tracking and segmentation, based on Segment Anything, XMem, and E2FGVI. - gaomingqi/Track-Anything",
+      "site": "GitHub",
+      "image": "/og-cache/0300ed9a65b3.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/iiab/iiab": {
+      "title": "iiab/iiab",
+      "description": "Internet-in-a-Box - Build your own LIBRARY OF ALEXANDRIA with a Raspberry Pi ! - iiab/iiab",
+      "site": "GitHub",
+      "image": "/og-cache/d28014b15e37.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/irgolic/AutoPR": {
+      "title": "irgolic/AutoPR",
+      "description": "AutoPR autonomously wrote pull requests in response to issues - irgolic/AutoPR",
+      "site": "GitHub",
+      "image": "/og-cache/d25229edd04c.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/jlevy/the-art-of-command-line": {
+      "title": "jlevy/the-art-of-command-line",
+      "description": "Master the command line, in one page.",
+      "site": "GitHub",
+      "image": "/og-cache/c0718683de09.webp",
+      "width": 480,
+      "height": 288,
+      "color": "#187838"
+    },
+    "https://github.com/jonschlinkert/word-wrap/pull/33": {
+      "title": ":lock: fix: CVE-2023-26115 by aashutoshrathi · Pull Request #33 · jonschlinkert/word-wrap",
+      "description": "Fixes #32 Issue with existing approach CVE-2023-26115 TLDR; ReDoS, the issue is due to Regex matching algo. Approach used here Removed the use of String.prototype.replace(Regex), instead wrote fun...",
+      "site": "GitHub",
+      "image": "/og-cache/64559d8da623.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/kamranahmedse/code-reviews": {
+      "title": "nilbuild/awesome-minimal-sites",
+      "description": "An opinionated collection of minimal yet beautiful websites. - nilbuild/awesome-minimal-sites",
+      "site": "GitHub",
+      "image": "/og-cache/b0360a3bad4a.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/kevmo314/magic-copy": {
+      "title": "kevmo314/magic-copy",
+      "description": "Magic Copy is a Chrome extension that uses Meta's Segment Anything Model to extract a foreground object from an image and copy it to the clipboard. - kevmo314/magic-copy",
+      "site": "GitHub",
+      "image": "/og-cache/47c8e6e1c7d2.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/kslambert/hacker-news-arc-boost": {
+      "title": "kslambert/hacker-news-arc-boost",
+      "description": "An Arc boost (The Browser Company) for Hacker News - kslambert/hacker-news-arc-boost",
+      "site": "GitHub",
+      "image": "/og-cache/7ec4ca17a28c.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/leetcode-mafia/cheetah": {
+      "title": "leetcode-mafia/cheetah",
+      "description": "Mac app for crushing tech interviews with AI.",
+      "site": "GitHub",
+      "image": "/og-cache/15e62f5bf08b.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/onionshare/onionshare": {
+      "title": "onionshare/onionshare",
+      "description": "Securely and anonymously share files, host websites, and chat with friends using the Tor network - onionshare/onionshare",
+      "site": "GitHub",
+      "image": "/og-cache/e10f99ca4517.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/openai/shap-e": {
+      "title": "openai/shap-e",
+      "description": "Generate 3D objects conditioned on text or images.",
+      "site": "GitHub",
+      "image": "/og-cache/46acb9a084fa.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/shuding/cobe": {
+      "title": "shuding/cobe",
+      "description": "5KB WebGL globe lib.",
+      "site": "GitHub",
+      "image": "/og-cache/45d37687af37.webp",
+      "width": 600,
+      "height": 337,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/sindresorhus": {
+      "title": "sindresorhus - Overview",
+      "description": "Full-Time Open-Sourcerer. Focused on Swift & JavaScript. Makes macOS apps, CLI tools, npm packages. - sindresorhus",
+      "site": "GitHub",
+      "image": "/og-cache/dc21bcb724d3.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#e8d8c8"
+    },
+    "https://github.com/sindresorhus/np": {
+      "title": "sindresorhus/np",
+      "description": "A better `npm publish`.",
+      "site": "GitHub",
+      "image": "/og-cache/3d927692b59e.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/skunight/nestjs-redis": {
+      "title": "skunight/nestjs-redis",
+      "description": "nestjs redis module.",
+      "site": "GitHub",
+      "image": "/og-cache/c2f0faa84221.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/Stability-AI/StableLM": {
+      "title": "Stability-AI/StableLM",
+      "description": "StableLM: Stability AI Language Models.",
+      "site": "GitHub",
+      "image": "/og-cache/b0e03d778b64.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/the-nibble/dig": {
+      "title": "The-Nibble/dig",
+      "description": "Search The Nibble's editions - tools, TILs, reads & quotes, plus when each topic first and last came up. - The-Nibble/dig",
+      "site": "GitHub",
+      "image": "/og-cache/49c0c77a7ffb.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/twitter/the-algorithm": {
+      "title": "twitter/the-algorithm",
+      "description": "Source code for the X Recommendation Algorithm.",
+      "site": "GitHub",
+      "image": "/og-cache/12c92f6ce99f.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/wabarc/wayback": {
+      "title": "wabarc/wayback",
+      "description": "An archiving tool with an IM-style interface that prioritizes privacy and accessibility, integrated with various archival services including Internet Archive, archive.today, Ghostarchive, IPFS, Tel...",
+      "site": "GitHub",
+      "image": "/og-cache/017a556a63fb.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/zilliztech/GPTCache": {
+      "title": "zilliztech/GPTCache",
+      "description": "Semantic cache for LLMs. Fully integrated with LangChain and llama_index. - zilliztech/GPTCache",
+      "site": "GitHub",
+      "image": "/og-cache/c3e79efcf23b.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://go.regie.ai/": {
+      "title": "The AI Sales Assistant for Sellers",
+      "description": "AI agents that source, enrich, dial, and email from your own inbox, plus LinkedIn tasks. One workspace, $49/mo. Start free.",
+      "site": "Regie.ai",
+      "image": "/og-cache/d2f254c211a5.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#084838"
+    },
+    "https://hono.dev/": {
+      "title": "Hono - Web framework built on Web Standards",
+      "description": "Hono is a small, simple, and ultrafast web framework built on Web Standards. It works on Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Netlify, AWS Lambda, Lambda@Edge, and Node.js. Fast, but not only fast.",
+      "image": "/og-cache/73d1237708e0.webp",
+      "width": 600,
+      "height": 161,
+      "color": "#080808"
+    },
+    "https://huggingface.co/spaces/abyildirim/inst-inpaint": {
+      "title": "Inst Inpaint - a Hugging Face Space by abyildirim",
+      "description": "Upload a photo and type an instruction that starts with “Remove the …” to specify what you want taken out. The app will show the original image (optionally cropped) and a new version where the requ...",
+      "image": "/og-cache/9e0ba7aab417.webp",
+      "width": 600,
+      "height": 324,
+      "color": "#b83888"
+    },
+    "https://huggingface.co/spaces/sanchit-gandhi/whisper-jax": {
+      "title": "Whisper JAX - a Hugging Face Space by sanchit-gandhi",
+      "description": "Discover amazing ML apps made by the community",
+      "image": "/og-cache/b952605f2a1d.webp",
+      "width": 600,
+      "height": 324,
+      "color": "#8868a8"
+    },
+    "https://instinpaint.abyildirim.com/": {
+      "title": "Inst-Inpaint: Instructing to Remove Objects with Diffusion Models",
+      "description": "Inst-Inpaint takes an image and a textual instruction as input and is able to automatically remove objects mentioned in the text, without any need of user-supplied binary mask to locate the region of interest, as in…"
+    },
+    "https://integer.exposed/": {
+      "title": "Integer Exposed"
+    },
+    "https://iterm2.com/": {
+      "title": "iTerm2 - macOS Terminal Replacement",
+      "description": "iTerm2 is a replacement for Terminal and the successor to iTerm"
+    },
+    "https://jalammar.github.io/illustrated-transformer": {
+      "title": "The Illustrated Transformer",
+      "description": "Discussions: Hacker News (65 points, 4 comments), Reddit r/MachineLearning (29 points, 3 comments) Translations: Arabic, Chinese (Simplified) 1, Chinese (Simplified) 2, French 1, French 2, Italian, Japanese, Korean…"
+    },
+    "https://jam.dev/?invite=631d06f3-d58a-4200-2705-26e158294736": {
+      "title": "Jam: Screen recorder for bugs, feedback, and ideas",
+      "description": "Jam is a screen recorder for software teams. Capture bugs, feedback, and ideas with available console logs, network requests, device details, and user events.",
+      "image": "/og-cache/b0573ebb7331.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#f8f8f8"
+    },
+    "https://jvns.ca/": {
+      "title": "Julia Evans",
+      "description": "Julia Evans",
+      "site": "Julia Evans"
+    },
+    "https://landing-ai.com/": {
+      "title": "Build Beautiful landing pages Instantly With AI | Makelanding",
+      "description": "Write about your project and get an entire landing page generated in seconds! Copy that sells, unique logo and illustrations, beautiful icons.",
+      "image": "/og-cache/b4a697584732.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#f8f8f8"
+    },
+    "https://learn.microsoft.com/en-us/clarity/mobile-sdk": {
+      "title": "Clarity for Mobile Apps",
+      "description": "Learn how to use Clarity for Mobile Apps.",
+      "image": "/og-cache/345f29494962.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#e8e8e8"
+    },
+    "https://letsencrypt.org/getting-started": {
+      "title": "Getting Started",
+      "description": "Let’s Encrypt issues certificates through an automated API based on the ACME protocol. In order to interact with the Let’s Encrypt API and get a certificate, a piece of software called an “ACME client” is required. No…",
+      "site": "Let's Encrypt",
+      "image": "/og-cache/bb951fd9e8f8.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#f8f8f8"
+    },
+    "https://littlecook.io/": {
+      "title": "littlecook | Your Digital Sous Chef",
+      "description": "Turn unused ingredients into delicious new dishes",
+      "site": "littlecook.io",
+      "image": "/og-cache/fa703177712b.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#789828"
+    },
+    "https://liveblocks.io/": {
+      "title": "Realtime and sync for the agentic web",
+      "description": "Liveblocks provides the infrastructure to handle concurrent edits on shared data, so people and AI agents can collaborate without breaking your app.",
+      "site": "Liveblocks",
+      "image": "/og-cache/e42f6fa84e3f.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#080808"
+    },
+    "https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh": {
+      "title": "Remote - SSH - Visual Studio Marketplace",
+      "description": "Extension for Visual Studio Code - Open any folder on a remote machine using SSH and take advantage of VS Code's full feature set.",
+      "image": "/og-cache/ab26d8d3c7a8.webp",
+      "width": 128,
+      "height": 128,
+      "color": "#3878c8"
+    },
+    "https://mnm.aashutosh.dev/": {
+      "title": "one word, both teams, 90 seconds",
+      "description": "A Pictionary host that runs the whole game from one phone. It deals the prompt, holds the clock, and keeps the tally - and keeps every team's phone on the same word with no network between them.",
+      "site": "Marker & Mayhem",
+      "image": "/og-cache/3cee6099a70b.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#181828"
+    },
+    "https://moreepisodes.com/": {
+      "title": "More Episodes!",
+      "description": "New episodes of your favorite TV Shows, written by GPT-4",
+      "image": "/og-cache/bffba84da225.webp",
+      "width": 600,
+      "height": 338,
+      "color": "#182838"
+    },
+    "https://murf.ai/": {
+      "title": "Leading AI Voice & Conversational Agent Platform - Murf AI",
+      "description": "Generate human-like speech and deploy Conversational agents with Murf AI. The complete AI Voice platform trusted by 10 million+ developers, businesses, and creators.",
+      "image": "/og-cache/8714637c40df.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#180828"
+    },
+    "https://neurosity.co/": {
+      "title": "Introducing the Crown | Neurosity",
+      "description": "Shift into focus. The Crown guides you into a focused state and helps you stay there. Hack your flow and free your code.",
+      "image": "/og-cache/827abb9be3a5.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#080808"
+    },
+    "https://news.agpt.co/": {
+      "title": "Your team of AI Experts",
+      "description": "Build your team of AI Experts for content, sales, research, and recurring work. Share the context, connect your tools, and let Otto coordinate.",
+      "site": "AutoGPT",
+      "image": "/og-cache/cf461f82fc46.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#f8f8f8"
+    },
+    "https://news.ycombinator.com/item?id=35429801": {
+      "title": "Ask HN: What lesser-known accessories do you use with your computer? | Hacker News"
+    },
+    "https://nextjs.org/": {
+      "title": "Next.js by Vercel - The React Framework",
+      "description": "Next.js by Vercel is the full-stack React framework for the web.",
+      "image": "/og-cache/c549f0f16a0d.webp",
+      "width": 600,
+      "height": 314,
+      "color": "#080808"
+    },
+    "https://nibbles.dev/": {
+      "title": "The Nibble | Substack",
+      "description": "quick bits that keep you updated on tech, life, and memes. Click to read The Nibble, a Substack publication with hundreds of subscribers.",
+      "image": "/og-cache/51ba34de18fc.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#080808"
+    },
+    "https://nodejs.org/en/blog/announcements/v20-release-announce": {
+      "title": "Node.js — Node.js 20 is now available!",
+      "description": "Node.js® is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts.",
+      "image": "/og-cache/b62b39808e94.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#080808"
+    },
+    "https://nownownow.com/about": {
+      "title": "about nownownow.com",
+      "description": "nownownow.com: personal websites with a /now page"
+    },
+    "https://obsidian.md/": {
+      "title": "Sharpen your thinking",
+      "description": "The free and flexible app for your private thoughts.",
+      "site": "Obsidian",
+      "image": "/og-cache/0307419d94e2.webp",
+      "width": 600,
+      "height": 344,
+      "color": "#080808"
+    },
+    "https://ocr.space/OCRAPI": {
+      "title": "Free OCR API",
+      "description": "Free OCR API. Code snippets for calling the REST API. The OCR API takes an image or multi-page PDF document as input."
+    },
+    "https://one-from-nippon.ghost.io/indo-curry": {
+      "title": "The Surprising Roots of Japan's Indian Curry",
+      "description": "It's been a while since our last post - life got in the way. A big thanks to everyone who reached out! We are now restarting our articles, though we might not always write once a week. If we don't think it's…",
+      "site": "One from Nippon",
+      "image": "/og-cache/32b247b00113.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#684838"
+    },
+    "https://only4.dev/": {
+      "title": "Mohit Kumar Yadav",
+      "description": "I am a Software Engineer based in Berlin, originally from RJ (India). I have worked with Flutter, Flask (Python) and JavaScript applications for 3+ years. Currently, I am working with React + Ruby.",
+      "image": "/og-cache/4764c02b1385.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#181818"
+    },
+    "https://openai.com/research/whisper": {
+      "title": "Introducing Whisper",
+      "description": "We’ve trained and are open-sourcing a neural net called Whisper that approaches human level robustness and accuracy on English speech recognition.",
+      "site": "OpenAI",
+      "image": "/og-cache/188838648035.webp",
+      "width": 600,
+      "height": 338,
+      "color": "#58d848"
+    },
+    "https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS": {
+      "title": "Regular expression Denial of Service - ReDoS | OWASP Foundation",
+      "description": "Regular expression Denial of Service - ReDoS on the main website for The OWASP Foundation. OWASP is a nonprofit foundation that works to improve the security of software."
+    },
+    "https://phys.org/news/2023-02-webb-massive-galaxies-early-universe.html": {
+      "title": "Webb spots surprisingly massive galaxies in early universe",
+      "description": "The James Webb Space Telescope has spotted six massive galaxies that emerged not long after the Big Bang, a study said Wednesday, surprising scientists by forming at a speed that contradicts our current understanding…",
+      "site": "Phys.org",
+      "image": "/og-cache/7ba295814843.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#383838"
+    },
+    "https://phys.org/news/2023-04-physicists-gravity.html": {
+      "title": "Physicists discover that gravity can create light",
+      "description": "Researchers have discovered that in the exotic conditions of the early universe, waves of gravity may have shaken space-time so hard that they spontaneously created radiation.",
+      "site": "Phys.org",
+      "image": "/og-cache/a561a2529b9e.webp",
+      "width": 600,
+      "height": 306,
+      "color": "#180808"
+    },
+    "https://play.vercel.ai/": {
+      "title": "AI Playground | Compare top AI models side-by-side",
+      "description": "Chat and compare OpenAI GPT, Anthropic Claude, Google Gemini, Llama, Mistral, and more."
+    },
+    "https://podio.com/site/creative-routines": {
+      "title": "Work Management Platform | Streamline Collaboration & Workflows | Podio",
+      "description": "Podio is the all-in-one work management software that helps teams collaborate, automate workflows, and manage projects with ease. Build custom solutions that drive productivity and efficiency.",
+      "site": "Progress.com",
+      "image": "/og-cache/e45f5e5fc803.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#58e808"
+    },
+    "https://programmablesearchengine.google.com/": {
+      "title": "Programmable Search Engine by Google",
+      "description": "Help people find what they need on your website. Add a customizable search box to your web pages and show fast, relevant results powered by Google.",
+      "site": "Programmable Search Engine by Google",
+      "image": "/og-cache/2a8235e0cc05.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#f8f8f8"
+    },
+    "https://proxyman.io/": {
+      "title": "Best HTTP Debugging Proxy for macOS, iOS, Android, Windows & Linux",
+      "description": "Proxyman is a native, high-performance HTTP debugging proxy app for macOS, iOS, Android, Windows, and Linux. Capture, inspect, and mock HTTP/HTTPS requests with ease. The best Charles Proxy and Fiddler alternative for…",
+      "site": "Proxyman",
+      "image": "/og-cache/7bfe7cc44ac6.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#f8f8f8"
+    },
+    "https://quietest.aashutosh.dev/": {
+      "title": "Quietest",
+      "description": "A Chrome extension that hides test files, mocks, and snapshots on GitHub pull requests, so you can review the code that matters.",
+      "site": "Quietest",
+      "image": "/og-cache/626efddb9328.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#081818"
+    },
+    "https://rc.toki.aashutosh.dev/": {
+      "title": "Toki Remote Control"
+    },
+    "https://rclone.org/": {
+      "title": "Rclone",
+      "description": "Rclone syncs your files to cloud storage: Google Drive, S3, Swift, Dropbox, Google Cloud Storage, Azure, Box and many more.",
+      "site": "Rclone",
+      "image": "/og-cache/dcf5365f938c.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#f8f8f8"
+    },
+    "https://react.gg/": {
+      "title": "The interactive way to master modern React – react.gg",
+      "description": "\"Just finished react.gg. Wow. The course is a masterpiece. Learned a lot, even after years of developing in React.\" – Austin Hale",
+      "image": "/og-cache/9257b49b387b.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#080808"
+    },
+    "https://reflect.app/": {
+      "title": "Reflect",
+      "description": "Capture ideas, connect notes, and keep your files in Markdown. Reflect Open is open source and free on Mac, with paid apps for iPhone and iPad.",
+      "image": "/og-cache/2a0eaa73cf03.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#080818"
+    },
+    "https://regex.ai/": {
+      "title": "AI-Powered Regex Solver",
+      "description": "AI-Powered Regex Regular Expression Generator and Solver. Discover how this powerful tool can help you automate your data extraction tasks and streamline your workflow.",
+      "image": "/og-cache/4e5298687324.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#282828"
+    },
+    "https://regexgpt.app/": {
+      "title": "RegExGPT",
+      "description": "Natural language RegEx powered by A.I.",
+      "site": "RegExGPT",
+      "image": "/og-cache/1f54477c0330.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#080808"
+    },
+    "https://regie.ai/": {
+      "title": "The AI Sales Assistant for Sellers",
+      "description": "AI agents that source, enrich, dial, and email from your own inbox, plus LinkedIn tasks. One workspace, $49/mo. Start free.",
+      "site": "Regie.ai",
+      "image": "/og-cache/d2f254c211a5.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#084838"
+    },
+    "https://roadmap.sh/": {
+      "title": "Developer Roadmaps",
+      "description": "Community driven roadmaps, articles and guides for developers to grow in their career.",
+      "site": "roadmap.sh",
+      "image": "/og-cache/2047bdc46cb1.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#080808"
+    },
+    "https://sealevel.nasa.gov/faq/9/are-sea-levels-rising-the-same-all-over-the-world-as-if-were-filling-a-giant-bathtub": {
+      "title": "Are sea levels rising the same all over the world, as if we're filling a giant bathtub?",
+      "description": "Visit NASA's portal for an in-depth look at the science behind sea level change.",
+      "site": "NASA Sea Level Change Portal"
+    },
+    "https://security.googleblog.com/2023/04/google-authenticator-now-supports.html": {
+      "title": "Google Authenticator now supports Google Account synchronization",
+      "description": "Christiaan Brand, Group Product Manager We are excited to announce an update to Google Authenticator , across both iOS and Android, which a...",
+      "site": "Google Online Security Blog",
+      "image": "/og-cache/512016145f97.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#080808"
+    },
+    "https://security.snyk.io/vuln/SNYK-JS-WORDWRAP-3149973": {
+      "title": "Snyk Vulnerability Database | Snyk",
+      "description": "Low severity (3.7) Regular Expression Denial of Service (ReDoS) in word-wrap | CVE-2023-26115",
+      "site": "Learn more about npm with Snyk Open Source Vulnerability Database",
+      "image": "/og-cache/1838fd441aeb.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#282848"
+    },
+    "https://seths.blog/": {
+      "title": "Seth's Blog",
+      "description": "Seth Godin's Blog on marketing, tribes and respect",
+      "site": "Seth's Blog",
+      "image": "/og-cache/7ffd6888b4e9.webp",
+      "width": 600,
+      "height": 314,
+      "color": "#282828"
+    },
+    "https://simonwillison.net/2023/May/4/no-moat": {
+      "title": "Leaked Google document: “We Have No Moat, And Neither Does OpenAI”",
+      "description": "SemiAnalysis published something of a bombshell leaked document this morning: Google “We Have No Moat, And Neither Does OpenAI”. The source of the document is vague: The text below is …",
+      "site": "Simon Willison’s Weblog",
+      "image": "/og-cache/414b94404d7f.webp",
+      "width": 600,
+      "height": 258,
+      "color": "#f8f8f8"
+    },
+    "https://sorcereroftea.com/punkpunk-a-to-z-of-punk-genres": {
+      "title": "Different punk: A to Z of punk genres",
+      "description": "Cyberpunk, Steampunk, Dieselpunk, Afropunk. Confused? The A to Z of punk genres will let you understand this colourful, and sometimes odd range of genres.",
+      "site": "Sorcerer of Tea",
+      "image": "/og-cache/802c8fe5f5d4.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#081828"
+    },
+    "https://spectrum.ieee.org/software-salaries-2023": {
+      "title": "Eight Graphs that Explain Software Engineering Salaries in 2023",
+      "description": "Tech professionals’ pay by programming skills, job functions, regions, and more",
+      "site": "IEEE Spectrum",
+      "image": "/og-cache/9b28b38e3add.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#583878"
+    },
+    "https://stability.ai/": {
+      "title": "Stability AI",
+      "description": "Stability AI is the enterprise-ready creative partner for teams and creators, delivering professional-grade generative AI tools and solutions for content production at scale.",
+      "site": "Stability AI",
+      "image": "/og-cache/7f2fdd408634.webp",
+      "width": 600,
+      "height": 314,
+      "color": "#383838"
+    },
+    "https://stackoverflow.blog/2023/03/28/the-next-gen-web-browser-has-no-tabs-only-spaces-ep-549": {
+      "title": "The next gen web browser has no tabs, only spaces (Ep. 554) - Stack Overflow",
+      "description": "Ben and Cassidy sit down with The Browser Company to talk about reimagining the web browser—and the way we use the internet.",
+      "image": "/og-cache/0917761bf7e5.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#f8f8f8"
+    },
+    "https://store.google.com/product/pixel_9_pro": {
+      "title": "Google Pixel 11 Phones",
+      "description": "Find the right smartphone for you",
+      "site": "Google Store",
+      "image": "/og-cache/74e46b3b2a63.webp",
+      "width": 512,
+      "height": 269,
+      "color": "#e8e8e8"
+    },
+    "https://store.google.com/product/pixel_buds_pro_2": {
+      "title": "Pixel Buds Pro 2",
+      "description": "Immersive Audio, Comfortable Fit",
+      "site": "Google Store",
+      "image": "/og-cache/ff5cb8de7ecf.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#f8f8f8"
+    },
+    "https://support.microsoft.com/en-us/windows/windows-xp-support-has-ended-47b944b8-f4d3-82f2-9acc-21c79ee6ef5e": {
+      "title": "What does it mean if Windows isn't supported? | Microsoft Support",
+      "description": "Learn what it means if you have an older version of Windows that's no longer supported."
+    },
+    "https://t.me/git_profile_bot": {
+      "title": "GitHub Profiler",
+      "description": "Send a GitHub username to bot and it will send you basic profile overview next moment.",
+      "site": "Telegram",
+      "image": "/og-cache/fbf322703c2f.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#f8f8f8"
+    },
+    "https://tcgen.aashutosh.dev/": {
+      "title": "Testcase Generator",
+      "description": "⚡️ Handy script for HackerRank, HackerEarth and CodeChef TCs Generation.",
+      "site": "Testcase-Generator"
+    },
+    "https://techcommunity.microsoft.com/t5/microsoft-teams-blog/microsoft-teams-advantages-of-the-new-architecture/ba-p/3775704": {
+      "title": "Microsoft Teams: Advantages of the new architecture | Microsoft Community Hub",
+      "description": "Microsoft Teams has made a significant investment in the re-architecture of its desktop client, with a focus on providing a simpler user experience. This...",
+      "site": "TECHCOMMUNITY.MICROSOFT.COM",
+      "image": "/og-cache/6b62b8ee6b22.webp",
+      "width": 600,
+      "height": 379,
+      "color": "#f8f8f8"
+    },
+    "https://techcrunch.com/2023/04/13/google-says-it-just-made-chrome-a-lot-faster-on-both-mac-and-android": {
+      "title": "Google says it just made Chrome a lot faster on both Mac and Android",
+      "description": "Google has made several under-the-hood performance improvements to its popular browser, Chrome.",
+      "site": "TechCrunch"
+    },
+    "https://techcrunch.com/2023/04/18/reddit-will-begin-charging-for-access-to-its-api": {
+      "title": "Reddit will begin charging for access to its API",
+      "description": "Reddit says that it'll begin charging certain developers and organizations for access to its user-generated content.",
+      "site": "TechCrunch",
+      "image": "/og-cache/f7919a9bd232.webp",
+      "width": 600,
+      "height": 400,
+      "color": "#e83828"
+    },
+    "https://theintercept.com/2023/04/08/twitter-dmca-github-musk": {
+      "title": "Twitter Deploys Classic Musk Tactics to Hunt Down Leaker",
+      "description": "The social media platform’s copyright infringement claim against GitHub shows that websites can be compelled to violate users' privacy.",
+      "site": "The Intercept",
+      "image": "/og-cache/c7aa72427742.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#080808"
+    },
+    "https://thumbnailtest.com/": {
+      "title": "Run A/B Tests for YouTube Videos",
+      "description": "Find out which thumbnail wins more clicks. Thumbnail Test is the #1 alternative to YouTube Test & Compare for thumbnails and titles.",
+      "site": "Thumbnail Test",
+      "image": "/og-cache/64f68a5a391a.webp",
+      "width": 600,
+      "height": 338,
+      "color": "#080808"
+    },
+    "https://toki.aashutosh.dev/": {
+      "title": "Toki",
+      "description": "A native macOS menu bar app that tracks usage and spend across Claude Code, Codex, Cursor, and more, and lets you answer a waiting agent from your phone.",
+      "site": "Toki",
+      "image": "/og-cache/8a9d815752c3.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#f8f8e8"
+    },
+    "https://toolbuilder.ai/": {
+      "title": "BANDOTSLOT: Situs Slot Gacor Terbaru Bandar Slot Jackpot Hari Ini",
+      "description": "BANDOTSLOT adalah situs bandar slot online pilihan, menyediakan slot gacor jackpot terbaru hari ini paling banyak diminati dan dicari bagi pecinta slot tanah air saat ini.",
+      "image": "/og-cache/015baed6747b.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#080808"
+    },
+    "https://trpc.io/?ref=aashutosh.dev": {
+      "title": "tRPC - Move Fast and Break Nothing. End-to-end typesafe APIs made easy. | tRPC",
+      "description": "End-to-end typesafe APIs made easy. Automatic typesafety & autocompletion inferred from your API-paths, their input data, & outputs 🧙‍♂️",
+      "image": "/og-cache/9998d5dad92f.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#181818"
+    },
+    "https://twitter-algorithm.vercel.app/": {
+      "title": "Twitter Algorithm Rank Validator",
+      "description": "See how your tweet performs against Twitter's Open Source algorithm.",
+      "image": "/og-cache/561ffe076a46.webp",
+      "width": 500,
+      "height": 263,
+      "color": "#080808"
+    },
+    "https://twitter.com/8priteshj/status/1647609527376683009?s=20": {
+      "title": "Pritesh Jain (@8priteshj) on X",
+      "description": "@rgiit888 Beautiful! BTW, this pattern in tree growth is called Crown shyness. It is a naturally occurring phenomenon in some tree species where the uppermost branches in a forest canopy avoid touching one another. The…",
+      "site": "X (formerly Twitter)",
+      "image": "/og-cache/a1d455f7cde0.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#b8c8e8"
+    },
+    "https://twitter.com/AashutoshRathi/status/1639617444917518341": {
+      "title": "Aashutosh (@AashutoshRathi) on X",
+      "description": "What is the ideal frequency of newsletters delivering tiny bits of important and interesting stuff?",
+      "site": "X (formerly Twitter)",
+      "image": "/og-cache/4356d05776c7.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#282838"
+    },
+    "https://twitter.com/chrisatmachine/status/1643752250752507906?t=54oXCt-ddwU1ZgpeAtW64Q&s=19": {
+      "title": "Chris (@chrisatmachine) on X",
+      "description": "Apparently the #Bitcoin whitepaper is hidden on all mac devices, you can check by opening this pdf: open /System/Library/Image\\ Capture/Devices/VirtualScanner.app/Contents/Resources/simpledoc.pdf",
+      "site": "X (formerly Twitter)",
+      "image": "/og-cache/8d9de085e1b8.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#c85838"
+    },
+    "https://twitter.com/george__mack/status/1649835213982408704?t=D90fYvYWhFvuCJCQC4xFmw&s=19": {
+      "title": "George Mack (@george__mack) on X",
+      "description": "The most useful razors and rules I've found. Rules of thumb that simplify decisions:",
+      "site": "X (formerly Twitter)",
+      "image": "/og-cache/bfec9b251e56.webp",
+      "width": 600,
+      "height": 376,
+      "color": "#f8f8f8"
+    },
+    "https://twitter.com/karpathy/status/1647372603907280896?s=20": {
+      "title": "Andrej Karpathy (@karpathy) on X",
+      "description": "Fun weekend hack: https://t.co/l6uyNmrXmu 🎥Took all 11,768 movies since 1970 🧮Took each movie's Summary+Plot from Wikipedia, embedded it with OpenAI API (ada-002) 📃 Wrapped it up into a movie search/recommendation…",
+      "site": "X (formerly Twitter)",
+      "image": "/og-cache/d8c316e19b32.webp",
+      "width": 600,
+      "height": 350,
+      "color": "#080808"
+    },
+    "https://twitter.com/levelsio/status/1654455407916756992?s=20": {
+      "title": "@levelsio (@levelsio) on X",
+      "description": "One guy deadlifts for mental clarity One guy doesn’t",
+      "site": "X (formerly Twitter)",
+      "image": "/og-cache/898dd3ba0efe.webp",
+      "width": 600,
+      "height": 400,
+      "color": "#e8e8e8"
+    },
+    "https://twitter.com/localghost/status/1644068688902127616?s=20": {
+      "title": "Aaron Ng (@localghost) on X",
+      "description": "Apollo: a ChatGPT-powered app for real-time knowledge. Talk to it all day long through your headphones. If augmented reality is an overlay on the world, this is augmented intelligence — an overlay on your thoughts…",
+      "site": "X (formerly Twitter)",
+      "image": "/og-cache/a97550a705df.webp",
+      "width": 600,
+      "height": 338,
+      "color": "#584848"
+    },
+    "https://twitter.com/NativeScript/status/1642059224963485696": {
+      "title": "NativeScript (@NativeScript) on X",
+      "description": "📢 Announcing ... jQuery Support! 🙌 Enjoy all the nostalgia with {N} 🙌 Try now on @stackblitz 👇 https://t.co/mNT0kxjbhV import $ from 'jquery' $('you').text('are awesome').animate({ scaleX: 10, }, 420, () => { //…",
+      "site": "X (formerly Twitter)",
+      "image": "/og-cache/dcef7f1fd1c8.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#f8f8f8"
+    },
+    "https://twitter.com/shuding_/status/1475916082875666441?s=20": {
+      "title": "Shu (@shuding) on X",
+      "description": "I made https://t.co/I0YSkt5x0R a while ago: a 5kB globe lib, and it improved our page performance* by almost 60%. How is it created? Time for a WebGL & shader thread!",
+      "site": "X (formerly Twitter)",
+      "image": "/og-cache/5cc57e01af1a.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#080808"
+    },
+    "https://twitter.com/swyx/status/1650989632413401089?s=20": {
+      "title": "swyx (@swyx) on X",
+      "description": ".@Replit just announced their own LLaMa style code LLM at their developer day! replit-code-v1-3b - 2.7b params - 20 languages - 525B tokens (“20x Chinchilla?”) - beats all open source code models on HumanEval benchmark…",
+      "site": "X (formerly Twitter)",
+      "image": "/og-cache/4a62cf97b25c.webp",
+      "width": 600,
+      "height": 450,
+      "color": "#080818"
+    },
+    "https://twitter.com/TiyaTwts/status/1646219314788278277": {
+      "title": "Tiya (@TiyaTwts) on X",
+      "description": "Tech Opportunities you can't Afford to Miss in April: A Thread 🧵",
+      "site": "X (formerly Twitter)",
+      "image": "/og-cache/d2d5cf571632.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#180808"
+    },
+    "https://twitter.com/year_progress/status/1642406532556943360?t=YKFDLRU9TG9gqay_xLmmAQ&s=19": {
+      "title": "Years Progress (@year_progress) on X",
+      "description": "▓▓▓▓░░░░░░░░░░░ 25%",
+      "site": "X (formerly Twitter)",
+      "image": "/og-cache/9ce14914b865.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#080808"
+    },
+    "https://twoam.dev/": {
+      "title": "2AM Developers",
+      "description": "We don't sleep until the problem's solved."
+    },
+    "https://txt.cohere.ai/what-are-transformer-models": {
+      "title": "What Are Transformer Models and How Do They Work?",
+      "description": "Explore the fundamentals of transformer models, which have revolutionized natural language processing.",
+      "site": "Cohere",
+      "image": "/og-cache/b2410769da7f.webp",
+      "width": 600,
+      "height": 304,
+      "color": "#c8b8c8"
+    },
+    "https://ui.dev/": {
+      "title": "JavaScript, but fun.",
+      "description": "We help JavaScript developers make more money - and enjoy themselves in the process.",
+      "site": "Fireship",
+      "image": "/og-cache/2c54f966a6c3.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#281818"
+    },
+    "https://unzip.dev/0x011-sbom": {
+      "title": "SBOM 📔 Explained",
+      "description": "Problem: It’s very hard to have visibility into your dependencies and mitigate software supply chain attacks. Solution: A standardized, machine-readable list of components that make up your software.",
+      "site": "Unzip.dev",
+      "image": "/og-cache/4a3d676b9da3.webp",
+      "width": 599,
+      "height": 373,
+      "color": "#f8f8f8"
+    },
+    "https://unzip.dev/0x012-trpc": {
+      "title": "tRPC 🪢 Explained",
+      "description": "Problem: It’s hard and bug-prone to share API endpoints (including types) between our server and client. Solution: tRPC leverages TypeScript to share types between the server and client without code generation or…",
+      "site": "Unzip.dev",
+      "image": "/og-cache/068f2e0b10d7.webp",
+      "width": 599,
+      "height": 378,
+      "color": "#f8f8f8"
+    },
+    "https://utcc.utoronto.ca/~cks/space/blog/web/AvoidingHTTP3ForNow": {
+      "title": "You're using a too-old browser"
+    },
+    "https://vercel.com/blog/vercel-storage": {
+      "title": "Introducing storage on Vercel",
+      "description": "New to the Vercel dashboard: Vercel KV, Vercel Postgres, and Vercel Blob. Announcing serverless storage solutions available on Vercel.",
+      "site": "Vercel",
+      "image": "/og-cache/4831ea1fa8a3.webp",
+      "width": 600,
+      "height": 338,
+      "color": "#180808"
+    },
+    "https://vocs.dev/": {
+      "title": "Vocs",
+      "description": "Publish docs that stay simple at the source and rich in the browser.",
+      "site": "Vocs",
+      "image": "/og-cache/784d90c4d209.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#181818"
+    },
+    "https://wandb.ai/wandb/wb-announcements/reports/Introducing-W-B-Prompts-The-Present-Future-of-LLMOps--Vmlldzo0MTI4NjY5": {
+      "title": "Forge"
+    },
+    "https://web.archive.org/web/20230325060104/https://www.nokiapure.com": {
+      "title": "Nokia Pure",
+      "description": "Nokia Pure is a new design system that has been created to produce consistent, flexible and future-proof digital products.",
+      "site": "Nokia Pure",
+      "image": "/og-cache/0f20665e1035.webp",
+      "width": 600,
+      "height": 338,
+      "color": "#0868f8"
+    },
+    "https://web.dev/import-maps-in-all-modern-browsers": {
+      "title": "JavaScript import maps are now supported cross-browser | Blog",
+      "site": "web.dev"
+    },
+    "https://web.dev/pwas-in-app-stores": {
+      "title": "PWAs in app stores",
+      "description": "Progressive Web Apps can be submitted to app stores like the Android Play Store or the Microsoft Store and more.",
+      "site": "web.dev",
+      "image": "/og-cache/f8fc6b131006.webp",
+      "width": 600,
+      "height": 338,
+      "color": "#f8f8f8"
+    },
+    "https://webgpufundamentals.org/": {
+      "title": "WebGPU Fundamentals",
+      "description": "Learn webgpu"
+    },
+    "https://whisperize.me/": {
+      "title": "WhisperBot - Read you voice messages.",
+      "description": "Turn your WhatsApp voice messages into text 💬",
+      "site": "WhisperBot - Read you voice messages.",
+      "image": "/og-cache/ad8cb348dca0.webp",
+      "width": 600,
+      "height": 316,
+      "color": "#f8f8f8"
+    },
+    "https://wikiscroll.blankenship.io/": {
+      "title": "WikiScroll"
+    },
+    "https://world.hey.com/dhh/even-amazon-can-t-make-sense-of-serverless-or-microservices-59625580": {
+      "title": "Even Amazon can't make sense of serverless or microservices",
+      "description": "The Prime Video team at Amazon has published a rather remarkable case study on their decision to dump their serverless, microservices architecture and replace it with a monolith instead. This move saved them a…",
+      "image": "/og-cache/52364eec9c40.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#b8d8c8"
+    },
+    "https://worldtravelfamily.com/where-is-egypt-located": {
+      "title": "Where is Egypt Located?",
+      "description": "Egypt is located in North Africa, the Middle East, and Asia, making its geography very interesting indeed. It is a transcontinental country and there aren't very many of those. Likewise, the Middle East is a…",
+      "site": "World Travel Family",
+      "image": "/og-cache/9ca7a7736e6d.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#d8b898"
+    },
+    "https://www.3dnatives.com/en/cobod-printer-used-for-indias-first-2-story-3d-printed-building-180120216": {
+      "title": "COBOD printer used for India's first 2-Story 3D printed building",
+      "description": "L&T Construction used a COBOD printer for India's first 2-Story 3D Printed building. One of only a few to be 3D printed with real concrete.",
+      "site": "3Dnatives",
+      "image": "/og-cache/36bf4f34186c.webp",
+      "width": 600,
+      "height": 353,
+      "color": "#98d8f8"
+    },
+    "https://www.amazon.in/dp/B0CWS3V8QN": {
+      "title": "Amazon.in"
+    },
+    "https://www.apple.com/in/shop/buy-ipad/ipad": {
+      "title": "Buy iPad",
+      "description": "Get a new iPad from only ₹3908.00 per month with No Cost EMI. Enjoy free custom engraving and delivery, only at Apple.",
+      "site": "Apple (IN)",
+      "image": "/og-cache/be122cea1906.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#f8f8f8"
+    },
+    "https://www.atlasobscura.com/articles/null-island-is-one-of-the-most-visited-places-on-earth-too-bad-it-doesnt-exist": {
+      "title": "Null Island Is One of the Most Visited Places on Earth. Too Bad It Doesn't Exist",
+      "description": "The ocean spot is the center of the world's geocoded map mistakes.",
+      "site": "Atlas Obscura",
+      "image": "/og-cache/d673992ce55e.webp",
+      "width": 512,
+      "height": 384,
+      "color": "#f8f8f8"
+    },
+    "https://www.builder.io/": {
+      "title": "Builder.io: Collaborative Platform to Build With AI Agents",
+      "description": "One codebase for engineers, designers, PMs, and marketers. Everyone works from one source of truth, on brand and in code, with no handoffs to clean up.",
+      "site": "Builder.io",
+      "image": "/og-cache/5c348bbee4eb.webp",
+      "width": 600,
+      "height": 338,
+      "color": "#080808"
+    },
+    "https://www.builder.io/blog/visual-guide-to-nodejs-event-loop": {
+      "title": "A Complete Visual Guide to Understanding the Node.js Event Loop",
+      "description": "You've been working with Node.js for a while. But there's something that's been nagging at you — the event loop. Learn more in this event loop guide.",
+      "site": "Builder.io",
+      "image": "/og-cache/c0bf762aa11a.webp",
+      "width": 600,
+      "height": 338,
+      "color": "#181818"
+    },
+    "https://www.chegg.com/": {
+      "title": "Chegg - Get 24/7 Homework Help | Study Support Across 50+ Subjects",
+      "description": "Innovative learning tools. 24/7 support. All in one place. Homework help for relevant study solutions, step-by-step support, and real experts."
+    },
+    "https://www.cisa.gov/sbom": {
+      "title": "Software Bill of Materials (SBOM) | CISA",
+      "site": "Cybersecurity and Infrastructure Security Agency CISA"
+    },
+    "https://www.databricks.com/blog/2023/03/24/hello-dolly-democratizing-magic-chatgpt-open-models.html": {
+      "title": "Hello Dolly: Democratizing the magic of ChatGPT with open models",
+      "description": "Introducing 'Hello Dolly,' a project to democratize AI by integrating ChatGPT and open models, making advanced AI accessible to everyone.",
+      "site": "Databricks",
+      "image": "/og-cache/5af241fd4fa8.webp",
+      "width": 600,
+      "height": 314,
+      "color": "#e8e8f8"
+    },
+    "https://www.datasciencecentral.com/will-coding-jobs-cease-to-exist-in-three-years": {
+      "title": "TechTarget - Global Network of Information Technology Websites and Contributors"
+    },
+    "https://www.deepmind.com/blog/announcing-google-deepmind": {
+      "title": "Announcing Google DeepMind",
+      "description": "DeepMind and the Brain team from Google Research will join forces to accelerate progress towards a world in which AI helps solve the biggest challenges facing humanity.",
+      "site": "Google DeepMind",
+      "image": "/og-cache/364e77c43553.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#f8f8f8"
+    },
+    "https://www.docker.com/": {
+      "title": "Docker: Accelerated Container Application Development",
+      "description": "Docker is a platform designed to help developers build, share, and run container applications. We handle the tedious setup, so you can focus on the code.",
+      "site": "Docker",
+      "image": "/og-cache/8b4df6002eda.webp",
+      "width": 600,
+      "height": 314,
+      "color": "#0868c8"
+    },
+    "https://www.fitbit.com/global/us/products/trackers/inspire2": {
+      "title": "Fitbit Inspire 3",
+      "description": "Stay on top of your stress, fitness, and sleep with the new Fitbit Inspire 3 smartwatch through health metric tracking and daily scores.",
+      "site": "Google Store",
+      "image": "/og-cache/2d03fcc291a2.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#f8f8f8"
+    },
+    "https://www.goodreads.com/en/book/show/29093292": {
+      "title": "The Daily Stoic: 366 Meditations on Wisdom, Perseveranc…",
+      "description": "Alternate cover edition of ISBN 9780735211735. A beaut…",
+      "site": "Goodreads",
+      "image": "/og-cache/454427bb54a5.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#f8f8e8"
+    },
+    "https://www.greensoul.online/products/green-soul-elevate-multi-purpose-adjustable-table": {
+      "title": "Height Adjustable Study Table – Elevate Electric Desk | Green Soul",
+      "description": "Elevate electric height adjustable study table with digital screen & sedentary alarm. Adjusts 72–117cm. Ideal for students & home study. ₹19,990. 3-year warranty. EMI available."
+    },
+    "https://www.historydefined.net/how-killing-sparrows-led-to-one-of-the-greatest-famines-in-history": {
+      "title": "How Killing Sparrows Led to Famine in China",
+      "description": "Learn about the devastating consequences that followed when the Mao's Chinese government ordered the mass killing of sparrows.",
+      "site": "History Defined -",
+      "image": "/og-cache/16928c1a1374.webp",
+      "width": 600,
+      "height": 450,
+      "color": "#e8c8a8"
+    },
+    "https://www.instagram.com/p/C_tEQ6RMWak": {
+      "title": "Instagram"
+    },
+    "https://www.justinweiss.com/articles/how-to-get-from-theyre-to-theyre": {
+      "title": "How to get from theyâ€™re to they’re",
+      "site": "Justin Weiss",
+      "image": "/og-cache/180e05e05de6.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#f8f8f8"
+    },
+    "https://www.kron4.com/news/bay-area/why-isnt-the-golden-gate-bridge-gold": {
+      "title": "Why isn’t the Golden Gate Bridge gold?",
+      "description": "SAN FRANCISCO (KRON) – It’s a question a lot of people gazing through the fog upon the almost one million tons of steel we call the Golden Gate Bridge have — why is the bridge reddish a…",
+      "site": "KRON4",
+      "image": "/og-cache/9752727b9bd1.webp",
+      "width": 512,
+      "height": 341,
+      "color": "#b8b8b8"
+    },
+    "https://www.legittorrents.info/": {
+      "title": "Legit Torrents - Legal Torrents, Free Media",
+      "description": "Download free and legal torrents. Music, movies, games, software and more! Legit Torrents is the biggest and best free and legal torrent tracker."
+    },
+    "https://www.mage.space/": {
+      "title": "Unlimited AI Image & Video Generator — Free to Start",
+      "description": "Mage Space: unlimited AI image, video, and audio generation with frontier models in one place. Free to start and private by default.",
+      "site": "Mage",
+      "image": "/og-cache/24244ad0a7e6.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#080808"
+    },
+    "https://www.memecam.io/": {
+      "title": "MemeCam",
+      "description": "Can AI generate memes?",
+      "site": "MemeCam",
+      "image": "/og-cache/bdc511b8ab74.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#585848"
+    },
+    "https://www.microsoft.com/en-us/microsoft-loop": {
+      "title": "Microsoft Loop: Collaborative App | Microsoft 365",
+      "description": "Collaborate in real time with Microsoft Loop. Organize tasks, share ideas, and integrate workflows across teams. Start using Loop today to boost productivity."
+    },
+    "https://www.modular.com/mojo": {
+      "title": "Mojo",
+      "description": "The Mojo programming language",
+      "image": "/og-cache/576d1f9aff2b.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#181818"
+    },
+    "https://www.multion.ai/": {
+      "title": "AGI, Inc. | Private action AI for phones and devices",
+      "description": "AGI, Inc. builds AGI-0, a small action model, and an agent that sees the screen and acts across any app on Android. No APIs or integrations, private by design.",
+      "image": "/og-cache/b9cf90dd0747.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#f8f8f8"
+    },
+    "https://www.nginx.com/": {
+      "title": "F5 NGINX: Built for cloud-native apps. Ready for AI traffic.",
+      "description": "Deliver modern applications with NGINX. Explore high-performance load balancing, API gateways, and web server solutions trusted by top global enterprises.",
+      "site": "F5, Inc.",
+      "image": "/og-cache/9ea4c5a71cef.webp",
+      "width": 500,
+      "height": 282,
+      "color": "#080808"
+    },
+    "https://www.opera.com/one": {
+      "title": "Opera One | The browser built for beginnings | Opera",
+      "description": "Opera One is the browser built for beginnings, big and small. Clear the noise, block ads, and reach your tools without leaving the page. Free to download for Mac, Windows, and Linux.",
+      "image": "/og-cache/855427649fc0.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#f8f8e8"
+    },
+    "https://www.pixxel.space/": {
+      "title": "Pixxel | The Planetary Infrastructure Company",
+      "description": "Pixxel is a planetary infrastructure company combining advanced Earth observation, space systems, and intelligent software to better understand Earth.",
+      "image": "/og-cache/4c97a9dfcfda.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#080808"
+    },
+    "https://www.postman.com/": {
+      "title": "API engineering for your agents",
+      "description": "Go faster from development to production with higher accuracy and fewer tokens.",
+      "image": "/og-cache/4708873234ed.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#080808"
+    },
+    "https://www.primevideotech.com/video-streaming/scaling-up-the-prime-video-audio-video-monitoring-service-and-reducing-costs-by-90": {
+      "title": "Entertainment",
+      "description": "Amazon produces and delivers to customers world-class entertainment via Prime Video, Amazon MGM Studios, MGM+, Amazon Music, Audible, Wondery, Amazon Games, and Twitch. Amazon’s entertainment properties empower…",
+      "site": "Amazon News",
+      "image": "/og-cache/0c2dd1b493ae.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#080818"
+    },
+    "https://www.pullnow.com/": {
+      "title": "PullNow.com is for sale",
+      "description": "Choose a memorable domain name. Professional, friendly customer support. Start using your domain right away.",
+      "site": "HugeDomains",
+      "image": "/og-cache/561ff7014492.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#5878c8"
+    },
+    "https://www.pump.co/": {
+      "title": "Pump - The Intelligent Cloud Platform",
+      "description": "One platform to monitor, optimize, and manage your cloud. No engineering required. #GetPumped",
+      "image": "/og-cache/f049fc605c04.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#28f858"
+    },
+    "https://www.raycast.com/": {
+      "title": "Raycast - Your shortcut to everything",
+      "description": "A collection of powerful productivity tools all within an extendable launcher.",
+      "image": "/og-cache/0d173c523cb2.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#080808"
+    },
+    "https://www.raycast.com/ai": {
+      "title": "Meet your new virtual assistant",
+      "description": "Raycast AI uses the tools you already rely on to get work done.",
+      "image": "/og-cache/54ad9065ce9c.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#080808"
+    },
+    "https://www.rewind.ai/": {
+      "title": "Every AI Tool, Free to Start",
+      "description": "The world's best free AI tools. Chat, generate images, create videos, write content, code and more. Most tools need no sign up.",
+      "site": "Rewind.ai",
+      "image": "/og-cache/d17beb22ce2a.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#f8f8f8"
+    },
+    "https://www.rewind.ai/privacy-first": {
+      "title": "What Happened to Rewind AI? (Timeline + What's Here Now)",
+      "description": "Rewind AI rebranded to Limitless, was acquired by Meta, and shut down on December 19, 2025. Full timeline — plus what lives at Rewind.ai today.",
+      "site": "Rewind.ai"
+    },
+    "https://www.semafor.com/article/04/25/2023/theres-a-new-ai-unicorn-that-will-make-coders-faster": {
+      "title": "There’s a new AI unicorn that will make coders faster",
+      "description": "Startup Replit just closed a fundraising round that pushes its valuation to about $1.2 billion as its popularity surges among software developers.",
+      "image": "/og-cache/dbd3e4b9a38c.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#181838"
+    },
+    "https://www.sequoiacap.com/article/ai-powered-developer-tools": {
+      "title": "Developer Tools 2.0 | Sequoia Capital",
+      "description": "Generative AI stands to change how work happens in one industry after another. But software engineering’s transformation isn’t done yet.",
+      "image": "/og-cache/1dea7099f562.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#7898b8"
+    },
+    "https://www.space.com/spacex-launches-1st-5g-satellite-internet-of-things": {
+      "title": "SpaceX launches world's 1st 5G satellite to bring global connectivity to Internet of Things",
+      "description": "The Sateliot \"GroundBreaker\" is the first of a constellation of over 250 spacecraft.",
+      "site": "Space",
+      "image": "/og-cache/d62b42295601.webp",
+      "width": 600,
+      "height": 338,
+      "color": "#080808"
+    },
+    "https://www.supaglue.com/": {
+      "title": "SupaGlue.com is for sale",
+      "description": "Great domain names provide SEO, branding, and a memorable experience for your users. Get a premium domain today.",
+      "site": "HugeDomains",
+      "image": "/og-cache/561ff7014492.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#5878c8"
+    },
+    "https://www.thepushkarp.com/": {
+      "title": "Pushkar Patel",
+      "description": "Pushkar Patel is an ML engineer working on model training and infrastructure. Writing, notes, and projects on AI, ML systems, and etymology.",
+      "site": "Pushkar Patel",
+      "image": "/og-cache/2f2dac6475f7.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#080808"
+    },
+    "https://www.theverge.com/2023/2/7/23587767/microsoft-google-open-ai-battle-search-bing": {
+      "title": "Microsoft and Google are about to Open an AI battle",
+      "description": "The two tech giants are on course to butt heads again.",
+      "site": "The Verge",
+      "image": "/og-cache/32125aadc7a3.webp",
+      "width": 600,
+      "height": 312,
+      "color": "#08b8e8"
+    },
+    "https://www.theverge.com/2023/3/30/23662130/arc-mobile-browser-hands-on-ios": {
+      "title": "Arc’s mobile browser is here — and it’s not really a web browser at all",
+      "description": "It won’t replace your default browser, but it might make you want to.",
+      "site": "The Verge",
+      "image": "/og-cache/10199458e3cb.webp",
+      "width": 600,
+      "height": 312,
+      "color": "#080808"
+    },
+    "https://www.theverge.com/2023/4/3/23665477/mullvad-browser-tor-vpn-privacy-browser": {
+      "title": "The Tor Project’s new privacy-focused browser doesn’t use the Tor network",
+      "description": "It’s not a privacy silver-bullet, but could be a good first step.",
+      "site": "The Verge",
+      "image": "/og-cache/8e6a39ce4de9.webp",
+      "width": 600,
+      "height": 312,
+      "color": "#080808"
+    },
+    "https://www.tutorialspoint.com/sdlc/sdlc_overview.htm": {
+      "title": "SDLC - Overview",
+      "description": "Software Development Life Cycle (SDLC) is a process used by the software industry to design, develop and test high quality softwares. The SDLC aims to produce a high-quality software that meets or exceeds customer…",
+      "image": "/og-cache/744621d013af.webp",
+      "width": 436,
+      "height": 228,
+      "color": "#080808"
+    },
+    "https://www.twitch.tv/ThePrimeagen": {
+      "title": "ThePrimeagen",
+      "description": "CEO @ TheStartup™ (multi-billion)Stuck in Vim Wishing it was Emacs — ThePrimeagen streams live on Twitch! Check out their videos, sign up to chat, and join their community.",
+      "site": "Twitch",
+      "image": "/og-cache/75fa96b9087c.webp",
+      "width": 160,
+      "height": 160,
+      "color": "#080808"
+    },
+    "https://www.unitary.ai/": {
+      "title": "Unitary",
+      "description": "Unitary's blended team of AI agents and expert humans carry out customer and marketplace operations tasks with high accuracy, allowing businesses to minimise costs and prepare for scale."
+    },
+    "https://www.warp.dev/": {
+      "title": "Open Infrastructure for Cloud Software Factories",
+      "description": "Build your software factory on Warp: factories as code, any model or harness, with evals, benchmarks, and self-improvement built in.",
+      "site": "Warp",
+      "image": "/og-cache/098a1970f606.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#181818"
+    },
+    "https://www.worldatlas.com/articles/why-was-the-panama-canal-built.html": {
+      "title": "Why Was The Panama Canal Built?",
+      "description": "The Panama Canal is a waterway linking the Pacific and Atlantic oceans. Its construction made international trade easier, cheaper and more convenient.",
+      "site": "WorldAtlas",
+      "image": "/og-cache/6adbb50499aa.webp",
+      "width": 600,
+      "height": 400,
+      "color": "#e8e8f8"
+    },
+    "https://www.ynharari.com/book/sapiens-2": {
+      "title": "21 Lessons for the 21st Century",
+      "site": "Yuval Noah Harari",
+      "image": "/og-cache/286275de923c.webp",
+      "width": 600,
+      "height": 432,
+      "color": "#080808"
+    },
+    "https://www.youtube.com/watch?v=-HYbFm67Gs8": {
+      "title": "- YouTube",
+      "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube."
+    },
+    "https://www.youtube.com/watch?v=9BUrNe3Vhtk": {
+      "title": "- YouTube",
+      "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube."
+    },
+    "https://www.youtube.com/watch?v=cDdv7q4jtiY&t=6s": {
+      "title": "- YouTube",
+      "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube."
+    },
+    "https://www.youtube.com/watch?v=cwyH59nACzQ": {
+      "title": "- YouTube",
+      "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube."
+    },
+    "https://www.youtube.com/watch?v=DeiATy-FfjI": {
+      "title": "- YouTube",
+      "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube."
+    },
+    "https://www.youtube.com/watch?v=Dyo8915RzUU": {
+      "title": "- YouTube",
+      "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube."
+    },
+    "https://www.youtube.com/watch?v=lnA9DMvHtfI&t=0s": {
+      "title": "- YouTube",
+      "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube."
+    },
+    "https://www.youtube.com/watch?v=qQk94CjRvIs": {
+      "title": "- YouTube",
+      "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube."
+    },
+    "https://www.youtube.com/watch?v=SsoOG6ZeyUI": {
+      "title": "- YouTube",
+      "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube."
+    },
+    "https://www.youtube.com/watch?v=SZorAJ4I-sA": {
+      "title": "- YouTube",
+      "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube."
+    },
+    "https://www.youtube.com/watch?v=twGcjDnOb_U": {
+      "title": "- YouTube",
+      "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube."
+    },
+    "https://www.youtube.com/watch?v=UYtQ_snhqzo": {
+      "title": "- YouTube",
+      "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube."
+    },
+    "https://www.youtube.com/watch?v=W3gltVKtxcM": {
+      "title": "- YouTube",
+      "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube."
+    },
+    "https://www.youtube.com/watch?v=WXuK6gekU1Y": {
+      "title": "- YouTube",
+      "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube."
+    },
+    "https://yc-knowledge-app.vercel.app/": {
+      "title": "React App",
+      "description": "Web site created using create-react-app"
+    },
+    "https://youtu.be/cy8r7WSuT1I": {
+      "title": "- YouTube",
+      "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube."
+    },
+    "https://zed.dev/": {
+      "title": "Your last next editor",
+      "description": "Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+      "site": "Zed",
+      "image": "/og-cache/f7f9efedb074.webp",
+      "width": 600,
+      "height": 315,
+      "color": "#080818"
+    }
+  }
+}

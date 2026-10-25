@@ -13,6 +13,8 @@ type AnimatedLinkProps = Omit<
   to?: string
   href?: string
   hideFavicon?: boolean
+  /** Skip the hover preview card (see link-preview.tsx), e.g. for nav links */
+  noPreview?: boolean
 }
 
 const getFaviconCandidates = (href: string, isDark: boolean): string[] => {
@@ -190,6 +192,7 @@ const AnimatedLink: React.FC<AnimatedLinkProps> = ({
   to,
   href,
   hideFavicon,
+  noPreview,
   className,
   children,
   ...props
@@ -197,10 +200,11 @@ const AnimatedLink: React.FC<AnimatedLinkProps> = ({
   const baseClasses =
     "relative inline font-sans text-blue-600 no-underline transition-colors duration-200 before:absolute before:bottom-0 before:h-px before:w-0 before:bg-current before:transition-all before:content-[''] hover:text-blue-700 hover:no-underline hover:before:w-full focus:outline-none focus-visible:before:w-full dark:text-blue-400 dark:hover:text-blue-300"
   const classes = clsx(baseClasses, className)
+  const preview = noPreview ? {} : { "data-preview": "" }
 
   if (to) {
     return (
-      <Link to={to} className={classes} {...(props as any)}>
+      <Link to={to} className={classes} {...preview} {...(props as any)}>
         {children}
       </Link>
     )
@@ -213,6 +217,7 @@ const AnimatedLink: React.FC<AnimatedLinkProps> = ({
         target="_blank"
         rel="noopener noreferrer"
         className={classes}
+        {...preview}
         {...(props as any)}>
         {href && !hideFavicon && <Favicon href={href} />}
         {children}

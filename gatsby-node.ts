@@ -6,7 +6,11 @@ const WORDS_PER_MINUTE = 200
 
 export const onCreateNode: GatsbyNode["onCreateNode"] = ({ node, actions }) => {
   if (node.internal.type === "Mdx") {
-    const content = (node.internal.content as string | undefined) ?? ""
+    // gatsby-plugin-mdx keeps the source in `body`; internal.content is unset
+    const content =
+      (node.body as string | undefined) ??
+      (node.internal.content as string | undefined) ??
+      ""
     const words = content.split(/\s+/).filter(Boolean).length
     actions.createNodeField({
       node,
