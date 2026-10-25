@@ -39,10 +39,6 @@
     "reason": "ERR_TLS_CERT_ALTNAME_INVALID",
     "since": "2026-10-25"
   },
-  "https://claude.com/product/claude-code": {
-    "reason": "no usable title",
-    "since": "2026-10-25"
-  },
   "https://divye.sh/": {
     "reason": "ENOTFOUND",
     "since": "2026-10-25"
@@ -59,39 +55,7 @@
     "reason": "HTTP 403",
     "since": "2026-10-25"
   },
-  "https://github.com/aashutoshrathi/aashutosh.dev": {
-    "reason": "image: HTTP 429",
-    "since": "2026-10-25"
-  },
-  "https://github.com/aashutoshrathi/Insta-Downloader-Extension": {
-    "reason": "image: HTTP 429",
-    "since": "2026-10-25"
-  },
-  "https://github.com/aashutoshrathi/mnm": {
-    "reason": "image: HTTP 429",
-    "since": "2026-10-25"
-  },
-  "https://github.com/aashutoshrathi/nestjs-redis": {
-    "reason": "image: HTTP 429",
-    "since": "2026-10-25"
-  },
-  "https://github.com/aashutoshrathi/pratinidhi": {
-    "reason": "image: HTTP 429",
-    "since": "2026-10-25"
-  },
   "https://github.com/aashutoshrathi/quietest": {
-    "reason": "image: HTTP 429",
-    "since": "2026-10-25"
-  },
-  "https://github.com/aashutoshrathi/Testcase-Generator": {
-    "reason": "image: HTTP 429",
-    "since": "2026-10-25"
-  },
-  "https://github.com/aashutoshrathi/toki": {
-    "reason": "image: HTTP 429",
-    "since": "2026-10-25"
-  },
-  "https://github.com/denolehov/obsidian-git": {
     "reason": "image: HTTP 429",
     "since": "2026-10-25"
   },
@@ -99,19 +63,7 @@
     "reason": "HTTP 404",
     "since": "2026-10-25"
   },
-  "https://github.com/gaomingqi/Track-Anything": {
-    "reason": "image: HTTP 429",
-    "since": "2026-10-25"
-  },
   "https://github.com/iiab/iiab": {
-    "reason": "image: HTTP 429",
-    "since": "2026-10-25"
-  },
-  "https://github.com/irgolic/AutoPR": {
-    "reason": "image: HTTP 429",
-    "since": "2026-10-25"
-  },
-  "https://github.com/jonschlinkert/word-wrap/pull/33": {
     "reason": "image: HTTP 429",
     "since": "2026-10-25"
   },
@@ -120,10 +72,6 @@
     "since": "2026-10-25"
   },
   "https://github.com/kevmo314/magic-copy": {
-    "reason": "image: HTTP 429",
-    "since": "2026-10-25"
-  },
-  "https://github.com/kslambert/hacker-news-arc-boost": {
     "reason": "image: HTTP 429",
     "since": "2026-10-25"
   },
@@ -139,10 +87,6 @@
     "reason": "image: HTTP 429",
     "since": "2026-10-25"
   },
-  "https://github.com/skunight/nestjs-redis": {
-    "reason": "image: HTTP 429",
-    "since": "2026-10-25"
-  },
   "https://github.com/Stability-AI/StableLM": {
     "reason": "image: HTTP 429",
     "since": "2026-10-25"
@@ -152,10 +96,6 @@
     "since": "2026-10-25"
   },
   "https://github.com/wabarc/wayback": {
-    "reason": "image: HTTP 429",
-    "since": "2026-10-25"
-  },
-  "https://github.com/zilliztech/GPTCache": {
     "reason": "image: HTTP 429",
     "since": "2026-10-25"
   },
@@ -317,10 +257,6 @@
   },
   "https://www.producthunt.com/posts/figma-export-to-video": {
     "reason": "HTTP 403",
-    "since": "2026-10-25"
-  },
-  "https://www.pullnow.com/": {
-    "reason": "ECONNRESET",
     "since": "2026-10-25"
   },
   "https://www.querykitty.com/": {
