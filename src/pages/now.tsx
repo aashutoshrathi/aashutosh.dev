@@ -31,6 +31,8 @@ const NowPage: React.FC = () => {
     })
 
     if (contentRef.current) {
+      /* Hidden in the SSR paint (animate-init) so from() can't flash it */
+      tl.set(contentRef.current, { opacity: 1 })
       tl.from(contentRef.current.children, {
         y: -8,
         opacity: 0,
@@ -141,10 +143,6 @@ const NowPage: React.FC = () => {
 
   return (
     <>
-      <SEO
-        title="Now"
-        description="What Aashutosh is up to right now - work, side projects and writing."
-      />
       <div className="mx-auto max-w-3xl px-4 py-8">
         <div className="mb-12">
           <h1 ref={headingRef} className="animate-init mb-4 text-4xl font-bold opacity-0 -translate-y-3">
@@ -159,7 +157,7 @@ const NowPage: React.FC = () => {
           </p>
         </div>
 
-        <div ref={contentRef} className="space-y-12">
+        <div ref={contentRef} className="animate-init space-y-12 opacity-0">
           {sections.map((section) => (
             <section key={section.title}>
               <h2 className="mb-4 text-2xl font-bold">{section.title}</h2>
@@ -185,3 +183,10 @@ const NowPage: React.FC = () => {
 }
 
 export default NowPage
+
+export const Head = () => (
+  <SEO
+    title="Now"
+    description="What Aashutosh is up to right now - work, side projects and writing."
+  />
+)

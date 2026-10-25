@@ -199,6 +199,8 @@ const UsesPage: React.FC = () => {
 
     const tl = gsap.timeline()
 
+    /* Hidden in the SSR paint (animate-init) so the from()s below can't flash it */
+    tl.set(usesRef.current, { opacity: 1 })
     tl.to(headingRef.current, {
       y: 0,
       opacity: 1,
@@ -233,7 +235,9 @@ const UsesPage: React.FC = () => {
 
   return (
     <>
-      <div ref={usesRef} className="mx-auto max-w-3xl px-4 py-8">
+      <div
+        ref={usesRef}
+        className="animate-init mx-auto max-w-3xl px-4 py-8 opacity-0">
         <div className="mb-12">
           <h1 ref={headingRef} className="animate-init mb-4 text-4xl font-bold opacity-0 -translate-y-3">
             Uses
@@ -266,7 +270,8 @@ const UsesPage: React.FC = () => {
                           {item.name}
                         </h3>
                       )}
-                      <p className="opacity-80">{item.description}</p>
+                      {/* div, not p: some descriptions contain a <pre> */}
+                      <div className="opacity-80">{item.description}</div>
                     </div>
                   </div>
                 ))}

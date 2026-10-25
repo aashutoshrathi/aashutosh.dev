@@ -54,6 +54,8 @@ const FreeGames: React.FC = () => {
 
   useGSAP(() => {
     if (shouldReduceMotion() || !sectionRef.current) return
+    /* Hidden in the SSR paint (animate-init) so the fromTo below can't flash it */
+    gsap.set(sectionRef.current, { opacity: 1 })
     /* fromTo, not from: `from` infers the end value from whatever opacity the
        card happens to have when its staggered tween initialises, which could
        leave the later cards stuck part-way faded. */
@@ -75,7 +77,7 @@ const FreeGames: React.FC = () => {
     <section
       ref={sectionRef}
       aria-labelledby="fun-heading"
-      className="mt-12">
+      className="animate-init mt-12 opacity-0">
       <div className="mb-6 flex items-baseline justify-between gap-4">
         <h2
           id="fun-heading"

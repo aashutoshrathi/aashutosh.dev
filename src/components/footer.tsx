@@ -32,6 +32,9 @@ const Footer: React.FC = () => {
     const delay = location.pathname === "/" ? 0.4 : 0.25
 
     if (socialsRef.current) {
+      /* The row starts hidden (animate-init), otherwise the SSR paint shows
+         the icons and from() hides them again on hydration - a visible flash */
+      tl.set(socialsRef.current, { opacity: 1 })
       tl.from(socialsRef.current.children, {
         y: 12,
         opacity: 0,
@@ -52,7 +55,7 @@ const Footer: React.FC = () => {
     <footer className="p-8 text-center font-mono">
       <div
         ref={socialsRef}
-        className="text-center flex items-center justify-center gap-2">
+        className="animate-init text-center flex items-center justify-center gap-2 opacity-0">
         <SocialIcon
           link="https://github.com/aashutoshrathi"
           title="GitHub"
