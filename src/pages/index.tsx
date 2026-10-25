@@ -147,6 +147,6 @@ export default IndexPage
 export const Head = () => (
   <SEO
     description="Aashutosh Rathi - software engineer by profession, in it for the plot, baking code into stories. nibbles and quibbles on tech, life and everything in between."
-    video={{ url: "/og/home.mp4", width: 1200, height: 630 }}
+    video={{ url: "/og/pale-blue-dot.mp4", width: 1200, height: 630 }}
   />
 )
