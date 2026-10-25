@@ -13,6 +13,7 @@ const mockUseStaticQuery = mock().mockReturnValue({
       author: "Site Author",
       navigationString: "Site Navigation | ",
       coverImage: "site-cover.jpg",
+      siteUrl: "https://example.dev",
     },
   },
 })
@@ -82,6 +83,28 @@ describe("SEO component", () => {
     )
     const description = container.querySelector('meta[name="description"]')
     expect(description?.getAttribute("content")).toBe("Explicit Description")
+  })
+
+  it("omits og:video when no video is given", () => {
+    const { container } = render(<SEO title="Page Title" />)
+    expect(container.querySelector('meta[property="og:video"]')).toBeNull()
+  })
+
+  it("renders og:video tags with a site-qualified URL", () => {
+    const { container } = render(
+      <SEO video={{ url: "/og/home.mp4", width: 1200, height: 630 }} />
+    )
+    const content = (property: string) =>
+      container
+        .querySelector(`meta[property="${property}"]`)
+        ?.getAttribute("content")
+    expect(content("og:video")).toBe("https://example.dev/og/home.mp4")
+    expect(content("og:video:secure_url")).toBe(
+      "https://example.dev/og/home.mp4"
+    )
+    expect(content("og:video:type")).toBe("video/mp4")
+    expect(content("og:video:width")).toBe("1200")
+    expect(content("og:video:height")).toBe("630")
   })
 
   it("merges custom meta tags", () => {

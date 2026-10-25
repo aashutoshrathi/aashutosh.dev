@@ -145,5 +145,10 @@ const IndexPage: React.FC = () => {
 export default IndexPage
 
 export const Head = () => (
-  <SEO description="Aashutosh Rathi - software engineer by profession, in it for the plot, baking code into stories. nibbles and quibbles on tech, life and everything in between." />
+  <SEO
+    description="Aashutosh Rathi - software engineer by profession, in it for the plot, baking code into stories. nibbles and quibbles on tech, life and everything in between."
+    /* The image is the clip's first frame, so the hand-off to the video is seamless */
+    image="/og/pale-blue-dot.jpg"
+    video={{ url: "/og/pale-blue-dot.mp4", width: 1200, height: 630 }}
+  />
 )
