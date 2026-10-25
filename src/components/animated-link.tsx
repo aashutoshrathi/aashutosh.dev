@@ -88,6 +88,7 @@ const setCachedFavicon = (host: string, isDark: boolean, url: string) => {
 
 const EMOJI_FALLBACK: Record<string, string> = {
   "toki.aashutosh.dev": "🖥️",
+  "quietest.aashutosh.dev": "🤫",
   "api.chess.com": "♟️",
   "chess.com": "♟️",
 }

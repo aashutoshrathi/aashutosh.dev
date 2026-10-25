@@ -21,6 +21,9 @@ building side projects that automate things nobody asked to automate by night.
 - **Chupa Rustam**: Online social deduction game - everyone gets the word, one gets nothing. [cr.aashutosh.dev](https://cr.aashutosh.dev)
 - **Toki**: Native macOS menu bar app that keeps an eye on Claude Code and Codex
   account usage. [toki.aashutosh.dev](https://toki.aashutosh.dev)
+- **Quietest**: Chrome extension that hides test files, mocks and snapshots on
+  GitHub pull requests, so you can review the real code.
+  [quietest.aashutosh.dev](https://quietest.aashutosh.dev)
 - **M3**: Money MicroManager - cross-platform personal finance app that ingests
   transactions from SMS and email.
 - **Upright Services**: Trust-first home services marketplace for tier-3 cities

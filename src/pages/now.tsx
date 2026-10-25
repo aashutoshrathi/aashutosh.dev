@@ -7,7 +7,7 @@ import { AnimatedLink, SEO } from "@components"
 import ChessWidget from "../components/easter-eggs/chess-widget"
 import { shouldReduceMotion } from "@utils"
 
-const LAST_UPDATED = "September 2026"
+const LAST_UPDATED = "October 2026"
 
 interface NowSection {
   title: string
@@ -74,6 +74,22 @@ const NowPage: React.FC = () => {
             Homebrew tap
           </AnimatedLink>
           ).
+        </>,
+        <>
+          <AnimatedLink href="https://github.com/aashutoshrathi/quietest">
+            quietest
+          </AnimatedLink>{" "}
+          <img
+            alt="GitHub Release"
+            src="https://img.shields.io/github/v/release/aashutoshrathi/quietest?style=flat&label=release&color=2563eb"
+            className="inline align-text-bottom"
+          />{" "}
+          -{" "}
+          <AnimatedLink href="https://quietest.aashutosh.dev">
+            Chrome extension
+          </AnimatedLink>{" "}
+          that hides tests, mocks and snapshots in GitHub PR diffs, so you can
+          review the real code in peace.
         </>,
         <>
           Weekend games:{" "}
