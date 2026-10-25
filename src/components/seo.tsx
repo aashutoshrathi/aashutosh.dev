@@ -25,6 +25,13 @@ interface MetaTag {
   content: string
 }
 
+export interface OgVideo {
+  /* Direct link to an MP4 file, not a player page */
+  url: string
+  width: number
+  height: number
+}
+
 export interface SEOProps {
   description?: string
   image?: string | null
@@ -32,6 +39,8 @@ export interface SEOProps {
   meta?: MetaTag[]
   /* Omit on the landing page so the title is just the site name */
   title?: string
+  /* Plays inline in iMessage, Discord and Telegram; other previews keep og:image */
+  video?: OgVideo | null
 }
 
 const SEO: React.FC<SEOProps> = ({
@@ -40,6 +49,7 @@ const SEO: React.FC<SEOProps> = ({
   lang = "en",
   meta = [],
   title,
+  video = null,
 }) => {
   const { site } = useStaticQuery<SiteQueryResult>(graphql`
     query {
@@ -63,12 +73,21 @@ const SEO: React.FC<SEOProps> = ({
     ? `${site.siteMetadata.navigationString}${title}`
     : site.siteMetadata.title
 
-  /* Per-post images may be absolute URLs or site-relative paths */
-  const metaImage = image
-    ? image.startsWith("http")
-      ? image
-      : `${site.siteMetadata.siteUrl}${image}`
-    : site.siteMetadata.coverImage
+  /* Per-page media may be absolute URLs or site-relative paths */
+  const toAbsoluteUrl = (url: string) =>
+    url.startsWith("http") ? url : `${site.siteMetadata.siteUrl}${url}`
+
+  const metaImage = image ? toAbsoluteUrl(image) : site.siteMetadata.coverImage
+
+  const videoTags: MetaTag[] = video
+    ? [
+        { property: `og:video`, content: toAbsoluteUrl(video.url) },
+        { property: `og:video:secure_url`, content: toAbsoluteUrl(video.url) },
+        { property: `og:video:type`, content: `video/mp4` },
+        { property: `og:video:width`, content: String(video.width) },
+        { property: `og:video:height`, content: String(video.height) },
+      ]
+    : []
 
   const metaTags: MetaTag[] = [
     {
@@ -119,6 +138,7 @@ const SEO: React.FC<SEOProps> = ({
       property: `twitter:image`,
       content: metaImage,
     },
+    ...videoTags,
     ...meta,
   ]
 
