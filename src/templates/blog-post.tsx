@@ -18,6 +18,10 @@ interface MDXPreProps extends React.HTMLAttributes<HTMLPreElement> {
 
 const components = {
   pre: (props: MDXPreProps) => <CodeBlock {...props.children.props} />,
+  // Links in posts get hover previews like the rest of the site
+  a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
+    <a {...props} data-preview="" />
+  ),
 }
 
 interface BlogPostTemplateProps {

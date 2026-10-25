@@ -7,10 +7,14 @@ on:
       - "src/pages/blog.tsx"
       - "src/pages/uses.tsx"
       - "src/pages/now.tsx"
+      - "src/pages/work.tsx"
       - "src/templates/blog-post.tsx"
       - "src/components/free-games.tsx"
+      - "src/components/projects.tsx"
       - "content/blog/**/*"
       - "scripts/cache-favicons.mjs"
+      - "scripts/cache-og.mjs"
+      - "scripts/lib/og.mjs"
   push:
     branches: [master]
     paths:
@@ -18,8 +22,10 @@ on:
       - "src/pages/blog.tsx"
       - "src/pages/uses.tsx"
       - "src/pages/now.tsx"
+      - "src/pages/work.tsx"
       - "src/templates/blog-post.tsx"
       - "src/components/free-games.tsx"
+      - "src/components/projects.tsx"
       - "content/blog/**/*"
 
 permissions:
@@ -35,21 +41,32 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.ref || github.ref }}
           repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
+          cache: pnpm
+      # Link previews resize og:images with sharp
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
       - name: Cache favicons
         run: node scripts/cache-favicons.mjs
-      - name: Check for new favicons
+      - name: Cache link previews
+        run: node scripts/cache-og.mjs --retry-failed
+        env:
+          OG_CACHE_BUDGET_MS: "600000"
+      - name: Check for new favicons or previews
         id: check
         run: |
-          if [ -n "$(git status --porcelain static/favicons/)" ]; then
+          if [ -n "$(git status --porcelain static/favicons/ static/og-cache/)" ]; then
             echo "changed=true" >> $GITHUB_OUTPUT
-            git status --short static/favicons/
+            git status --short static/favicons/ static/og-cache/
           else
             echo "changed=false" >> $GITHUB_OUTPUT
           fi
-      - name: Commit new favicons
+      - name: Commit new favicons and previews
         if: >-
           steps.check.outputs.changed == 'true' &&
           (github.event_name == 'push' ||
@@ -57,12 +74,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add static/favicons/
-          git commit -m "chore: cache favicons for new links"
+          git add static/favicons/ static/og-cache/
+          git commit -m "chore: cache favicons and link previews for new links"
           git push
       - name: Comment on PR
         if: steps.check.outputs.changed == 'true' && github.event_name == 'pull_request'
         uses: peter-evans/create-or-update-comment@v4
         with:
           issue-number: ${{ github.event.pull_request.number }}
-          body: "✨ Cached new favicons for links added in this PR. They will be served from `/favicons/` instead of live fetching."
+          body: "✨ Cached favicons and link previews for links added in this PR. They will be served from `/favicons/` and `/og-cache/` instead of live fetching."

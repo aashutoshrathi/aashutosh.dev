@@ -1,0 +1,25 @@
+{
+  "links": {
+    "https://nodejs.org/en/blog/announcements/v20-release-announce": {
+      "title": "Node.js — Node.js 20 is now available!",
+      "description": "Node.js® is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts.",
+      "image": "/og-cache/b62b39808e94.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#080808"
+    },
+    "https://www.docker.com/": {
+      "title": "Docker: Accelerated Container Application Development",
+      "description": "Docker is a platform designed to help developers build, share, and run container applications. We handle the tedious setup, so you can focus on the code.",
+      "site": "Docker",
+      "image": "/og-cache/8b4df6002eda.webp",
+      "width": 600,
+      "height": 314,
+      "color": "#0868c8"
+    },
+    "https://www.microsoft.com/en-us/microsoft-loop": {
+      "title": "Microsoft Loop: Collaborative App | Microsoft 365",
+      "description": "Collaborate in real time with Microsoft Loop. Organize tasks, share ideas, and integrate workflows across teams. Start using Loop today to boost productivity."
+    }
+  }
+}

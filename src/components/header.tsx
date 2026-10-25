@@ -21,6 +21,7 @@ const Header: React.FC = () => {
 
         <div className="flex flex-row flex-wrap items-center justify-center gap-4 px-2 sm:justify-end sm:gap-6">
           <AnimatedLink
+            noPreview
             to="/timeline"
             onClick={lightHaptic}
             aria-current={location.pathname === "/timeline" ? "page" : undefined}
@@ -32,6 +33,7 @@ const Header: React.FC = () => {
             About
           </AnimatedLink>
           <AnimatedLink
+            noPreview
             to="/work"
             onClick={lightHaptic}
             aria-current={location.pathname === "/work" ? "page" : undefined}
@@ -43,6 +45,7 @@ const Header: React.FC = () => {
             Work
           </AnimatedLink>
           <AnimatedLink
+            noPreview
             to="/blog"
             onClick={lightHaptic}
             aria-current={
@@ -56,6 +59,7 @@ const Header: React.FC = () => {
             Blog
           </AnimatedLink>
           <AnimatedLink
+            noPreview
             to="/now"
             onClick={lightHaptic}
             aria-current={location.pathname === "/now" ? "page" : undefined}
@@ -67,6 +71,7 @@ const Header: React.FC = () => {
             Now
           </AnimatedLink>
           <AnimatedLink
+            noPreview
             to="/uses"
             onClick={lightHaptic}
             aria-current={location.pathname === "/uses" ? "page" : undefined}
