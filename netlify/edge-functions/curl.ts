@@ -8,7 +8,7 @@ Aashutosh Rathi
 software engineer by profession, in it for the plot.
 
   work       optimizing sales with AI @ regie.ai
-  building   toki, pratinidhi & other tiny tools for people
+  building   toki, quietest, pratinidhi & other tiny tools for people
              who hate doing things manually
   writing    nibbles.dev + aashutosh.dev/blog
 

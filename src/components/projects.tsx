@@ -61,6 +61,16 @@ const sortProjects = (repos: Project[], sortBy: ProjectSort): Project[] => {
 
 const DUMMY_PROJECTS: Project[] = [
   {
+    id: 1430148210,
+    name: "quietest",
+    description:
+      "Mute the tests in GitHub PRs. Review the code that matters - a Chrome extension that hides test files, mocks and snapshots until you ask.",
+    language: "JavaScript",
+    html_url: "https://github.com/aashutoshrathi/quietest",
+    homepage: "https://quietest.aashutosh.dev/",
+    stargazers_count: 2,
+  },
+  {
     id: 1343990722,
     name: "mnm",
     description:

@@ -137,6 +137,11 @@ const UsesPage: React.FC = () => {
         description: "Browser debugging and performance analysis",
         link: "https://developer.chrome.com/docs/devtools/",
       },
+      {
+        name: "Quietest",
+        description: "Muting tests, mocks and snapshots in GitHub PR reviews",
+        link: "https://quietest.aashutosh.dev",
+      },
     ],
   },
   {

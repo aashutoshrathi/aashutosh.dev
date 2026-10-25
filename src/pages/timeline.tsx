@@ -26,6 +26,18 @@ const commits: Commit[] = [
     graph: "*",
   },
   {
+    hash: "97ba68",
+    type: "feat",
+    scope: "quietest",
+    message: "build quietest - mute test files in GitHub PRs",
+    details: [
+      "+ Vanilla JS Chrome extension (quietest.aashutosh.dev)",
+      "+ Hides tests, mocks & snapshots, regex or on-device AI rules",
+    ],
+    date: "2026",
+    graph: "| *",
+  },
+  {
     hash: "f6a7b8",
     type: "ship",
     scope: "games",
@@ -198,6 +210,6 @@ export default TimelinePage
 export const Head = () => (
   <SEO
     title="About"
-    description="About Aashutosh Rathi - Technical Lead at Regie.ai, ex Stackr, Jio, IIIT Vadodara. Maker of toki, Marker & Mayhem and Chupa Rustam."
+    description="About Aashutosh Rathi - Technical Lead at Regie.ai, ex Stackr, Jio, IIIT Vadodara. Maker of toki, quietest, Marker & Mayhem and Chupa Rustam."
   />
 )

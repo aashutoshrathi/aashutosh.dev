@@ -12,6 +12,7 @@ const HOSTS = [
   "cr.aashutosh.dev",
   "toki.aashutosh.dev",
   "rc.toki.aashutosh.dev",
+  "quietest.aashutosh.dev",
   "nibbles.dev",
   "dig.nibbles.dev",
   "regie.ai",
