@@ -383,6 +383,15 @@
       "height": 300,
       "color": "#f8f8f8"
     },
+    "https://github.com/aashutoshrathi/quietest": {
+      "title": "aashutoshrathi/quietest: Mute the tests in GitHub PRs. Review the code that matters.",
+      "description": "Mute the tests in GitHub PRs. Review the code that matters. - aashutoshrathi/quietest",
+      "site": "GitHub",
+      "image": "/og-cache/f7af6417ac74.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
     "https://github.com/aashutoshrathi/Testcase-Generator": {
       "title": "aashutoshrathi/Testcase-Generator: ⚡️ Handy script for HackerRank, HackerEarth and CodeChef TCs Generation.",
       "description": "⚡️ Handy script for HackerRank, HackerEarth and CodeChef TCs Generation. - aashutoshrathi/Testcase-Generator",
@@ -437,6 +446,15 @@
       "height": 300,
       "color": "#f8f8f8"
     },
+    "https://github.com/iiab/iiab": {
+      "title": "iiab/iiab: Internet-in-a-Box - Build your own LIBRARY OF ALEXANDRIA with a Raspberry Pi !",
+      "description": "Internet-in-a-Box - Build your own LIBRARY OF ALEXANDRIA with a Raspberry Pi ! - iiab/iiab",
+      "site": "GitHub",
+      "image": "/og-cache/d28014b15e37.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
     "https://github.com/irgolic/AutoPR": {
       "title": "irgolic/AutoPR: AutoPR autonomously wrote pull requests in response to issues",
       "description": "AutoPR autonomously wrote pull requests in response to issues - irgolic/AutoPR",
@@ -464,6 +482,24 @@
       "height": 300,
       "color": "#f8f8f8"
     },
+    "https://github.com/kamranahmedse/code-reviews": {
+      "title": "nilbuild/awesome-minimal-sites: An opinionated collection of minimal yet beautiful websites.",
+      "description": "An opinionated collection of minimal yet beautiful websites. - nilbuild/awesome-minimal-sites",
+      "site": "GitHub",
+      "image": "/og-cache/b0360a3bad4a.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/kevmo314/magic-copy": {
+      "title": "kevmo314/magic-copy: Magic Copy is a Chrome extension that uses Meta's Segment Anything Model to extract a foreground…",
+      "description": "Magic Copy is a Chrome extension that uses Meta's Segment Anything Model to extract a foreground object from an image and copy it to the clipboard. - kevmo314/magic-copy",
+      "site": "GitHub",
+      "image": "/og-cache/47c8e6e1c7d2.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
     "https://github.com/kslambert/hacker-news-arc-boost": {
       "title": "kslambert/hacker-news-arc-boost: An Arc boost (The Browser Company) for Hacker News",
       "description": "An Arc boost (The Browser Company) for Hacker News - kslambert/hacker-news-arc-boost",
@@ -473,11 +509,29 @@
       "height": 300,
       "color": "#f8f8f8"
     },
+    "https://github.com/leetcode-mafia/cheetah": {
+      "title": "leetcode-mafia/cheetah: Mac app for crushing tech interviews with AI",
+      "description": "Mac app for crushing tech interviews with AI. Contribute to leetcode-mafia/cheetah development by creating an account on GitHub.",
+      "site": "GitHub",
+      "image": "/og-cache/15e62f5bf08b.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
     "https://github.com/onionshare/onionshare": {
       "title": "onionshare/onionshare: Securely and anonymously share files, host websites, and chat with friends using the Tor network",
       "description": "Securely and anonymously share files, host websites, and chat with friends using the Tor network - onionshare/onionshare",
       "site": "GitHub",
       "image": "/og-cache/e10f99ca4517.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/openai/shap-e": {
+      "title": "openai/shap-e: Generate 3D objects conditioned on text or images",
+      "description": "Generate 3D objects conditioned on text or images. Contribute to openai/shap-e development by creating an account on GitHub.",
+      "site": "GitHub",
+      "image": "/og-cache/46acb9a084fa.webp",
       "width": 600,
       "height": 300,
       "color": "#f8f8f8"
@@ -500,6 +554,15 @@
       "height": 160,
       "color": "#e8d8c8"
     },
+    "https://github.com/sindresorhus/np": {
+      "title": "sindresorhus/np: A better `npm publish`",
+      "description": "A better `npm publish`. Contribute to sindresorhus/np development by creating an account on GitHub.",
+      "site": "GitHub",
+      "image": "/og-cache/3d927692b59e.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
     "https://github.com/skunight/nestjs-redis": {
       "title": "skunight/nestjs-redis: nestjs redis module",
       "description": "nestjs redis module. Contribute to skunight/nestjs-redis development by creating an account on GitHub.",
@@ -509,11 +572,38 @@
       "height": 300,
       "color": "#f8f8f8"
     },
+    "https://github.com/Stability-AI/StableLM": {
+      "title": "Stability-AI/StableLM: StableLM: Stability AI Language Models",
+      "description": "StableLM: Stability AI Language Models. Contribute to Stability-AI/StableLM development by creating an account on GitHub.",
+      "site": "GitHub",
+      "image": "/og-cache/b0e03d778b64.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/the-nibble/dig": {
+      "title": "The-Nibble/dig: Search The Nibble's editions - tools, TILs, reads & quotes, plus when each topic first and last came up.",
+      "description": "Search The Nibble's editions - tools, TILs, reads & quotes, plus when each topic first and last came up. - The-Nibble/dig",
+      "site": "GitHub",
+      "image": "/og-cache/49c0c77a7ffb.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
     "https://github.com/twitter/the-algorithm": {
       "title": "twitter/the-algorithm: Source code for the X Recommendation Algorithm",
       "description": "Source code for the X Recommendation Algorithm. Contribute to twitter/the-algorithm development by creating an account on GitHub.",
       "site": "GitHub",
       "image": "/og-cache/12c92f6ce99f.webp",
+      "width": 600,
+      "height": 300,
+      "color": "#f8f8f8"
+    },
+    "https://github.com/wabarc/wayback": {
+      "title": "wabarc/wayback: An archiving tool with an IM-style interface that prioritizes privacy and accessibility, integrated…",
+      "description": "An archiving tool with an IM-style interface that prioritizes privacy and accessibility, integrated with various archival services including Internet Archive, archive.today, Ghostarchive, IPFS, Tel...",
+      "site": "GitHub",
+      "image": "/og-cache/017a556a63fb.webp",
       "width": 600,
       "height": 300,
       "color": "#f8f8f8"

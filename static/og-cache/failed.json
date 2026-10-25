@@ -55,48 +55,8 @@
     "reason": "HTTP 403",
     "since": "2026-10-25"
   },
-  "https://github.com/aashutoshrathi/quietest": {
-    "reason": "image: HTTP 429",
-    "since": "2026-10-25"
-  },
   "https://github.com/DoneDeal0/alright-react-app": {
     "reason": "HTTP 404",
-    "since": "2026-10-25"
-  },
-  "https://github.com/iiab/iiab": {
-    "reason": "image: HTTP 429",
-    "since": "2026-10-25"
-  },
-  "https://github.com/kamranahmedse/code-reviews": {
-    "reason": "image: HTTP 429",
-    "since": "2026-10-25"
-  },
-  "https://github.com/kevmo314/magic-copy": {
-    "reason": "image: HTTP 429",
-    "since": "2026-10-25"
-  },
-  "https://github.com/leetcode-mafia/cheetah": {
-    "reason": "image: HTTP 429",
-    "since": "2026-10-25"
-  },
-  "https://github.com/openai/shap-e": {
-    "reason": "image: HTTP 429",
-    "since": "2026-10-25"
-  },
-  "https://github.com/sindresorhus/np": {
-    "reason": "image: HTTP 429",
-    "since": "2026-10-25"
-  },
-  "https://github.com/Stability-AI/StableLM": {
-    "reason": "image: HTTP 429",
-    "since": "2026-10-25"
-  },
-  "https://github.com/the-nibble/dig": {
-    "reason": "image: HTTP 429",
-    "since": "2026-10-25"
-  },
-  "https://github.com/wabarc/wayback": {
-    "reason": "image: HTTP 429",
     "since": "2026-10-25"
   },
   "https://heypi.com/talk": {
