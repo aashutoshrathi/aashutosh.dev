@@ -3,7 +3,7 @@ import React, { useCallback, useEffect, useRef, useState } from "react"
 import { useLocation } from "@gatsbyjs/reach-router"
 import gsap from "gsap"
 import { createPortal } from "react-dom"
-import { FiArrowRight, FiArrowUpRight } from "react-icons/fi"
+import { FiArrowUpRight } from "react-icons/fi"
 import { useIsomorphicLayoutEffect } from "usehooks-ts"
 
 import {
@@ -79,8 +79,7 @@ const distanceTo = (r: DOMRect, p: { x: number; y: number }) =>
     p.y - clamp(p.y, r.top, r.bottom)
   )
 
-const describeUrl = (key: string, internal: boolean) => {
-  if (internal) return `aashutosh.dev${key === "/" ? "" : key}`
+const describeUrl = (key: string) => {
   try {
     const url = new URL(key)
     let rest = url.pathname === "/" ? "" : url.pathname
@@ -95,11 +94,10 @@ const describeUrl = (key: string, internal: boolean) => {
 
 const SiteIcon: React.FC<{
   host: string
-  internal: boolean
   label: string
-}> = ({ host, internal, label }) => {
+}> = ({ host, label }) => {
   const [failed, setFailed] = useState(false)
-  const src = internal ? "/favicon-32x32.png" : cachedFaviconPath(host)
+  const src = cachedFaviconPath(host)
   if (src && !failed) {
     return (
       <img
@@ -147,18 +145,13 @@ interface CardProps {
 const Card = React.forwardRef<HTMLAnchorElement, CardProps>(
   ({ active, showImage, onImageError, onClick }, ref) => {
     const { key, data, anchor } = active
-    const internal = key.startsWith("/")
-    const host = internal ? "aashutosh.dev" : new URL(key).hostname
+    const host = new URL(key).hostname
     const site = data.site || host.replace(/^www\./, "")
     const hasImage = showImage && !!data.image
     const banner =
       hasImage &&
       (!data.width || !data.height || data.width / data.height >= 1.3)
     const thumb = hasImage && !banner
-    const meta = [data.date, data.readTime && `${data.readTime} min read`]
-      .filter(Boolean)
-      .join(" · ")
-    const Arrow = internal ? FiArrowRight : FiArrowUpRight
     const imageBg = { backgroundColor: data.color }
 
     return (
@@ -172,12 +165,6 @@ const Card = React.forwardRef<HTMLAnchorElement, CardProps>(
         data-link-preview=""
         onClick={onClick}
         className="group invisible absolute left-0 top-0 z-[60] block w-[21rem] max-w-[calc(100vw-24px)] overflow-hidden rounded-2xl border border-slate-200/80 bg-white text-left font-sans text-slate-900 no-underline shadow-[0_1px_2px_rgba(15,23,42,0.04),0_8px_24px_-6px_rgba(15,23,42,0.14),0_28px_56px_-20px_rgba(15,23,42,0.24)] outline-none transition-[border-color] duration-200 hover:border-blue-300/70 dark:border-slate-700/80 dark:bg-slate-800 dark:text-slate-50 dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_8px_24px_-6px_rgba(0,0,0,0.45),0_28px_56px_-20px_rgba(0,0,0,0.7)] dark:hover:border-blue-400/40">
-        {internal && !banner && (
-          <span
-            aria-hidden="true"
-            className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-blue-600 via-blue-400/70 to-transparent dark:from-blue-400 dark:via-blue-400/40"
-          />
-        )}
         {banner && (
           <div
             data-card-banner=""
@@ -198,18 +185,10 @@ const Card = React.forwardRef<HTMLAnchorElement, CardProps>(
             <div
               data-card-part=""
               className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400">
-              <SiteIcon host={host} internal={internal} label={site} />
+              <SiteIcon host={host} label={site} />
               <span className="truncate font-medium text-slate-700 dark:text-slate-200">
                 {site}
               </span>
-              {meta && (
-                <span className="shrink-0 truncate">
-                  <span aria-hidden="true" className="mr-2">
-                    ·
-                  </span>
-                  {meta}
-                </span>
-              )}
             </div>
             <div
               data-card-part=""
@@ -239,8 +218,8 @@ const Card = React.forwardRef<HTMLAnchorElement, CardProps>(
         <div
           data-card-part=""
           className="mx-4 flex items-center gap-2 border-t border-slate-100 py-2.5 font-mono text-[11px] text-slate-400 dark:border-slate-700/70 dark:text-slate-500">
-          <span className="truncate">{describeUrl(key, internal)}</span>
-          <Arrow
+          <span className="truncate">{describeUrl(key)}</span>
+          <FiArrowUpRight
             aria-hidden="true"
             className="ml-auto size-3.5 shrink-0 text-blue-600 transition-transform duration-200 group-hover:-translate-y-px group-hover:translate-x-0.5 dark:text-blue-400"
           />
@@ -327,8 +306,9 @@ const LinkPreview: React.FC = () => {
         return
       }
       const key = linkPreviewKey(anchor.getAttribute("href"))
-      // No card for a link to the page you are already on
-      if (!key || key === linkPreviewKey(window.location.pathname)) return
+      // Cards preview where a link leaves to; pages on this site key on their
+      // path ("/blog") and get none
+      if (!key || key.startsWith("/")) return
 
       window.clearTimeout(timers.current.open)
       pendingRef.current = anchor

@@ -1,6 +1,6 @@
 import { previewKey, SITE_HOSTS } from "./preview-key.mjs"
 
-/** One hover card, as written by scripts/cache-og.mjs or gatsby-node.ts. */
+/** One hover card, as written by scripts/cache-og.mjs. */
 export interface LinkPreviewData {
   title: string
   description?: string
@@ -11,16 +11,13 @@ export interface LinkPreviewData {
   height?: number
   /** Dominant colour of the image, painted while it decodes */
   color?: string
-  /** Posts on this site only */
-  date?: string
-  readTime?: number
 }
 
 export type LinkPreviews = Record<string, LinkPreviewData>
 
-// External links (committed, see scripts/cache-og.mjs) and this site's own
-// pages (written by onPostBuild in gatsby-node.ts).
-const SOURCES = ["/og-cache/manifest.json", "/og-cache/pages.json"]
+// External links only (committed, see scripts/cache-og.mjs); links to this
+// site's own pages get no card.
+const SOURCES = ["/og-cache/manifest.json"]
 
 let loading: Promise<LinkPreviews> | null = null
 

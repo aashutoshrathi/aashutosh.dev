@@ -5,9 +5,11 @@ import {
   cleanText,
   decodeEntities,
   detectCharset,
+  dropRepeatedTagline,
   extractLinks,
   parseOg,
   sniffImage,
+  stripGithubBoilerplate,
   stripSiteName,
 } from "./og.mjs"
 
@@ -153,6 +155,38 @@ describe("text helpers", () => {
     ).toBe("Your shortcut to everything")
     expect(stripSiteName("Raycast", "Raycast")).toBe("Raycast")
     expect(stripSiteName("Zed-editor", "Zed")).toBe("Zed-editor")
+  })
+
+  it("drops a title's tagline only when the description repeats it", () => {
+    const blurb = "Native macOS menu bar app for managing usage and sessions"
+    expect(dropRepeatedTagline(`aashutoshrathi/toki: ${blurb}`, blurb)).toBe(
+      "aashutoshrathi/toki"
+    )
+    // A title already cut short on a word still matches
+    expect(
+      dropRepeatedTagline("owner/repo: Native macOS menu bar…", blurb)
+    ).toBe("owner/repo")
+    expect(dropRepeatedTagline("Rust: a language guide", blurb)).toBe(
+      "Rust: a language guide"
+    )
+    expect(dropRepeatedTagline("Note: hi", "hi there")).toBe("Note: hi")
+    expect(dropRepeatedTagline(`owner/repo: ${blurb}`, "")).toBe(
+      `owner/repo: ${blurb}`
+    )
+  })
+
+  it("drops GitHub's sign-up line from repo descriptions", () => {
+    const tail =
+      "Contribute to aashutoshrathi/mnm development by creating an account on GitHub."
+    expect(
+      stripGithubBoilerplate(
+        `Marker & Mayhem - Pictionary for the masses. ${tail}`
+      )
+    ).toBe("Marker & Mayhem - Pictionary for the masses.")
+    expect(stripGithubBoilerplate(tail)).toBe("")
+    expect(stripGithubBoilerplate("Contribute to open source.")).toBe(
+      "Contribute to open source."
+    )
   })
 })
 

@@ -78,6 +78,31 @@ export const stripSiteName = (title, site) => {
   return title
 }
 
+/**
+ * "owner/repo: blurb" -> "owner/repo" when the description is that blurb, as
+ * on every GitHub repo, so the card doesn't say the same thing twice.
+ */
+export const dropRepeatedTagline = (title, description) => {
+  const at = title.indexOf(": ")
+  if (at < 3 || !description) return title
+  const tagline = title
+    .slice(at + 2)
+    .replace(/…$/, "")
+    .trim()
+  return tagline.length >= 12 && description.startsWith(tagline)
+    ? title.slice(0, at)
+    : title
+}
+
+/** GitHub appends this sign-up line to every repo's description. */
+export const stripGithubBoilerplate = (description) =>
+  description
+    .replace(
+      /\s*Contribute to \S+ development by creating an account on GitHub\.?$/,
+      ""
+    )
+    .trim()
+
 // Interstitials and login walls that answer 200 with a real <title> but are
 // not the page the link points at.
 const BLOCKED_TITLE =
@@ -129,7 +154,9 @@ export const parseOg = (html, pageUrl) => {
   if (!title || BLOCKED_TITLE.test(title)) return null
 
   const description = cleanText(
-    pick("og:description", "twitter:description", "description"),
+    stripGithubBoilerplate(
+      pick("og:description", "twitter:description", "description")
+    ),
     DESCRIPTION_MAX
   )
 
@@ -150,7 +177,12 @@ export const parseOg = (html, pageUrl) => {
     } catch {}
   }
 
-  return { title, description, site, image }
+  return {
+    title: dropRepeatedTagline(title, description),
+    description,
+    site,
+    image,
+  }
 }
 
 // URL characters, minus template-literal interpolation: links built from
