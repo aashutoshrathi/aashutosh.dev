@@ -118,6 +118,26 @@ const httpError = (status) =>
     ? new PermanentError(`HTTP ${status}`)
     : new Error(`HTTP ${status}`)
 
+// Rate-limited hosts (GitHub's og images, archive.today) answer 429 to bursts;
+// waiting as asked usually clears it, so retry a few times before giving up.
+const RETRY_STATUSES = new Set([429, 503])
+const MAX_RETRIES = 3
+
+const politeFetch = async (url, init) => {
+  for (let attempt = 0; ; attempt++) {
+    const res = await fetch(url, {
+      ...init,
+      signal: AbortSignal.timeout(TIMEOUT_MS),
+    })
+    if (!RETRY_STATUSES.has(res.status) || attempt === MAX_RETRIES) return res
+    res.body?.cancel().catch(() => {})
+    const retryAfter = Number(res.headers.get("retry-after"))
+    const waitMs =
+      retryAfter > 0 ? Math.min(retryAfter, 30) * 1000 : 2000 * 2 ** attempt
+    await new Promise((resolve) => setTimeout(resolve, waitMs))
+  }
+}
+
 /** Read at most `limit` bytes, optionally stopping early once `done(chunk)`. */
 const readBody = async (res, limit, done) => {
   const reader = res.body.getReader()
@@ -139,9 +159,8 @@ const readBody = async (res, limit, done) => {
 }
 
 const fetchPage = async (url, ua) => {
-  const res = await fetch(url, {
+  const res = await politeFetch(url, {
     redirect: "follow",
-    signal: AbortSignal.timeout(TIMEOUT_MS),
     headers: {
       "user-agent": ua,
       accept: "text/html,application/xhtml+xml;q=0.9,*/*;q=0.5",
@@ -193,9 +212,8 @@ const toHex = ({ r, g, b }) =>
   `#${[r, g, b].map((n) => n.toString(16).padStart(2, "0")).join("")}`
 
 const cacheImage = async (imageUrl, referer, ua) => {
-  const res = await fetch(imageUrl, {
+  const res = await politeFetch(imageUrl, {
     redirect: "follow",
-    signal: AbortSignal.timeout(TIMEOUT_MS),
     headers: {
       "user-agent": ua,
       accept: "image/avif,image/webp,image/png,image/jpeg,image/*;q=0.8",
