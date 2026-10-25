@@ -5,10 +5,22 @@ dotenv.config({
   path: `.env`,
 })
 
+/*
+ * Netlify deploy previews and branch deploys point share tags at their own
+ * URL, so link previews (og:image, og:video) can be tested before merging.
+ */
+const isNetlifyPreview = ["deploy-preview", "branch-deploy"].includes(
+  process.env.CONTEXT
+)
+const siteUrl =
+  isNetlifyPreview && process.env.DEPLOY_PRIME_URL
+    ? process.env.DEPLOY_PRIME_URL
+    : `https://aashutosh.dev`
+
 module.exports = {
   siteMetadata: {
     title: `aashutosh.dev`,
-    siteUrl: `https://aashutosh.dev`,
+    siteUrl,
     description: `software engineer by profession, in it for the plot, baking code into stories. writing nibbles and open to quibbles on tech, life and everything in between.`,
     navigationString: `aashutosh.dev | `,
     author: `@AashutoshRathi`,
