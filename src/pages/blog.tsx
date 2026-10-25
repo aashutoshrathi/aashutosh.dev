@@ -46,6 +46,8 @@ const BlogIndex: React.FC<BlogIndexProps> = ({ data }) => {
     })
 
     if (postsRef.current) {
+      /* Hidden in the SSR paint (animate-init) so from() can't flash it */
+      tl.set(postsRef.current, { opacity: 1 })
       tl.from(postsRef.current.children, {
         y: -8,
         opacity: 0,
@@ -75,7 +77,7 @@ const BlogIndex: React.FC<BlogIndexProps> = ({ data }) => {
             Subscribe at nibbles.dev →
           </AnimatedLink>
         </aside>
-        <div ref={postsRef} className="space-y-8">
+        <div ref={postsRef} className="animate-init space-y-8 opacity-0">
           {data.allMdx.nodes.map((post) => (
             <article key={post.id}>
               <header>

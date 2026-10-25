@@ -13,7 +13,7 @@ interface LoopingTextProps {
 const LoopingText = ({ texts, duration }: LoopingTextProps) => {
   const [activeTextIndex, setActiveTextIndex] = useState(0)
 
-  const textsRef = useRef<HTMLDivElement | null>(null)
+  const textsRef = useRef<HTMLSpanElement | null>(null)
 
   useGSAP(
     () => {
@@ -51,14 +51,16 @@ const LoopingText = ({ texts, duration }: LoopingTextProps) => {
     { scope: textsRef, dependencies: [activeTextIndex] }
   )
 
+  /* span, not div: this renders inside the footer's <p>, and a <div> there
+     makes the browser close the <p> early, so hydration never matches */
   return (
-    <div ref={textsRef} className="inline-block overflow-hidden">
+    <span ref={textsRef} className="inline-block overflow-hidden">
       {texts[activeTextIndex].split("").map((char, idx) => (
         <span key={idx} className="char inline-block">
           {char}
         </span>
       ))}
-    </div>
+    </span>
   )
 }
 

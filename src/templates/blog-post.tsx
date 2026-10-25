@@ -42,6 +42,8 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps> = ({
     const tl = gsap.timeline()
 
     if (titleRef.current) {
+      /* Hidden in the SSR paint (animate-init) so from() can't flash it */
+      tl.set(titleRef.current, { opacity: 1 })
       tl.from(titleRef.current.children, {
         y: -12,
         opacity: 0,
@@ -78,7 +80,7 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps> = ({
             &larr; Back to Blog
           </Link>
         </div>
-        <header ref={titleRef} className="mb-8">
+        <header ref={titleRef} className="animate-init mb-8 opacity-0">
           <h1 className="mb-2 text-4xl font-bold">{post.frontmatter.title}</h1>
           <p className="text-base opacity-80">
             {post.frontmatter.date} · {post.fields.timeToRead} min read

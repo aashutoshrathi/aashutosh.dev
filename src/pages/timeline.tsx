@@ -146,6 +146,8 @@ const TimelinePage: React.FC = () => {
       )
 
     if (commitsRef.current) {
+      /* Hidden in the SSR paint (animate-init) so from() can't flash it */
+      tl.set(commitsRef.current, { opacity: 1 })
       tl.from(commitsRef.current.children, {
         y: -10,
         opacity: 0,
@@ -180,7 +182,7 @@ const TimelinePage: React.FC = () => {
             </p>
           </header>
 
-          <div ref={commitsRef} className="grid gap-2">
+          <div ref={commitsRef} className="animate-init grid gap-2 opacity-0">
             {commits.map((commit) => (
               <AnimatedDetails key={commit.hash} commit={commit} />
             ))}
